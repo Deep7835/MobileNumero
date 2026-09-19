@@ -1,6 +1,6 @@
 {
-  "name": "Mobile Numerology",
-  "short_name": "Numerology",
+  "name": "NumberKundli",
+  "short_name": "NumberKundli",
   "description": "Free mobile number numerology calculator with lucky PIN, password, wallpaper and cover recommendations.",
   "start_url": "./index.html",
   "display": "standalone",

@@ -1,5 +1,5 @@
 I18N.register('mr', { ui: {
-  'brand': 'मोबाइल न्यूमरॉलॉजी',
+  'brand': 'NumberKundli',
   'nav.profile': 'प्रोफाइल', 'nav.mobile': 'मोबाइल नंबर', 'nav.pin': 'पिन', 'nav.password': 'पासवर्ड', 'nav.wallpaper': 'वॉलपेपर',
   'nav.cover': 'कव्हर आणि रंग', 'nav.affirmation': 'अफर्मेशन', 'nav.report': 'अहवाल', 'nav.buy': 'नंबर खरेदी करा',
   'nav.blog': 'ब्लॉग', 'nav.analyse': 'विश्लेषण', 'nav.numbers': 'मूलांक 1–9', 'nav.sections': 'माझे निकाल',
@@ -88,7 +88,7 @@ I18N.register('mr', { ui: {
   'c.matchesBN': '✓ BN {n} शी जुळते', 'c.matchesDN': 'DN {n} शी जुळते', 'c.idealFor': 'योग्य:', 'c.tip': 'सूचना:',
   'col.good': 'तुमच्यासाठी पूरक', 'col.avoid': 'टाळणे चांगले', 'col.neutral': 'तटस्थ', 'col.energy': 'अंक {nums} ची ऊर्जा ({planets})',
   'a.ringtone': 'रिंगटोन', 'a.mantra': 'मंत्र', 'toast.copied': '{text} कॉपी झाले',
-  'r.brand': 'मोबाइल न्यूमरॉलॉजी', 'r.title': 'वैयक्तिक अहवाल', 'r.dob': 'जन्मतारीख', 'r.purpose': 'उद्देश', 'r.generated': 'तयार केला',
+  'r.brand': 'NumberKundli', 'r.title': 'वैयक्तिक अहवाल', 'r.dob': 'जन्मतारीख', 'r.purpose': 'उद्देश', 'r.generated': 'तयार केला',
   'r.s1': '1. मूळ अंक', 'r.s2': '2. मोबाइल नंबर विश्लेषण', 'r.s3': '3. पिन कोड', 'r.s4': '4. पासवर्ड (कॅल्डियन)', 'r.s5': '5. वॉलपेपर', 'r.s6': '6. बॅक कव्हर व फोनचा रंग', 'r.s7': '7. अफर्मेशन, रिंगटोन व मंत्र',
   'r.number': 'नंबर', 'r.total': 'बेरीज', 'r.withBN': 'BN {n} सोबत', 'r.withDN': 'DN {n} सोबत', 'r.balancerTotal': 'बॅलन्सर बेरीज',
   'r.warnings': 'इशारे ({n})', 'r.strengths': 'बलस्थाने ({n})', 'r.noMobile': 'मोबाइल नंबर टाकलेला नाही.',

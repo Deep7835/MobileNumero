@@ -153,7 +153,7 @@ const Report = (() => {
 
   function filename(profile) {
     const base = (profile.name || 'numerology').replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase();
-    return `${base}-mobile-numerology-report.pdf`;
+    return `${base}-numberkundli-report.pdf`;
   }
 
   /** Download as PDF (or hand the jsPDF instance to opts.onPdf instead of saving). The report is rendered inside the page (html2canvas cannot see into

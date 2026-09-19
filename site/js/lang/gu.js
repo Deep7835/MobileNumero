@@ -1,5 +1,5 @@
 I18N.register('gu', { ui: {
-  'brand': 'મોબાઇલ ન્યુમરોલોજી',
+  'brand': 'NumberKundli',
   'nav.profile': 'પ્રોફાઇલ', 'nav.mobile': 'મોબાઇલ નંબર', 'nav.pin': 'પિન', 'nav.password': 'પાસવર્ડ', 'nav.wallpaper': 'વૉલપેપર',
   'nav.cover': 'કવર અને રંગ', 'nav.affirmation': 'અફર્મેશન', 'nav.report': 'રિપોર્ટ', 'nav.buy': 'નંબર ખરીદો',
   'nav.blog': 'બ્લોગ', 'nav.analyse': 'વિશ્લેષણ', 'nav.numbers': 'મૂળાંક 1–9', 'nav.sections': 'મારા પરિણામો',
@@ -88,7 +88,7 @@ I18N.register('gu', { ui: {
   'c.matchesBN': '✓ BN {n} સાથે મેળ', 'c.matchesDN': 'DN {n} સાથે મેળ', 'c.idealFor': 'યોગ્ય:', 'c.tip': 'સૂચન:',
   'col.good': 'તમારા માટે સહાયક', 'col.avoid': 'ટાળવું સારું', 'col.neutral': 'તટસ્થ', 'col.energy': 'અંક {nums} ની ઊર્જા ({planets})',
   'a.ringtone': 'રિંગટોન', 'a.mantra': 'મંત્ર', 'toast.copied': '{text} કૉપી થયું',
-  'r.brand': 'મોબાઇલ ન્યુમરોલોજી', 'r.title': 'વ્યક્તિગત રિપોર્ટ', 'r.dob': 'જન્મતારીખ', 'r.purpose': 'હેતુ', 'r.generated': 'બનાવ્યો',
+  'r.brand': 'NumberKundli', 'r.title': 'વ્યક્તિગત રિપોર્ટ', 'r.dob': 'જન્મતારીખ', 'r.purpose': 'હેતુ', 'r.generated': 'બનાવ્યો',
   'r.s1': '1. મૂળ અંકો', 'r.s2': '2. મોબાઇલ નંબર વિશ્લેષણ', 'r.s3': '3. પિન કોડ', 'r.s4': '4. પાસવર્ડ (કેલ્ડિયન)', 'r.s5': '5. વૉલપેપર', 'r.s6': '6. બેક કવર અને ફોનનો રંગ', 'r.s7': '7. અફર્મેશન, રિંગટોન અને મંત્ર',
   'r.number': 'નંબર', 'r.total': 'સરવાળો', 'r.withBN': 'BN {n} સાથે', 'r.withDN': 'DN {n} સાથે', 'r.balancerTotal': 'બેલેન્સર સરવાળો',
   'r.warnings': 'ચેતવણીઓ ({n})', 'r.strengths': 'શક્તિઓ ({n})', 'r.noMobile': 'મોબાઇલ નંબર દાખલ કર્યો નથી.',

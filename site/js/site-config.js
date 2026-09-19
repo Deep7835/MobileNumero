@@ -5,7 +5,7 @@
    ===================================================================== */
 window.SITE_CONFIG = {
   url: 'https://numberkundli.com',   // canonical site URL — change before deploying (also in tools/build.py)
-  name: 'Mobile Numerology',
+  name: 'NumberKundli',
   analytics: {
     ga4: '',        // e.g. 'G-XXXXXXXXXX' — loaded only after cookie consent
     plausible: '',  // e.g. 'numberkundli.com' — cookieless, loaded after consent

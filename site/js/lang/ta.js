@@ -1,5 +1,5 @@
 I18N.register('ta', { ui: {
-  'brand': 'மொபைல் எண் கணிதம்',
+  'brand': 'NumberKundli',
   'nav.profile': 'சுயவிவரம்', 'nav.mobile': 'மொபைல் எண்', 'nav.pin': 'பின்', 'nav.password': 'கடவுச்சொல்', 'nav.wallpaper': 'வால்பேப்பர்',
   'nav.cover': 'கவர் & நிறம்', 'nav.affirmation': 'உறுதிமொழி', 'nav.report': 'அறிக்கை', 'nav.buy': 'எண் வாங்க',
   'nav.blog': 'வலைப்பதிவு', 'nav.analyse': 'ஆய்வு', 'nav.numbers': 'பிறப்பு எண்கள்', 'nav.sections': 'என் முடிவுகள்',
@@ -88,7 +88,7 @@ I18N.register('ta', { ui: {
   'c.matchesBN': '✓ BN {n} உடன் பொருந்துகிறது', 'c.matchesDN': 'DN {n} உடன் பொருந்துகிறது', 'c.idealFor': 'ஏற்றவர்கள்:', 'c.tip': 'குறிப்பு:',
   'col.good': 'உங்களுக்கு ஆதரவானது', 'col.avoid': 'தவிர்ப்பது நல்லது', 'col.neutral': 'நடுநிலை', 'col.energy': 'எண் {nums} இன் ஆற்றல் ({planets})',
   'a.ringtone': 'ரிங்டோன்', 'a.mantra': 'மந்திரம்', 'toast.copied': '{text} நகலெடுக்கப்பட்டது',
-  'r.brand': 'மொபைல் எண் கணிதம்', 'r.title': 'தனிப்பட்ட அறிக்கை', 'r.dob': 'பிறந்த தேதி', 'r.purpose': 'நோக்கம்', 'r.generated': 'உருவாக்கப்பட்டது',
+  'r.brand': 'NumberKundli', 'r.title': 'தனிப்பட்ட அறிக்கை', 'r.dob': 'பிறந்த தேதி', 'r.purpose': 'நோக்கம்', 'r.generated': 'உருவாக்கப்பட்டது',
   'r.s1': '1. அடிப்படை எண்கள்', 'r.s2': '2. மொபைல் எண் ஆய்வு', 'r.s3': '3. பின் குறியீடுகள்', 'r.s4': '4. கடவுச்சொல் (கால்டியன்)', 'r.s5': '5. வால்பேப்பர்', 'r.s6': '6. பின்புற கவர் & ஃபோன் நிறம்', 'r.s7': '7. உறுதிமொழி, ரிங்டோன் & மந்திரம்',
   'r.number': 'எண்', 'r.total': 'கூட்டுத்தொகை', 'r.withBN': 'BN {n} உடன்', 'r.withDN': 'DN {n} உடன்', 'r.balancerTotal': 'பேலன்சர் கூட்டுத்தொகை',
   'r.warnings': 'எச்சரிக்கைகள் ({n})', 'r.strengths': 'பலங்கள் ({n})', 'r.noMobile': 'மொபைல் எண் உள்ளிடப்படவில்லை.',

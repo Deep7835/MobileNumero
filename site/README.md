@@ -1,4 +1,4 @@
-# Mobile Numerology
+# NumberKundli
 
 A static, client-side website built from the *Advance Mobile Numerology Class* PDFs (modules 9–13).
 No build step, no backend — everything runs in the browser.

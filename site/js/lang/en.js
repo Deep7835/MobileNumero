@@ -1,5 +1,5 @@
 I18N.register('en', { ui: {
-  'brand': 'Mobile Numerology',
+  'brand': 'NumberKundli',
   'nav.profile': 'Profile', 'nav.mobile': 'Mobile Number', 'nav.pin': 'PIN', 'nav.password': 'Password', 'nav.wallpaper': 'Wallpaper',
   'nav.cover': 'Cover & Colour', 'nav.affirmation': 'Affirmation', 'nav.report': 'Report', 'nav.buy': 'Buy a Number',
   'nav.blog': 'Blog', 'nav.analyse': 'Analyse', 'nav.numbers': 'Birth Numbers', 'nav.sections': 'My results',
@@ -99,7 +99,7 @@ I18N.register('en', { ui: {
   'col.good': 'Supportive for you', 'col.avoid': 'Better to avoid', 'col.neutral': 'Neutral', 'col.energy': 'Energy of number {nums} ({planets})',
   'a.ringtone': 'Ringtone', 'a.mantra': 'Mantra', 'toast.copied': 'Copied {text}',
 
-  'r.brand': 'MOBILE NUMEROLOGY', 'r.title': 'Personal Report', 'r.dob': 'Date of birth', 'r.purpose': 'Purpose', 'r.generated': 'Generated',
+  'r.brand': 'NUMBERKUNDLI', 'r.title': 'Personal Report', 'r.dob': 'Date of birth', 'r.purpose': 'Purpose', 'r.generated': 'Generated',
   'r.s1': '1. Core numbers', 'r.s2': '2. Mobile number analysis', 'r.s3': '3. PIN codes', 'r.s4': '4. Password (Chaldean)', 'r.s5': '5. Wallpaper', 'r.s6': '6. Back cover & phone colour', 'r.s7': '7. Affirmation, ringtone & mantra',
   'r.number': 'Number', 'r.total': 'Total', 'r.withBN': 'With BN {n}', 'r.withDN': 'With DN {n}', 'r.balancerTotal': 'Balancer total',
   'r.warnings': 'Warnings ({n})', 'r.strengths': 'Strengths ({n})', 'r.noMobile': 'No mobile number was entered.',
