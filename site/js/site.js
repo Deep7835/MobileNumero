@@ -12,6 +12,17 @@
     return;
   }
 
+  /* ---------- 1b. Theme (dark by default; light if saved or preferred). The <head> snippet applies it pre-paint. ---------- */
+  const root = document.documentElement;
+  const setIcons = () => document.querySelectorAll('.theme-toggle').forEach(b => b.textContent = root.dataset.theme === 'light' ? '🌙' : '☀️');
+  setIcons();
+  document.querySelectorAll('.theme-toggle').forEach(b => b.addEventListener('click', () => {
+    const light = root.dataset.theme !== 'light';
+    if (light) root.dataset.theme = 'light'; else root.removeAttribute('data-theme');
+    try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch {}
+    setIcons();
+  }));
+
   /* ---------- 2. Mobile navigation ---------- */
   const navBtn = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');

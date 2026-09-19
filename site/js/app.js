@@ -19,13 +19,6 @@
   function copy(text) { navigator.clipboard?.writeText(text).then(() => toast(t('toast.copied', { text }))); }
   window.__copy = copy;
 
-  /* ---------- theme ---------- */
-  const root = document.documentElement;
-  try { const saved = localStorage.getItem('theme'); if (saved) root.dataset.theme = saved; } catch {}
-  const setThemeIcon = () => $('#themeToggle').textContent = root.dataset.theme === 'light' ? '🌙' : '☀️';
-  setThemeIcon();
-  $('#themeToggle').onclick = () => { root.dataset.theme = root.dataset.theme === 'light' ? '' : 'light'; if (!root.dataset.theme) root.removeAttribute('data-theme'); try { localStorage.setItem('theme', root.dataset.theme || ''); } catch {} setThemeIcon(); };
-
   /* ---------- language ---------- */
   const langSel = $('#langSelect');
   Object.entries(I18N.LANGS).forEach(([code, l]) => langSel.append(new Option(l.native, code)));

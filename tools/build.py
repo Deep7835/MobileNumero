@@ -47,7 +47,7 @@ SITE_URL = 'https://numberkundli.com'   # keep in sync with site/js/site-config.
 SITE_NAME = 'NumberKundli'
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=23'
+VER = 'v=24'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -176,6 +176,8 @@ def esc(s): return html.escape(s, quote=True)
 def fmt_date(iso): return datetime.date.fromisoformat(iso).strftime('%d %B %Y')
 BY = {p['slug']: p for p in POSTS}
 
+THEME_PRE = "<script>(function(){try{var m=localStorage.getItem('theme');if(m==='light'||(m===null&&matchMedia('(prefers-color-scheme: light)').matches))document.documentElement.setAttribute('data-theme','light')}catch(e){}})()</script>"
+
 def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth=1, lang='en', alternates=None):
     up = '../' * depth; u = UI[lang]
     alt_links = ''.join(f'<link rel="alternate" hreflang="{l}" href="{SITE_URL}/{p}" />' for l, p in (alternates or {}).items()) + (f'<link rel="alternate" hreflang="x-default" href="{SITE_URL}/{alternates["en"]}" />' if alternates and 'en' in alternates else '')
@@ -224,6 +226,7 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{up}css/styles.css?{VER}" />
+  {THEME_PRE}
   {'<style>:root{--font:' + FONT_CSS[lang][0] + ';--display:' + FONT_CSS[lang][1] + '}</style>' if lang != 'en' else ''}
 </head>
 <body>
@@ -238,6 +241,7 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
       <a href="{up}numbers/">{u['numbers']}</a>
     </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <button class="icon-btn theme-toggle" title="Toggle theme" aria-label="Toggle theme">☀️</button>
     <a class="btn sm" href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}#mainForm" style="margin-left:8px">{u['free']}</a>
   </div>
 </nav>
