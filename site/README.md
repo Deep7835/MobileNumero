@@ -49,6 +49,10 @@ Hosting configs are included for Netlify (`netlify.toml`, repo root), Vercel (`v
 | 19 | Analytics | GA4 (IP-anonymised) or Plausible via `site-config.js`, consent-gated; `trackEvent()` fires `analysis_generated` and `pdf_downloaded` |
 | 20 | One clear CTA | "Get my free analysis" — hero button, sticky button on scroll, CTA box in every post, 404 page |
 
+## Standalone calculators
+
+`tools/` holds five single-purpose pages generated from `tools/calculators.py` (specs) + `site/js/tools.js` (UI): Life Path, Name numerology (Chaldean & Pythagorean), Compatibility (two DOBs → 0–100), Personal Year/Month/Day, and Lo Shu grid with planes. Engine functions: `lifePath`, `pythagorean`, `compatibility`, `personalCycle`, `loShuPlanes` in `numerology.js`; meanings in `data.js` (`lifePath`, `personalYear`, `loShu`). English-only for now.
+
 ## Lucky number generator, compare & share
 
 `Numerology.generateNumbers(profile)` builds candidate 10-digit numbers per pattern (555 / 55 / 6 / 3 / 7 endings, repeating pairs, balanced mix) from the ideal-digit table, validates each with `analyzeMobile`, and keeps only numbers scoring ≥ 80 whose total is not an enemy of BN or DN. A seeded PRNG makes the suggestions stable per date of birth. `compareNumbers()` scores 2–3 candidates side by side. Share buttons use the Web Share API with a WhatsApp fallback.

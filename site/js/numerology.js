@@ -294,6 +294,58 @@ const Numerology = (() => {
     return rows.map(x => ({ ...x, best: x.res.score === best }));
   }
 
-  return { reduce, reduceSteps, relation, profileFromDOB, chaldean, analyzeMobile, idealDigitsByPosition, generateNumbers, compareNumbers,
+  /* ---------- Life Path ---------- */
+  function lifePath(isoDate) {
+    const p = profileFromDOB(isoDate);
+    const master = p.dnSteps.find(x => [11, 22, 33].includes(x)) || null;
+    return { ...p, master, meaning: DATA.lifePath[p.dn], birthMeaning: DATA.lifePath[p.bn] };
+  }
+
+  /* ---------- Personal Year / Month / Day ---------- */
+  function personalCycle(isoDate, onDate) {
+    const [, m, d] = isoDate.split('-').map(Number);
+    const now = onDate ? new Date(onDate + 'T00:00:00') : new Date();
+    // Personal year runs from birthday to birthday; before this year's birthday the previous calendar year applies
+    const yr = now.getFullYear() - ((now.getMonth() + 1 < m || (now.getMonth() + 1 === m && now.getDate() < d)) ? 1 : 0);
+    const pySteps = reduceSteps(sum(digitsOf(d)) + sum(digitsOf(m)) + sum(digitsOf(yr)));
+    const py = pySteps[pySteps.length - 1];
+    const pm = reduce(py + now.getMonth() + 1);
+    const pd = reduce(pm + now.getDate());
+    return { year: yr, personalYear: py, pySteps, personalMonth: pm, personalDay: pd, cycleStart: `${yr}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`, cycleEnd: `${yr + 1}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`, meaning: DATA.personalYear[py], nextYear: DATA.personalYear[py === 9 ? 1 : py + 1] };
+  }
+
+  /* ---------- Compatibility between two dates of birth ---------- */
+  function compatibility(dobA, dobB) {
+    const a = profileFromDOB(dobA), b = profileFromDOB(dobB);
+    const score2 = (x, y) => { const r1 = relation(x, y), r2 = relation(y, x); const v = r => r === 'friendly' ? 1 : r === 'neutral' ? 0.5 : 0; return (v(r1) + v(r2)) / 2; };
+    const parts = [
+      { key: 'bn', label: 'Birth number ↔ Birth number', a: a.bn, b: b.bn, weight: 40, s: score2(a.bn, b.bn), rAB: relation(a.bn, b.bn), rBA: relation(b.bn, a.bn) },
+      { key: 'dn', label: 'Destiny number ↔ Destiny number', a: a.dn, b: b.dn, weight: 30, s: score2(a.dn, b.dn), rAB: relation(a.dn, b.dn), rBA: relation(b.dn, a.dn) },
+      { key: 'ab', label: 'A\'s Birth ↔ B\'s Destiny', a: a.bn, b: b.dn, weight: 15, s: score2(a.bn, b.dn), rAB: relation(a.bn, b.dn), rBA: relation(b.dn, a.bn) },
+      { key: 'ba', label: 'B\'s Birth ↔ A\'s Destiny', a: b.bn, b: a.dn, weight: 15, s: score2(b.bn, a.dn), rAB: relation(b.bn, a.dn), rBA: relation(a.dn, b.bn) },
+    ];
+    const score = Math.round(parts.reduce((t, p) => t + p.s * p.weight, 0));
+    const shared = [1,2,3,4,5,6,7,8,9].filter(n => a.balancers.includes(n) && b.balancers.includes(n));
+    const grade = score >= 80 ? 'Excellent' : score >= 60 ? 'Good' : score >= 40 ? 'Average' : 'Needs change';
+    return { a, b, parts, score, grade, shared };
+  }
+
+  /* ---------- Pythagorean name value (alternative to Chaldean) ---------- */
+  function pythagorean(str) {
+    const letters = []; let total = 0;
+    for (const ch of String(str).toUpperCase()) {
+      if (/[A-Z]/.test(ch)) { const v = ((ch.charCodeAt(0) - 65) % 9) + 1; letters.push({ ch, v }); total += v; }
+      else if (/[0-9]/.test(ch)) { const v = Number(ch); letters.push({ ch, v }); total += v; }
+      else if (ch.trim()) letters.push({ ch, v: 0 });
+    }
+    return { letters, total, steps: reduceSteps(total), single: reduce(total) };
+  }
+
+  /* ---------- Lo Shu planes ---------- */
+  function loShuPlanes(grid) {
+    return DATA.loShu.planes.map(pl => ({ ...pl, complete: pl.cells.every(c => grid[c] > 0), present: pl.cells.filter(c => grid[c] > 0).length }));
+  }
+
+  return { reduce, reduceSteps, relation, profileFromDOB, chaldean, pythagorean, analyzeMobile, idealDigitsByPosition, generateNumbers, compareNumbers, lifePath, personalCycle, compatibility, loShuPlanes,
            checkPin, generatePins, recommendCovers, recommendColors, purposePins, purposePasswords, balancerNumbers, digitsOf };
 })();

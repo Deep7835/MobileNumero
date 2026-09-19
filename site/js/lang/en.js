@@ -2,6 +2,7 @@ I18N.register('en', { ui: {
   'brand': 'NumberKundli',
   'nav.profile': 'Profile', 'nav.mobile': 'Mobile Number', 'nav.pin': 'PIN', 'nav.password': 'Password', 'nav.wallpaper': 'Wallpaper',
   'nav.cover': 'Cover & Colour', 'nav.affirmation': 'Affirmation', 'nav.report': 'Report', 'nav.buy': 'Buy a Number',
+  'nav.calc': 'Calculators', 'calc.h': 'Free numerology calculators', 'calc.p': 'Single-purpose tools that answer one question each — no sign-up, nothing stored.',
   'nav.blog': 'Blog', 'nav.analyse': 'Analyse', 'nav.numbers': 'Birth Numbers', 'nav.sections': 'My results',
   'nav.lucky': 'Lucky Numbers',
   'sec.lucky.h': 'Lucky mobile numbers for you', 'sec.lucky.p': 'Ready-to-search 10-digit numbers that satisfy the position rules and whose total is friendly to both your Birth and Destiny numbers. Copy one and search for it on the VIP-number sites below.',

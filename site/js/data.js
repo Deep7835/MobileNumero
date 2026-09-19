@@ -267,4 +267,67 @@ const DATA = {
     { id: 'travel',       label: 'Foreign travel',        pinKeys: ['Foreign travel'], pwTotals: [6], tags: [] },
     { id: 'property',     label: 'Property & legal',      pinKeys: ['Property', 'Construction of house', 'Court case'], pwTotals: [8, 4], tags: ['money'] },
   ],
+
+  /* ---------- Life Path (Destiny) number meanings ---------- */
+  lifePath: {
+    1: { title: 'The Leader',       traits: 'Independent, original, ambitious and self-reliant. You are here to lead, initiate and stand on your own feet.', strengths: ['Initiative and courage', 'Originality', 'Determination'], challenges: ['Ego and stubbornness', 'Impatience with others', 'Loneliness at the top'], careers: 'Entrepreneur, founder, manager, politician, surgeon, army officer', relationships: 'Needs a partner who respects independence; best with 1, 2, 3, 5, 6, 9.' },
+    2: { title: 'The Diplomat',     traits: 'Sensitive, cooperative, intuitive and peace-loving. You are here to partner, mediate and nurture.', strengths: ['Empathy and tact', 'Patience', 'Artistic sense'], challenges: ['Over-sensitivity', 'Indecision', 'Dependence on others'], careers: 'Counsellor, diplomat, nurse, teacher, musician, HR', relationships: 'Thrives in partnership; best with 1, 3, 5.' },
+    3: { title: 'The Communicator', traits: 'Expressive, optimistic, creative and knowledge-loving. You are here to teach, create and uplift.', strengths: ['Communication', 'Optimism', 'Wisdom'], challenges: ['Scattered energy', 'Exaggeration', 'Difficulty finishing'], careers: 'Teacher, writer, lawyer, advisor, banker, priest, media', relationships: 'Warm and generous; best with 1, 2, 3, 5.' },
+    4: { title: 'The Builder',      traits: 'Practical, disciplined, hard-working and unconventional. You are here to build lasting structures, often the hard way.', strengths: ['Discipline', 'Reliability', 'Technical skill'], challenges: ['Rigidity', 'Sudden ups and downs', 'Overwork'], careers: 'Engineer, technician, researcher, IT, journalist, real estate', relationships: 'Loyal but reserved; best with 1, 5, 6, 7.' },
+    5: { title: 'The Freedom Seeker', traits: 'Adaptable, curious, persuasive and restless. You are here to communicate, trade and experience change.', strengths: ['Versatility', 'Quick thinking', 'Charm'], challenges: ['Restlessness', 'Impulsiveness', 'Lack of follow-through'], careers: 'Business, sales, marketing, travel, media, finance, IT', relationships: 'Needs variety and freedom; friendly with everyone (1, 2, 3, 5, 6).' },
+    6: { title: 'The Nurturer',     traits: 'Loving, responsible, artistic and family-oriented. You are here to care, beautify and harmonise.', strengths: ['Responsibility', 'Charm and beauty', 'Loyalty'], challenges: ['Over-giving', 'Worry', 'Attachment to comfort'], careers: 'Arts, fashion, hospitality, interior design, medicine, luxury goods', relationships: 'Devoted partner and parent; best with 1, 5, 6, 7.' },
+    7: { title: 'The Seeker',       traits: 'Analytical, spiritual, introspective and original. You are here to research, understand and go deeper than others.', strengths: ['Analysis', 'Intuition', 'Independence'], challenges: ['Aloofness', 'Secretiveness', 'Doubt'], careers: 'Research, science, spirituality, psychology, occult, writing', relationships: 'Private and selective; best with 1, 3, 4, 5, 6.' },
+    8: { title: 'The Executive',    traits: 'Ambitious, disciplined, persistent and just. You are here to master the material world through effort and patience.', strengths: ['Endurance', 'Organisation', 'Sense of justice'], challenges: ['Delays and setbacks', 'Workaholism', 'Emotional distance'], careers: 'Business, finance, law, real estate, administration, mining', relationships: 'Slow to open up but steadfast; best with 3, 5, 6, 7.' },
+    9: { title: 'The Humanitarian', traits: 'Courageous, energetic, generous and idealistic. You are here to serve, fight for causes and complete cycles.', strengths: ['Courage', 'Compassion', 'Drive'], challenges: ['Anger and impatience', 'Impulsiveness', 'Difficulty letting go'], careers: 'Defence, sports, surgery, engineering, social work, leadership', relationships: 'Passionate and protective; best with 1, 2, 3, 5, 6.' },
+  },
+  masterNumbers: { 11: 'Master Intuitive — heightened sensitivity and inspiration (reduces to 2)', 22: 'Master Builder — big visions made practical (reduces to 4)', 33: 'Master Teacher — compassionate service (reduces to 6)' },
+
+  /* ---------- Personal Year cycle ---------- */
+  personalYear: {
+    1: { theme: 'New beginnings', text: 'A fresh nine-year cycle starts. Plant seeds: launch, apply, move, begin. Act on your own initiative rather than waiting.', focus: ['Start projects', 'Take the lead', 'Define goals'], avoid: ['Clinging to the past', 'Waiting for permission'] },
+    2: { theme: 'Patience & partnership', text: 'Things grow slowly beneath the surface. Cooperate, listen, build alliances, and let relationships mature. Details matter more than speed.', focus: ['Partnerships', 'Diplomacy', 'Rest and reflection'], avoid: ['Forcing outcomes', 'Over-sensitivity'] },
+    3: { theme: 'Expression & growth', text: 'A social, creative and optimistic year. Communicate, study, travel, network. Your ideas find an audience.', focus: ['Creativity', 'Learning', 'Social life'], avoid: ['Scattering energy', 'Overspending'] },
+    4: { theme: 'Work & foundations', text: 'A year of effort, discipline and practical building. Organise finances, health and routines. Results come from consistency, not luck.', focus: ['Discipline', 'Health', 'Long-term structure'], avoid: ['Shortcuts', 'Neglecting details'] },
+    5: { theme: 'Change & freedom', text: 'Expect movement: travel, new people, changes in work or home. Stay flexible and say yes to opportunity, but keep one foot on the ground.', focus: ['Adaptability', 'Communication', 'New experiences'], avoid: ['Impulsive decisions', 'Excess'] },
+    6: { theme: 'Home & responsibility', text: 'Family, love, home and duty take centre stage. A good year for marriage, children, property and healing relationships.', focus: ['Family', 'Service', 'Beauty and comfort'], avoid: ['Over-giving', 'Interfering'] },
+    7: { theme: 'Reflection & study', text: 'A quieter, inward year. Research, study, spiritual practice and rest bring more than pushing outward. Trust your intuition.', focus: ['Learning', 'Spirituality', 'Health'], avoid: ['Isolation', 'Over-analysis'] },
+    8: { theme: 'Power & harvest', text: 'The material peak of the cycle. Money, authority, recognition and karma return in proportion to the effort of past years. Manage resources wisely.', focus: ['Career', 'Finance', 'Leadership'], avoid: ['Arrogance', 'Cutting corners'] },
+    9: { theme: 'Completion & release', text: 'The cycle closes. Finish, forgive, declutter and let go of what no longer serves you, making room for the new cycle ahead.', focus: ['Closure', 'Generosity', 'Letting go'], avoid: ['Starting major new ventures', 'Holding grudges'] },
+  },
+
+  /* ---------- Lo Shu grid ---------- */
+  loShu: {
+    missing: {
+      1: 'Difficulty expressing yourself; low confidence; may struggle to speak up for your own needs.',
+      2: 'Lack of intuition and patience; over-sensitivity; difficulty sensing others\' feelings.',
+      3: 'Struggles with focus, knowledge and self-expression; may doubt your own intelligence.',
+      4: 'Disorganisation and impractical planning; discipline has to be learned consciously.',
+      5: 'Weak communication and balance; resistance to change; may be easily influenced.',
+      6: 'Family and relationship friction; money does not stick; responsibility feels heavy.',
+      7: 'Little spiritual grounding; hard to learn from setbacks; may repeat the same mistakes.',
+      8: 'Money management and discipline issues; may swing between spending and hoarding.',
+      9: 'Low drive and ambition; humanitarian and caring instincts are underdeveloped.',
+    },
+    repeated: {
+      1: 'Strong self-expression; three or more 1s can make you talk too much or too little.',
+      2: 'Very sensitive and intuitive; too many 2s bring moodiness and impatience.',
+      3: 'Sharp mind and imagination; excess can mean over-thinking and criticism.',
+      4: 'Practical and hard-working; excess brings rigidity and stress.',
+      5: 'Strong drive and balance; too many 5s make you restless and accident-prone.',
+      6: 'Creative, caring and home-loving; excess brings worry and over-attachment.',
+      7: 'Learns through experience; excess brings loss, disappointment or isolation.',
+      8: 'Detail-oriented and disciplined; excess brings restlessness and money swings.',
+      9: 'Idealistic and ambitious; excess brings anger and impulsiveness.',
+    },
+    planes: [
+      { id: 'mind',        name: 'Mental plane (4-9-2)',        cells: [4, 9, 2], text: 'Excellent memory, thinking and analytical ability.' },
+      { id: 'emotional',   name: 'Emotional plane (3-5-7)',     cells: [3, 5, 7], text: 'Emotional balance, spiritual awareness and sensitivity.' },
+      { id: 'practical',   name: 'Practical plane (8-1-6)',     cells: [8, 1, 6], text: 'Practical skill, ability to turn ideas into results.' },
+      { id: 'thought',     name: 'Thought plane (4-3-8)',       cells: [4, 3, 8], text: 'Orderly, methodical thinking; good planner.' },
+      { id: 'will',        name: 'Will plane (9-5-1)',          cells: [9, 5, 1], text: 'Strong will and determination; pushes through obstacles.' },
+      { id: 'action',      name: 'Action plane (2-7-6)',        cells: [2, 7, 6], text: 'Turns plans into action; good with people.' },
+      { id: 'determination', name: 'Determination plane (4-5-6)', cells: [4, 5, 6], text: 'Persistence and follow-through; achieves goals.' },
+      { id: 'spiritual',   name: 'Spiritual plane (2-5-8)',     cells: [2, 5, 8], text: 'Compassion, intuition and spiritual insight.' },
+    ],
+  },
 };

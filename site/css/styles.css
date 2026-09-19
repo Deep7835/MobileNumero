@@ -420,3 +420,17 @@ footer { padding: 40px 0 60px; color: var(--muted); font-size: .85rem; border-to
 
 .lang-switch { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 4px 0 18px; }
 .lang-switch .chip { text-decoration: none; }
+
+/* ---------- calculator pages ---------- */
+.tool-layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; align-items: start; padding-top: 24px; }
+.tool-nav { position: sticky; top: 84px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px; }
+.tool-nav-head { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 8px 12px 6px; }
+.tool-nav a { display: flex; align-items: center; gap: 12px; padding: 11px 12px; border-radius: 12px; color: var(--text); font-weight: 500; font-size: .95rem; }
+.tool-nav a:hover { background: var(--surface-2); text-decoration: none; }
+.tool-nav a.active { background: var(--surface-2); font-weight: 700; }
+.tool-nav .ico { width: 26px; text-align: center; font-size: 1.05rem; opacity: .9; }
+.tool-card { text-decoration: none; color: var(--text); display: block; transition: transform .2s, border-color .2s; }
+.tool-card:hover { transform: translateY(-3px); border-color: rgba(139,123,255,.45); text-decoration: none; }
+.tool-ico { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; font-size: 1.5rem; background: linear-gradient(135deg, rgba(139,123,255,.25), rgba(255,203,71,.2)); margin-bottom: 12px; }
+.tool-card h3 { margin-bottom: 4px; }
+@media (max-width: 900px) { .tool-layout { grid-template-columns: 1fr; } .tool-nav { position: static; display: flex; flex-wrap: wrap; gap: 4px; } .tool-nav-head { width: 100%; } .tool-nav a { padding: 8px 10px; font-size: .88rem; } }
