@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "site",
   "cleanUrls": true,
   "redirects": [
     { "source": "/:path*", "has": [{ "type": "host", "value": "numberkundli.in" }], "destination": "https://numberkundli.com/:path*", "permanent": true },

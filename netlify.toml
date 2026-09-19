@@ -1,4 +1,8 @@
-# Netlify: force HTTPS, serve custom 404, cache static assets
+# Netlify: publish the static site/ folder, force HTTPS + canonical host, custom 404, cache assets
+[build]
+  publish = "site"
+  command = ""
+
 [[redirects]]
   from = "http://*"
   to = "https://:splat"
