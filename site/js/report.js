@@ -13,7 +13,7 @@ const Report = (() => {
   const ftext = f => f.key ? t(f.key, f.vars) : td(f.text);
 
   const RAW_CSS = `
-    *{box-sizing:border-box;font-family:var(--rfont, Inter, Helvetica, Arial, sans-serif)}
+    *{box-sizing:border-box;font-family:var(--rfont, Geist, Inter, Helvetica, Arial, sans-serif)}
     body{color:#1b1d33;margin:0;font-size:12px;line-height:1.45;background:#fff;width:100%}
     .page{padding:28px 32px}
     h1{font-size:24px;margin:0 0 2px} h2{font-size:15px;margin:16px 0 8px;padding-bottom:4px;border-bottom:2px solid #8b7bff;color:#2b2560}
@@ -43,7 +43,7 @@ const Report = (() => {
   const CSS = RAW_CSS.replace(/([^{}]+)\{/g, (m, sel) =>
     sel.split(',').map(x => { x = x.trim(); return x === 'body' ? '.rpt' : x === '*' ? '.rpt *' : '.rpt ' + x; }).join(', ') + '{');
   const wrap = inner => `<style>${CSS}</style><div class="rpt" lang="${I18N.lang}" style="--rfont:${I18N.fontFor()}">${inner}</div>`;
-  const doc = inner => `<!DOCTYPE html><html><head><meta charset="utf-8"><title>Numerology report</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet" /></head><body style="margin:0">${wrap(inner)}</body></html>`;
+  const doc = inner => `<!DOCTYPE html><html><head><meta charset="utf-8"><title>Numerology report</title><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet" /></head><body style="margin:0">${wrap(inner)}</body></html>`;
 
   const DISCLAIMER = 'Numerology is a belief-based practice offered for guidance and entertainment; it is not medical, legal or financial advice. Never share your real PIN or password. Content based on the Advance Mobile Numerology Class material by Dr. Isha Thakkar Numerology.';
 
@@ -161,7 +161,7 @@ const Report = (() => {
   async function download(profile, opts) {
     await loadLib();
     const overlay = document.createElement('div');
-    overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(10,12,24,.92);display:grid;place-items:center;color:#fff;font:600 16px Inter,sans-serif';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(10,12,24,.92);display:grid;place-items:center;color:#fff;font:600 16px Geist,Inter,sans-serif';
     overlay.textContent = t('report.overlay');
     const host = document.createElement('div');
     host.style.cssText = 'position:fixed;top:0;left:0;width:748px;z-index:9998;background:#fff';

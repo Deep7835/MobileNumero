@@ -6,11 +6,11 @@
    ===================================================================== */
 const I18N = (() => {
   const LANGS = {
-    en: { name: 'English',  native: 'English',  font: "'Inter', system-ui, sans-serif", display: "'Playfair Display', Georgia, serif" },
-    hi: { name: 'Hindi',    native: 'हिन्दी',   font: "'Noto Sans Devanagari', 'Inter', sans-serif", display: "'Noto Sans Devanagari', serif" },
-    mr: { name: 'Marathi',  native: 'मराठी',    font: "'Noto Sans Devanagari', 'Inter', sans-serif", display: "'Noto Sans Devanagari', serif" },
-    ta: { name: 'Tamil',    native: 'தமிழ்',    font: "'Noto Sans Tamil', 'Inter', sans-serif",      display: "'Noto Sans Tamil', serif" },
-    gu: { name: 'Gujarati', native: 'ગુજરાતી',  font: "'Noto Sans Gujarati', 'Inter', sans-serif",   display: "'Noto Sans Gujarati', serif" },
+    en: { name: 'English',  native: 'English',  font: "'Geist', 'Inter', system-ui, sans-serif", display: "'Geist', 'Inter', system-ui, sans-serif" },
+    hi: { name: 'Hindi',    native: 'हिन्दी',   font: "'Noto Sans Devanagari', 'Geist', 'Inter', sans-serif", display: "'Noto Sans Devanagari', 'Geist', sans-serif" },
+    mr: { name: 'Marathi',  native: 'मराठी',    font: "'Noto Sans Devanagari', 'Geist', 'Inter', sans-serif", display: "'Noto Sans Devanagari', 'Geist', sans-serif" },
+    ta: { name: 'Tamil',    native: 'தமிழ்',    font: "'Noto Sans Tamil', 'Geist', 'Inter', sans-serif",      display: "'Noto Sans Tamil', 'Geist', sans-serif" },
+    gu: { name: 'Gujarati', native: 'ગુજરાતી',  font: "'Noto Sans Gujarati', 'Geist', 'Inter', sans-serif",   display: "'Noto Sans Gujarati', 'Geist', sans-serif" },
   };
   const packs = {};
   let lang = 'en';

@@ -19,8 +19,8 @@
   --radius: 18px;
   --radius-sm: 12px;
   --shadow: 0 20px 60px rgba(0,0,0,.45);
-  --font: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  --display: 'Playfair Display', Georgia, serif;
+  --font: 'Geist', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --display: 'Geist', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 :root[data-theme="light"] {
   --accent-ink: #8a5b00;
@@ -52,11 +52,11 @@ body {
 a { color: var(--accent-3); text-decoration: none; }
 a:hover { text-decoration: underline; }
 h1,h2,h3,h4 { margin: 0 0 .4em; line-height: 1.2; }
-h1 { font-family: var(--display); font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 600; }
+h1 { font-family: var(--display); font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; letter-spacing: -.025em; }
 html:not([lang=en]) h1 { font-size: clamp(1.9rem, 4.2vw, 3rem); line-height: 1.3; font-weight: 700; }
 html:not([lang=en]) h2 { line-height: 1.35; font-weight: 700; }
-html:not([lang=en]) .num-badge, html:not([lang=en]) .pos .d, html:not([lang=en]) .pin-card .pin, html:not([lang=en]) .score-ring .inner b { font-family: 'Playfair Display', Georgia, serif; }
-h2 { font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; }
+html:not([lang=en]) .num-badge, html:not([lang=en]) .pos .d, html:not([lang=en]) .pin-card .pin, html:not([lang=en]) .score-ring .inner b { font-family: 'Geist', 'Inter', sans-serif; }
+h2 { font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 700; letter-spacing: -.02em; }
 h3 { font-size: 1.15rem; font-weight: 600; }
 p { margin: 0 0 1em; }
 .muted { color: var(--muted); }
@@ -231,7 +231,7 @@ input::placeholder { color: var(--muted); opacity: .7; }
 .tab.active { background: linear-gradient(135deg, var(--accent-2), #a99cff); color: #14103a; border-color: transparent; }
 
 /* ---------- affirmation ---------- */
-.quote { font-family: var(--display); font-size: 1.25rem; font-style: italic; padding: 14px 18px; border-left: 3px solid var(--accent); background: var(--bg-2); border-radius: 0 12px 12px 0; margin-bottom: 12px; }
+.quote { font-family: var(--display); font-size: 1.15rem; font-weight: 500; padding: 14px 18px; border-left: 3px solid var(--accent); background: var(--bg-2); border-radius: 0 12px 12px 0; margin-bottom: 12px; }
 .mantra { font-size: 1.4rem; font-weight: 700; letter-spacing: .02em; background: linear-gradient(90deg, var(--accent-ink), var(--accent-3)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
 /* ---------- report ---------- */
@@ -360,7 +360,7 @@ footer { padding: 40px 0 60px; color: var(--muted); font-size: .85rem; border-to
 .footer-links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
 .footer-links a { color: var(--muted); }
 .err-page { text-align: center; padding: 80px 0; }
-.err-page .big { font-family: var(--display); font-size: clamp(5rem, 18vw, 10rem); line-height: 1; background: linear-gradient(135deg, var(--accent-ink), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.err-page .big { font-family: var(--display); font-weight: 800; font-size: clamp(5rem, 18vw, 10rem); line-height: 1; background: linear-gradient(135deg, var(--accent-ink), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .skip-link { position: absolute; left: -10000px; top: 8px; background: var(--accent); color: #1a1400; padding: 8px 12px; border-radius: 8px; z-index: 200; }
 .skip-link:focus { left: 8px; }
 @media (max-width: 960px) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -439,7 +439,7 @@ footer { padding: 40px 0 60px; color: var(--muted); font-size: .85rem; border-to
    JOURNAL-STYLE BLOG INDEX
    ====================================================================== */
 .journal-head { padding: 40px 0 28px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: 24px; }
-.journal-eyebrow { display: inline-block; font-family: var(--display); font-style: italic; font-size: .85rem; padding: 3px 12px; border: 1px solid var(--text); border-radius: 999px; margin-bottom: 18px; }
+.journal-eyebrow { display: inline-block; font-family: var(--display); font-weight: 500; font-size: .8rem; padding: 3px 12px; border: 1px solid var(--text); border-radius: 999px; margin-bottom: 18px; }
 .journal-head h1 { font-family: var(--font); font-weight: 700; letter-spacing: -.02em; font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 10px; }
 .journal-head p { color: var(--muted); font-size: 1.05rem; max-width: 70ch; margin: 0; }
 .journal { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding: 48px 0 24px; align-items: start; }
