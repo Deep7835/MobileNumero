@@ -78,6 +78,7 @@ I18N.register('en', { ui: {
   'm.verdict': 'Verdict', 'm.warnings': '⚠ Warnings', 'm.strengths': '✓ Strengths', 'm.warning': 'warning', 'm.warningsN': 'warnings', 'm.strength': 'strength', 'm.strengthsN': 'strengths',
   'm.hover': 'hover a digit for details', 'm.total': 'Number total', 'm.withBN': 'With your BN {n}', 'm.withDN': 'With your DN {n}',
   'm.balancerTotal': 'Balancer total', 'm.yesBoth': 'Yes — friendly to both', 'm.no': 'No', 'm.pos': 'Pos', 'm.overall': 'Overall', 'm.all': 'All',
+  'm.where': 'Because the {ord} digit of your number is {digit} — the {title} position',
   'm.enemyDigitsIn': 'Contains digits that are enemies of your BN/DN: {list}', 'm.balancerDigitsIn': 'Contains your balancer digits: {list}',
   'm.noRule': 'No specific rule for this digit here', 'm.none': 'None',
   'm.ideal.h': 'Ideal digits by position for you', 'm.ideal.legend': 'Green = positively indicated · grey = safe · missing = avoid',

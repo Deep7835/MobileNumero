@@ -167,7 +167,9 @@
       return `<div class="pos ${cls}" title="${esc(tip)}"><div class="p">P${x.pos}</div><div class="d">${x.digit}</div><div class="t">${td(x.meaning.title)}</div></div>`;
     }).join('');
 
-    const findings = (list, cls) => list.length ? list.map(f => `<div class="finding ${cls}"><span class="tag">${f.pos ? t('m.pos') + ' ' + f.pos + ' · ' + f.digit : t('m.overall')}</span><div class="txt">${ftext(f)}${f.pos ? `<small>${td(DATA.positions[f.pos].title)} — ${td(DATA.positions[f.pos].desc)}</small>` : ''}</div></div>`).join('') : `<p class="muted small">${t('m.none')}</p>`;
+    // "6th" in English; Indic languages take a suffix on the numeral
+    const ordinal = n => ({ en: n + (['th', 'st', 'nd', 'rd'][(n % 100 - 20) % 10] || ['th', 'st', 'nd', 'rd'][n % 100] || 'th'), hi: n + 'वाँ', mr: n + ' वा', gu: n + 'મો', ta: n + '-ஆவது' })[I18N.lang] || String(n);
+    const findings = (list, cls) => list.length ? list.map(f => `<div class="finding ${cls}"><span class="tag">${f.pos ? t('m.pos') + ' ' + f.pos + ' · ' + f.digit : t('m.overall')}</span><div class="txt">${ftext(f)}${f.pos ? `<small>${t('m.where', { ord: ordinal(f.pos), digit: f.digit, title: td(DATA.positions[f.pos].title) })}</small>` : ''}</div></div>`).join('') : `<p class="muted small">${t('m.none')}</p>`;
 
     const compat = p && r.compat ? `
       <div class="kv">

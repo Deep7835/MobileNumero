@@ -71,6 +71,7 @@ I18N.register('gu', { ui: {
   'm.verdict': 'નિષ્કર્ષ', 'm.warnings': '⚠ ચેતવણીઓ', 'm.strengths': '✓ શક્તિઓ', 'm.warning': 'ચેતવણી', 'm.warningsN': 'ચેતવણીઓ', 'm.strength': 'શક્તિ', 'm.strengthsN': 'શક્તિઓ',
   'm.hover': 'વિગત માટે અંક પર કર્સર રાખો', 'm.total': 'નંબરનો સરવાળો', 'm.withBN': 'તમારા BN {n} સાથે', 'm.withDN': 'તમારા DN {n} સાથે',
   'm.balancerTotal': 'બેલેન્સર સરવાળો', 'm.yesBoth': 'હા — બંનેના મિત્ર', 'm.no': 'ના', 'm.pos': 'પોઝ.', 'm.overall': 'એકંદર', 'm.all': 'બધા',
+  'm.where': 'કારણ કે તમારા નંબરનો {ord} અંક {digit} છે — {title} સ્થાન',
   'm.enemyDigitsIn': 'આમાં તમારા BN/DN ના શત્રુ અંકો છે: {list}', 'm.balancerDigitsIn': 'આમાં તમારા બેલેન્સર અંકો છે: {list}',
   'm.noRule': 'આ અંક માટે અહીં કોઈ ખાસ નિયમ નથી', 'm.none': 'કોઈ નહીં',
   'm.ideal.h': 'તમારા માટે દરેક પોઝિશનના આદર્શ અંકો', 'm.ideal.legend': 'લીલો = શુભ સંકેત · ગ્રે = સલામત · ખૂટતા = ટાળો',

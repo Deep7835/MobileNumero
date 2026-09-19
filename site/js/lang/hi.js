@@ -71,6 +71,7 @@ I18N.register('hi', { ui: {
   'm.verdict': 'निष्कर्ष', 'm.warnings': '⚠ चेतावनियाँ', 'm.strengths': '✓ ताक़तें', 'm.warning': 'चेतावनी', 'm.warningsN': 'चेतावनियाँ', 'm.strength': 'ताक़त', 'm.strengthsN': 'ताक़तें',
   'm.hover': 'विवरण के लिए अंक पर कर्सर रखें', 'm.total': 'नंबर का योग', 'm.withBN': 'आपके BN {n} के साथ', 'm.withDN': 'आपके DN {n} के साथ',
   'm.balancerTotal': 'बैलेंसर योग', 'm.yesBoth': 'हाँ — दोनों के मित्र', 'm.no': 'नहीं', 'm.pos': 'पोज़.', 'm.overall': 'समग्र', 'm.all': 'सभी',
+  'm.where': 'क्योंकि आपके नंबर का {ord} अंक {digit} है — {title} स्थान',
   'm.enemyDigitsIn': 'इसमें आपके BN/DN के शत्रु अंक हैं: {list}', 'm.balancerDigitsIn': 'इसमें आपके बैलेंसर अंक हैं: {list}',
   'm.noRule': 'इस अंक के लिए यहाँ कोई विशेष नियम नहीं', 'm.none': 'कोई नहीं',
   'm.ideal.h': 'आपके लिए हर पोज़ीशन के आदर्श अंक', 'm.ideal.legend': 'हरा = शुभ संकेत · ग्रे = सुरक्षित · गायब = बचें',

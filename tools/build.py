@@ -47,7 +47,7 @@ SITE_URL = 'https://numberkundli.com'   # keep in sync with site/js/site-config.
 SITE_NAME = 'NumberKundli'
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=25'
+VER = 'v=26'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
