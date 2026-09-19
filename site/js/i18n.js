@@ -46,7 +46,6 @@ const I18N = (() => {
     root.querySelectorAll('[data-i18n-html]').forEach(el => el.innerHTML = t(el.dataset.i18nHtml));
     root.querySelectorAll('[data-i18n-ph]').forEach(el => el.placeholder = t(el.dataset.i18nPh));
     root.querySelectorAll('[data-i18n-title]').forEach(el => el.title = t(el.dataset.i18nTitle));
-    root.querySelectorAll('[data-i18n-thanks]').forEach(el => el.dataset.thanks = t(el.dataset.i18nThanks));
   }
 
   function init() {

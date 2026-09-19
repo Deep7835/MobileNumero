@@ -87,20 +87,6 @@
     requestAnimationFrame(() => banner.classList.add('show'));
   }
 
-  /* ---------- 3b. Newsletter (Netlify Forms; AJAX with graceful fallback) ---------- */
-  document.querySelectorAll('form.news-form').forEach(f => {
-    f.addEventListener('submit', async e => {
-      const note = f.nextElementSibling; const email = f.querySelector('input[type=email]').value.trim();
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { e.preventDefault(); note.textContent = 'Please enter a valid email.'; return; }
-      if (isLocal || location.protocol === 'file:') { e.preventDefault(); note.textContent = note.dataset.thanks + ' (demo — submissions are stored once the site is on Netlify)'; f.reset(); return; }
-      e.preventDefault(); note.textContent = '…';
-      try {
-        const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f)).toString() });
-        if (!r.ok) throw new Error(r.status);
-        note.textContent = note.dataset.thanks; f.reset(); if (window.trackEvent) trackEvent('newsletter_signup', {});
-      } catch { f.removeEventListener('submit', arguments.callee); f.submit(); }   // fall back to a normal POST
-    });
-  });
   const socials = (cfg.social || {}); const socialHtml = Object.entries(socials).filter(([, v]) => v).map(([k, v]) => `<a href="${v}" target="_blank" rel="noopener" style="margin-right:12px">${{instagram: 'Instagram', youtube: 'YouTube', facebook: 'Facebook', x: 'X', linkedin: 'LinkedIn'}[k] || k}</a>`).join('');
   document.querySelectorAll('[data-social-links]').forEach(el => el.innerHTML = socialHtml ? socialHtml + '<span class="dot">·</span> ' : '');
 
