@@ -45,7 +45,7 @@ SITE_URL = 'https://www.mobilenumerology.example'   # keep in sync with site/js/
 SITE_NAME = 'Mobile Numerology'
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=15'
+VER = 'v=16'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):

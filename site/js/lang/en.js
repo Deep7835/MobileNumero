@@ -2,7 +2,7 @@ I18N.register('en', { ui: {
   'brand': 'Mobile Numerology',
   'nav.profile': 'Profile', 'nav.mobile': 'Mobile Number', 'nav.pin': 'PIN', 'nav.password': 'Password', 'nav.wallpaper': 'Wallpaper',
   'nav.cover': 'Cover & Colour', 'nav.affirmation': 'Affirmation', 'nav.report': 'Report', 'nav.buy': 'Buy a Number',
-  'nav.analyse': 'Analyse', 'nav.numbers': 'Birth Numbers', 'nav.sections': 'My results',
+  'nav.blog': 'Blog', 'nav.analyse': 'Analyse', 'nav.numbers': 'Birth Numbers', 'nav.sections': 'My results',
   'nav.lucky': 'Lucky Numbers',
   'sec.lucky.h': 'Lucky mobile numbers for you', 'sec.lucky.p': 'Ready-to-search 10-digit numbers that satisfy the position rules and whose total is friendly to both your Birth and Destiny numbers. Copy one and search for it on the VIP-number sites below.',
   'lucky.end555': 'Ends with 555', 'lucky.end55': 'Ends with 55', 'lucky.end6': 'Ends with 6 (money)', 'lucky.end3': 'Ends with 3 (opportunity)', 'lucky.end7': 'Ends with 7', 'lucky.pairs': 'Repeating pairs', 'lucky.mixed': 'Balanced mix',
