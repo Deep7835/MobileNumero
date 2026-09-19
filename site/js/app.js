@@ -115,7 +115,7 @@
       </div>`;
 
     const bnHtml = numCard(p.bn, '', t('p.bn'), `${t('p.day')} ${steps(p.bnSteps)}`,
-      `<div class="divider"></div><div class="small muted" style="margin-bottom:6px">${t('p.friendlyBN')}</div><div class="chips">${p.friendsBN.map(x => `<span class="digit-chip good">${x}</span>`).join('')}</div><p class="small" style="margin:10px 0 0"><a href="numbers/birth-number-${p.bn}.html">${t('p.readMore', { n: p.bn })} →</a></p>`);
+      `<div class="divider"></div><div class="small muted" style="margin-bottom:6px">${t('p.friendlyBN')}</div><div class="chips">${p.friendsBN.map(x => `<span class="digit-chip good">${x}</span>`).join('')}</div><p class="small" style="margin:10px 0 0"><a href="numbers/birth-number-${p.bn}">${t('p.readMore', { n: p.bn })} →</a></p>`);
     const dnHtml = numCard(p.dn, 'violet', t('p.dn'), `${p.day}/${p.month}/${p.year} → ${steps(p.dnSteps)}`,
       `<div class="divider"></div><div class="small muted" style="margin-bottom:6px">${t('p.friendlyDN')}</div><div class="chips">${p.friendsDN.map(x => `<span class="digit-chip good">${x}</span>`).join('')}</div>`);
 

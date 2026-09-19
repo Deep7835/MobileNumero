@@ -47,7 +47,7 @@ SITE_URL = 'https://numberkundli.com'   # keep in sync with site/js/site-config.
 SITE_NAME = 'NumberKundli'
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=24'
+VER = 'v=25'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -175,6 +175,15 @@ def brand_images():
 def esc(s): return html.escape(s, quote=True)
 def fmt_date(iso): return datetime.date.fromisoformat(iso).strftime('%d %B %Y')
 BY = {p['slug']: p for p in POSTS}
+
+def clean_urls(html_):
+    """Cloudflare serves extensionless URLs and 307-redirects *.html to them, so every link, canonical,
+    hreflang and JSON-LD URL must use the clean form (index.html -> directory)."""
+    html_ = re.sub(r'href="index\.html(?=[?#"])', 'href="./', html_)
+    html_ = re.sub(r'index\.html(?=[?#"\'])', '', html_)
+    return re.sub(r'\.html(?=[?#"\'])', '', html_)
+
+def write_page(path, html_): path.write_text(clean_urls(html_))
 
 THEME_PRE = "<script>(function(){try{var m=localStorage.getItem('theme');if(m==='light'||(m===null&&matchMedia('(prefers-color-scheme: light)').matches))document.documentElement.setAttribute('data-theme','light')}catch(e){}})()</script>"
 
@@ -386,7 +395,7 @@ def post_page(p0, lang='en'):
 </section>
 ''' + foot(depth, lang)
     out = BLOG if lang == 'en' else ROOT / lang / 'blog'; out.mkdir(parents=True, exist_ok=True)
-    (out / f"{p['slug']}.html").write_text(html_)
+    write_page(out / f"{p['slug']}.html", html_)
 
 def index_page(lang='en'):
     """Editorial blog index: eyebrow + title, category sidebar (client-side filter), featured post, two-column list."""
@@ -418,7 +427,7 @@ def index_page(lang='en'):
         '<div class="journal"><nav class="cat-nav" aria-label="Categories">' + catnav + '</nav><div>' + feature + '<div class="post-list">' + items + '</div></div></div>\n'
         '<script>' + filter_js + '</script>\n') + foot(depth, lang)
     out = BLOG if lang == 'en' else ROOT / lang / 'blog'; out.mkdir(parents=True, exist_ok=True)
-    (out / 'index.html').write_text(html_)
+    write_page(out / 'index.html', html_)
 
 NUMDIR = ROOT / 'numbers'
 def number_pages():
@@ -492,14 +501,14 @@ def number_pages():
   </div>
 </article>
 ''' + foot()
-        (NUMDIR / f'{slug}.html').write_text(html_)
+        write_page(NUMDIR / f'{slug}.html', html_)
     # index of the nine numbers
     cards = ''.join(f'''<article class="card post-card"><a href="birth-number-{n}.html">{picture('birth-number-' + n, f"Birth number {n} — {d['planet']}", thumb=True)}</a><div class="body"><span class="tag">{d['planet']}</span><h3><a href="birth-number-{n}.html">Birth Number {n}</a></h3><p>{d['keyword']}. Born on the {', '.join(map(str, d['days']))}.</p></div></article>''' for n, d in NUMBERS.items())
     html_ = head('Birth Numbers 1–9: Lucky Mobile Number, PIN, Wallpaper & Colour for Each', 'Find your birth number from your day of birth and see the lucky mobile number digits, PINs, passwords, wallpaper, cover and colour recommended for numbers 1 to 9.', 'numbers/', f'{SITE_URL}/assets/og-image.jpg') + f'''
 <div class="page-head"><div class="breadcrumb"><a href="../index.html">Home</a> › Birth numbers</div><h1>Birth Numbers 1–9</h1><p class="muted" style="max-width:64ch">Your Birth number is the day of the month you were born, reduced to a single digit (29 → 2 + 9 = 11 → 2). Pick yours to see the mobile-number digits, PINs, wallpaper, cover and colour that suit it.</p></div>
 <div class="post-grid">{cards}</div>
 ''' + foot()
-    (NUMDIR / 'index.html').write_text(html_)
+    write_page(NUMDIR / 'index.html', html_)
 
 def tool_pages():
     TDIR = ROOT / 'tools'; TDIR.mkdir(exist_ok=True)
@@ -532,33 +541,33 @@ def tool_pages():
 </div>
 ''' + foot().replace('<script src="../js/site-config.js', scripts())
         html_ = html_.replace('<body>', f'<body data-tool="{t["tool"]}">')
-        (TDIR / f"{t['slug']}.html").write_text(html_)
+        write_page(TDIR / f"{t['slug']}.html", html_)
     cards = ''.join(f'<a class="card tool-card" href="{t["slug"]}.html"><div class="tool-ico">{t["icon"]}</div><h3>{t["name"]}</h3><p class="muted small">{t["short"]}</p></a>' for t in TOOLS)
     html_ = head('Free Numerology Calculators — Life Path, Name, Compatibility, Personal Year, Lo Shu', 'Five free numerology calculators: Life Path number, name numerology (Chaldean & Pythagorean), compatibility by date of birth, Personal Year forecast and Lo Shu grid — plus the mobile number analyser.', 'tools/', f'{SITE_URL}/assets/og-image.jpg') + f'''
 <div class="page-head"><div class="breadcrumb"><a href="../index.html">Home</a> › Calculators</div><h1>Free numerology calculators</h1><p class="muted" style="max-width:64ch">Quick, single-purpose tools that run in your browser. For the complete picture — mobile number, PIN, password, wallpaper, cover and a PDF report — use the <a href="../index.html#mainForm">main analyser</a>.</p></div>
 <div class="grid grid-3">{cards}<a class="card tool-card" href="../index.html#mainForm"><div class="tool-ico">📱</div><h3>Mobile Number Analyser</h3><p class="muted small">All 10 positions, score, lucky numbers &amp; PDF</p></a></div>
 ''' + foot()
-    (TDIR / 'index.html').write_text(html_)
+    write_page(TDIR / 'index.html', html_)
 
 def sitemap_robots():
     today = datetime.date.today().isoformat()
-    urls = [('', '1.0', 'weekly', today), ('blog/', '0.8', 'weekly', today), ('numbers/', '0.8', 'monthly', today), ('tools/', '0.9', 'monthly', today)] + [(f"tools/{t['slug']}.html", '0.8', 'monthly', today) for t in TOOLS] + [(f"blog/{p['slug']}.html", '0.7', 'monthly', p['date']) for p in POSTS] + [(f'numbers/birth-number-{n}.html', '0.7', 'monthly', '2026-09-16') for n in NUMBERS] + [('privacy.html', '0.2', 'yearly', today), ('terms.html', '0.2', 'yearly', today)]
+    urls = [('', '1.0', 'weekly', today), ('blog/', '0.8', 'weekly', today), ('numbers/', '0.8', 'monthly', today), ('tools/', '0.9', 'monthly', today)] + [(f"tools/{t['slug']}", '0.8', 'monthly', today) for t in TOOLS] + [(f"blog/{p['slug']}", '0.7', 'monthly', p['date']) for p in POSTS] + [(f'numbers/birth-number-{n}', '0.7', 'monthly', '2026-09-16') for n in NUMBERS] + [('privacy', '0.2', 'yearly', today), ('terms', '0.2', 'yearly', today)]
     for l in LANGS:
         if TR.get(l):
             urls.append((f'{l}/blog/', '0.7', 'weekly', today))
-            urls += [(f"{l}/blog/{p['slug']}.html", '0.6', 'monthly', p['date']) for p in POSTS if p['slug'] in TR[l]]
+            urls += [(f"{l}/blog/{p['slug']}", '0.6', 'monthly', p['date']) for p in POSTS if p['slug'] in TR[l]]
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
     for path, pri, freq, mod in urls:
-        m = re.match(r'(?:(hi|mr|ta|gu)/)?blog/([a-z0-9-]+)\.html$', path)
+        m = re.match(r'(?:(hi|mr|ta|gu)/)?blog/([a-z0-9-]+)$', path)
         lang_img = ('-' + m.group(1)) if m and m.group(1) else ''
-        img = f"\n    <image:image><image:loc>{SITE_URL}/assets/blog/{path.split('/')[-1][:-5]}{lang_img}.jpg</image:loc></image:image>" if path.endswith('.html') and ('blog/' in path or path.startswith('numbers/')) else ''
+        img = f"\n    <image:image><image:loc>{SITE_URL}/assets/blog/{path.split('/')[-1]}{lang_img}.jpg</image:loc></image:image>" if not path.endswith('/') and (m or path.startswith('numbers/birth-number-')) else ''
         alts = ''
-        if m: alts = ''.join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="{SITE_URL}/{ap}" />' for l, ap in alternates_for(m.group(2)).items())
+        if m: alts = ''.join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="{SITE_URL}/{ap[:-5]}" />' for l, ap in alternates_for(m.group(2)).items())
         elif path.endswith('blog/'): alts = ''.join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="{SITE_URL}/{ap}" />' for l, ap in ({'en': 'blog/'} | {l: f'{l}/blog/' for l in LANGS if TR.get(l)}).items())
         xml += f'  <url>\n    <loc>{SITE_URL}/{path}</loc>\n    <lastmod>{mod}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{pri}</priority>{img}{alts}\n  </url>\n'
     xml += '</urlset>\n'
     (ROOT / 'sitemap.xml').write_text(xml)
-    (ROOT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nDisallow: /404.html\n\nSitemap: {SITE_URL}/sitemap.xml\n')
+    (ROOT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nDisallow: /404\nDisallow: /404.html\n\nSitemap: {SITE_URL}/sitemap.xml\n')
 
 def inject_static_footers():
     """privacy/terms/404/index keep their own bodies; the footer is replaced between markers."""
@@ -576,7 +585,7 @@ def inject_static_footers():
             body = body.replace(f">{u['f_cta_btn']} ↗<", f" data-i18n-html=\"f_cta_btn_x\">{u['f_cta_btn']} ↗<")
             body = body.replace(f"{u['disclaimer']} {u['credit']}", '<span data-i18n-html="footer.disclaimer"></span> <span data-i18n-html="footer.credit"></span>')
             body = body.replace(f">{u['calc']}<", f" data-i18n=\"nav.calc\">{u['calc']}<").replace(f">{u['numbers']}<", f" data-i18n=\"nav.numbers\">{u['numbers']}<").replace(f">{u['blog']}<", f" data-i18n=\"nav.blog\">{u['blog']}<").replace(f">{u['privacy']}<", f" data-i18n=\"f_privacy\">{u['privacy']}<").replace(f">{u['terms']}<", f" data-i18n=\"f_terms\">{u['terms']}<").replace(f">{u['sitemap']}<", f" data-i18n=\"f_sitemap\">{u['sitemap']}<").replace(f">{u['cta']}<", f" data-i18n=\"report.ctaSticky\">{u['cta']}<")
-        f.write_text(html_[:a] + '<!-- footer:start -->' + body + '<!-- footer:end -->' + html_[b:])
+        f.write_text(clean_urls(html_[:a] + '<!-- footer:start -->' + body + '<!-- footer:end -->' + html_[b:]))
 
 if __name__ == '__main__':
     inject_static_footers()

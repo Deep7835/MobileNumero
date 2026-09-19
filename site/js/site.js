@@ -77,8 +77,7 @@
   const consent = store.get('cookie-consent');
   if (consent === 'accepted') loadAnalytics();
   else if (!consent) {
-    const isBlog = location.pathname.includes('/blog/');
-    const privacyHref = isBlog ? '../privacy.html' : 'privacy.html';
+    const privacyHref = '/privacy';
     const banner = document.createElement('div');
     banner.className = 'cookie-banner'; banner.setAttribute('role', 'dialog'); banner.setAttribute('aria-live', 'polite'); banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML = `

@@ -15,12 +15,14 @@ for f in html_files:
     for attr, url in re.findall(r'\b(href|src|srcset)="([^"]+)"', text):
         for u in ([x.strip().split(' ')[0] for x in url.split(',')] if attr == 'srcset' else [url]):
             if u.startswith(('http://', 'https://')):
-                if not u.startswith(SITE_URL): external.add((u, str(f.relative_to(ROOT))))   # canonical/og URLs point at the deploy domain
-                continue
+                if not u.startswith(SITE_URL): external.add((u, str(f.relative_to(ROOT)))); continue   # canonical/og URLs point at the deploy domain
+                u = u[len(SITE_URL):] or '/'                                                          # check own absolute URLs like relative ones
             if u.startswith(('mailto:', 'tel:', 'data:', 'javascript:')) or u == '#': continue
             path, _, frag = u.partition('#'); path = path.split('?')[0]
-            target = f if not path else (f.parent / path).resolve()
+            if attr == 'href' and path.endswith('.html'): broken.append((str(f.relative_to(ROOT)), u, 'links must be extensionless (Cloudflare redirects *.html)')); continue
+            target = f if not path else (ROOT / path.lstrip('/') if path.startswith('/') else f.parent / path).resolve()
             if path and target.is_dir(): target = target / 'index.html'
+            elif path and not target.exists() and target.with_name(target.name + '.html').is_file(): target = target.with_name(target.name + '.html')   # clean URL -> page.html
             if path and not target.exists(): broken.append((str(f.relative_to(ROOT)), u, 'missing file')); continue
             if frag and target.suffix == '.html' and frag not in ids.get(target, set()): broken.append((str(f.relative_to(ROOT)), u, f'missing anchor #{frag}'))
 print(f'checked {len(html_files)} pages')

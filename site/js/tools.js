@@ -12,10 +12,10 @@
   const N = DATA.numbers;
   const badge = (n, cls) => `<div class="num-badge ${cls || ''}">${n}</div>`;
   const dobOk = v => { const d = v ? new Date(v + 'T00:00:00') : null; return d && !isNaN(d) && d <= new Date() && d.getFullYear() >= 1900; };
-  const home = 'index.html';
+  const home = '../';
   const tool = document.body.dataset.tool;
   const out = $('#toolOut');
-  const cta = `<div class="callout cta" style="margin-top:18px"><h3>Want the full picture?</h3><p>The free analyser combines your Birth and Destiny numbers with your actual mobile number and gives you a lucky PIN, password, wallpaper, cover and a PDF report.</p><p><a class="btn" href="../${home}#mainForm">✨ Analyse my numbers</a></p></div>`;
+  const cta = `<div class="callout cta" style="margin-top:18px"><h3>Want the full picture?</h3><p>The free analyser combines your Birth and Destiny numbers with your actual mobile number and gives you a lucky PIN, password, wallpaper, cover and a PDF report.</p><p><a class="btn" href="${home}#mainForm">✨ Analyse my numbers</a></p></div>`;
   const show = html => { out.innerHTML = html; out.classList.remove('hidden'); out.scrollIntoView({ behavior: 'smooth', block: 'start' }); if (window.trackEvent) trackEvent('tool_used', { tool }); };
 
   /* ---------- Life Path ---------- */
@@ -38,7 +38,7 @@
           <div><h4>Careers</h4><p class="small">${m.careers}</p><h4>Relationships</h4><p class="small">${m.relationships}</p></div></div>
           <div class="divider"></div>
           <div class="kv"><dt>Lucky colours</dt><dd>${DATA.wallpapers[r.dn].colors.join(' / ')}</dd><dt>Wallpaper</dt><dd>${DATA.wallpapers[r.dn].items.slice(0, 2).join(' · ')}</dd><dt>Mantra</dt><dd><span class="mantra">${DATA.affirmations[r.dn].mantra}</span></dd></div>
-          <p class="small" style="margin-top:12px"><a href="../numbers/birth-number-${r.bn}.html">Full guide for Birth number ${r.bn} →</a></p></div>${cta}`);
+          <p class="small" style="margin-top:12px"><a href="../numbers/birth-number-${r.bn}">Full guide for Birth number ${r.bn} →</a></p></div>${cta}`);
     });
   }
 
@@ -94,7 +94,7 @@
           <li><b>${esc(nameA)}</b> (${DATA.lifePath[r.a.bn].title}): ${DATA.lifePath[r.a.bn].relationships}</li>
           <li><b>${esc(nameB)}</b> (${DATA.lifePath[r.b.bn].title}): ${DATA.lifePath[r.b.bn].relationships}</li>
           <li>Wallpaper for a couple: a couple's picture (number 2) or family photo (number 6). Recommended PINs for a good married life: 5666, 5667, 2577.</li></ul>
-          <p class="small"><a href="../blog/mobile-number-for-marriage-and-relationships.html">Which mobile number digits support marriage →</a></p></div>${cta}`);
+          <p class="small"><a href="../blog/mobile-number-for-marriage-and-relationships">Which mobile number digits support marriage →</a></p></div>${cta}`);
     });
   }
 
@@ -137,7 +137,7 @@
         </div>
         <div class="grid grid-2" style="margin-top:18px">
           <div class="card"><h3 style="color:var(--accent-2)">Missing numbers</h3>${p.missing.length ? p.missing.map(n => `<div class="finding"><span class="tag" style="background:rgba(139,123,255,.2);color:var(--accent-2)">${n} · ${N[n].planet}</span><div class="txt">${DATA.loShu.missing[n]}</div></div>`).join('') : '<p class="muted small">None — every energy is present.</p>'}
-            <p class="small muted">Add missing numbers through your PIN and password: <a href="../blog/how-to-choose-lucky-pin-code-numerology.html">how to choose a lucky PIN →</a></p></div>
+            <p class="small muted">Add missing numbers through your PIN and password: <a href="../blog/how-to-choose-lucky-pin-code-numerology">how to choose a lucky PIN →</a></p></div>
           <div class="card"><h3>Repeated numbers</h3>${p.repeated.length ? p.repeated.map(n => `<div class="finding good"><span class="tag">${n} ×${p.grid[n]}</span><div class="txt">${DATA.loShu.repeated[n]}</div></div>`).join('') : '<p class="muted small">No repeats.</p>'}
             ${pins.length ? `<div class="divider"></div><div class="small muted" style="margin-bottom:6px">PINs built from your missing numbers (totals friendly to BN ${p.bn} & DN ${p.dn})</div><div class="chips">${pins.map(x => chip(x.pin + ' · ' + x.total, 'good')).join('')}</div>` : ''}</div>
         </div>${cta}`);
