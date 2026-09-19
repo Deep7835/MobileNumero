@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Number Numerology Calculator — Free Analysis, Lucky PIN &amp; Password</title>
+  <meta name="description" content="Free mobile numerology calculator: analyse all 10 digits of your phone number, find your birth &amp; destiny numbers, and get a lucky PIN, password, wallpaper, cover colour and mantra from your date of birth." />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="theme-color" content="#0b0d17" />
+  <link rel="canonical" href="https://www.mobilenumerology.example/" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <!-- Social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mobile Numerology" />
+  <meta property="og:title" content="Mobile Number Numerology Calculator — Free Analysis" />
+  <meta property="og:description" content="Analyse your phone number digit by digit and get a lucky PIN, password, wallpaper, cover colour and mantra from your date of birth. Free, runs in your browser." />
+  <meta property="og:url" content="https://www.mobilenumerology.example/" />
+  <meta property="og:image" content="https://www.mobilenumerology.example/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Mobile Numerology — free mobile number, PIN and password analyser" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mobile Number Numerology Calculator — Free Analysis" />
+  <meta name="twitter:description" content="Analyse your phone number digit by digit and get a lucky PIN, password, wallpaper, cover colour and mantra from your date of birth." />
+  <meta name="twitter:image" content="https://www.mobilenumerology.example/assets/og-image.jpg" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"WebSite","name":"Mobile Numerology","url":"https://www.mobilenumerology.example/"},
+    {"@type":"WebApplication","name":"Mobile Number Numerology Calculator","url":"https://www.mobilenumerology.example/","applicationCategory":"LifestyleApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"description":"Free mobile numerology calculator that analyses all 10 digits of a phone number and suggests a lucky PIN, password, wallpaper, cover and mantra from the date of birth."}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Is the mobile number numerology calculator really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every feature — position analysis, PIN and password suggestions, wallpaper, cover and colour recommendations, lucky number generator and the PDF report — is free and requires no sign-up."}},
+    {"@type":"Question","name":"Which mobile number total is lucky?","acceptedAnswer":{"@type":"Answer","text":"A total is lucky for you when it is a friendly number for your Birth and Destiny numbers. Broadly, totals of 1, 3, 5 and 6 suit the most people, while 4 and 8 are enemies for most."}},
+    {"@type":"Question","name":"Do I include the country code?","acceptedAnswer":{"@type":"Answer","text":"No. Only the 10-digit subscriber number is analysed; +91 or any other prefix is ignored automatically."}},
+    {"@type":"Question","name":"How is this different from other calculators?","acceptedAnswer":{"@type":"Answer","text":"Most tools only reduce your number to one digit. This one reads all ten positions against the class rules, scores the number out of 100, generates alternatives, compares candidates side by side and produces a full PDF — in five languages."}},
+    {"@type":"Question","name":"Should I change my mobile number if the score is low?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Look at which warnings appear and whether they touch areas that matter to you. Strengthening the PIN, password, wallpaper and cover is a lighter first step. If the total is an enemy number and the warnings sit in the money or marriage positions, a change is worth considering."}},
+    {"@type":"Question","name":"How long does it take to feel a change?","acceptedAnswer":{"@type":"Answer","text":"The class teaches that the effect of a new number, PIN or password is generally seen in about 45 days."}},
+    {"@type":"Question","name":"Is numerology scientifically proven?","acceptedAnswer":{"@type":"Answer","text":"No. Numerology is a belief-based practice presented for guidance, reflection and entertainment, not as medical, legal or financial advice."}},
+    {"@type":"Question","name":"Where can I buy a lucky mobile number?","acceptedAnswer":{"@type":"Answer","text":"Operators (Jio, Vi, Airtel) and VIP-number marketplaces sell numbers with chosen endings. Use the lucky-number generator to know what to search for, then re-check the exact number before paying."}}
+  ]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=15" />
+</head>
+<body>
+<a class="skip-link" href="#top">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" aria-label="Main">
+  <div class="container">
+    <a class="brand" href="#top"><span class="logo">९</span> <span data-i18n="brand">Mobile Numerology</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#mainForm" data-i18n="nav.analyse">Analyse</a>
+      <a href="#lucky" data-i18n="nav.lucky">Lucky Numbers</a>
+      <a href="#report" data-i18n="nav.report">Report</a>
+      <a href="numbers/" data-i18n="nav.numbers">Birth Numbers</a>
+      <a href="blog/">Blog</a>
+      <div class="nav-dd hidden" id="sectionsDd">
+        <button class="nav-dd-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.sections">My results</span> ▾</button>
+        <div class="nav-dd-menu">
+          <a href="#profile" data-i18n="nav.profile">Profile</a>
+          <a href="#mobile" data-i18n="nav.mobile">Mobile Number</a>
+          <a href="#pin" data-i18n="nav.pin">PIN</a>
+          <a href="#password" data-i18n="nav.password">Password</a>
+          <a href="#wallpaper" data-i18n="nav.wallpaper">Wallpaper</a>
+          <a href="#cover" data-i18n="nav.cover">Cover &amp; Colour</a>
+          <a href="#affirmation" data-i18n="nav.affirmation">Affirmation</a>
+          <a href="#buy" data-i18n="nav.buy">Buy a Number</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <div class="lang-wrap"><span class="lang-icon" aria-hidden="true">🌐</span><select id="langSelect" class="lang-select" aria-label="Language"></select></div>
+    <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme" data-i18n-title="theme.toggle">☀️</button>
+  </div>
+</nav>
+
+<main class="container" id="top">
+
+  <!-- ============ HERO + FORM ============ -->
+  <section class="hero">
+    <div>
+      <span class="eyebrow"><i></i> <span data-i18n="hero.eyebrow">Advance Mobile Numerology</span></span>
+      <h1 data-i18n-html="hero.title">Your phone carries <span class="grad">a number's energy.</span><br/>Make it work for you.</h1>
+      <p class="lead" data-i18n="hero.lead">Enter your date of birth and mobile number.</p>
+      <div class="pill-row">
+        <span class="pill" data-i18n="hero.pill1">📱 Position-wise analysis</span>
+        <span class="pill" data-i18n="hero.pill2">🔐 PIN &amp; password generator</span>
+        <span class="pill" data-i18n="hero.pill3">🖼️ Wallpaper &amp; cover guide</span>
+        <span class="pill" data-i18n="hero.pill4">🕉️ Affirmation &amp; mantra</span>
+      </div>
+    </div>
+
+    <form class="card form" id="mainForm" autocomplete="off">
+      <div class="field">
+        <label for="name"><span data-i18n="form.name">Full name</span> <span class="muted" data-i18n="form.nameOpt">(optional — for name number)</span></label>
+        <input id="name" type="text" placeholder="e.g. Isha Thakkar" data-i18n-ph="form.namePh" maxlength="60" autocomplete="name" />
+        <div class="field-error" id="nameError">Please use letters and spaces only (max 60 characters).</div>
+      </div>
+      <div class="hp" aria-hidden="true"><label>Website <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" /></label></div>
+      <div class="row">
+        <div class="field">
+          <label for="dob" data-i18n="form.dob">Date of birth *</label>
+          <input id="dob" type="date" required min="1900-01-01" autocomplete="bday" aria-describedby="dobError" />
+          <div class="field-error" id="dobError">Enter a valid date of birth (not in the future).</div>
+        </div>
+        <div>
+          <label for="purpose" data-i18n="form.purpose">Main life purpose</label>
+          <select id="purpose"></select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="mobile"><span data-i18n="form.mobile">Mobile number</span> <span class="muted" data-i18n="form.mobileOpt">(optional — 10 digits, country code ignored)</span></label>
+        <input id="mobile" type="tel" inputmode="numeric" placeholder="e.g. 98765 43210" data-i18n-ph="form.mobilePh" autocomplete="tel" maxlength="20" aria-describedby="mobileError" />
+        <div class="field-error" id="mobileError">Enter a 10-digit mobile number (spaces and +91 are fine).</div>
+        <div class="field-note" data-i18n="form.note">Only the last 10 digits are analysed.</div>
+      </div>
+      <button class="btn" type="submit" data-i18n="form.submit">✨ Analyse my numbers</button>
+    </form>
+  </section>
+
+  <!-- ============ RESULTS (hidden until form submit) ============ -->
+  <div id="results" class="hidden">
+
+    <!-- Profile -->
+    <section class="section" id="profile">
+      <div class="section-head">
+        <h2 data-i18n="sec.profile.h">Your core numbers</h2>
+        <p data-i18n="sec.profile.p">Your core numbers</p>
+      </div>
+      <div class="grid grid-3" id="profileCards"></div>
+    </section>
+
+    <!-- Mobile number -->
+    <section class="section" id="mobile">
+      <div class="section-head">
+        <h2 data-i18n="sec.mobile.h">Mobile number analysis</h2>
+        <p data-i18n="sec.mobile.p">Mobile number analysis</p>
+      </div>
+      <div id="mobileResult"></div>
+      <div class="card" style="margin-top:18px" id="compareCard">
+        <div class="card-title"><h3 data-i18n="cmp.h">Compare up to 3 numbers</h3></div>
+        <p class="small muted" data-i18n="cmp.p">Choosing between numbers offered by an operator or VIP site? Paste them here and see which one suits you best.</p>
+        <div class="grid grid-3" style="gap:10px">
+          <input id="cmp1" type="tel" inputmode="numeric" placeholder="Number 1" maxlength="20" />
+          <input id="cmp2" type="tel" inputmode="numeric" placeholder="Number 2" maxlength="20" />
+          <input id="cmp3" type="tel" inputmode="numeric" placeholder="Number 3" maxlength="20" />
+        </div>
+        <button class="btn secondary sm" id="cmpBtn" style="margin-top:10px" data-i18n="cmp.btn">Compare</button>
+        <div id="cmpOut" style="margin-top:14px"></div>
+      </div>
+    </section>
+
+    <!-- Lucky numbers -->
+    <section class="section" id="lucky">
+      <div class="section-head">
+        <h2 data-i18n="sec.lucky.h">Lucky mobile numbers for you</h2>
+        <p data-i18n="sec.lucky.p">Ready-to-search 10-digit numbers that satisfy the position rules and whose total is friendly to both your Birth and Destiny numbers.</p>
+      </div>
+      <div id="luckyResult"></div>
+    </section>
+
+    <!-- PIN -->
+    <section class="section" id="pin">
+      <div class="section-head">
+        <h2 data-i18n="sec.pin.h">PIN codes</h2>
+        <p data-i18n="sec.pin.p">PIN codes</p>
+      </div>
+      <div class="grid grid-2" id="pinResult"></div>
+    </section>
+
+    <!-- Password -->
+    <section class="section" id="password">
+      <div class="section-head">
+        <h2 data-i18n="sec.password.h">Passwords (Chaldean)</h2>
+        <p data-i18n="sec.password.p">Passwords (Chaldean)</p>
+      </div>
+      <div class="grid grid-2" id="passwordResult"></div>
+    </section>
+
+    <!-- Wallpaper -->
+    <section class="section" id="wallpaper">
+      <div class="section-head">
+        <h2 data-i18n="sec.wallpaper.h">Wallpaper for your phone &amp; laptop</h2>
+        <p data-i18n="sec.wallpaper.p">Wallpaper for your phone &amp; laptop</p>
+      </div>
+      <div class="grid grid-2" id="wallpaperResult"></div>
+    </section>
+
+    <!-- Cover & colour -->
+    <section class="section" id="cover">
+      <div class="section-head">
+        <h2 data-i18n="sec.cover.h">Back cover &amp; phone colour</h2>
+        <p data-i18n="sec.cover.p">Back cover &amp; phone colour</p>
+      </div>
+      <h3 class="muted" style="margin-bottom:12px" data-i18n="sec.cover.types">Cover types</h3>
+      <div class="grid grid-3" id="coverResult"></div>
+      <h3 class="muted" style="margin:28px 0 12px" data-i18n="sec.cover.colors">Phone colours</h3>
+      <div class="grid grid-2" id="colorResult"></div>
+    </section>
+
+    <!-- Affirmation -->
+    <section class="section" id="affirmation">
+      <div class="section-head">
+        <h2 data-i18n="sec.aff.h">Affirmation, ringtone &amp; mantra</h2>
+        <p data-i18n="sec.aff.p">Affirmation, ringtone &amp; mantra</p>
+      </div>
+      <div class="grid grid-2" id="affirmationResult"></div>
+    </section>
+
+    <!-- Report -->
+    <section class="section" id="report">
+      <div class="section-head">
+        <h2 data-i18n="sec.report.h">Download your report</h2>
+        <p data-i18n="sec.report.p">Download your report</p>
+      </div>
+      <div class="card report-card">
+        <div class="report-preview" aria-hidden="true">
+          <div class="rp-page"><div class="rp-line w60"></div><div class="rp-line w40 thin"></div><div class="rp-row"><div class="rp-box"></div><div class="rp-box"></div><div class="rp-box"></div></div><div class="rp-line w30 thin"></div><div class="rp-bar"></div><div class="rp-line w90 thin"></div><div class="rp-line w80 thin"></div><div class="rp-line w70 thin"></div></div>
+        </div>
+        <div class="report-body">
+          <h3 id="reportTitle" data-i18n="report.title">Personal numerology report</h3>
+          <ul class="list small muted" id="reportContents">
+            <li data-i18n="report.c1">Birth, Destiny &amp; Name numbers with Lo Shu grid</li>
+            <li data-i18n="report.c2">Position-by-position mobile number analysis &amp; ideal digits</li>
+            <li data-i18n="report.c3">Generated PINs and class-recommended PINs for your purpose</li>
+            <li data-i18n="report.c4">Chaldean password guidance</li>
+            <li data-i18n="report.c5">Wallpaper, cover, colour, ringtone &amp; mantra</li>
+          </ul>
+          <div class="report-actions">
+            <button class="btn" id="downloadPdf" data-i18n="report.download">⬇︎ Download PDF</button>
+            <button class="btn secondary" id="printPdf" data-i18n="report.print">🖨 Print / Save as PDF</button>
+            <button class="btn secondary" id="previewReport" data-i18n="report.preview">👁 Preview</button>
+          </div>
+          <div class="field-note" id="reportStatus" data-i18n="report.note">The PDF is generated in your browser — nothing is uploaded.</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- ============ HOW IT WORKS (crawlable, English) ============ -->
+  <section class="section" id="how-it-works">
+    <div class="section-head" style="text-align:center;margin-inline:auto">
+      <span class="eyebrow"><i></i> The method</span>
+      <h2>How mobile number numerology works</h2>
+      <p style="margin-inline:auto">Six things the free calculator checks — and why numerologists care about every digit of your phone number.</p>
+    </div>
+
+    <div class="steps">
+      <article class="step">
+        <div class="step-art" style="--c1:#ffcb47;--c2:#ff8a3d">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="14" fill="#fff" opacity=".95"/><g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"><path d="M32 6v8M32 50v8M6 32h8M50 32h8M13.6 13.6l5.6 5.6M44.8 44.8l5.6 5.6M13.6 50.4l5.6-5.6M44.8 19.2l5.6-5.6"/></g></svg>
+          <span class="step-no">1</span>
+        </div>
+        <h3>Your two personal numbers</h3>
+        <ul>
+          <li><b>Birth number</b> = day of birth reduced: 29 → 2+9 → 11 → <b>2</b></li>
+          <li><b>Destiny number</b> = whole date: 29/11/1994 → 36 → <b>9</b></li>
+          <li>Each number has a planet with friends, enemies and neutrals</li>
+        </ul>
+        <a class="step-link" href="numbers/">Guide for your Birth number →</a>
+      </article>
+
+      <article class="step">
+        <div class="step-art" style="--c1:#8b7bff;--c2:#5b8cff">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="10" width="40" height="44" rx="8" fill="#fff" opacity=".95"/><g fill="var(--c1)"><circle cx="24" cy="24" r="3.5"/><circle cx="32" cy="24" r="3.5"/><circle cx="40" cy="24" r="3.5"/><circle cx="24" cy="34" r="3.5"/><circle cx="32" cy="34" r="3.5"/><circle cx="40" cy="34" r="3.5"/><circle cx="24" cy="44" r="3.5"/><circle cx="32" cy="44" r="3.5"/><circle cx="40" cy="44" r="3.5"/></g></svg>
+          <span class="step-no">2</span>
+        </div>
+        <h3>The total of your number</h3>
+        <ul>
+          <li>Add all ten digits, reduce to one: 9737765591 → 59 → 14 → <b>5</b></li>
+          <li>Friendly to <em>both</em> your numbers = a <b>balancer</b> ✓</li>
+          <li>An enemy total (4 or 8 for most people) works against you</li>
+        </ul>
+      </article>
+
+      <article class="step">
+        <div class="step-art" style="--c1:#4fd1c5;--c2:#2fa4ff">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="#fff" opacity=".95"><rect x="8" y="26" width="8" height="12" rx="2"/><rect x="18" y="18" width="8" height="20" rx="2"/><rect x="28" y="30" width="8" height="8" rx="2"/><rect x="38" y="14" width="8" height="24" rx="2"/><rect x="48" y="22" width="8" height="16" rx="2"/></g><path d="M8 46h48" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/></svg>
+          <span class="step-no">3</span>
+        </div>
+        <h3>Position-by-position reading</h3>
+        <ul>
+          <li>Each of the 10 positions rules a life area — health, marriage, career, wealth…</li>
+          <li>5 at the 9th–10th = career success; 5 at the 6th–7th = marital friction</li>
+          <li>30+ digit-position rules checked, every hit shown to you</li>
+        </ul>
+        <a class="step-link" href="blog/mobile-number-numerology-10-positions-meaning.html">What each position means →</a>
+      </article>
+
+      <article class="step">
+        <div class="step-art" style="--c1:#34d399;--c2:#0ea5a5">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><text x="32" y="42" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="30" fill="#fff">555</text><path d="M14 50h36" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/></svg>
+          <span class="step-no">4</span>
+        </div>
+        <h3>Patterns &amp; endings</h3>
+        <ul>
+          <li>Ending in <b>55</b> or <b>555</b> — the most favourable; <b>6</b> at the end — money</li>
+          <li>Never end with <b>8</b> — financial loss and debt</li>
+          <li>Avoid <b>4</b> anywhere; <b>000</b> at the end signals business loss</li>
+        </ul>
+        <a class="step-link" href="blog/best-mobile-number-ending-55-555.html">Why 555 is lucky →</a>
+      </article>
+
+      <article class="step">
+        <div class="step-art" style="--c1:#f472b6;--c2:#c084fc">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="20" fill="none" stroke="#fff" stroke-width="6" opacity=".35"/><path d="M32 12a20 20 0 0 1 19 14" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/><text x="32" y="38" text-anchor="middle" font-family="Inter, sans-serif" font-weight="800" font-size="16" fill="#fff">77</text></svg>
+          <span class="step-no">5</span>
+        </div>
+        <h3>A score you can act on</h3>
+        <ul>
+          <li>Warnings subtract, strengths add, compatibility shifts the total</li>
+          <li><b>0–100 score</b> + verdict: Excellent · Good · Average · Needs change</li>
+          <li>Plus ideal digits per position, ready-made lucky numbers and a compare tool</li>
+        </ul>
+      </article>
+
+      <article class="step">
+        <div class="step-art" style="--c1:#fb923c;--c2:#f43f5e">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="20" y="8" width="24" height="48" rx="6" fill="#fff" opacity=".95"/><rect x="24" y="14" width="16" height="30" rx="2" fill="var(--c1)" opacity=".8"/><circle cx="32" cy="50" r="2.5" fill="var(--c1)"/><path d="M8 20l6 4-6 4M56 20l-6 4 6 4" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/></svg>
+          <span class="step-no">6</span>
+        </div>
+        <h3>Beyond the number</h3>
+        <ul>
+          <li><b>PIN</b> from your missing numbers · <b>password</b> by Chaldean value</li>
+          <li><b>Wallpaper</b>, <b>cover</b>, <b>phone colour</b> matched to your planet</li>
+          <li><b>Affirmation, ringtone &amp; mantra</b> — all in one PDF report</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="privacy-strip">
+      <div class="privacy-icon">🔒</div>
+      <div><b>Nothing you enter is uploaded.</b> Calculations run in your browser and the PDF is created on your device — we never store phone numbers, dates of birth or names.</div>
+      <a class="btn" href="#mainForm">✨ Analyse my number now</a>
+    </div>
+
+    <div class="faq-head"><h2 style="font-size:1.6rem">Frequently asked questions</h2></div>
+    <div class="faq grid grid-2" style="gap:10px">
+      <details><summary>Is the mobile number numerology calculator really free?</summary><p>Yes. Every feature — position analysis, PIN and password suggestions, wallpaper, cover and colour recommendations, lucky number generator and the PDF report — is free and requires no sign-up.</p></details>
+      <details><summary>Which mobile number total is lucky?</summary><p>There is no single lucky total. A total is lucky for you when it is a friendly number for your Birth and Destiny numbers. Broadly, totals of 1, 3, 5 and 6 suit the most people, while 4 and 8 are enemies for most.</p></details>
+      <details><summary>Do I include the country code?</summary><p>No. Only the 10-digit subscriber number is analysed; +91 or any other prefix is ignored automatically.</p></details>
+      <details><summary>How is this different from other calculators?</summary><p>Most tools only reduce your number to one digit. This one reads all ten positions against the class rules, scores the number out of 100, generates alternatives, compares candidates side by side and produces a full PDF — in five languages.</p></details>
+      <details><summary>Should I change my mobile number if the score is low?</summary><p>Not necessarily. First look at which warnings appear and whether they touch areas that matter to you. Strengthening the PIN, password, wallpaper and cover is a lighter first step. If the total is an enemy number and the warnings sit in the money or marriage positions, a change is worth considering.</p></details>
+      <details><summary>How long does it take to feel a change?</summary><p>The class teaches that the effect of a new number, PIN or password is generally seen in about 45 days.</p></details>
+      <details><summary>Is numerology scientifically proven?</summary><p>No. Numerology is a belief-based practice. We present it for guidance, reflection and entertainment, not as medical, legal or financial advice.</p></details>
+      <details><summary>Where can I buy a lucky mobile number?</summary><p>Operators (Jio, Vi, Airtel) and VIP-number marketplaces sell numbers with chosen endings. Use the lucky-number generator above to know what to search for, then re-check the exact number here before paying.</p></details>
+    </div>
+  </section>
+
+  <!-- ============ TOOLS (always visible) ============ -->
+  <section class="section" id="tools">
+    <div class="section-head">
+      <h2>Quick tools</h2>
+      <p>Use these without a full profile. The Chaldean calculator works standalone; the number checker and PIN checker use your profile if you have generated one.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 data-i18n="tools.chaldean">Chaldean word calculator</h3>
+        <input id="toolWord" type="text" placeholder="Type any word or password" data-i18n-ph="tools.wordPh" />
+        <div id="toolWordOut" class="small" style="margin-top:10px"></div>
+        <div class="divider"></div>
+        <div class="chaldean-table" id="chaldeanTable"></div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="tools.checkMobile">Check any mobile number</h3>
+        <input id="toolMobile" type="tel" inputmode="numeric" placeholder="10-digit number" data-i18n-ph="tools.mobilePh" />
+        <button class="btn secondary sm" id="toolMobileBtn" style="margin-top:10px" data-i18n="tools.check">Check</button>
+        <div id="toolMobileOut" style="margin-top:12px"></div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="tools.checkPin">Check a PIN</h3>
+        <input id="toolPin" type="tel" inputmode="numeric" placeholder="4–6 digit PIN" maxlength="6" data-i18n-ph="tools.pinPh" />
+        <button class="btn secondary sm" id="toolPinBtn" style="margin-top:10px" data-i18n="tools.check">Check</button>
+        <div id="toolPinOut" style="margin-top:12px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUY ============ -->
+  <section class="section" id="buy">
+    <div class="section-head">
+      <h2>Where to buy a chosen number</h2>
+      <p>Once you know the digits you want at each position, these sites let you search for VIP / fancy numbers.</p>
+    </div>
+    <div class="grid grid-4 website-grid" id="websites"></div>
+    <div class="card" style="margin-top:18px">
+      <h3 data-i18n="buy.positions">What each position governs</h3>
+      <div class="grid grid-2" id="positionLegend"></div>
+    </div>
+  </section>
+
+  <!-- ============ FRIENDLY CHART ============ -->
+  <section class="section" id="chart">
+    <div class="section-head">
+      <h2>Friendly &amp; enemy numbers</h2>
+      <p>The compatibility chart used by the analyzer. Friendly totals strengthen you; enemy totals create friction.</p>
+    </div>
+    <div class="card" style="overflow:auto">
+      <table class="ideal-table" id="friendlyTable"></table>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p data-i18n-html="footer.disclaimer"></p>
+    <p data-i18n-html="footer.credit"></p>
+    <div class="footer-links">
+      <a href="blog/">Blog</a>
+      <a href="numbers/">Birth numbers 1–9</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="sitemap.xml">Sitemap</a>
+      <a href="#" data-whatsapp target="_blank" rel="noopener">Talk to an expert</a>
+    </div>
+  </div>
+</footer>
+<a class="btn sticky-cta" href="#mainForm">✨ Get my free analysis</a>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/site-config.js?v=15" defer></script>
+<script src="js/i18n.js?v=15" defer></script>
+<script src="js/lang/en.js?v=15" defer></script>
+<script src="js/lang/hi.js?v=15" defer></script>
+<script src="js/lang/mr.js?v=15" defer></script>
+<script src="js/lang/ta.js?v=15" defer></script>
+<script src="js/lang/gu.js?v=15" defer></script>
+<script src="js/data.js?v=15" defer></script>
+<script src="js/numerology.js?v=15" defer></script>
+<script src="js/report.js?v=15" defer></script>
+<script src="js/app.js?v=15" defer></script>
+<script src="js/site.js?v=15" defer></script>
+</body>
+</html>

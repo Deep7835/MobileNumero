@@ -1,0 +1,102 @@
+/* =====================================================================
+   Shared site behaviour for every page:
+   HTTPS enforcement, mobile nav, cookie consent + gated analytics, CTA.
+   ===================================================================== */
+(() => {
+  const cfg = window.SITE_CONFIG || {};
+
+  /* ---------- 1. Force HTTPS (server-side rules live in netlify.toml / vercel.json / .htaccess) ---------- */
+  const isLocal = /^(localhost|127\.|0\.0\.0\.0|\[::1\]|.*\.local)$/.test(location.hostname) || location.protocol === 'file:';
+  if (location.protocol === 'http:' && !isLocal) {
+    location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+    return;
+  }
+
+  /* ---------- 2. Mobile navigation ---------- */
+  const navBtn = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (navBtn && navLinks) {
+    navBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navBtn.setAttribute('aria-expanded', String(open));
+      navBtn.textContent = open ? '✕' : '☰';
+    });
+    navLinks.addEventListener('click', e => { if (e.target.tagName === 'A') { navLinks.classList.remove('open'); navBtn.setAttribute('aria-expanded', 'false'); navBtn.textContent = '☰'; } });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { navLinks.classList.remove('open'); navBtn.setAttribute('aria-expanded', 'false'); navBtn.textContent = '☰'; } });
+  }
+
+  /* ---------- 2b. Nav dropdown ---------- */
+  document.querySelectorAll('.nav-dd').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', e => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open)); });
+    dd.addEventListener('click', e => { if (e.target.tagName === 'A') { dd.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); } });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('.nav-dd.open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.nav-dd.open').forEach(dd => dd.classList.remove('open')); });
+
+  /* ---------- 3. Cookie consent (gates analytics) ---------- */
+  const store = {
+    get: k => { try { return localStorage.getItem(k); } catch { return null; } },
+    set: (k, v) => { try { localStorage.setItem(k, v); } catch {} },
+  };
+  const hasAnalytics = !!(cfg.analytics && (cfg.analytics.ga4 || cfg.analytics.plausible));
+
+  function loadAnalytics() {
+    if (!hasAnalytics || window.__analyticsLoaded) return;
+    window.__analyticsLoaded = true;
+    if (cfg.analytics.ga4) {
+      const s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(cfg.analytics.ga4);
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      gtag('js', new Date()); gtag('config', cfg.analytics.ga4, { anonymize_ip: true });
+    }
+    if (cfg.analytics.plausible) {
+      const s = document.createElement('script'); s.defer = true; s.dataset.domain = cfg.analytics.plausible; s.src = 'https://plausible.io/js/script.js';
+      document.head.appendChild(s);
+    }
+  }
+  /** Fire a custom event with whichever analytics is configured (no-op without consent). */
+  window.trackEvent = (name, params) => {
+    if (store.get('cookie-consent') !== 'accepted') return;
+    if (window.gtag) gtag('event', name, params || {});
+    if (window.plausible) plausible(name, { props: params || {} });
+  };
+
+  const consent = store.get('cookie-consent');
+  if (consent === 'accepted') loadAnalytics();
+  else if (!consent) {
+    const isBlog = location.pathname.includes('/blog/');
+    const privacyHref = isBlog ? '../privacy.html' : 'privacy.html';
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner'; banner.setAttribute('role', 'dialog'); banner.setAttribute('aria-live', 'polite'); banner.setAttribute('aria-label', 'Cookie consent');
+    banner.innerHTML = `
+      <div class="cookie-text"><strong>🍪 Cookies &amp; privacy.</strong> This site stores your language and theme preferences on your device.
+        ${hasAnalytics ? 'With your consent we also use anonymised analytics to understand which pages are useful.' : 'No tracking cookies are set.'}
+        <a href="${privacyHref}">Privacy policy</a></div>
+      <div class="cookie-actions">
+        ${hasAnalytics ? '<button class="btn secondary sm" data-consent="declined">Decline</button>' : ''}
+        <button class="btn sm" data-consent="accepted">${hasAnalytics ? 'Accept' : 'OK, got it'}</button>
+      </div>`;
+    banner.addEventListener('click', e => {
+      const v = e.target.dataset.consent; if (!v) return;
+      store.set('cookie-consent', v); banner.classList.add('hide'); setTimeout(() => banner.remove(), 300);
+      if (v === 'accepted') loadAnalytics();
+    });
+    document.body.appendChild(banner);
+    requestAnimationFrame(() => banner.classList.add('show'));
+  }
+
+  /* ---------- 4. Sticky CTA (one clear action on every page) ---------- */
+  const cta = document.querySelector('.sticky-cta');
+  if (cta) {
+    const target = document.querySelector('#mainForm');
+    const show = () => { const past = window.scrollY > 500; const formVisible = target && target.getBoundingClientRect().bottom > 0 && target.getBoundingClientRect().top < innerHeight; cta.classList.toggle('show', past && !formVisible); };
+    addEventListener('scroll', show, { passive: true }); show();
+  }
+  const wa = cfg.contact && cfg.contact.whatsapp;
+  document.querySelectorAll('[data-whatsapp]').forEach(el => {
+    if (wa) el.href = 'https://wa.me/' + wa.replace(/\D/g, '') + '?text=' + encodeURIComponent('Hi, I would like a mobile numerology consultation.');
+    else el.remove();
+  });
+})();
