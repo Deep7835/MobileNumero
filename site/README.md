@@ -20,7 +20,7 @@ python3 tools/check-links.py      # verifies every internal link/anchor; add --e
 python3 -m http.server 8765 --directory site
 ```
 
-Before deploying, set your real domain in **two places**: `SITE_URL` in `tools/build.py` and `url` in `site/js/site-config.js`, then rebuild. Optional: add a GA4 or Plausible ID and a WhatsApp number in `site-config.js` (public values only — the site has no secrets and no backend).
+The canonical domain is **https://numberkundli.com** (set in `SITE_URL` in `tools/build.py` and `url` in `site/js/site-config.js`; `numberkundli.in` and `www.` redirect to it in every hosting config). If it ever changes, update both places and rebuild. Optional: add a GA4 or Plausible ID and a WhatsApp number in `site-config.js` (public values only — the site has no secrets and no backend).
 
 Hosting configs are included for Netlify (`netlify.toml`), Vercel (`vercel.json`) and Apache (`.htaccess`): each forces HTTPS, serves `404.html` for missing pages and sets security/caching headers. `site.js` also redirects `http://` → `https://` client-side as a safety net (skipped on localhost).
 

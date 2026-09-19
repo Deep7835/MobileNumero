@@ -5,6 +5,23 @@
   status = 301
   force = true
 
+# numberkundli.in and www → canonical numberkundli.com
+[[redirects]]
+  from = "https://numberkundli.in/*"
+  to = "https://numberkundli.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.numberkundli.in/*"
+  to = "https://numberkundli.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.numberkundli.com/*"
+  to = "https://numberkundli.com/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]

@@ -2,6 +2,9 @@
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# numberkundli.in / www → canonical numberkundli.com
+RewriteCond %{HTTP_HOST} !^numberkundli\.com$ [NC]
+RewriteRule ^(.*)$ https://numberkundli.com/$1 [L,R=301]
 ErrorDocument 404 /404.html
 <IfModule mod_headers.c>
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"

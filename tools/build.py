@@ -41,11 +41,11 @@ NUM_INTRO = {
 }
 
 ROOT = Path(__file__).resolve().parent.parent / 'site'
-SITE_URL = 'https://www.mobilenumerology.example'   # keep in sync with site/js/site-config.js
+SITE_URL = 'https://numberkundli.com'   # keep in sync with site/js/site-config.js
 SITE_NAME = 'Mobile Numerology'
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=16'
+VER = 'v=17'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://www.mobilenumerology.example/sitemap.xml
+Sitemap: https://numberkundli.com/sitemap.xml
