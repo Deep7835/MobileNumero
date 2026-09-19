@@ -10,6 +10,9 @@ window.SITE_CONFIG = {
     ga4: '',        // e.g. 'G-XXXXXXXXXX' — loaded only after cookie consent
     plausible: '',  // e.g. 'numberkundli.com' — cookieless, loaded after consent
   },
+  social: {          // shown in the footer when set, e.g. 'https://instagram.com/numberkundli'
+    instagram: '', youtube: '', facebook: '', x: '', linkedin: '',
+  },
   contact: {
     whatsapp: '',   // e.g. '919737765591' (country code + number, digits only) — enables the "Talk to an expert" CTA
   },
