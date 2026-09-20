@@ -23,7 +23,7 @@ TOOLS = [
       title='Name Numerology Calculator — Chaldean & Pythagorean Name Number',
       meta='Free name numerology calculator. Get the Chaldean or Pythagorean number of your full name and first name, its meaning, and whether it is friendly to your date of birth.',
       img=dict(a='#0f172a', b='#fbbf24', glyph='Aa', label='Name number'),
-      form='<div class="field"><label for="name">Full name (as commonly used)</label><input id="name" type="text" placeholder="e.g. Isha Thakkar" maxlength="60" required autocomplete="name" /></div>'
+      form='<div class="field"><label for="name">Full name (as commonly used)</label><input id="name" type="text" placeholder="e.g. Priya Sharma" maxlength="60" required autocomplete="name" /></div>'
            '<div class="row"><div class="field"><label for="system">System</label><select id="system"><option value="chaldean">Chaldean (1–8)</option><option value="pythagorean">Pythagorean (1–9)</option></select></div><div class="field"><label for="dob">Date of birth <span class="muted">(optional, for compatibility)</span></label><input id="dob" type="date" min="1900-01-01" /></div></div>'
            '<button class="btn" type="submit">Calculate name number</button>',
       intro='Every letter carries a number. Your <strong>name number</strong> is the reduced total of those values and describes how the world sees you and what your name attracts. Indian numerologists use the <strong>Chaldean</strong> system (values 1–8, based on sound); Western numerologists use <strong>Pythagorean</strong> (A=1 … I=9, repeating). This calculator gives both.',

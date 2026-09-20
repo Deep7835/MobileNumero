@@ -4,6 +4,8 @@
 
 The method follows the Advance Mobile Numerology Class syllabus: each of the 10 digit positions governs a life area (attitude, decision making, health, partnership, kids, marriage, married life, career & health, public relations, wealth), each digit has good/bad positions, digits are friendly, neutral or enemy to the Birth number (day of birth reduced to 1–9) and Destiny number (full date of birth reduced), and the Lo Shu grid shows missing numbers. Numerology is a belief-based practice; the site gives guidance, not medical, legal or financial advice.
 
+Author and publisher: Deepam Mishra, who runs NumberKundli independently (https://numberkundli.com/about). Not affiliated with any numerology school or teacher.
+
 ## Tools
 - [Mobile number analyser](https://numberkundli.com/): full 10-position analysis, score, lucky numbers, PIN & password, PDF report
 - [Life Path Number](https://numberkundli.com/tools/life-path-number): Your Destiny number from your full date of birth
@@ -47,6 +49,7 @@ The method follows the Advance Mobile Numerology Class syllabus: each of the 10 
 - [Gujarati (ગુજરાતી)](https://numberkundli.com/gu/blog/)
 
 ## Optional
+- [About / author](https://numberkundli.com/about)
 - [Privacy policy](https://numberkundli.com/privacy)
 - [Terms](https://numberkundli.com/terms)
 - [Sitemap](https://numberkundli.com/sitemap.xml)
