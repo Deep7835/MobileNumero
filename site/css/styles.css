@@ -462,21 +462,9 @@ footer { padding: 40px 0 60px; color: var(--muted); font-size: .85rem; border-to
 @media (max-width: 960px) { .steps { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .steps { grid-template-columns: 1fr; } }
 
-/* ---------- nav dropdown ---------- */
-.nav-dd { position: relative; }
-.nav-dd-btn { display: inline-flex; align-items: center; gap: 4px; background: var(--surface-2); border: 1px solid var(--border); color: var(--text); font: inherit; font-size: .9rem; font-weight: 500; min-height: 40px; padding: 6px 10px 6px 12px; border-radius: 10px; cursor: pointer; white-space: nowrap; transition: background var(--dur) var(--ease); }
-.nav-dd-btn:hover { background: var(--surface-3); }
-.nav-dd-btn .ico { width: 14px; height: 14px; color: var(--muted); }
-.nav-dd-menu { display: none; position: absolute; top: calc(100% + 8px); right: 0; min-width: 220px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 14px; padding: 6px; box-shadow: var(--shadow-lg); z-index: 60; flex-direction: column; }
-.nav-dd.open .nav-dd-menu { display: flex; }
-.nav-dd-menu a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 9px; color: var(--text); font-size: .92rem; }
-.nav-dd-menu a:hover { background: var(--surface-2); text-decoration: none; }
-.nav-dd-menu a .ico { width: 16px; height: 16px; color: var(--muted); }
-@media (max-width: 1000px) {
-  .nav-dd { width: 100%; }
-  .nav-dd-btn { width: 100%; text-align: left; margin: 4px 0; }
-  .nav-dd-menu { position: static; box-shadow: none; border: 0; padding: 0 0 0 12px; background: transparent; }
-}
+/* ---------- nav CTA (home page; generated pages carry the same button) ---------- */
+.nav-cta { margin-left: 8px; flex: none; }
+@media (max-width: 600px) { .nav-cta { display: none; } }
 
 .lang-switch { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 4px 0 18px; }
 .lang-switch .chip { text-decoration: none; }

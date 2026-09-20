@@ -36,14 +36,6 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') { navLinks.classList.remove('open'); navBtn.setAttribute('aria-expanded', 'false'); navBtn.innerHTML = ico('menu'); } });
   }
 
-  /* ---------- 2b. Nav dropdown ---------- */
-  document.querySelectorAll('.nav-dd').forEach(dd => {
-    const btn = dd.querySelector('.nav-dd-btn');
-    btn.addEventListener('click', e => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open)); });
-    dd.addEventListener('click', e => { if (e.target.tagName === 'A') { dd.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); } });
-  });
-  document.addEventListener('click', () => document.querySelectorAll('.nav-dd.open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.nav-dd.open').forEach(dd => dd.classList.remove('open')); });
 
   /* ---------- 3. Cookie consent (gates analytics) ---------- */
   const store = {

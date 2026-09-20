@@ -78,7 +78,6 @@
     currentPurpose = purposeSel.value;
     renderAll();
     $('#results').classList.remove('hidden');
-    $('#sectionsDd')?.classList.remove('hidden');
     document.querySelectorAll('#results .section').forEach(s => s.classList.add('fade-in'));
     setTimeout(() => $('#profile').scrollIntoView({ behavior: 'smooth' }), 50);
     if (window.trackEvent) trackEvent('analysis_generated', { has_mobile: !!$('#mobile').value.trim(), lang: I18N.lang });
@@ -437,8 +436,4 @@
       <span class="chip ${c.verdict === 'Avoid' ? 'bad' : c.verdict === 'Average' ? 'warn' : 'good'}">${grade(c.verdict)} · ${c.score}/100</span>`;
   };
 
-  /* ---------- nav highlight ---------- */
-  const links = [...document.querySelectorAll('.nav-links a')];
-  const obs = new IntersectionObserver(entries => entries.forEach(en => { if (en.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id)); }), { rootMargin: '-40% 0px -55% 0px' });
-  document.querySelectorAll('section[id]').forEach(s => obs.observe(s));
 })();
