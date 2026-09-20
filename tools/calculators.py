@@ -5,7 +5,7 @@ def _rows(rows): return ''.join('<tr>' + ''.join(f'<td>{c}</td>' for c in r) + '
 
 TOOLS = [
  dict(slug='life-path-number', tool='life-path', icon='compass', name='Life Path Number', short='Your Destiny number from your full date of birth',
-      title='Life Path Number Calculator — Find Your Destiny Number by Date of Birth',
+      title='Life Path Number Calculator — From Your Date of Birth',
       meta='Free Life Path (Destiny) Number calculator. Enter your date of birth to get your Life Path and Birth numbers, ruling planet, strengths, careers and compatible numbers.',
       img=dict(a='#1e1b4b', b='#8b7bff', glyph='9', label='Life Path'),
       form='<div class="field"><label for="dob">Date of birth</label><input id="dob" type="date" required min="1900-01-01" /></div><button class="btn" type="submit">Calculate my Life Path</button>',
@@ -20,7 +20,7 @@ TOOLS = [
             ('Can my Life Path number change?', 'No. It is fixed by your date of birth. What you can change is the numbers around you — mobile number, PIN, name spelling — to be friendly to it.')]),
 
  dict(slug='name-numerology', tool='name', icon='user', name='Name Numerology', short='Chaldean & Pythagorean value of any name',
-      title='Name Numerology Calculator — Chaldean & Pythagorean Name Number',
+      title='Name Numerology Calculator — Chaldean & Pythagorean',
       meta='Free name numerology calculator. Get the Chaldean or Pythagorean number of your full name and first name, its meaning, and whether it is friendly to your date of birth.',
       img=dict(a='#0f172a', b='#fbbf24', glyph='Aa', label='Name number'),
       form='<div class="field"><label for="name">Full name (as commonly used)</label><input id="name" type="text" placeholder="e.g. Priya Sharma" maxlength="60" required autocomplete="name" /></div>'
@@ -36,7 +36,7 @@ TOOLS = [
             ('Does changing my name spelling really change anything?', 'Numerology holds that the vibration changes with the spelling. Changing a signature or the spelling on social profiles is a low-risk way to try it; legal name changes are a bigger decision.')]),
 
  dict(slug='compatibility', tool='compatibility', icon='heart', name='Compatibility', short='Two dates of birth → relationship score',
-      title='Numerology Compatibility Calculator — Love & Partnership by Date of Birth',
+      title='Numerology Compatibility Calculator by Date of Birth',
       meta='Free numerology compatibility calculator. Enter two dates of birth to get a 0–100 compatibility score based on Birth and Destiny numbers, with friendly, enemy and shared balancer numbers.',
       img=dict(a='#4a044e', b='#f9a8d4', glyph='♥', label='Compatibility'),
       form='<div class="row"><div class="field"><label for="nameA">Person A (name, optional)</label><input id="nameA" type="text" maxlength="40" placeholder="Name" /></div><div class="field"><label for="dobA">Date of birth A</label><input id="dobA" type="date" required min="1900-01-01" /></div></div>'
@@ -52,7 +52,7 @@ TOOLS = [
             ('Can we improve a low score?', 'Your dates cannot change, but you can surround the relationship with shared balancer numbers — a joint phone number, PIN or house number whose total is friendly to both of you.')]),
 
  dict(slug='personal-year', tool='personal-year', icon='calendar', name='Personal Year', short='Where you are in your 9-year cycle',
-      title='Personal Year Number Calculator — Your Numerology Forecast for This Year',
+      title='Personal Year Number Calculator — Your Year Ahead',
       meta='Free Personal Year calculator. Find your current Personal Year, Month and Day numbers from your date of birth and see the theme, focus and pitfalls of this stage of your 9-year cycle.',
       img=dict(a='#7c2d12', b='#fb923c', glyph='📅', label='Personal Year'),
       form='<div class="row"><div class="field"><label for="dob">Date of birth</label><input id="dob" type="date" required min="1900-01-01" /></div><div class="field"><label for="on">For date <span class="muted">(defaults to today)</span></label><input id="on" type="date" /></div></div><button class="btn" type="submit">Find my Personal Year</button>',
@@ -67,7 +67,7 @@ TOOLS = [
             ('What are Personal Month and Day?', 'Finer subdivisions of the same cycle: Personal Year + calendar month = Personal Month; Personal Month + date = Personal Day. Use them for timing decisions within the year.')]),
 
  dict(slug='lo-shu-grid', tool='lo-shu', icon='grid', name='Lo Shu Grid', short='Present, missing & repeated numbers',
-      title='Lo Shu Grid Calculator — Missing Numbers, Repeated Numbers & Planes',
+      title='Lo Shu Grid Calculator — Missing & Repeated Numbers',
       meta='Free Lo Shu grid calculator. Enter your date of birth to draw your 3×3 numerology grid, see present, missing and repeated numbers, completed planes, and PINs that add the missing energies.',
       img=dict(a='#1e293b', b='#4fd1c5', glyph='⊞', label='Lo Shu grid'),
       form='<div class="field"><label for="dob">Date of birth</label><input id="dob" type="date" required min="1900-01-01" /></div><button class="btn" type="submit">Draw my Lo Shu grid</button>',
