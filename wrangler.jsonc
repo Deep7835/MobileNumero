@@ -1,0 +1,13 @@
+// Cloudflare Workers (static assets) — deployed by "npx wrangler deploy" from Workers Builds.
+// The name must match the Worker in the dashboard, otherwise a second Worker would be created.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "numberkundli",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page",       // serve site/404.html (with a 404 status) for missing paths
+    "html_handling": "auto-trailing-slash"  // /blog/post -> blog/post.html, /blog -> /blog/ (the clean URLs the site links to)
+  },
+  "observability": { "enabled": true }      // keep Workers Logs on (matches the dashboard setting)
+}
