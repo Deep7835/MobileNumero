@@ -52,7 +52,7 @@ VERIFY = {'google-site-verification': 'WMT9RBYqvsxIn936s6lqItZouN2_6RP97dqWz3PPz
 VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=31'
+VER = 'v=32'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -226,6 +226,13 @@ def write_page(path, html_):
 def ICON(name, up=''):
     return f'<svg class="ico" aria-hidden="true" focusable="false"><use href="{up}assets/icons.svg?{VER}#{name}"/></svg>'
 
+NAV_TOOLS = [('life-path-number', 'compass', 'Life Path Number'), ('name-numerology', 'user', 'Name Numerology'), ('compatibility', 'heart', 'Compatibility'), ('personal-year', 'calendar', 'Personal Year'), ('lo-shu-grid', 'grid', 'Lo Shu Grid')]
+def nav_dd(up, label):
+    """Calculators dropdown in the header (hover on desktop, tap on touch)."""
+    items = ''.join(f'\n          <a href="{up}tools/{slug}">{ICON(ic, up)}<span>{name}</span></a>' for slug, ic, name in NAV_TOOLS)
+    return (f'<div class="nav-dd">\n        <button class="nav-dd-btn" type="button" aria-haspopup="true" aria-expanded="false">{ICON("calculator", up)}<span>{label}</span>{ICON("chevron-down", up)}</button>'
+            f'\n        <div class="nav-dd-menu">{items}\n          <a class="all" href="{up}tools/">{ICON("layout-grid", up)}<span>All calculators</span></a>\n        </div>\n      </div>')
+
 THEME_PRE = "<script>(function(){try{var m=localStorage.getItem('theme');if(m==='light'||(m===null&&matchMedia('(prefers-color-scheme: light)').matches))document.documentElement.setAttribute('data-theme','light')}catch(e){}})()</script>"
 
 def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth=1, lang='en', alternates=None):
@@ -290,8 +297,8 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
     <div class="nav-links" id="navLinks">
       <a href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}">{ICON("house", up)}<span>{u['home']}</span></a>
       <a href="{up}{'' if lang == 'en' else lang + '/'}blog/">{ICON("book", up)}<span>{u['blog']}</span></a>
-      <a href="{up}tools/">{ICON("calculator", up)}<span>{u['calc']}</span></a>
-      <a href="{up}numbers/">{ICON("hash", up)}<span>{u['numbers']}</span></a>
+      {nav_dd(up, u['calc'])}
+      <a href="{up}numbers/">{ICON("cake", up)}<span>{u['numbers']}</span></a>
     </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">{ICON("menu", up)}</button>
     <button class="icon-btn theme-toggle" title="Toggle theme" aria-label="Toggle theme">{ICON("sun", up)}</button>

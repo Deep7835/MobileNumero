@@ -37,6 +37,15 @@
   }
 
 
+  /* ---------- 2b. Calculators dropdown (hover is CSS; click/tap + Escape here) ---------- */
+  document.querySelectorAll('.nav-dd').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', e => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open)); });
+  });
+  const closeDd = () => document.querySelectorAll('.nav-dd.open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); });
+  document.addEventListener('click', closeDd);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDd(); });
+
   /* ---------- 3. Cookie consent (gates analytics) ---------- */
   const store = {
     get: k => { try { return localStorage.getItem(k); } catch { return null; } },
