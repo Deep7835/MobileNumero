@@ -15,7 +15,7 @@
   const home = '../';
   const tool = document.body.dataset.tool;
   const out = $('#toolOut');
-  const cta = `<div class="callout cta" style="margin-top:18px"><h3>Want the full picture?</h3><p>The free analyser combines your Birth and Destiny numbers with your actual mobile number and gives you a lucky PIN, password, wallpaper, cover and a PDF report.</p><p><a class="btn" href="${home}#mainForm">✨ Analyse my numbers</a></p></div>`;
+  const cta = `<div class="callout cta" style="margin-top:18px"><h3>Want the full picture?</h3><p>The free analyser combines your Birth and Destiny numbers with your actual mobile number and gives you a lucky PIN, password, wallpaper, cover and a PDF report.</p><p><a class="btn" href="${home}#mainForm">${ico('sparkles')} Analyse my numbers</a></p></div>`;
   const show = html => { out.innerHTML = html; out.classList.remove('hidden'); out.scrollIntoView({ behavior: 'smooth', block: 'start' }); if (window.trackEvent) trackEvent('tool_used', { tool }); };
 
   /* ---------- Life Path ---------- */

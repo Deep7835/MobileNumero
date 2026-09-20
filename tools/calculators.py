@@ -4,7 +4,7 @@
 def _rows(rows): return ''.join('<tr>' + ''.join(f'<td>{c}</td>' for c in r) + '</tr>' for r in rows)
 
 TOOLS = [
- dict(slug='life-path-number', tool='life-path', icon='🧭', name='Life Path Number', short='Your Destiny number from your full date of birth',
+ dict(slug='life-path-number', tool='life-path', icon='compass', name='Life Path Number', short='Your Destiny number from your full date of birth',
       title='Life Path Number Calculator — Find Your Destiny Number by Date of Birth',
       meta='Free Life Path (Destiny) Number calculator. Enter your date of birth to get your Life Path and Birth numbers, ruling planet, strengths, careers and compatible numbers.',
       img=dict(a='#1e1b4b', b='#8b7bff', glyph='9', label='Life Path'),
@@ -19,7 +19,7 @@ TOOLS = [
             ('What if my total is 11, 22 or 33?', "These are master numbers with an extra layer of meaning (intuition, building, teaching). The calculator flags them. In this site's system they are still reduced to 2, 4 and 6 for compatibility checks."),
             ('Can my Life Path number change?', 'No. It is fixed by your date of birth. What you can change is the numbers around you — mobile number, PIN, name spelling — to be friendly to it.')]),
 
- dict(slug='name-numerology', tool='name', icon='👤', name='Name Numerology', short='Chaldean & Pythagorean value of any name',
+ dict(slug='name-numerology', tool='name', icon='user', name='Name Numerology', short='Chaldean & Pythagorean value of any name',
       title='Name Numerology Calculator — Chaldean & Pythagorean Name Number',
       meta='Free name numerology calculator. Get the Chaldean or Pythagorean number of your full name and first name, its meaning, and whether it is friendly to your date of birth.',
       img=dict(a='#0f172a', b='#fbbf24', glyph='Aa', label='Name number'),
@@ -35,7 +35,7 @@ TOOLS = [
             ('Chaldean or Pythagorean — which is right?', 'Neither is "wrong"; they are different traditions. Indian mobile and name numerology (including this site) uses Chaldean. Use Pythagorean if you follow Western numerology.'),
             ('Does changing my name spelling really change anything?', 'Numerology holds that the vibration changes with the spelling. Changing a signature or the spelling on social profiles is a low-risk way to try it; legal name changes are a bigger decision.')]),
 
- dict(slug='compatibility', tool='compatibility', icon='💞', name='Compatibility', short='Two dates of birth → relationship score',
+ dict(slug='compatibility', tool='compatibility', icon='heart', name='Compatibility', short='Two dates of birth → relationship score',
       title='Numerology Compatibility Calculator — Love & Partnership by Date of Birth',
       meta='Free numerology compatibility calculator. Enter two dates of birth to get a 0–100 compatibility score based on Birth and Destiny numbers, with friendly, enemy and shared balancer numbers.',
       img=dict(a='#4a044e', b='#f9a8d4', glyph='♥', label='Compatibility'),
@@ -51,7 +51,7 @@ TOOLS = [
             ('Which number matters most?', 'The Birth-number pairing (40%) — it reflects everyday temperament, which is where most friction or ease is felt.'),
             ('Can we improve a low score?', 'Your dates cannot change, but you can surround the relationship with shared balancer numbers — a joint phone number, PIN or house number whose total is friendly to both of you.')]),
 
- dict(slug='personal-year', tool='personal-year', icon='📅', name='Personal Year', short='Where you are in your 9-year cycle',
+ dict(slug='personal-year', tool='personal-year', icon='calendar', name='Personal Year', short='Where you are in your 9-year cycle',
       title='Personal Year Number Calculator — Your Numerology Forecast for This Year',
       meta='Free Personal Year calculator. Find your current Personal Year, Month and Day numbers from your date of birth and see the theme, focus and pitfalls of this stage of your 9-year cycle.',
       img=dict(a='#7c2d12', b='#fb923c', glyph='📅', label='Personal Year'),
@@ -66,7 +66,7 @@ TOOLS = [
             ('Is a Personal Year 9 bad?', 'No — it is a year of completion. It is a poor time to start big new things, but an excellent one to finish, declutter and forgive, which sets up a strong Year 1.'),
             ('What are Personal Month and Day?', 'Finer subdivisions of the same cycle: Personal Year + calendar month = Personal Month; Personal Month + date = Personal Day. Use them for timing decisions within the year.')]),
 
- dict(slug='lo-shu-grid', tool='lo-shu', icon='⊞', name='Lo Shu Grid', short='Present, missing & repeated numbers',
+ dict(slug='lo-shu-grid', tool='lo-shu', icon='grid', name='Lo Shu Grid', short='Present, missing & repeated numbers',
       title='Lo Shu Grid Calculator — Missing Numbers, Repeated Numbers & Planes',
       meta='Free Lo Shu grid calculator. Enter your date of birth to draw your 3×3 numerology grid, see present, missing and repeated numbers, completed planes, and PINs that add the missing energies.',
       img=dict(a='#1e293b', b='#4fd1c5', glyph='⊞', label='Lo Shu grid'),

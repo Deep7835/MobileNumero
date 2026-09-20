@@ -2,7 +2,7 @@
 """Tamil translations of the blog posts, keyed by slug."""
 CTA = '''<div class="callout cta"><h3>30 வினாடிகளில் உங்கள் எண்ணைச் சரிபார்க்கவும்</h3>
 <p>எங்கள் இலவச கால்குலேட்டர் உங்கள் மொபைல் எண்ணின் 10 இடங்களையும் ஆய்வு செய்து, உங்கள் பிறப்பு & விதி எண்களைக் கண்டறிந்து, அதிர்ஷ்ட பின், கடவுச்சொல், வால்பேப்பர் மற்றும் கவரைப் பரிந்துரைக்கிறது — நீங்கள் உள்ளிடுவது எதுவும் உங்கள் உலாவியை விட்டு வெளியேறாது.</p>
-<p><a class="btn" href="../../index.html?lang=ta#mainForm">✨ என் இலவச ஆய்வைப் பெறு</a></p></div>'''
+<p><a class="btn" href="../../index.html?lang=ta#mainForm">{{ico:sparkles}} என் இலவச ஆய்வைப் பெறு</a></p></div>'''
 CAT = {'Mobile Number': 'மொபைல் எண்', 'Core Numbers': 'அடிப்படை எண்கள்', 'PIN & Password': 'பின் & கடவுச்சொல்', 'Lifestyle': 'வாழ்க்கை முறை'}
 
 POSTS = {

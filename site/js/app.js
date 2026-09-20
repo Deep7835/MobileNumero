@@ -192,15 +192,15 @@
           </div>
           <div class="divider"></div>
           ${compat}
-          ${full ? `<div class="share-row"><button class="btn sm" data-share="${r.score}|${r.grade}">${t('share.btn')}</button><button class="btn secondary sm" data-copy-summary="${r.score}|${r.grade}">${t('share.copy')}</button></div>` : ''}
+          ${full ? `<div class="share-row"><button class="btn sm" data-share="${r.score}|${r.grade}">${ico('share')}${t('share.btn')}</button><button class="btn secondary sm" data-copy-summary="${r.score}|${r.grade}">${t('share.copy')}</button></div>` : ''}
         </div>
         <div class="card">
           <div class="card-title"><h3>${r.str.replace(/(\d{5})(\d{5})/, '$1 $2')}</h3><span class="muted small">${t('m.hover')}</span></div>
           <div class="positions">${positions}</div>
           <div class="divider"></div>
           <div class="grid grid-2">
-            <div><h4 style="color:var(--bad)">${t('m.warnings')}</h4>${findings(r.bad, 'bad')}</div>
-            <div><h4 style="color:var(--good)">${t('m.strengths')}</h4>${findings(r.good, 'good')}</div>
+            <div><h4 class="findings-h" style="color:var(--bad)">${ico('alert')}${t('m.warnings')}</h4>${findings(r.bad, 'bad')}</div>
+            <div><h4 class="findings-h" style="color:var(--good)">${ico('check-circle')}${t('m.strengths')}</h4>${findings(r.good, 'good')}</div>
           </div>
         </div>
       </div>
@@ -312,8 +312,8 @@
     const p = profile;
     const list = Numerology.recommendCovers(p);
     $('#coverResult').innerHTML = list.map(c => `<div class="card cover-card">
-      ${c.matchBN ? `<span class="chip good match">${t('c.matchesBN', { n: p.bn })}</span>` : c.matchDN ? `<span class="chip warn match">${t('c.matchesDN', { n: p.dn })}</span>` : ''}
-      <div class="icon">${c.icon}</div>
+      ${c.matchBN ? `<span class="chip good match">${ico('check')}${t('c.matchesBN', { n: p.bn })}</span>` : c.matchDN ? `<span class="chip warn match">${t('c.matchesDN', { n: p.dn })}</span>` : ''}
+      <div class="icon">${ico(c.icon)}</div>
       <h3 style="margin-top:6px">${td(c.name)}</h3>
       <div class="chips" style="margin-bottom:10px">${c.bestFor.map(n => `<span class="digit-chip ${n === p.bn ? 'good' : n === p.dn ? 'missing' : 'neutral'}">${n}</span>`).join('')}</div>
       <ul class="list traits">${c.traits.map(x => `<li>${td(x)}</li>`).join('')}</ul>

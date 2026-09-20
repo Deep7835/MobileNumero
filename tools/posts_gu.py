@@ -2,7 +2,7 @@
 """Gujarati translations of the blog posts, keyed by slug."""
 CTA = '''<div class="callout cta"><h3>30 સેકન્ડમાં તમારો નંબર તપાસો</h3>
 <p>અમારું મફત કેલ્ક્યુલેટર તમારા મોબાઇલ નંબરની બધી 10 પોઝિશન તપાસે છે, તમારો મૂળાંક અને ભાગ્યાંક શોધે છે અને શુભ પિન, પાસવર્ડ, વૉલપેપર અને કવર સૂચવે છે — તમે જે લખો છો તે તમારા બ્રાઉઝરની બહાર જતું નથી.</p>
-<p><a class="btn" href="../../index.html?lang=gu#mainForm">✨ મારું મફત વિશ્લેષણ મેળવો</a></p></div>'''
+<p><a class="btn" href="../../index.html?lang=gu#mainForm">{{ico:sparkles}} મારું મફત વિશ્લેષણ મેળવો</a></p></div>'''
 CAT = {'Mobile Number': 'મોબાઇલ નંબર', 'Core Numbers': 'મૂળ અંકો', 'PIN & Password': 'પિન અને પાસવર્ડ', 'Lifestyle': 'જીવનશૈલી'}
 
 POSTS = {

@@ -4,7 +4,7 @@
 
 CTA = '''<div class="callout cta"><h3>Check your own number in 30 seconds</h3>
 <p>Our free calculator scans all 10 positions of your mobile number, finds your Birth &amp; Destiny numbers and suggests a lucky PIN, password, wallpaper and cover — nothing you type leaves your browser.</p>
-<p><a class="btn" href="../index.html#mainForm">✨ Get my free analysis</a></p></div>'''
+<p><a class="btn" href="../index.html#mainForm">{{ico:sparkles}} Get my free analysis</a></p></div>'''
 
 POSTS = [
 dict(

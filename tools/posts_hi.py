@@ -2,7 +2,7 @@
 """Hindi translations of the blog posts, keyed by slug. Body HTML mirrors posts.py."""
 CTA = '''<div class="callout cta"><h3>30 सेकंड में अपना नंबर जाँचें</h3>
 <p>हमारा मुफ़्त कैलकुलेटर आपके मोबाइल नंबर की सभी 10 पोज़ीशन जाँचता है, आपका मूलांक और भाग्यांक निकालता है और शुभ पिन, पासवर्ड, वॉलपेपर व कवर सुझाता है — आप जो भी लिखते हैं वह आपके ब्राउज़र से बाहर नहीं जाता।</p>
-<p><a class="btn" href="../../index.html?lang=hi#mainForm">✨ मेरा मुफ़्त विश्लेषण पाएँ</a></p></div>'''
+<p><a class="btn" href="../../index.html?lang=hi#mainForm">{{ico:sparkles}} मेरा मुफ़्त विश्लेषण पाएँ</a></p></div>'''
 CAT = {'Mobile Number': 'मोबाइल नंबर', 'Core Numbers': 'मूल अंक', 'PIN & Password': 'पिन और पासवर्ड', 'Lifestyle': 'जीवनशैली'}
 
 POSTS = {

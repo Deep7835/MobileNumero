@@ -14,7 +14,7 @@
 
   /* ---------- 1b. Theme (dark by default; light if saved or preferred). The <head> snippet applies it pre-paint. ---------- */
   const root = document.documentElement;
-  const setIcons = () => document.querySelectorAll('.theme-toggle').forEach(b => b.textContent = root.dataset.theme === 'light' ? '🌙' : '☀️');
+  const setIcons = () => document.querySelectorAll('.theme-toggle').forEach(b => b.innerHTML = ico(root.dataset.theme === 'light' ? 'moon' : 'sun'));
   setIcons();
   document.querySelectorAll('.theme-toggle').forEach(b => b.addEventListener('click', () => {
     const light = root.dataset.theme !== 'light';
@@ -30,10 +30,10 @@
     navBtn.addEventListener('click', () => {
       const open = navLinks.classList.toggle('open');
       navBtn.setAttribute('aria-expanded', String(open));
-      navBtn.textContent = open ? '✕' : '☰';
+      navBtn.innerHTML = ico(open ? 'x' : 'menu');
     });
-    navLinks.addEventListener('click', e => { if (e.target.tagName === 'A') { navLinks.classList.remove('open'); navBtn.setAttribute('aria-expanded', 'false'); navBtn.textContent = '☰'; } });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') { navLinks.classList.remove('open'); navBtn.setAttribute('aria-expanded', 'false'); navBtn.textContent = '☰'; } });
+    navLinks.addEventListener('click', e => { if (e.target.tagName === 'A') { navLinks.classList.remove('open'); navBtn.setAttribute('aria-expanded', 'false'); navBtn.innerHTML = ico('menu'); } });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { navLinks.classList.remove('open'); navBtn.setAttribute('aria-expanded', 'false'); navBtn.innerHTML = ico('menu'); } });
   }
 
   /* ---------- 2b. Nav dropdown ---------- */
@@ -81,7 +81,7 @@
     const banner = document.createElement('div');
     banner.className = 'cookie-banner'; banner.setAttribute('role', 'dialog'); banner.setAttribute('aria-live', 'polite'); banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML = `
-      <div class="cookie-text"><strong>🍪 Cookies &amp; privacy.</strong> This site stores your language and theme preferences on your device.
+      <div class="cookie-text"><strong>${ico('cookie')} Cookies &amp; privacy.</strong> This site stores your language and theme preferences on your device.
         ${hasAnalytics ? 'With your consent we also use anonymised analytics to understand which pages are useful.' : 'No tracking cookies are set.'}
         <a href="${privacyHref}">Privacy policy</a></div>
       <div class="cookie-actions">

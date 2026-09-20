@@ -111,7 +111,7 @@ const Report = (() => {
       <div class="row">${wall(p.bn, t('r.bnLabel'))}${p.dn !== p.bn ? wall(p.dn, t('r.dnLabel')) : ''}</div>
 
       <h2>${t('r.s6')}</h2>
-      <div class="row">${covers.map(c => `<div class="col box pb"><b>${c.icon} ${td(c.name)}</b> ${c.matchBN ? chip(t('c.matchesBN', { n: p.bn }), 'g') : chip(t('c.matchesDN', { n: p.dn }), 'm')}<div class="small muted">${t('r.bestFor')} ${c.bestFor.join(', ')} · ${td(c.idealFor)}${c.tip ? ' · ' + t('c.tip') + ' ' + td(c.tip) : ''}</div><ul class="small">${c.traits.slice(0, 4).map(x => `<li>${td(x)}</li>`).join('')}</ul></div>`).join('')}</div>
+      <div class="row">${covers.map(c => `<div class="col box pb"><b>${td(c.name)}</b> ${c.matchBN ? chip(t('c.matchesBN', { n: p.bn }), 'g') : chip(t('c.matchesDN', { n: p.dn }), 'm')}<div class="small muted">${t('r.bestFor')} ${c.bestFor.join(', ')} · ${td(c.idealFor)}${c.tip ? ' · ' + t('c.tip') + ' ' + td(c.tip) : ''}</div><ul class="small">${c.traits.slice(0, 4).map(x => `<li>${td(x)}</li>`).join('')}</ul></div>`).join('')}</div>
       <div class="box pb"><b>${t('r.phoneColors')}</b><div style="margin-top:4px">${colors.map(c => chip(`<span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${c.hex};border:1px solid #999;margin-right:4px;vertical-align:middle"></span>${td(c.name)} — ${t('r.' + (c.status === 'good' ? 'supportive' : c.status))}`, c.status === 'good' ? 'g' : c.status === 'avoid' ? 'b' : 'n')).join(' ')}</div></div>
 
       <h2>${t('r.s7')}</h2>

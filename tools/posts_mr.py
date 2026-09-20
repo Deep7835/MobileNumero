@@ -2,7 +2,7 @@
 """Marathi translations of the blog posts, keyed by slug."""
 CTA = '''<div class="callout cta"><h3>30 सेकंदांत तुमचा नंबर तपासा</h3>
 <p>आमचा मोफत कॅल्क्युलेटर तुमच्या मोबाइल नंबरची सर्व 10 स्थाने तपासतो, तुमचा मूलांक व भाग्यांक काढतो आणि शुभ पिन, पासवर्ड, वॉलपेपर व कव्हर सुचवतो — तुम्ही जे टाकता ते तुमच्या ब्राउझरबाहेर जात नाही.</p>
-<p><a class="btn" href="../../index.html?lang=mr#mainForm">✨ माझे मोफत विश्लेषण मिळवा</a></p></div>'''
+<p><a class="btn" href="../../index.html?lang=mr#mainForm">{{ico:sparkles}} माझे मोफत विश्लेषण मिळवा</a></p></div>'''
 CAT = {'Mobile Number': 'मोबाइल नंबर', 'Core Numbers': 'मूळ अंक', 'PIN & Password': 'पिन व पासवर्ड', 'Lifestyle': 'जीवनशैली'}
 
 POSTS = {
