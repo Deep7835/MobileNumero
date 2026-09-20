@@ -100,8 +100,7 @@ p { margin: 0 0 1em; }
 .nav .container { display: flex; align-items: center; gap: 12px; height: 64px; flex-wrap: nowrap; width: min(1360px, 100% - 32px); }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; color: var(--text); white-space: nowrap; flex: none; }
 .brand:hover { text-decoration: none; }
-.brand .logo { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
-  background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #111; font-weight: 800; box-shadow: var(--shadow-sm); }
+.brand .logo { width: 34px; height: 34px; display: block; border-radius: 9px; box-shadow: var(--shadow-sm); }
 .nav-links { display: flex; gap: 2px; margin-left: auto; flex-wrap: nowrap; min-width: 0; }
 .nav-links a { color: var(--muted); padding: 8px 11px; border-radius: 10px; font-size: .9rem; font-weight: 500; white-space: nowrap; transition: color var(--dur) var(--ease), background var(--dur) var(--ease); }
 .nav-links a:hover, .nav-links a.active, .nav-links a[aria-current="page"] { color: var(--text); background: var(--surface-2); text-decoration: none; }
@@ -518,7 +517,8 @@ footer { padding: 40px 0 60px; color: var(--muted); font-size: .85rem; border-to
 .feature h2 a:hover, .post-item h3 a:hover { text-decoration: underline; }
 .feature p { color: var(--muted); margin: 0 0 16px; }
 .byline { display: flex; align-items: center; gap: 10px; font-size: .85rem; }
-.byline .avatar { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #14103a; font-weight: 800; font-size: .95rem; }
+.byline .avatar { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; overflow: hidden; }
+.byline .avatar img { width: 34px; height: 34px; display: block; }
 .byline b { display: block; }
 .byline span { color: var(--muted); }
 .post-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 0; row-gap: 40px; }
@@ -545,7 +545,8 @@ footer { padding: 40px 0 60px; color: var(--muted); font-size: .85rem; border-to
 .rings { position: relative; height: 300px; }
 .rings svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .rings .orb { position: absolute; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: .95rem; color: #14103a; border: 2px solid var(--bg-2); box-shadow: 0 6px 16px rgba(0,0,0,.18); }
-.rings .core { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; font-size: 1.4rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #14103a; }
+.rings .core { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; box-shadow: var(--shadow-md); }
+.rings .core img { width: 52px; height: 52px; display: block; border-radius: 14px; }
 .footer-main { background: var(--surface); border-top: 1px solid var(--border); margin-top: 48px; padding: 48px 0 24px; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 32px; }
 .footer-grid h4 { font-size: .95rem; margin: 0 0 14px; }
@@ -553,7 +554,10 @@ footer { padding: 40px 0 60px; color: var(--muted); font-size: .85rem; border-to
 .footer-grid a { color: var(--muted); font-size: .95rem; }
 .footer-grid a:hover { color: var(--text); text-decoration: none; }
 .footer-grid a .ext { font-size: .75rem; margin-left: 3px; opacity: .7; }
-.footer-brand .brand { margin-bottom: 12px; }
+.footer-logo { display: block; width: min(300px, 100%); margin: 0 0 14px -6px; }
+.footer-logo img { width: 100%; height: auto; display: block; }
+:root[data-theme="light"] .only-dark { display: none; }
+:root:not([data-theme="light"]) .only-light { display: none; }
 .footer-brand p { color: var(--muted); font-size: .95rem; max-width: 34ch; margin: 0; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); font-size: .82rem; color: var(--muted); }
 .footer-bottom .dot { margin: 0 6px; }

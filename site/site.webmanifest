@@ -1,13 +1,21 @@
 {
   "name": "NumberKundli",
   "short_name": "NumberKundli",
-  "description": "Free mobile number numerology calculator with lucky PIN, password, wallpaper and cover recommendations.",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#0b0d17",
+  "description": "Free mobile number numerology calculator",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0a0c16",
   "theme_color": "#0b0d17",
   "icons": [
-    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }

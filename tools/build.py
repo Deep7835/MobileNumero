@@ -52,7 +52,7 @@ VERIFY = {'google-site-verification': 'WMT9RBYqvsxIn936s6lqItZouN2_6RP97dqWz3PPz
 VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=28'
+VER = 'v=29'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -155,26 +155,53 @@ def save_variants(img, stem):
     img.save(IMG / f'{stem}.jpg', 'JPEG', quality=80, optimize=True, progressive=True)
     img.resize((640, 336), Image.LANCZOS).save(IMG / f'{stem}-640.webp', 'WEBP', quality=74, method=6)
 
+BRAND = ROOT.parent / 'brand'   # source artwork supplied by the owner (mark-source.webp, logo-source.webp)
+
+def key_white(img, floor=40):
+    """Turn a logo drawn on white into RGBA: alpha from distance-to-white, colour un-mixed so it re-composites identically on white."""
+    px = img.convert('RGB').load(); w, h = img.size; out = Image.new('RGBA', (w, h)); o = out.load()
+    for y in range(h):
+        for x in range(w):
+            r, g, b_ = px[x, y]; m = min(r, g, b_)
+            a = min(1.0, max(0.0, (255 - m) / (255 - floor)))
+            if a <= 0.02: o[x, y] = (0, 0, 0, 0); continue
+            un = lambda c: int(max(0, min(255, (c - (1 - a) * 255) / a)))
+            o[x, y] = (un(r), un(g), un(b_), int(a * 255))
+    return out
+
+def light_variant(img, light=(238, 240, 251), x_from=0.24):
+    """Dark-navy / grey lettering -> light, gold untouched: the lockup for dark surfaces. The mark (left of x_from) is left as designed."""
+    out = img.copy(); px = out.load(); w, h = out.size
+    for y in range(h):
+        for x in range(int(w * x_from), w):
+            r, g, b_, a = px[x, y]
+            if a and max(r, g, b_) < 150 and max(r, g, b_) - min(r, g, b_) < 70: px[x, y] = (*light, a)
+    return out
+
 def brand_images():
-    # favicon.svg
-    (ASSETS / 'favicon.svg').write_text('''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b7bff"/><stop offset="1" stop-color="#ffcb47"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#g)"/><text x="32" y="45" font-family="Georgia, serif" font-size="38" font-weight="700" text-anchor="middle" fill="#14103a">९</text></svg>''')
-    def icon(size):
-        im = gradient(size, size, hexrgb('#8b7bff'), hexrgb('#ffcb47')); d = ImageDraw.Draw(im)
-        mask = Image.new('L', (size, size), 0); ImageDraw.Draw(mask).rounded_rectangle([0, 0, size-1, size-1], radius=size//4, fill=255)
-        f = None
-        for p in ['/System/Library/Fonts/Supplemental/Devanagari Sangam MN.ttc', '/System/Library/Fonts/Supplemental/Arial Unicode.ttf', '/System/Library/Fonts/Supplemental/Kohinoor.ttc']:
-            if os.path.exists(p):
-                try: f = ImageFont.truetype(p, int(size*0.62)); break
-                except Exception: pass
-        d.text((size/2, size/2), '९', font=f or font(int(size*0.6)), anchor='mm', fill=(20, 16, 58))
-        out = Image.new('RGBA', (size, size), (0, 0, 0, 0)); out.paste(im, mask=mask); return out
-    icon(32).save(ASSETS / 'favicon-32.png', optimize=True)
-    icon(180).convert('RGB').save(ASSETS / 'apple-touch-icon.png', optimize=True)
-    icon(192).save(ASSETS / 'icon-192.png', optimize=True)
-    icon(512).save(ASSETS / 'icon-512.png', optimize=True)
-    # OG image for the home page
-    og = hero_image(dict(title='NumberKundli — Free Mobile Number Numerology Calculator', img=dict(a='#0b0d17', b='#8b7bff', glyph='९', label='Number · PIN · Password · Wallpaper')))
-    og.save(ASSETS / 'og-image.jpg', 'JPEG', quality=82, optimize=True, progressive=True)
+    mark = Image.open(BRAND / 'mark-source.webp').convert('RGBA').crop((65, 60, 1189, 1184))   # the rounded square; corners are transparent
+    sq = lambda n: mark.resize((n, n), Image.LANCZOS)
+    for n, name in [(16, 'favicon-16.png'), (32, 'favicon-32.png'), (48, 'favicon-48.png'), (128, 'logo-mark.png'), (192, 'icon-192.png'), (512, 'icon-512.png')]:
+        sq(n).save(ASSETS / name, optimize=True)
+    sq(48).save(ASSETS / 'favicon.ico', sizes=[(16, 16), (32, 32), (48, 48)])
+    bg = Image.new('RGBA', (180, 180), (44, 28, 84, 255)); bg.alpha_composite(sq(180))            # iOS masks its own corners: give it an opaque square
+    bg.convert('RGB').save(ASSETS / 'apple-touch-icon.png', optimize=True)
+    # horizontal lockup (mark + wordmark + tagline) for light surfaces, and a light-lettered variant for dark ones
+    src = Image.open(BRAND / 'logo-source.webp').convert('RGB'); bb = (85, 21, 1924, 606)
+    logo = key_white(src.crop(bb)); logo_dark = light_variant(logo)
+    for im, name in [(logo, 'logo.png'), (logo_dark, 'logo-dark.png')]:
+        im.resize((900, int(900 * im.height / im.width)), Image.LANCZOS).save(ASSETS / name, optimize=True)
+    # OG image: lockup on the brand gradient
+    og = gradient(1200, 630, hexrgb('#1a1035'), hexrgb('#0b0d17')); decorate(og, '#8b7bff')
+    lk = logo_dark.resize((880, int(880 * logo_dark.height / logo_dark.width)), Image.LANCZOS)
+    og.alpha_composite(lk, ((1200 - lk.width) // 2, (630 - lk.height) // 2 - 30)) if og.mode == 'RGBA' else og.paste(lk, ((1200 - lk.width) // 2, (630 - lk.height) // 2 - 30), lk)
+    d = ImageDraw.Draw(og); cap = 'Free mobile number numerology · lucky numbers · PIN & password · PDF report'
+    d.text((600, 560), cap, font=font(28, bold=False), anchor='mm', fill=(200, 204, 232))
+    og.convert('RGB').save(ASSETS / 'og-image.jpg', 'JPEG', quality=86, optimize=True, progressive=True)
+    for stale in ['favicon.svg']:
+        if (ASSETS / stale).exists(): (ASSETS / stale).unlink()
+    (ROOT / 'site.webmanifest').write_text(json.dumps({"name": SITE_NAME, "short_name": SITE_NAME, "description": "Free mobile number numerology calculator", "start_url": "/", "display": "browser",
+        "background_color": "#0a0c16", "theme_color": "#0b0d17", "icons": [{"src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png"}]}, indent=2))
 
 # ---------------------------------------------------------------- html
 def esc(s): return html.escape(s, quote=True)
@@ -230,9 +257,11 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
   {VERIFY_TAGS}<link rel="canonical" href="{SITE_URL}/{canonical_path}" />
   {alt_links}
   <meta property="og:locale" content="{LOCALE[lang]}" />
-  <link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="{up}assets/favicon.ico" sizes="48x48" />
   <link rel="icon" href="{up}assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="{up}assets/icon-192.png" sizes="192x192" type="image/png" />
   <link rel="apple-touch-icon" href="{up}assets/apple-touch-icon.png" />
+  <link rel="manifest" href="{up}site.webmanifest" />
   <meta property="og:type" content="{'article' if article else 'website'}" />
   <meta property="og:site_name" content="{SITE_NAME}" />
   <meta property="og:title" content="{esc(title)}" />
@@ -257,7 +286,7 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
 <a class="skip-link" href="#main">{u['skip']}</a>
 <nav class="nav" aria-label="Main">
   <div class="container">
-    <a class="brand" href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}"><span class="logo">९</span> <span>{SITE_NAME}</span></a>
+    <a class="brand" href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}"><img class="logo" src="{up}assets/logo-mark.png" width="34" height="34" alt="" /> <span>{SITE_NAME}</span></a>
     <div class="nav-links" id="navLinks">
       <a href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}">{u['home']}</a>
       <a href="{up}{'' if lang == 'en' else lang + '/'}blog/">{u['blog']}</a>
@@ -292,7 +321,7 @@ def foot(depth=1, lang='en', home_anchor=None):
       </div>
       <div class="rings" aria-hidden="true">
         <svg viewBox="0 0 400 300"><g fill="none" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="3 5"><circle cx="200" cy="150" r="44"/><circle cx="200" cy="150" r="100"/><circle cx="200" cy="150" r="156"/><circle cx="200" cy="150" r="212"/></g></svg>
-        <span class="core">९</span>{orbs}
+        <span class="core"><img src="{up}assets/logo-mark.png" width="52" height="52" alt="" /></span>{orbs}
       </div>
     </div>
   </div>
@@ -300,7 +329,7 @@ def foot(depth=1, lang='en', home_anchor=None):
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="{home}"><span class="logo">९</span> <span>{SITE_NAME}</span></a>
+          <a class="footer-logo" href="{home}" aria-label="{SITE_NAME}"><img class="only-dark" src="{up}assets/logo-dark.png" width="900" height="285" alt="{SITE_NAME} — Numbers guide a brighter you" /><img class="only-light" src="{up}assets/logo.png" width="900" height="285" alt="{SITE_NAME} — Numbers guide a brighter you" /></a>
           <p>{u['f_tag']}</p>
         </div>
         <div>
@@ -425,7 +454,7 @@ def index_page(lang='en'):
         key = base_by_slug[p['slug']]['category']
         if key not in [c[0] for c in cats]: cats.append((key, p['category']))
     catkey = lambda p: re.sub(r'[^a-z0-9]+', '-', base_by_slug[p['slug']]['category'].lower())
-    author = lambda d: '<div class="byline"><span class="avatar">९</span><div><b>' + SITE_NAME + '</b><span>' + fmt_date_l(d, lang) + '</span></div></div>'
+    author = lambda d: '<div class="byline"><span class="avatar"><img src="' + '../' * depth + 'assets/logo-mark.png" width="34" height="34" alt="" /></span><div><b>' + SITE_NAME + '</b><span>' + fmt_date_l(d, lang) + '</span></div></div>'
     feat = posts[0]
     feature = ('<article class="feature" data-cat="' + catkey(feat) + '">'
                '<a href="' + feat['slug'] + '.html" aria-label="' + esc(feat['title']) + '">' + picture(feat['slug'], u['imgalt'].format(t=feat['title']), lazy=False, depth=depth, lang=lang) + '</a>'
@@ -620,7 +649,7 @@ def inject_static_footers():
             body = body.replace(f"{u['disclaimer']} {u['credit']} {u['f_indep']}", '<span data-i18n-html="footer.disclaimer"></span> <span data-i18n-html="footer.credit"></span> <span data-i18n="f_indep"></span>')
             body = body.replace(f">{u['calc']}<", f" data-i18n=\"nav.calc\">{u['calc']}<").replace(f">{u['numbers']}<", f" data-i18n=\"nav.numbers\">{u['numbers']}<").replace(f">{u['blog']}<", f" data-i18n=\"nav.blog\">{u['blog']}<").replace(f">{u['about'] if 'about' in u else u['f_about']}<", f" data-i18n=\"f_about\">{u['f_about']}<").replace(f">{u['privacy']}<", f" data-i18n=\"f_privacy\">{u['privacy']}<").replace(f">{u['terms']}<", f" data-i18n=\"f_terms\">{u['terms']}<").replace(f">{u['sitemap']}<", f" data-i18n=\"f_sitemap\">{u['sitemap']}<").replace(f"<span>{u['cta']}</span>", f"<span data-i18n=\"report.ctaSticky\">{u['cta']}</span>")
         html_ = html_[:a] + '<!-- footer:start -->' + body + '<!-- footer:end -->' + html_[b:]
-        html_ = re.sub(r'<!-- verify -->(?:<meta name="(?:google-site-verification|msvalidate\.01)" content="[^"]*" />\s*)*', '<!-- verify -->' + VERIFY_TAGS, html_, 1)
+        html_ = re.sub(r'<!-- verify -->(?:<meta name="(?:google-site-verification|msvalidate\.01)" content="[^"]*" />\s*)*', '<!-- verify -->' + VERIFY_TAGS, html_, count=1)
         f.write_text(clean_urls(html_))
 
 if __name__ == '__main__':

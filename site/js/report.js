@@ -78,7 +78,7 @@ const Report = (() => {
       </div>` : `<p class="muted">${t('r.noMobile')}</p>`;
 
     const html = `<div class="page">
-      <div class="head"><div><div class="brand">${t('r.brand')}</div><h1>${t('r.title')}${p.name ? ' — ' + esc(p.name) : ''}</h1>
+      <div class="head"><div><img class="brand-logo" src="${new URL('assets/logo.png', document.baseURI).href}" alt="${t('r.brand')}" style="height:44px;width:auto;display:block;margin-bottom:6px" /><h1>${t('r.title')}${p.name ? ' — ' + esc(p.name) : ''}</h1>
         <div class="small muted">${t('r.dob')} ${String(p.day).padStart(2, '0')}/${String(p.month).padStart(2, '0')}/${p.year} · ${t('r.purpose')}: ${td(purpose.label)} · ${t('r.generated')} ${today}</div></div></div>
 
       <h2>${t('r.s1')}</h2>
