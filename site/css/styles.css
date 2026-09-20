@@ -589,7 +589,9 @@ footer { padding: 40px 0 60px; color: var(--muted); font-size: .85rem; border-to
 .footer-brand p { color: var(--muted); font-size: .95rem; max-width: 34ch; margin: 0; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); font-size: .82rem; color: var(--muted); }
 .footer-bottom .dot { margin: 0 6px; }
-.footer-bottom .credit b { font-weight: 600; color: var(--text); }
+.footer-bottom .credit a { color: var(--text); }
+.footer-bottom .credit a:hover { color: var(--accent-ink); text-decoration: none; }
+.footer-bottom .credit b { font-weight: 600; }
 .footer-disc { font-size: .8rem; color: var(--muted); margin-top: 28px; max-width: 100ch; }
 @media (max-width: 960px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } .footer-cta { grid-template-columns: 1fr; padding: 32px; } .rings { height: 220px; } }
 @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-cta { padding: 26px 22px; } }
