@@ -1,0 +1,52 @@
+# NumberKundli
+
+> Free mobile-number numerology: enter a date of birth and a 10-digit Indian mobile number to get Birth and Destiny numbers, a position-by-position (1–10) analysis, a 0–100 score, lucky numbers, a PIN/password generator, wallpaper, cover-colour, ringtone and mantra recommendations, and a downloadable PDF report. Available in English, Hindi, Marathi, Tamil and Gujarati.
+
+The method follows the Advance Mobile Numerology Class syllabus: each of the 10 digit positions governs a life area (attitude, decision making, health, partnership, kids, marriage, married life, career & health, public relations, wealth), each digit has good/bad positions, digits are friendly, neutral or enemy to the Birth number (day of birth reduced to 1–9) and Destiny number (full date of birth reduced), and the Lo Shu grid shows missing numbers. Numerology is a belief-based practice; the site gives guidance, not medical, legal or financial advice.
+
+## Tools
+- [Mobile number analyser](https://numberkundli.com/): full 10-position analysis, score, lucky numbers, PIN & password, PDF report
+- [Life Path Number](https://numberkundli.com/tools/life-path-number): Your Destiny number from your full date of birth
+- [Name Numerology](https://numberkundli.com/tools/name-numerology): Chaldean & Pythagorean value of any name
+- [Compatibility](https://numberkundli.com/tools/compatibility): Two dates of birth → relationship score
+- [Personal Year](https://numberkundli.com/tools/personal-year): Where you are in your 9-year cycle
+- [Lo Shu Grid](https://numberkundli.com/tools/lo-shu-grid): Present, missing & repeated numbers
+
+## Birth number guides (1–9)
+- [Birth number 1](https://numberkundli.com/numbers/birth-number-1): Sun — Leadership, authority, originality
+- [Birth number 2](https://numberkundli.com/numbers/birth-number-2): Moon — Emotion, intuition, partnership
+- [Birth number 3](https://numberkundli.com/numbers/birth-number-3): Jupiter — Wisdom, knowledge, expansion
+- [Birth number 4](https://numberkundli.com/numbers/birth-number-4): Rahu — Discipline, unconventional, sudden change
+- [Birth number 5](https://numberkundli.com/numbers/birth-number-5): Mercury — Communication, business, freedom
+- [Birth number 6](https://numberkundli.com/numbers/birth-number-6): Venus — Love, luxury, family, beauty
+- [Birth number 7](https://numberkundli.com/numbers/birth-number-7): Ketu — Spirituality, research, detachment
+- [Birth number 8](https://numberkundli.com/numbers/birth-number-8): Saturn — Karma, hard work, justice
+- [Birth number 9](https://numberkundli.com/numbers/birth-number-9): Mars — Energy, courage, action
+
+## Blog (English)
+- [Mobile Number Numerology: What Each of the 10 Digit Positions Means](https://numberkundli.com/blog/mobile-number-numerology-10-positions-meaning): Your mobile number is not just a string of digits. In mobile numerology each position — from the first digit to the last — rules a specific area of life.
+- [Best Mobile Number Ending: Why 55 and 555 Are Considered the Luckiest](https://numberkundli.com/blog/best-mobile-number-ending-55-555): If you could pick the last digits of your phone number, numerology has a clear favourite: 55 or 555.
+- [Why You Should Never End Your Mobile Number With 8 (Numerology Explained)](https://numberkundli.com/blog/never-end-mobile-number-with-8): 8 is the number of Saturn: karma, hard work and delay. In the wrong position of a phone number it becomes a drain on money and relationships.
+- [Number 4 in Your Mobile Number: Why Numerologists Say Avoid It](https://numberkundli.com/blog/number-4-in-mobile-number-numerology): The class material is unusually blunt about one digit: "Avoid 4 number in mobile phone." Here is why.
+- [How to Calculate Your Birth Number and Destiny Number (With Examples)](https://numberkundli.com/blog/how-to-calculate-birth-number-and-destiny-number): Two numbers drive every recommendation in mobile numerology. Both come from your date of birth and take less than a minute to work out.
+- [Lo Shu Grid Explained: How to Find Your Missing Numbers and Fix Them](https://numberkundli.com/blog/lo-shu-grid-missing-numbers-explained): Nine boxes, one date of birth. The Lo Shu grid shows at a glance which energies you were born with — and which ones you need to add.
+- [How to Choose a Lucky PIN Code Using Numerology (Rules + Examples)](https://numberkundli.com/blog/how-to-choose-lucky-pin-code-numerology): You type your phone PIN dozens of times a day. Numerology treats it as a small daily ritual — so choose the digits deliberately.
+- [Chaldean Numerology Password Guide: Pick a Word That Matches Your Goal](https://numberkundli.com/blog/chaldean-numerology-password-guide): GANESHJI totals 6. LAXMI totals 5. In Chaldean numerology a password is a word with a number inside it — and that number can be chosen on purpose.
+- [Best Mobile Wallpaper According to Your Date of Birth (Numbers 1–9)](https://numberkundli.com/blog/best-mobile-wallpaper-according-to-date-of-birth): Rising sun for 1, full moon for 2, Lakshmi for 6, Hanuman for 9 — each number has imagery that resonates with its planet.
+- [What Your Phone Cover Says About You: Silicone, Leather, Metal & More](https://numberkundli.com/blog/phone-cover-material-numerology-personality): The case you choose to protect your phone quietly describes how you protect yourself. Numerology matches nine cover types to Birth numbers.
+- [Phone Colour Numerology: Black, Gold, Blue, Red — Which One Suits You?](https://numberkundli.com/blog/phone-colour-numerology-which-colour-suits-you): Black for discipline, gold for authority, green for business, purple for intuition — the colour of your phone is a daily dose of one planet.
+- [Mobile Affirmations, Ringtones & Mantras for Numbers 1 to 9](https://numberkundli.com/blog/mobile-affirmations-ringtones-mantras-numbers-1-to-9): Every call is a small event. The class pairs each number with two affirmations, a ringtone style and a planetary mantra to set the tone.
+- [Friendly and Enemy Numbers in Numerology: The Complete Compatibility Chart](https://numberkundli.com/blog/friendly-and-enemy-numbers-numerology-chart): Every recommendation in mobile numerology comes back to one question: is this number a friend, an enemy or neutral to you?
+- [Best Mobile Number for Business Growth and Money (Digits to Pick, Digits to Avoid)](https://numberkundli.com/blog/mobile-number-for-business-growth-money): For a business line the last three digits do most of the work. Here is exactly what to put there — and what to keep out.
+- [Mobile Number for Marriage & Relationships: Positions 6 and 7 Explained](https://numberkundli.com/blog/mobile-number-for-marriage-and-relationships): Two digits in the middle of your phone number describe your love life. One of them can help; several can hurt.
+
+## Blog in other languages
+- [Hindi (हिन्दी)](https://numberkundli.com/hi/blog/)
+- [Marathi (मराठी)](https://numberkundli.com/mr/blog/)
+- [Tamil (தமிழ்)](https://numberkundli.com/ta/blog/)
+- [Gujarati (ગુજરાતી)](https://numberkundli.com/gu/blog/)
+
+## Optional
+- [Privacy policy](https://numberkundli.com/privacy)
+- [Terms](https://numberkundli.com/terms)
+- [Sitemap](https://numberkundli.com/sitemap.xml)

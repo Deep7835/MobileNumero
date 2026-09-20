@@ -19,6 +19,7 @@ for _l in LANGS:
     try: TR[_l] = importlib.import_module(f'posts_{_l}').POSTS
     except ModuleNotFoundError: TR[_l] = {}
 FONT_CSS = {'hi': ("'Noto Sans Devanagari','Geist',sans-serif", "'Noto Sans Devanagari','Geist',sans-serif"), 'mr': ("'Noto Sans Devanagari','Geist',sans-serif", "'Noto Sans Devanagari','Geist',sans-serif"), 'ta': ("'Noto Sans Tamil','Geist',sans-serif", "'Noto Sans Tamil','Geist',sans-serif"), 'gu': ("'Noto Sans Gujarati','Geist',sans-serif", "'Noto Sans Gujarati','Geist',sans-serif")}
+LANG_NAMES = {'hi': 'Hindi (हिन्दी)', 'mr': 'Marathi (मराठी)', 'ta': 'Tamil (தமிழ்)', 'gu': 'Gujarati (ગુજરાતી)'}
 LOCALE = {'en': 'en_IN', 'hi': 'hi_IN', 'mr': 'mr_IN', 'ta': 'ta_IN', 'gu': 'gu_IN'}
 LANG_NAME = {'en': 'English', 'hi': 'हिन्दी', 'mr': 'मराठी', 'ta': 'தமிழ்', 'gu': 'ગુજરાતી'}
 FOOT_UI = {'en': {'f_tag': 'Free mobile numerology: analyse your number, find a lucky PIN and password, and get a PDF report in five languages.', 'f_explore': 'Explore', 'f_company': 'Company', 'f_social': 'Socials', 'f_rights': 'All rights reserved', 'f_made': 'Built with care in India', 'f_cta_eye': 'Free personal report', 'f_cta_h': 'Get your mobile numerology report', 'f_cta_p': 'Birth & Destiny numbers, a position-by-position reading of your mobile number, lucky PIN, password, wallpaper and cover — compiled into a PDF you can keep.', 'f_cta_btn': 'Analyse my number', 'f_expert': 'Talk to an expert', 'f_home': 'Home', 'f_analyser': 'Mobile number analyser', 'viewall': 'View all', 'journal_eye': 'NumberKundli Journal', 'featured': 'Featured'}, 'hi': {'f_tag': 'मुफ़्त मोबाइल न्यूमरोलॉजी: अपना नंबर जाँचें, शुभ पिन और पासवर्ड पाएँ, और पाँच भाषाओं में PDF रिपोर्ट लें।', 'f_explore': 'खोजें', 'f_company': 'कंपनी', 'f_social': 'सोशल', 'f_rights': 'सर्वाधिकार सुरक्षित', 'f_made': 'भारत में सावधानी से बनाया गया', 'f_cta_eye': 'मुफ़्त व्यक्तिगत रिपोर्ट', 'f_cta_h': 'अपनी मोबाइल न्यूमरोलॉजी रिपोर्ट पाएँ', 'f_cta_p': 'मूलांक और भाग्यांक, आपके मोबाइल नंबर की पोज़ीशन-दर-पोज़ीशन रीडिंग, शुभ पिन, पासवर्ड, वॉलपेपर और कवर — एक PDF में।', 'f_cta_btn': 'मेरा नंबर जाँचें', 'f_expert': 'विशेषज्ञ से बात करें', 'f_home': 'होम', 'f_analyser': 'मोबाइल नंबर विश्लेषक', 'viewall': 'सभी देखें', 'journal_eye': 'NumberKundli जर्नल', 'featured': 'विशेष'}, 'mr': {'f_tag': 'मोफत मोबाइल न्यूमरॉलॉजी: तुमचा नंबर तपासा, शुभ पिन व पासवर्ड मिळवा, आणि पाच भाषांत PDF अहवाल घ्या.', 'f_explore': 'शोधा', 'f_company': 'कंपनी', 'f_social': 'सोशल', 'f_rights': 'सर्व हक्क राखीव', 'f_made': 'भारतात काळजीपूर्वक बनवले', 'f_cta_eye': 'मोफत वैयक्तिक अहवाल', 'f_cta_h': 'तुमचा मोबाइल न्यूमरॉलॉजी अहवाल मिळवा', 'f_cta_p': 'मूलांक व भाग्यांक, तुमच्या मोबाइल नंबरचे स्थाननिहाय वाचन, शुभ पिन, पासवर्ड, वॉलपेपर व कव्हर — एका PDF मध्ये.', 'f_cta_btn': 'माझा नंबर तपासा', 'f_expert': 'तज्ज्ञांशी बोला', 'f_home': 'होम', 'f_analyser': 'मोबाइल नंबर विश्लेषक', 'viewall': 'सर्व पहा', 'journal_eye': 'NumberKundli जर्नल', 'featured': 'खास'}, 'ta': {'f_tag': 'இலவச மொபைல் எண் கணிதம்: உங்கள் எண்ணை ஆய்வு செய்து, அதிர்ஷ்ட பின் மற்றும் கடவுச்சொல்லைக் கண்டறிந்து, ஐந்து மொழிகளில் PDF அறிக்கையைப் பெறுங்கள்.', 'f_explore': 'ஆராயுங்கள்', 'f_company': 'நிறுவனம்', 'f_social': 'சமூக ஊடகம்', 'f_rights': 'அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை', 'f_made': 'இந்தியாவில் அக்கறையுடன் உருவாக்கப்பட்டது', 'f_cta_eye': 'இலவச தனிப்பட்ட அறிக்கை', 'f_cta_h': 'உங்கள் மொபைல் எண் கணித அறிக்கையைப் பெறுங்கள்', 'f_cta_p': 'பிறப்பு & விதி எண்கள், உங்கள் மொபைல் எண்ணின் இடவாரியான வாசிப்பு, அதிர்ஷ்ட பின், கடவுச்சொல், வால்பேப்பர் மற்றும் கவர் — ஒரே PDF இல்.', 'f_cta_btn': 'என் எண்ணை ஆய்வு செய்', 'f_expert': 'நிபுணரிடம் பேசுங்கள்', 'f_home': 'முகப்பு', 'f_analyser': 'மொபைல் எண் ஆய்வாளர்', 'viewall': 'அனைத்தும்', 'journal_eye': 'NumberKundli இதழ்', 'featured': 'சிறப்பு'}, 'gu': {'f_tag': 'મફત મોબાઇલ ન્યુમરોલોજી: તમારો નંબર તપાસો, શુભ પિન અને પાસવર્ડ મેળવો, અને પાંચ ભાષામાં PDF રિપોર્ટ લો.', 'f_explore': 'શોધો', 'f_company': 'કંપની', 'f_social': 'સોશિયલ', 'f_rights': 'સર્વ હક્ક સુરક્ષિત', 'f_made': 'ભારતમાં કાળજીથી બનાવેલું', 'f_cta_eye': 'મફત વ્યક્તિગત રિપોર્ટ', 'f_cta_h': 'તમારો મોબાઇલ ન્યુમરોલોજી રિપોર્ટ મેળવો', 'f_cta_p': 'મૂળાંક અને ભાગ્યાંક, તમારા મોબાઇલ નંબરનું પોઝિશન-દર-પોઝિશન વાંચન, શુભ પિન, પાસવર્ડ, વૉલપેપર અને કવર — એક PDF માં.', 'f_cta_btn': 'મારો નંબર તપાસો', 'f_expert': 'નિષ્ણાત સાથે વાત કરો', 'f_home': 'હોમ', 'f_analyser': 'મોબાઇલ નંબર વિશ્લેષક', 'viewall': 'બધા જુઓ', 'journal_eye': 'NumberKundli જર્નલ', 'featured': 'ખાસ'}}
@@ -45,6 +46,9 @@ NUM_INTRO = {
 ROOT = Path(__file__).resolve().parent.parent / 'site'
 SITE_URL = 'https://numberkundli.com'   # keep in sync with site/js/site-config.js
 SITE_NAME = 'NumberKundli'
+# Search-engine ownership tokens (public by design). Leave empty if verifying via DNS TXT instead.
+VERIFY = {'google-site-verification': '', 'msvalidate.01': ''}
+VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
 VER = 'v=26'
@@ -190,7 +194,8 @@ THEME_PRE = "<script>(function(){try{var m=localStorage.getItem('theme');if(m===
 def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth=1, lang='en', alternates=None):
     up = '../' * depth; u = UI[lang]
     alt_links = ''.join(f'<link rel="alternate" hreflang="{l}" href="{SITE_URL}/{p}" />' for l, p in (alternates or {}).items()) + (f'<link rel="alternate" hreflang="x-default" href="{SITE_URL}/{alternates["en"]}" />' if alternates and 'en' in alternates else '')
-    ld = [{"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + '/'}]
+    ld = [{"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + '/'},
+          {"@type": "Organization", "@id": SITE_URL + '/#org', "name": SITE_NAME, "url": SITE_URL + '/', "logo": f"{SITE_URL}/assets/icon-512.png"}]
     if article:
         ld.append({"@type": "Article", "headline": article['title'], "description": article['meta'], "image": [og_image],
                    "datePublished": article['date'], "dateModified": article['date'],
@@ -212,7 +217,7 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
   <meta name="description" content="{esc(desc)}" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="theme-color" content="#0b0d17" />
-  <link rel="canonical" href="{SITE_URL}/{canonical_path}" />
+  {VERIFY_TAGS}<link rel="canonical" href="{SITE_URL}/{canonical_path}" />
   {alt_links}
   <meta property="og:locale" content="{LOCALE[lang]}" />
   <link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml" />
@@ -567,7 +572,23 @@ def sitemap_robots():
         xml += f'  <url>\n    <loc>{SITE_URL}/{path}</loc>\n    <lastmod>{mod}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{pri}</priority>{img}{alts}\n  </url>\n'
     xml += '</urlset>\n'
     (ROOT / 'sitemap.xml').write_text(xml)
-    (ROOT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nDisallow: /404\nDisallow: /404.html\n\nSitemap: {SITE_URL}/sitemap.xml\n')
+    ai_bots = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'anthropic-ai', 'PerplexityBot', 'Google-Extended', 'Applebot-Extended', 'Bingbot', 'DuckAssistBot']
+    (ROOT / 'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /404\nDisallow: /404.html\n\n# AI search / answer engines are welcome to index and cite the site\n'
+                                     + ''.join(f'User-agent: {b}\nAllow: /\n\n' for b in ai_bots) + f'Sitemap: {SITE_URL}/sitemap.xml\n')
+    llms_txt()
+
+def llms_txt():
+    """llms.txt (llmstxt.org): a plain-text map of the site for LLM crawlers and answer engines."""
+    L = [f'# {SITE_NAME}', '',
+         f'> Free mobile-number numerology: enter a date of birth and a 10-digit Indian mobile number to get Birth and Destiny numbers, a position-by-position (1–10) analysis, a 0–100 score, lucky numbers, a PIN/password generator, wallpaper, cover-colour, ringtone and mantra recommendations, and a downloadable PDF report. Available in English, Hindi, Marathi, Tamil and Gujarati.', '',
+         'The method follows the Advance Mobile Numerology Class syllabus: each of the 10 digit positions governs a life area (attitude, decision making, health, partnership, kids, marriage, married life, career & health, public relations, wealth), each digit has good/bad positions, digits are friendly, neutral or enemy to the Birth number (day of birth reduced to 1–9) and Destiny number (full date of birth reduced), and the Lo Shu grid shows missing numbers. Numerology is a belief-based practice; the site gives guidance, not medical, legal or financial advice.', '',
+         '## Tools', f'- [Mobile number analyser]({SITE_URL}/): full 10-position analysis, score, lucky numbers, PIN & password, PDF report']
+    L += [f"- [{t['name']}]({SITE_URL}/tools/{t['slug']}): {t['short']}" for t in TOOLS]
+    L += ['', '## Birth number guides (1–9)'] + [f"- [Birth number {n}]({SITE_URL}/numbers/birth-number-{n}): {d['planet']} — {d['keyword']}" for n, d in NUMBERS.items()]
+    L += ['', '## Blog (English)'] + [f"- [{p['title']}]({SITE_URL}/blog/{p['slug']}): {p['excerpt']}" for p in POSTS]
+    L += ['', '## Blog in other languages'] + [f"- [{LANG_NAMES.get(l, l)}]({SITE_URL}/{l}/blog/)" for l in LANGS if TR.get(l)]
+    L += ['', '## Optional', f'- [Privacy policy]({SITE_URL}/privacy)', f'- [Terms]({SITE_URL}/terms)', f'- [Sitemap]({SITE_URL}/sitemap.xml)', '']
+    (ROOT / 'llms.txt').write_text('\n'.join(L))
 
 def inject_static_footers():
     """privacy/terms/404/index keep their own bodies; the footer is replaced between markers."""
@@ -585,7 +606,9 @@ def inject_static_footers():
             body = body.replace(f">{u['f_cta_btn']} ↗<", f" data-i18n-html=\"f_cta_btn_x\">{u['f_cta_btn']} ↗<")
             body = body.replace(f"{u['disclaimer']} {u['credit']}", '<span data-i18n-html="footer.disclaimer"></span> <span data-i18n-html="footer.credit"></span>')
             body = body.replace(f">{u['calc']}<", f" data-i18n=\"nav.calc\">{u['calc']}<").replace(f">{u['numbers']}<", f" data-i18n=\"nav.numbers\">{u['numbers']}<").replace(f">{u['blog']}<", f" data-i18n=\"nav.blog\">{u['blog']}<").replace(f">{u['privacy']}<", f" data-i18n=\"f_privacy\">{u['privacy']}<").replace(f">{u['terms']}<", f" data-i18n=\"f_terms\">{u['terms']}<").replace(f">{u['sitemap']}<", f" data-i18n=\"f_sitemap\">{u['sitemap']}<").replace(f">{u['cta']}<", f" data-i18n=\"report.ctaSticky\">{u['cta']}<")
-        f.write_text(clean_urls(html_[:a] + '<!-- footer:start -->' + body + '<!-- footer:end -->' + html_[b:]))
+        html_ = html_[:a] + '<!-- footer:start -->' + body + '<!-- footer:end -->' + html_[b:]
+        html_ = re.sub(r'<!-- verify -->(?:<meta name="(?:google-site-verification|msvalidate\.01)" content="[^"]*" />\s*)*', '<!-- verify -->' + VERIFY_TAGS, html_, 1)
+        f.write_text(clean_urls(html_))
 
 if __name__ == '__main__':
     inject_static_footers()
