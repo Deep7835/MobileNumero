@@ -52,7 +52,7 @@ VERIFY = {'google-site-verification': 'WMT9RBYqvsxIn936s6lqItZouN2_6RP97dqWz3PPz
 VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=30'
+VER = 'v=31'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -288,14 +288,14 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
   <div class="container">
     <a class="brand" href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}"><img class="logo" src="{up}assets/logo-mark.png" width="34" height="34" alt="" /> <span>{SITE_NAME}</span></a>
     <div class="nav-links" id="navLinks">
-      <a href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}">{u['home']}</a>
-      <a href="{up}{'' if lang == 'en' else lang + '/'}blog/">{u['blog']}</a>
-      <a href="{up}tools/">{u['calc']}</a>
-      <a href="{up}numbers/">{u['numbers']}</a>
+      <a href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}">{ICON("house", up)}<span>{u['home']}</span></a>
+      <a href="{up}{'' if lang == 'en' else lang + '/'}blog/">{ICON("book", up)}<span>{u['blog']}</span></a>
+      <a href="{up}tools/">{ICON("calculator", up)}<span>{u['calc']}</span></a>
+      <a href="{up}numbers/">{ICON("hash", up)}<span>{u['numbers']}</span></a>
     </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">{ICON("menu", up)}</button>
     <button class="icon-btn theme-toggle" title="Toggle theme" aria-label="Toggle theme">{ICON("sun", up)}</button>
-    <a class="btn sm" href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}#mainForm" style="margin-left:8px">{u['free']}</a>
+    <a class="btn sm nav-cta" href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}#mainForm"><span>{u['free']}</span><span class="cta-arrow">{ICON("arrow-up-right", up)}</span></a>
   </div>
 </nav>
 <main class="container" id="main">
