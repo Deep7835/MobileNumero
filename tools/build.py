@@ -362,7 +362,7 @@ def foot(depth=1, lang='en', home_anchor=None):
       <p class="footer-disc">{u['disclaimer']} {u['credit']} {u['f_indep']}</p>
       <div class="footer-bottom">
         <div>© 2026 {SITE_NAME} <span class="dot">·</span> {u['f_rights']}</div>
-        <div><span data-social-links></span>{u['f_made']}</div>
+        <div><span data-social-links></span>{u['f_made']} <span class="dot">·</span> <span class="credit">Design &amp; Developed by <b>Mads Solutions</b></span></div>
       </div>
     </div>
   </div>
