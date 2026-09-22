@@ -45,7 +45,7 @@ const Report = (() => {
   const wrap = inner => `<style>${CSS}</style><div class="rpt" lang="${I18N.lang}" style="--rfont:${I18N.fontFor()}">${inner}</div>`;
   const doc = inner => `<!DOCTYPE html><html><head><meta charset="utf-8"><title>Numerology report</title><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet" /></head><body style="margin:0">${wrap(inner)}</body></html>`;
 
-  const DISCLAIMER = 'Numerology is a belief-based practice offered for guidance and entertainment; it is not medical, legal or financial advice. Never share your real PIN or password. Content based on the Advance Mobile Numerology Class material by Dr. Isha Thakkar Numerology.';
+  const DISCLAIMER = 'Numerology is a belief-based practice offered for guidance and entertainment; it is not medical, legal or financial advice. Never share your real PIN or password. Content based on traditional mobile numerology methods.';
 
   function build(profile, opts) {
     const p = profile, N = Numerology, D = DATA;

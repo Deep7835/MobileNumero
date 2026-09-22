@@ -1,6 +1,6 @@
 /* =====================================================================
-   DATA — extracted from the Advance Mobile Numerology Class PDFs
-   (Dr. Isha Thakkar Numerology). All rules below are data-driven so
+   DATA — the rule set behind the analyser, generators and PDF report.
+   Every rule lives here as data so
    they can be edited without touching the algorithm.
    ===================================================================== */
 

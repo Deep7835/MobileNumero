@@ -16,7 +16,7 @@ dict(
  excerpt='Your mobile number is not just a string of digits. In mobile numerology each position — from the first digit to the last — rules a specific area of life.',
  img=dict(a='#1e1b4b', b='#8b7bff', glyph='📱', label='10 positions'),
  body='''
-<p>In <strong>mobile number numerology</strong>, the ten digits of an Indian mobile number are read from left to right as ten <em>positions</em>. Each position is linked to an area of life, so the same digit can be a blessing in one place and a problem in another. This is the framework taught in the Advance Mobile Numerology Class, and it is the engine behind our free analyser.</p>
+<p>In <strong>mobile number numerology</strong>, the ten digits of an Indian mobile number are read from left to right as ten <em>positions</em>. Each position is linked to an area of life, so the same digit can be a blessing in one place and a problem in another. This is the framework taught in advanced mobile numerology, and it is the engine behind our free analyser.</p>
 
 <h2>The 10 positions at a glance</h2>
 <table>
@@ -37,7 +37,7 @@ dict(
 <p>Many people only reduce their number to a single digit. That total matters — it should be a friendly number for your Birth and Destiny numbers — but it hides what is happening inside the number. Two numbers can share a total of 5 while one has an 8 at the 10th place (financial loss and debt) and the other ends with 55 (one of the most favourable endings). Position-wise reading catches that difference.</p>
 
 <h2>Reading the last three digits</h2>
-<p>The 8th, 9th and 10th positions are the "results" zone: career, reputation and money. A 5 in any of these positions supports career success and fame, 3 in the 9th or 10th brings opportunity and confidence, and 6 at the 10th is considered excellent for money. The class also warns that <strong>three zeros at the end indicate business loss</strong>, and that 0 in the 9th or 10th position weakens thinking ability — something media professionals, doctors, writers and scientists should avoid.</p>
+<p>The 8th, 9th and 10th positions are the "results" zone: career, reputation and money. A 5 in any of these positions supports career success and fame, 3 in the 9th or 10th brings opportunity and confidence, and 6 at the 10th is considered excellent for money. The system also warns that <strong>three zeros at the end indicate business loss</strong>, and that 0 in the 9th or 10th position weakens thinking ability — something media professionals, doctors, writers and scientists should avoid.</p>
 
 <h2>Reading the middle digits</h2>
 <p>Positions 5, 6 and 7 are about family: children, marriage and married life. This zone is sensitive. 2 at the 5th or 6th place points to depression and indecision, 5 at the 6th or 7th to marital issues, 7 at the 7th to divorce and financial loss, and 9 at the 6th or 7th to aggression between partners. The one digit that is actively good here is <strong>6 at the 7th position</strong>, which supports a happy relationship.</p>
@@ -64,7 +64,7 @@ dict(
  excerpt='If you could pick the last digits of your phone number, numerology has a clear favourite: 55 or 555.',
  img=dict(a='#064e3b', b='#34d399', glyph='555', label='Luckiest ending'),
  body='''
-<p>Ask a mobile numerologist which ending they would choose for a new number and you will almost always hear the same answer: <strong>55 or 555</strong>. The Advance Mobile Numerology Class calls a number ending in 555 "one of the best endings", and our analyser awards it the highest pattern bonus. Here is the reasoning behind it.</p>
+<p>Ask a mobile numerologist which ending they would choose for a new number and you will almost always hear the same answer: <strong>55 or 555</strong>. Advanced mobile numerology treats a number ending in 555 as one of the best possible endings, and our analyser awards it the highest pattern bonus. Here is the reasoning behind it.</p>
 
 <h2>5 is Mercury — communication, business and freedom</h2>
 <p>In Chaldean numerology the digit 5 belongs to Mercury, the planet of speech, trade, quick thinking and adaptability. Because a phone is literally a communication device, 5 is considered the most natural digit for it. 5 is also the only digit with <em>no enemy numbers</em> in the compatibility chart — it is friendly with 1, 2, 3, 5 and 6 and neutral with the rest — which makes it a safe choice regardless of your Birth or Destiny number.</p>
@@ -104,7 +104,7 @@ dict(
  excerpt='8 is the number of Saturn: karma, hard work and delay. In the wrong position of a phone number it becomes a drain on money and relationships.',
  img=dict(a='#3b0d0d', b='#f87171', glyph='8', label='Avoid at the end'),
  body='''
-<p>Of all the digit-position rules in mobile numerology, this is the one that experts repeat most often: <strong>avoid 8 as the last digit of your mobile number.</strong> The Advance Mobile Numerology Class lists it plainly — "Avoid number 8 at the last digit of mobile as it may cause financial loss and debt." Here is the logic, the exceptions, and what to do if your number already ends with 8.</p>
+<p>Of all the digit-position rules in mobile numerology, this is the one that experts repeat most often: <strong>avoid 8 as the last digit of your mobile number.</strong> It is said to cause financial loss and debt. Here is the logic, the exceptions, and what to do if your number already ends with 8.</p>
 
 <h2>8 is Saturn</h2>
 <p>8 is ruled by Saturn (Shani), the planet of karma, discipline, delay and hard lessons. Saturn rewards effort but tests patience; it rarely gives quick gains. The 10th position of a mobile number governs <em>wealth and gains</em>, so placing Saturn there is like asking the strictest teacher to look after your cash flow.</p>
@@ -120,7 +120,7 @@ dict(
 <p>In the compatibility chart, 8 is an enemy number for Birth numbers 1, 2, 4, 8 and 9 — that is, for most of the population. Only people with Birth numbers 3, 5, 6 and 7 count 8 among their friendly numbers. If your total reduces to 8 <em>and</em> your Birth number is 1, 2 or 9, the analyser will flag the number as needing change.</p>
 
 <h2>Is 8 ever fine in a phone number?</h2>
-<p>Yes. The rules are position-specific. An 8 at the 1st, 2nd, 3rd or 4th position has no negative rule attached in the class material, and for Birth numbers 3, 5, 6 and 7 an 8 in the middle of the number is harmless. The problems are the 7th and 10th positions and the total.</p>
+<p>Yes. The rules are position-specific. An 8 at the 1st, 2nd, 3rd or 4th position has no negative rule attached in the traditional rules, and for Birth numbers 3, 5, 6 and 7 an 8 in the middle of the number is harmless. The problems are the 7th and 10th positions and the total.</p>
 
 <h2>What to do if your number ends with 8</h2>
 <ol>
@@ -141,16 +141,16 @@ dict(
  meta='Number 4 (Rahu) is the one digit numerologists recommend leaving out of a mobile number entirely. Learn what it does at each position and how to balance it.',
  category='Mobile Number', date='2026-09-04',
  keywords='number 4 mobile numerology, rahu number phone, avoid 4 in mobile number',
- excerpt='The class material is unusually blunt about one digit: "Avoid 4 number in mobile phone." Here is why.',
+ excerpt='The traditional rules are unusually blunt about one digit: "Avoid 4 number in mobile phone." Here is why.',
  img=dict(a='#312e81', b='#a5b4fc', glyph='4', label='Rahu digit'),
  body='''
-<p>Most digit rules in mobile numerology are about <em>position</em> — a digit is good in one place and bad in another. Number 4 is the exception. The Advance Mobile Numerology Class simply says: <strong>"Avoid 4 number in mobile phone."</strong> Our analyser deducts points for every 4 it finds, wherever it sits, and an extra penalty if it lands at the 6th position.</p>
+<p>Most digit rules in mobile numerology are about <em>position</em> — a digit is good in one place and bad in another. Number 4 is the exception. Advanced mobile numerology simply says: <strong>"Avoid 4 number in mobile phone."</strong> Our analyser deducts points for every 4 it finds, wherever it sits, and an extra penalty if it lands at the 6th position.</p>
 
 <h2>4 is Rahu — the shadow planet</h2>
 <p>4 is governed by Rahu, the north node of the Moon. Rahu is not a physical planet but a shadow point; it stands for the unconventional, the sudden and the confusing. It can bring flashes of brilliance and sudden rises, but also sudden falls, obsessions and unexpected obstacles. In a device you use hundreds of times a day, that unpredictability is exactly what you do not want.</p>
 
 <h2>4 at the 6th position: depression</h2>
-<p>The one position where 4 gets its own dedicated rule is the 6th, the marriage position. Here the class links it to a depressive tendency. Combined with the general "avoid 4" advice, a number with 4 in the middle deserves a close look.</p>
+<p>The one position where 4 gets its own dedicated rule is the 6th, the marriage position. Here the tradition links it to a depressive tendency. Combined with the general "avoid 4" advice, a number with 4 in the middle deserves a close look.</p>
 
 <h2>4 as a compatibility problem</h2>
 <p>4 is an enemy number for Birth numbers 2, 4, 8 and 9, and friendly only with 1, 5, 6 and 7. If your date of birth gives you a 2, 8 or 9, every 4 in your number is doubly unwelcome: once by the position rule and once by the compatibility chart.</p>
@@ -167,7 +167,7 @@ dict(
 </ul>
 <p>If the number carries two or more 4s and an unfriendly total, the cleanest remedy is a new number chosen with the position table in mind.</p>
 ''' + CTA,
- faqs=[('Is 4 bad for everyone?', 'The class recommends avoiding 4 in the mobile number for everyone. It is least harmful for Birth numbers 1, 5, 6 and 7, for whom 4 is a friendly number.'),
+ faqs=[('Is 4 bad for everyone?', 'The rule is to avoid 4 in the mobile number for everyone. It is least harmful for Birth numbers 1, 5, 6 and 7, for whom 4 is a friendly number.'),
        ('What about the number 44 or 444?', 'Repetition amplifies a digit. Since 4 is the digit to avoid, 44 or 444 in a mobile number is considered stronger Rahu influence, not lucky.'),
        ('Which digit should replace 4?', 'It depends on position and your Birth number. In the last three positions 5, 6 and 3 are safest; in the family zone (positions 5–7), 6 at the 7th position is the only actively positive digit.')],
  related=['mobile-number-numerology-10-positions-meaning','lo-shu-grid-missing-numbers-explained','friendly-and-enemy-numbers-numerology-chart']),
@@ -269,7 +269,7 @@ dict(
 </table>
 
 <h2>Adding the missing energies back</h2>
-<p>You cannot change your date of birth, but you can surround yourself with the missing digits. The class recommends putting them <strong>inside your PIN</strong>, so that you literally type them several times a day. The PIN's total should still be a friendly number for your Birth and Destiny numbers, ideally a balancer. Our PIN generator does exactly this: it builds four-digit combinations from your missing numbers, drops enemy digits and keeps only totals that are friendly to both numbers.</p>
+<p>You cannot change your date of birth, but you can surround yourself with the missing digits. The method is to put them <strong>inside your PIN</strong>, so that you literally type them several times a day. The PIN's total should still be a friendly number for your Birth and Destiny numbers, ideally a balancer. Our PIN generator does exactly this: it builds four-digit combinations from your missing numbers, drops enemy digits and keeps only totals that are friendly to both numbers.</p>
 <p>Repeated numbers matter too. Four 9s (Mars) in the example grid indicate intense energy that needs a calming outlet, which is why the wallpaper and affirmation for that person emphasise balance.</p>
 ''' + CTA,
  faqs=[('Do I include zeros in the Lo Shu grid?', 'No. There is no box for 0, so zeros in the day, month or year are skipped.'),
@@ -295,9 +295,9 @@ dict(
 <li><strong>Include your lucky / money number in the total.</strong> For most people that means a total of 5 or 6, or the number that appears as "best" in their chart.</li>
 <li><strong>Prefer a balancer.</strong> A balancer is a number friendly to both your Birth <em>and</em> Destiny numbers. A PIN whose total is a balancer works for both sides of your chart.</li>
 </ol>
-<p>Two more things from the class: avoid your enemy digits inside the PIN, and expect the effect of a changed PIN in about <strong>45 days</strong>.</p>
+<p>Two more points to keep in mind: avoid your enemy digits inside the PIN, and expect the effect of a changed PIN in about <strong>45 days</strong>.</p>
 
-<h2>Purpose-wise PINs from the class</h2>
+<h2>Purpose-wise PINs</h2>
 <p>These are the combinations recommended for specific goals. Always check the total against your own friendly numbers before using one.</p>
 <table>
 <tr><th>Purpose</th><th>PIN</th><th>Total</th></tr>
@@ -323,8 +323,8 @@ dict(
 <p>Numerology optimises for energy, not for guessability. Never reuse your banking PIN for your phone, never tell anyone your PIN, and remember that a pattern such as 1111 or 1234 is weak regardless of its total. Our PIN checker runs entirely in your browser and stores nothing.</p>
 ''' + CTA,
  faqs=[('Can a PIN have 6 digits?', 'Yes. The same rules apply: use missing numbers, avoid enemy digits and make the total friendly. Our checker accepts 4–6 digits.'),
-       ('Should the PIN contain 0?', 'The grid has no box for 0 and the class warns against 0 in several mobile-number positions, so a PIN without 0 is preferred. The checker deducts slightly for a 0.'),
-       ('How long before a new PIN "works"?', 'The class states that the effect of a changed PIN or password is generally seen in about 45 days.')],
+       ('Should the PIN contain 0?', 'The grid has no box for 0 and the tradition warns against 0 in several mobile-number positions, so a PIN without 0 is preferred. The checker deducts slightly for a 0.'),
+       ('How long before a new PIN "works"?', 'The effect of a changed PIN or password is generally seen in about 45 days.')],
  related=['lo-shu-grid-missing-numbers-explained','chaldean-numerology-password-guide','friendly-and-enemy-numbers-numerology-chart']),
 
 dict(
@@ -336,7 +336,7 @@ dict(
  excerpt='GANESHJI totals 6. LAXMI totals 5. In Chaldean numerology a password is a word with a number inside it — and that number can be chosen on purpose.',
  img=dict(a='#0f172a', b='#fbbf24', glyph='Aa', label='Chaldean values'),
  body='''
-<p>Mobile passwords may be 4–16 characters long, and in numerology those characters carry numbers. The <strong>Chaldean</strong> system assigns each letter a value from 1 to 8 (there is no 9, which is considered sacred). Add the values, reduce to a single digit, and you have the "total" of the password. The class teaches choosing a word whose total matches your life purpose.</p>
+<p>Mobile passwords may be 4–16 characters long, and in numerology those characters carry numbers. The <strong>Chaldean</strong> system assigns each letter a value from 1 to 8 (there is no 9, which is considered sacred). Add the values, reduce to a single digit, and you have the "total" of the password. The method is to choose a word whose total matches your life purpose.</p>
 
 <h2>The Chaldean alphabet</h2>
 <table>
@@ -354,7 +354,7 @@ dict(
 
 <h2>Which total for which purpose</h2>
 <table>
-<tr><th>Total</th><th>Purpose</th><th>Example words (from the class)</th></tr>
+<tr><th>Total</th><th>Purpose</th><th>Example words</th></tr>
 <tr><td>1</td><td>Name &amp; fame, leadership</td><td>GURUJI, TILK, RAIIN</td></tr>
 <tr><td>2</td><td>Intuition, emotions</td><td>SAIBABA, MANGO, PAPAYA</td></tr>
 <tr><td>3</td><td>Education, research</td><td>RHYTHM, REDROSE</td></tr>
@@ -367,7 +367,7 @@ dict(
 </table>
 
 <h2>The "avoid 8" rule</h2>
-<p>If your Birth or Destiny number is 8, the class advises against a password whose total is 8, even for property matters — Saturn on Saturn is too heavy. Choose a 5 (money flow) or 6 (harmony) word instead.</p>
+<p>If your Birth or Destiny number is 8, the rule advises against a password whose total is 8, even for property matters — Saturn on Saturn is too heavy. Choose a 5 (money flow) or 6 (harmony) word instead.</p>
 
 <h2>Making it a real password</h2>
 <p>A single dictionary word is a weak password, so combine the numerology with basic security: add digits or symbols (they change the total, so re-check), use a different password per account, and turn on two-factor authentication. Our Chaldean calculator shows the value of every character as you type, so you can adjust a word until the total lands where you want it. It runs entirely in your browser and nothing is sent anywhere.</p>
@@ -386,7 +386,7 @@ dict(
  excerpt='Rising sun for 1, full moon for 2, Lakshmi for 6, Hanuman for 9 — each number has imagery that resonates with its planet.',
  img=dict(a='#7c2d12', b='#fb923c', glyph='🖼', label='Wallpaper by DOB'),
  body='''
-<p>You look at your phone's lock screen more often than at any painting, photo or view. Mobile numerology takes that seriously: the wallpaper should reinforce the planet of your Birth number (and, if different, your Destiny number). Below is the full list from the class, with the solid colours to use if you prefer a plain background.</p>
+<p>You look at your phone's lock screen more often than at any painting, photo or view. Mobile numerology takes that seriously: the wallpaper should reinforce the planet of your Birth number (and, if different, your Destiny number). Below is the full list, with the solid colours to use if you prefer a plain background.</p>
 
 <h2>Wallpaper for each number</h2>
 <table>
@@ -411,12 +411,12 @@ dict(
 <h2>Things to avoid</h2>
 <ul>
 <li>Dark, chaotic or violent images for the calm numbers 2 and 7.</li>
-<li>Snow-capped mountains for number 4 — the class specifies mountains <em>without</em> snow.</li>
+<li>Snow-capped mountains for number 4 — the rule specifies mountains <em>without</em> snow.</li>
 <li>A wallpaper in an enemy colour: for example, red (Mars) for Birth number 2 or 4, whose enemy is 9.</li>
 </ul>
 <p>Our analyser shows both wallpaper sets with colour swatches once you enter your date of birth.</p>
 ''' + CTA,
- faqs=[('Does the laptop wallpaper follow the same rules?', 'Yes. The class title is "Best wallpaper for mobile or laptop according to your date of birth" — the same imagery applies to any screen you use daily.'),
+ faqs=[('Does the laptop wallpaper follow the same rules?', 'Yes. The rule is given as "best wallpaper for mobile or laptop according to your date of birth" — the same imagery applies to any screen you use daily.'),
        ('Can I use a photo of myself?', 'Photos with family members are explicitly recommended for several numbers: with your father (1), mother (2), grandparents (4) and spouse or family (6).'),
        ('What if I do not like yellow but my number is 1?', 'Use the imagery instead of the solid colour — a rising sun photograph carries the Sun energy without a flat yellow background.')],
  related=['phone-cover-material-numerology-personality','phone-colour-numerology-which-colour-suits-you','how-to-calculate-birth-number-and-destiny-number']),
@@ -430,7 +430,7 @@ dict(
  excerpt='The case you choose to protect your phone quietly describes how you protect yourself. Numerology matches nine cover types to Birth numbers.',
  img=dict(a='#134e4a', b='#5eead4', glyph='🛡', label='Cover types'),
  body='''
-<p>Mobile numerology does not stop at the number. The <strong>material of your back cover</strong> is read as an extension of your personality: soft materials for people who feel deeply, hard materials for people who guard themselves. The class describes nine cover types and the Birth numbers each suits best.</p>
+<p>Mobile numerology does not stop at the number. The <strong>material of your back cover</strong> is read as an extension of your personality: soft materials for people who feel deeply, hard materials for people who guard themselves. The system describes nine cover types and the Birth numbers each suits best.</p>
 
 <h2>The nine cover types</h2>
 <h3>Silicone / gel / TPU — Birth numbers 2, 3, 6, 7</h3>
@@ -458,8 +458,8 @@ dict(
 <h2>Choosing when you have a choice</h2>
 <p>Use the cover that matches your <strong>Birth number</strong> first. If you want to encourage a quality you lack — say, more boundaries for a soft-hearted number 2 — a leather or flip case matched to your Destiny number can act as a gentle corrective. Our analyser marks the covers that match your BN and DN so you can compare.</p>
 ''' + CTA,
- faqs=[('Does the cover colour matter as much as the material?', 'Both matter. The material describes protection style; the colour carries a planet\'s energy (see our phone colour guide). Where the class gives a colour tip — pink or blue for plastic, red or gold for metal — follow it.'),
-       ('I use no cover at all — what does that mean?', 'The class does not describe a no-cover profile, but a bare phone shows the body colour directly, so the phone colour rules apply with full strength.'),
+ faqs=[('Does the cover colour matter as much as the material?', 'Both matter. The material describes protection style; the colour carries a planet\'s energy (see our phone colour guide). Where the tradition gives a colour tip — pink or blue for plastic, red or gold for metal — follow it.'),
+       ('I use no cover at all — what does that mean?', 'There is no no-cover profile in the tradition, but a bare phone shows the body colour directly, so the phone colour rules apply with full strength.'),
        ('Which cover is best for Birth number 5?', 'Plastic is the listed match. Silicone is a reasonable second choice because 5 is friendly with 2, 3 and 6, the silicone numbers.')],
  related=['phone-colour-numerology-which-colour-suits-you','best-mobile-wallpaper-according-to-date-of-birth','how-to-calculate-birth-number-and-destiny-number']),
 
@@ -472,7 +472,7 @@ dict(
  excerpt='Black for discipline, gold for authority, green for business, purple for intuition — the colour of your phone is a daily dose of one planet.',
  img=dict(a='#581c87', b='#f0abfc', glyph='🎨', label='Phone colours'),
  body='''
-<p>Colour is the fastest way to add a planet's energy to your daily life, and your phone is the object you touch most. The class profiles ten phone colours. Here is what each one says — and, using the friendly-number chart, who should embrace or avoid it.</p>
+<p>Colour is the fastest way to add a planet's energy to your daily life, and your phone is the object you touch most. The system profiles ten phone colours. Here is what each one says — and, using the friendly-number chart, who should embrace or avoid it.</p>
 
 <h2>The ten phone colours</h2>
 <table>
@@ -499,10 +499,10 @@ dict(
 </ul>
 
 <h2>Colour by profession</h2>
-<p>The class also links colours to work: pink for beauty, fashion and healing; blue for mentors and counsellors; green for business and marketing; purple for intuitive and creative fields; yellow for educators and spiritual seekers; black for long-term planners.</p>
+<p>The tradition also links colours to work: pink for beauty, fashion and healing; blue for mentors and counsellors; green for business and marketing; purple for intuitive and creative fields; yellow for educators and spiritual seekers; black for long-term planners.</p>
 
 <h2>If you already own the "wrong" colour</h2>
-<p>You do not need a new phone. A back cover in a supportive colour overrides the body colour for numerology purposes, which is why the class gives colour tips for plastic and metal covers. Combine a supportive cover colour with a wallpaper for your number and the phone as a whole is aligned.</p>
+<p>You do not need a new phone. A back cover in a supportive colour overrides the body colour for numerology purposes, which is why there are colour tips for plastic and metal covers. Combine a supportive cover colour with a wallpaper for your number and the phone as a whole is aligned.</p>
 ''' + CTA,
  faqs=[('Is black phone colour unlucky?', 'Black carries Saturn (8) energy: excellent for discipline and planning, but heavy for people whose enemy number is 8 — Birth numbers 1, 2, 4, 8 and 9. For them a blue or green cover is a better daily companion.'),
        ('Which phone colour is best for business?', 'Green (Mercury, communication and trade) is the classic choice; gold adds authority for those whose friendly numbers include 1 and 3.'),
@@ -515,10 +515,10 @@ dict(
  meta='Say the right affirmation before you pick up a call, set a ringtone that matches your number and chant its planetary mantra. Full list for numbers 1–9.',
  category='Lifestyle', date='2026-09-12',
  keywords='numerology affirmations, ringtone according to numerology, mantra for birth number, om suryay namah',
- excerpt='Every call is a small event. The class pairs each number with two affirmations, a ringtone style and a planetary mantra to set the tone.',
+ excerpt='Every call is a small event. The system pairs each number with two affirmations, a ringtone style and a planetary mantra to set the tone.',
  img=dict(a='#1e3a5f', b='#93c5fd', glyph='🕉', label='Affirmations & mantras'),
  body='''
-<p>Numbers are not only visual. The Advance Mobile Numerology Class adds a sound layer: an <strong>affirmation</strong> to say before you pick up the phone, a <strong>ringtone style</strong> that matches your number's planet, and the planet's <strong>beej mantra</strong>. Here is the complete list for numbers 1 to 9. Use your Birth number first; if your Destiny number differs, alternate.</p>
+<p>Numbers are not only visual. Traditional practice adds a sound layer: an <strong>affirmation</strong> to say before you pick up the phone, a <strong>ringtone style</strong> that matches your number's planet, and the planet's <strong>beej mantra</strong>. Here is the complete list for numbers 1 to 9. Use your Birth number first; if your Destiny number differs, alternate.</p>
 
 <h2>1 — Sun</h2>
 <blockquote>"Every positive action I take leads to greater and greater success." · "I communicate with confidence and wisdom."</blockquote>
@@ -565,7 +565,7 @@ dict(
 ''' + CTA,
  faqs=[('Should I use my Birth number or Destiny number affirmation?', 'Start with the Birth number, which reflects your nature. Use the Destiny number affirmation on days when you are working towards long-term goals.'),
        ('Can I use these mantras without a guru?', 'The beej mantras listed are simple planetary salutations ("Om, salutations to the Sun") and are widely chanted without initiation. Pronounce them slowly and respectfully.'),
-       ('Does the ringtone volume or length matter?', 'Not in the class material. Choose a version you enjoy hearing — the point is that the sound matches the planet\'s mood.')],
+       ('Does the ringtone volume or length matter?', 'Not in the traditional rules. Choose a version you enjoy hearing — the point is that the sound matches the planet\'s mood.')],
  related=['best-mobile-wallpaper-according-to-date-of-birth','how-to-calculate-birth-number-and-destiny-number','phone-colour-numerology-which-colour-suits-you']),
 
 dict(
@@ -649,10 +649,10 @@ dict(
 </table>
 
 <h2>Partnership businesses</h2>
-<p>The 4th position governs partnership. Keep it free of enemy digits for <em>both</em> partners' Birth numbers, and avoid 1 at the 9th and 10th positions, which the class links to partnership disputes. If the partners have different friendly numbers, choose a total that is a balancer for both charts, or at least neutral for each.</p>
+<p>The 4th position governs partnership. Keep it free of enemy digits for <em>both</em> partners' Birth numbers, and avoid 1 at the 9th and 10th positions, which are linked to partnership disputes. If the partners have different friendly numbers, choose a total that is a balancer for both charts, or at least neutral for each.</p>
 
 <h2>Purpose-specific PINs and passwords</h2>
-<p>Align the rest of the phone too. The class lists <strong>1569</strong> and <strong>5559</strong> (both total 3) for business growth, <strong>13467</strong> (total 3) for money attraction and <strong>1668</strong> (total 3) for prosperity. For passwords, a total of 5 (LAXMI, LOTUS, NEELAM) supports communication and money flow, and 9 (HANUMAN, VISHNU) suits restaurants and energetic trades.</p>
+<p>Align the rest of the phone too. The system lists <strong>1569</strong> and <strong>5559</strong> (both total 3) for business growth, <strong>13467</strong> (total 3) for money attraction and <strong>1668</strong> (total 3) for prosperity. For passwords, a total of 5 (LAXMI, LOTUS, NEELAM) supports communication and money flow, and 9 (HANUMAN, VISHNU) suits restaurants and energetic trades.</p>
 
 <h2>A sample "money" template</h2>
 <p>For a Birth number 1 business owner: any first digit but 8; a calm 6 at the 7th position; then <strong>5-5-6</strong> or <strong>5-5-5</strong> at positions 8–10, giving a total that should reduce to 1, 2, 3, 5, 6 or 9. Our analyser's "ideal digits by position" table produces this template automatically for your own numbers.</p>
@@ -662,7 +662,7 @@ dict(
 ''' + CTA,
  faqs=[('Is a number with many 5s good for business?', 'In the last three positions, yes. Avoid 5 at the 5th, 6th and 7th positions, where it disturbs the family zone, and check that the total is friendly to your Birth number.'),
        ('Should a business number match the owner or the company name?', 'Mobile numerology works from the owner\'s date of birth, because the owner uses the phone. Company-name numerology is a separate practice.'),
-       ('My business number ends in 000 — what now?', 'The class flags three trailing zeros as a business-loss indicator. Consider migrating customers to a new number ending in 55, 555 or 6 over a few months.')],
+       ('My business number ends in 000 — what now?', 'Three trailing zeros are a business-loss indicator. Consider migrating customers to a new number ending in 55, 555 or 6 over a few months.')],
  related=['best-mobile-number-ending-55-555','never-end-mobile-number-with-8','how-to-choose-lucky-pin-code-numerology']),
 
 dict(
@@ -674,7 +674,7 @@ dict(
  excerpt='Two digits in the middle of your phone number describe your love life. One of them can help; several can hurt.',
  img=dict(a='#4a044e', b='#f9a8d4', glyph='6·7', label='Marriage positions'),
  body='''
-<p>People usually judge a phone number by its ending. For relationships, look at the <strong>middle</strong>: the 6th position governs <em>marriage</em> and the 7th governs <em>married life</em>. The class material is detailed about these two places, and the picture is clear — most digits carry a warning, and only one is actively good.</p>
+<p>People usually judge a phone number by its ending. For relationships, look at the <strong>middle</strong>: the 6th position governs <em>marriage</em> and the 7th governs <em>married life</em>. The traditional rules are detailed about these two places, and the picture is clear — most digits carry a warning, and only one is actively good.</p>
 
 <h2>Position 6: marriage</h2>
 <table>
@@ -707,7 +707,7 @@ dict(
 
 <h2>Beyond the number</h2>
 <ul>
-<li><strong>PIN:</strong> 5666 (total 5), 5667 (total 6) and 2577 (total 3) are the class picks for a good married life; 6775 and 1266 for love life; 1247, 3569, 2557 and 1455 for harmony.</li>
+<li><strong>PIN:</strong> 5666 (total 5), 5667 (total 6) and 2577 (total 3) are the classic picks for a good married life; 6775 and 1266 for love life; 1247, 3569, 2557 and 1455 for harmony.</li>
 <li><strong>Password:</strong> a total of 6 — GANESHJI or BANANA — for marriage and children.</li>
 <li><strong>Wallpaper:</strong> a couple's picture (number 2) or a family photo (number 6).</li>
 <li><strong>Cover:</strong> silicone or rubber, the "soft" covers listed for 2, 6 and 7, for people who want to soften a guarded nature.</li>
@@ -717,7 +717,7 @@ dict(
 <p>Ideally each partner's number has a 6 at the 7th position and a total that is friendly to <em>their own</em> Birth number. Do not try to make one number serve both charts; the number belongs to the person who carries the phone. What you can do is avoid a total that is an enemy for your partner's Birth number — that keeps the two phones from working against each other.</p>
 ''' + CTA,
  faqs=[('Is 6 good everywhere in a mobile number?', 'No. 6 is excellent at the 7th (relationship) and 10th (money) positions and good at the 8th for creative professionals, but at the 5th and 6th positions it is linked to BP, skin and kidney issues.'),
-       ('My number has 7 at the 7th position — should I change it?', 'The class links 7 at the 7th position to divorce and financial loss, one of the heaviest warnings in the system. Run the full analysis; if the total is also unfriendly, a change is worth considering.'),
+       ('My number has 7 at the 7th position — should I change it?', '7 at the 7th position is linked to divorce and financial loss, one of the heaviest warnings in the system. Run the full analysis; if the total is also unfriendly, a change is worth considering.'),
        ('Does a good middle fix a bad ending?', 'No. The positions are read independently. A 6 at the 7th helps married life while an 8 at the 10th still burdens finances.')],
  related=['mobile-number-numerology-10-positions-meaning','how-to-choose-lucky-pin-code-numerology','phone-cover-material-numerology-personality']),
 ]
