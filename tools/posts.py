@@ -298,6 +298,7 @@ dict(
 <p>Two more points to keep in mind: avoid your enemy digits inside the PIN, and expect the effect of a changed PIN in about <strong>45 days</strong>.</p>
 
 <h2>Purpose-wise PINs</h2>
+<p>The <a href="../tools/lucky-pin-generator">lucky PIN generator</a> builds these for your own date of birth and rates a PIN you already use.</p>
 <p>These are the combinations recommended for specific goals. Always check the total against your own friendly numbers before using one.</p>
 <table>
 <tr><th>Purpose</th><th>PIN</th><th>Total</th></tr>
@@ -336,7 +337,7 @@ dict(
  excerpt='GANESHJI totals 6. LAXMI totals 5. In Chaldean numerology a password is a word with a number inside it — and that number can be chosen on purpose.',
  img=dict(a='#0f172a', b='#fbbf24', glyph='Aa', label='Chaldean values'),
  body='''
-<p>Mobile passwords may be 4–16 characters long, and in numerology those characters carry numbers. The <strong>Chaldean</strong> system assigns each letter a value from 1 to 8 (there is no 9, which is considered sacred). Add the values, reduce to a single digit, and you have the "total" of the password. The method is to choose a word whose total matches your life purpose.</p>
+<p>Mobile passwords may be 4–16 characters long, and in numerology those characters carry numbers. The <strong>Chaldean</strong> system assigns each letter a value from 1 to 8 (there is no 9, which is considered sacred). Add the values, reduce to a single digit, and you have the "total" of the password. The method is to choose a word whose total matches your life purpose. The <a href="../tools/lucky-password">lucky password generator</a> does this for your date of birth, and the <a href="../tools/chaldean-numerology-calculator">Chaldean calculator</a> converts any word you are considering.</p>
 
 <h2>The Chaldean alphabet</h2>
 <table>
