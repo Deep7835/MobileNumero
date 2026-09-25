@@ -52,7 +52,7 @@ VERIFY = {'google-site-verification': 'WMT9RBYqvsxIn936s6lqItZouN2_6RP97dqWz3PPz
 VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=33'
+VER = 'v=34'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -226,7 +226,7 @@ def write_page(path, html_):
 def ICON(name, up=''):
     return f'<svg class="ico" aria-hidden="true" focusable="false"><use href="{up}assets/icons.svg?{VER}#{name}"/></svg>'
 
-NAV_TOOLS = [('life-path-number', 'compass', 'Life Path Number'), ('name-numerology', 'user', 'Name Numerology'), ('compatibility', 'heart', 'Compatibility'), ('personal-year', 'calendar', 'Personal Year'), ('lo-shu-grid', 'grid', 'Lo Shu Grid')]
+NAV_TOOLS = [(t['slug'], t['icon'], t['name']) for t in TOOLS]   # header dropdown follows the calculator list
 def nav_dd(up, label):
     """Calculators dropdown in the header (hover on desktop, tap on touch)."""
     items = ''.join(f'\n          <a href="{up}tools/{slug}">{ICON(ic, up)}<span>{name}</span></a>' for slug, ic, name in NAV_TOOLS)

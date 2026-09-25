@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://numberkundli.com/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://numberkundli.com/blog/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://numberkundli.com/blog/" />
@@ -19,43 +19,61 @@
   </url>
   <url>
     <loc>https://numberkundli.com/numbers/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://numberkundli.com/tools/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://numberkundli.com/tools/life-path-number</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://numberkundli.com/tools/name-numerology</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://numberkundli.com/tools/compatibility</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://numberkundli.com/tools/personal-year</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://numberkundli.com/tools/lucky-pin-generator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://numberkundli.com/tools/lucky-password</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://numberkundli.com/tools/chaldean-numerology-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://numberkundli.com/tools/lo-shu-grid</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -304,25 +322,25 @@
   </url>
   <url>
     <loc>https://numberkundli.com/about</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://numberkundli.com/privacy</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://numberkundli.com/terms</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://numberkundli.com/hi/blog/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://numberkundli.com/blog/" />
@@ -513,7 +531,7 @@
   </url>
   <url>
     <loc>https://numberkundli.com/mr/blog/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://numberkundli.com/blog/" />
@@ -704,7 +722,7 @@
   </url>
   <url>
     <loc>https://numberkundli.com/ta/blog/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://numberkundli.com/blog/" />
@@ -895,7 +913,7 @@
   </url>
   <url>
     <loc>https://numberkundli.com/gu/blog/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://numberkundli.com/blog/" />

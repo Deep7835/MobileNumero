@@ -12,6 +12,9 @@ Author and publisher: Deepam Mishra, who runs NumberKundli independently (https:
 - [Name Numerology](https://numberkundli.com/tools/name-numerology): Chaldean & Pythagorean value of any name
 - [Compatibility](https://numberkundli.com/tools/compatibility): Two dates of birth → relationship score
 - [Personal Year](https://numberkundli.com/tools/personal-year): Where you are in your 9-year cycle
+- [Lucky PIN Generator](https://numberkundli.com/tools/lucky-pin-generator): 4-digit PINs built from your missing numbers
+- [Lucky Password](https://numberkundli.com/tools/lucky-password): Chaldean word values matched to your goal
+- [Chaldean Calculator](https://numberkundli.com/tools/chaldean-numerology-calculator): Chaldean number of any name or word
 - [Lo Shu Grid](https://numberkundli.com/tools/lo-shu-grid): Present, missing & repeated numbers
 
 ## Birth number guides (1–9)

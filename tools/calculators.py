@@ -66,6 +66,81 @@ TOOLS = [
             ('Is a Personal Year 9 bad?', 'No — it is a year of completion. It is a poor time to start big new things, but an excellent one to finish, declutter and forgive, which sets up a strong Year 1.'),
             ('What are Personal Month and Day?', 'Finer subdivisions of the same cycle: Personal Year + calendar month = Personal Month; Personal Month + date = Personal Day. Use them for timing decisions within the year.')]),
 
+ dict(slug='lucky-pin-generator', tool='lucky-pin', icon='lock', name='Lucky PIN Generator', short='4-digit PINs built from your missing numbers',
+      title='Lucky PIN Number Generator (Free) — By Date of Birth',
+      meta='Free lucky PIN generator. Enter your date of birth to get 4-digit ATM, phone and locker PINs whose total is friendly to your Birth and Destiny numbers and which add your missing Lo Shu numbers.',
+      img=dict(a='#0b2545', b='#4fd1c5', glyph='PIN', label='Lucky PIN'),
+      form='<div class="row"><div class="field"><label for="dob">Date of birth</label><input id="dob" type="date" required min="1900-01-01" /></div>'
+           '<div class="field"><label for="purpose">Purpose <span class="muted">(optional)</span></label><select id="purpose"><option value="">General — best overall PINs</option></select></div></div>'
+           '<button class="btn" type="submit">Generate my lucky PIN</button>'
+           '<div class="field" style="margin-top:18px"><label for="pinCheck">Or check a PIN you already use <span class="muted">(4–6 digits)</span></label><input id="pinCheck" type="text" inputmode="numeric" maxlength="6" placeholder="e.g. 5666" autocomplete="off" /></div>',
+      intro='A <strong>lucky PIN</strong> is one whose digits add up to a number friendly to both your Birth number and your Destiny number — and which quietly adds the numbers <em>missing</em> from your Lo Shu grid. You touch your PIN several times a day, which is why numerologists treat it as one of the easiest numbers to fix. This generator does the arithmetic for you and rates any PIN you already use.',
+      body='<h2>What makes a PIN lucky</h2>'
+           '<table><tr><th>Rule</th><th>Why</th></tr>'
+           '<tr><td>Total is <b>friendly</b> to your Birth and Destiny numbers</td><td>The total is the vibration the PIN carries; friendly to both is called a <em>balancer</em>.</td></tr>'
+           '<tr><td>Includes your <b>missing</b> Lo Shu numbers</td><td>Adds the energies your date of birth left out — the main reason to change a PIN at all.</td></tr>'
+           '<tr><td>Avoids your <b>enemy</b> digits</td><td>Enemy digits pull against your chart even when the total is fine.</td></tr>'
+           '<tr><td>Avoids <b>0</b></td><td>Zero has no box in the Lo Shu grid and adds nothing to the total.</td></tr></table>'
+           '<h2>Where to use it</h2>'
+           '<p>The same PIN logic applies to an ATM or debit-card PIN, a phone lock screen, a locker, a door code or a safe. Numerologists suggest using one lucky PIN consistently rather than a different number everywhere, and expect the effect of a change to show over roughly <strong>45 days</strong>.</p>'
+           '<h2>PIN, mobile number and password together</h2>'
+           '<p>A PIN is one of three numbers you can change easily. The other two are your <a href="lucky-password.html">password</a> (letters converted to numbers through the Chaldean chart) and your <a href="../index.html#mainForm">mobile number</a>. Aligning all three to the same friendly totals is the complete version of this practice; the <a href="lo-shu-grid.html">Lo Shu grid calculator</a> shows which numbers you are missing in the first place.</p>',
+      faqs=[('How many digits should a lucky PIN have?', 'Four is standard, and this generator produces 4-digit PINs. The checker accepts 4 to 6 digits, because some banks and phones use longer codes; the same rules apply — the reduced total should be friendly to your Birth and Destiny numbers.'),
+            ('Should my PIN contain a 0?', 'Preferably not. Zero has no box in the Lo Shu grid and contributes nothing to the total, so it wastes one of only four positions. The checker deducts a small amount for it.'),
+            ('Can I repeat a digit in my PIN?', 'Yes, and it is often useful — repeating a missing number strengthens that energy. Repeating a digit you already have several times in your grid is less useful.'),
+            ('How long before a new PIN starts working?', 'Numerologists generally say about 45 days of consistent use. Numerology is a belief-based practice, so treat this as guidance rather than a guarantee.'),
+            ('Is a lucky PIN safe to use?', 'Choose from the list, never share it, and avoid the obvious weak patterns (1234, your birth year, four identical digits). This calculator runs entirely in your browser — nothing you type is uploaded or stored.')]),
+
+ dict(slug='lucky-password', tool='lucky-password', icon='shield-check', name='Lucky Password', short='Chaldean word values matched to your goal',
+      title='Lucky Password Generator — Chaldean Numerology',
+      meta='Free lucky password calculator. Convert any word to its Chaldean number, see whether it suits your date of birth, and get password words whose total matches your goal — money, career, marriage, education or health.',
+      img=dict(a='#3b0764', b='#c4b5fd', glyph='A1', label='Lucky password'),
+      form='<div class="row"><div class="field"><label for="dob">Date of birth</label><input id="dob" type="date" required min="1900-01-01" /></div>'
+           '<div class="field"><label for="purpose">What do you want it to support?</label><select id="purpose"></select></div></div>'
+           '<button class="btn" type="submit">Suggest password words</button>'
+           '<div class="field" style="margin-top:18px"><label for="pwCheck">Or check a word you already use</label><input id="pwCheck" type="text" maxlength="20" placeholder="e.g. LOTUS" autocomplete="off" /></div>',
+      intro='In numerology a password is read as a <strong>word total</strong>: every letter has a Chaldean value, and the reduced sum decides what the word attracts. A password total of 5 supports communication and money flow; 6 supports marriage, children and travel; 8 is the one most numerologists tell you to avoid. This calculator converts any word for you and suggests words whose total matches your goal and your date of birth.',
+      body='<h2>Chaldean letter values</h2>'
+           '<table><tr><th>Value</th><th>Letters</th></tr>'
+           '<tr><td><b>1</b></td><td>A I J Q Y</td></tr><tr><td><b>2</b></td><td>B K R</td></tr><tr><td><b>3</b></td><td>C G L S</td></tr><tr><td><b>4</b></td><td>D M T</td></tr>'
+           '<tr><td><b>5</b></td><td>E H N X</td></tr><tr><td><b>6</b></td><td>U V W</td></tr><tr><td><b>7</b></td><td>O Z</td></tr><tr><td><b>8</b></td><td>F P</td></tr></table>'
+           '<p class="small muted">There is no 9 in the Chaldean system — it is considered sacred and is never assigned to a letter.</p>'
+           '<h2>What each password total attracts</h2>'
+           '<table><tr><th>Total</th><th>Supports</th></tr>'
+           '<tr><td><b>1</b></td><td>Name, fame, leadership</td></tr><tr><td><b>2</b></td><td>Intuition and emotions</td></tr><tr><td><b>3</b></td><td>Education and research</td></tr><tr><td><b>4</b></td><td>Court cases and paperwork</td></tr>'
+           '<tr><td><b>5</b></td><td>Communication and money flow</td></tr><tr><td><b>6</b></td><td>Marriage, children, foreign travel</td></tr><tr><td><b>7</b></td><td>Research and occult study</td></tr><tr><td><b>8</b></td><td>Property and court matters — avoid if your Birth or Destiny number is 8</td></tr></table>'
+           '<h2>Turning a word into a real password</h2>'
+           '<p>Keep the letters that carry the total, then make it secure: add digits from your <a href="lucky-pin-generator.html">lucky PIN</a> and a symbol, or join two suggested words. Changing case does not change the numerology, so <em>Lotus</em> and <em>LOTUS</em> carry the same value. Never reuse a password across accounts, and never share it — this page runs entirely in your browser and stores nothing.</p>',
+      faqs=[('Does adding numbers or symbols change the password total?', 'Only letters carry Chaldean values, so digits and symbols do not change the word total. That is convenient: you can make a password secure without changing its numerology.'),
+            ('Does capitalisation matter?', 'No. The Chaldean value of a letter is the same in upper or lower case, so LOTUS, Lotus and lotus all total the same.'),
+            ('Why is there no 9 in the Chaldean chart?', 'The Chaldean system treats 9 as sacred and does not assign it to any letter. A word total can still reduce to 9 — the letters just never carry 9 directly.'),
+            ('Which total should I choose?', 'Pick by goal rather than by "best": 5 for money flow and communication, 6 for marriage and family, 3 for study, 1 for recognition. If your Birth or Destiny number is 8, avoid a total of 8.'),
+            ('Is it safe to use a suggested word as my password?', 'Not on its own — a dictionary word is weak. Use it as the base and add digits and a symbol, or combine two words. The calculator never uploads or stores what you type.')]),
+
+ dict(slug='chaldean-numerology-calculator', tool='chaldean', icon='sparkle', name='Chaldean Calculator', short='Chaldean number of any name or word',
+      title='Chaldean Numerology Calculator — Name & Word Number',
+      meta='Free Chaldean numerology calculator. Enter any name or word to get its Chaldean number with a letter-by-letter breakdown, the compound and root number, and whether it suits your date of birth.',
+      img=dict(a='#422006', b='#fbbf24', glyph='C', label='Chaldean'),
+      form='<div class="field"><label for="name">Name or word</label><input id="name" type="text" placeholder="e.g. Priya Sharma" maxlength="60" required autocomplete="off" /></div>'
+           '<div class="field"><label for="dob">Date of birth <span class="muted">(optional — checks whether the name suits you)</span></label><input id="dob" type="date" min="1900-01-01" /></div>'
+           '<button class="btn" type="submit">Calculate Chaldean number</button>',
+      intro='<strong>Chaldean numerology</strong> is the older of the two main systems and the one used across Indian numerology. Letters are valued 1–8 by <em>sound</em> rather than by alphabetical order, and 9 is left out as a sacred number. This calculator gives the Chaldean value of any name or word letter by letter, shows both the compound total and the reduced root number, and — if you add your date of birth — tells you whether the name is friendly to your chart.',
+      body='<h2>The Chaldean letter chart</h2>'
+           '<table><tr><th>Value</th><th>Letters</th><th>Planet</th></tr>'
+           '<tr><td><b>1</b></td><td>A I J Q Y</td><td>Sun</td></tr><tr><td><b>2</b></td><td>B K R</td><td>Moon</td></tr><tr><td><b>3</b></td><td>C G L S</td><td>Jupiter</td></tr><tr><td><b>4</b></td><td>D M T</td><td>Rahu</td></tr>'
+           '<tr><td><b>5</b></td><td>E H N X</td><td>Mercury</td></tr><tr><td><b>6</b></td><td>U V W</td><td>Venus</td></tr><tr><td><b>7</b></td><td>O Z</td><td>Ketu</td></tr><tr><td><b>8</b></td><td>F P</td><td>Saturn</td></tr></table>'
+           '<h2>Chaldean vs Pythagorean</h2>'
+           '<p>Pythagorean numerology assigns values in alphabetical order (A=1, B=2 … I=9, then repeats) and is the Western standard. Chaldean assigns values by the sound a letter makes, uses only 1–8, and is older — it is what Indian numerologists use for names, mobile numbers, PINs and passwords. The two systems will usually give a different number for the same name; neither is "wrong", but mixing them is. Our <a href="name-numerology.html">name numerology calculator</a> shows both side by side.</p>'
+           '<h2>Compound number and root number</h2>'
+           '<p>Chaldean readings use two numbers. The <strong>compound number</strong> is the raw total before reducing (for example 37) and is said to describe the hidden influence; the <strong>root number</strong> is that total reduced to a single digit (3 + 7 = 10 → 1) and describes the outward effect. Both are shown above.</p>'
+           '<h2>Using it beyond names</h2>'
+           '<p>The same chart converts any word, which is how numerologists choose a <a href="lucky-password.html">password</a>, a brand name or a company name. For a full picture, check the name number against your <a href="life-path-number.html">Life Path number</a> and the digits of your <a href="../index.html#mainForm">mobile number</a>.</p>',
+      faqs=[('Why does Chaldean numerology have no 9?', 'In the Chaldean system 9 is considered sacred and is not assigned to any letter. A name total can still reduce to 9 — no single letter is worth 9.'),
+            ('Which name should I calculate — full or short?', 'The name you are actually called by every day. Chaldean numerology reads the vibration you live with, which is usually the commonly used name rather than the full legal one.'),
+            ('What is a good Chaldean name number?', 'One that is friendly to your Birth number and Destiny number rather than one that is universally "lucky". Enter your date of birth above and the calculator checks the relationship for you.'),
+            ('Do spaces, initials and surnames count?', 'Only letters are valued, so spaces and punctuation are ignored. Include the surname if you normally use it; calculate the first name alone as well, since many numerologists read the two separately.'),
+            ('Is Chaldean better than Pythagorean?', 'Neither is better — they are separate traditions. Chaldean is standard in Indian numerology and across this site; Pythagorean is the Western norm. Pick one and stay with it.')]),
+
  dict(slug='lo-shu-grid', tool='lo-shu', icon='grid', name='Lo Shu Grid', short='Present, missing & repeated numbers',
       title='Lo Shu Grid Calculator — Missing & Repeated Numbers',
       meta='Free Lo Shu grid calculator. Enter your date of birth to draw your 3×3 numerology grid, see present, missing and repeated numbers, completed planes, and PINs that add the missing energies.',

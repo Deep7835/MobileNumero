@@ -119,6 +119,120 @@
     });
   }
 
+  /* ---------- Lucky PIN generator ---------- */
+  if (tool === 'lucky-pin') {
+    const sel = $('#purpose');
+    DATA.purposes.forEach(p => sel.insertAdjacentHTML('beforeend', `<option value="${p.id}">${p.label}</option>`));
+    const pinCard = (x, p) => {
+      const c = x.check || Numerology.checkPin(x.pin, p);
+      return `<div class="lucky-card"><div><div class="num">${x.pin}</div>
+        <div class="meta">Total ${c.total} · ${c.verdict}${x.purpose ? ' · ' + x.purpose : ''}${c.missingUsed.length ? ' · adds ' + c.missingUsed.join(', ') : ''}</div></div>
+        <div class="actions"><button class="btn secondary sm" data-copy="${x.pin}">Copy</button></div></div>`;
+    };
+    const run = () => {
+      const v = $('#dob').value;
+      if (!dobOk(v)) { out.innerHTML = chip('Enter a valid date of birth', 'bad'); out.classList.remove('hidden'); return; }
+      const p = Numerology.profileFromDOB(v);
+      const general = Numerology.generatePins(p, 9);
+      const pid = sel.value;
+      const purposed = pid ? Numerology.purposePins(pid, p).slice(0, 6) : [];
+      show(`
+        <div class="card"><div class="card-title"><h3>Your lucky PINs</h3>${chip('Birth ' + p.bn + ' · Destiny ' + p.dn, '')}</div>
+          <p class="muted small">Every PIN below reduces to a total that is friendly to <b>both</b> your numbers. Those marked “adds” also fill in numbers missing from your Lo Shu grid${p.missing.length ? ' (' + p.missing.join(', ') + ')' : ''}.</p>
+          <div class="lucky-grid" style="margin-top:12px">${general.map(x => pinCard(x, p)).join('')}</div>
+          ${p.enemies.length ? `<p class="small muted" style="margin-top:12px">Digits avoided for you: ${digits(p.enemies, 'bad')}</p>` : ''}
+        </div>
+        ${purposed.length ? `<div class="card" style="margin-top:18px"><div class="card-title"><h3>Recommended for ${esc(DATA.purposes.find(x => x.id === pid).label)}</h3></div>
+          <div class="lucky-grid">${purposed.map(x => pinCard(x, p)).join('')}</div>
+          <p class="small muted" style="margin-top:10px">These are the traditional combinations for this goal (a few are five digits), rated against your own numbers — a low rating means the combination does not suit your chart.</p></div>` : ''}
+        ${cta}`);
+    };
+    $('#f').addEventListener('submit', e => { e.preventDefault(); run(); });
+    sel.addEventListener('change', () => { if (!out.classList.contains('hidden')) run(); });
+    out.addEventListener('click', e => { const b = e.target.closest('[data-copy]'); if (!b) return; navigator.clipboard?.writeText(b.dataset.copy); b.textContent = 'Copied'; setTimeout(() => b.textContent = 'Copy', 1400); });
+    /* live checker for a PIN the visitor already uses */
+    const ci = $('#pinCheck'); const cOut = document.createElement('div'); cOut.className = 'field-note'; ci.after(cOut);
+    ci.addEventListener('input', () => {
+      const val = ci.value.replace(/\D/g, ''); const dob = $('#dob').value;
+      if (!val) { cOut.innerHTML = ''; return; }
+      if (!dobOk(dob)) { cOut.innerHTML = 'Enter your date of birth above to rate this PIN.'; return; }
+      const p = Numerology.profileFromDOB(dob); const c = Numerology.checkPin(val, p);
+      if (c.error) { cOut.innerHTML = c.error; return; }
+      cOut.innerHTML = `${chip(c.verdict + ' · ' + c.score + '/100', c.score >= 55 ? 'good' : c.score >= 35 ? 'warn' : 'bad')}
+        <span class="muted">Total ${c.totalRaw} → ${c.total} · Birth ${p.bn}: ${c.rBN} · Destiny ${p.dn}: ${c.rDN}${c.missingUsed.length ? ' · adds ' + c.missingUsed.join(', ') : ''}${c.enemiesUsed.length ? ' · enemy digits ' + c.enemiesUsed.join(', ') : ''}</span>`;
+    });
+  }
+
+  /* ---------- Lucky password ---------- */
+  if (tool === 'lucky-password') {
+    const sel = $('#purpose');
+    DATA.purposes.forEach(p => sel.insertAdjacentHTML('beforeend', `<option value="${p.id}">${p.label}</option>`));
+    const run = () => {
+      const v = $('#dob').value;
+      if (!dobOk(v)) { out.innerHTML = chip('Enter a valid date of birth', 'bad'); out.classList.remove('hidden'); return; }
+      const p = Numerology.profileFromDOB(v);
+      const list = Numerology.purposePasswords(sel.value || DATA.purposes[0].id, p);
+      const label = (DATA.purposes.find(x => x.id === (sel.value || DATA.purposes[0].id)) || {}).label || '';
+      show(`
+        <div class="card"><div class="card-title"><h3>Password words for ${esc(label)}</h3>${chip('Birth ' + p.bn + ' · Destiny ' + p.dn, '')}</div>
+          <div style="display:grid;gap:10px">
+          ${list.map(x => `<div class="finding ${x.avoid8 || x.rel === 'enemy' ? 'bad' : 'good'}">
+            <span class="tag">Total ${x.total}</span>
+            <div class="txt"><b>${esc(x.purpose)}</b>
+              <div class="chips" style="margin:6px 0">${x.examples.map(w => `<span class="chip" style="cursor:pointer" data-copy="${w}">${w} <small class="muted">${Numerology.chaldean(w).single}</small></span>`).join('')}</div>
+              <small>Birth ${p.bn}: ${x.rel} · Destiny ${p.dn}: ${x.relDN}${x.avoid8 ? ' · avoid — your own number is 8' : ''}</small></div></div>`).join('')}
+          </div>
+          <p class="small muted" style="margin-top:12px">Tap a word to copy it. Make it a real password by adding digits from your <a href="lucky-pin-generator">lucky PIN</a> and a symbol — numbers and symbols do not change the Chaldean total.</p>
+        </div>${cta}`);
+    };
+    $('#f').addEventListener('submit', e => { e.preventDefault(); run(); });
+    sel.addEventListener('change', () => { if (!out.classList.contains('hidden')) run(); });
+    out.addEventListener('click', e => { const b = e.target.closest('[data-copy]'); if (!b) return; navigator.clipboard?.writeText(b.dataset.copy); const old = b.innerHTML; b.textContent = 'Copied'; setTimeout(() => b.innerHTML = old, 1400); });
+    /* live checker for a word the visitor already uses */
+    const ci = $('#pwCheck'); const cOut = document.createElement('div'); cOut.className = 'field-note'; ci.after(cOut);
+    ci.addEventListener('input', () => {
+      const w = ci.value.trim(); const dob = $('#dob').value;
+      if (!w) { cOut.innerHTML = ''; return; }
+      const c = Numerology.chaldean(w);
+      if (!c.letters.some(l => l.v)) { cOut.innerHTML = 'Use letters A–Z.'; return; }
+      const d = DATA.passwords[c.single];
+      const p = dobOk(dob) ? Numerology.profileFromDOB(dob) : null;
+      cOut.innerHTML = `${chip('Total ' + c.single, p && (Numerology.relation(p.bn, c.single) === 'enemy' || Numerology.relation(p.dn, c.single) === 'enemy') ? 'bad' : 'good')}
+        <span class="muted">${steps(c.steps)}${d ? ' · ' + d.purpose : ''}${p ? ' · Birth ' + p.bn + ': ' + Numerology.relation(p.bn, c.single) + ' · Destiny ' + p.dn + ': ' + Numerology.relation(p.dn, c.single) : ' — add your date of birth to check compatibility'}</span>`;
+    });
+  }
+
+  /* ---------- Chaldean calculator ---------- */
+  if (tool === 'chaldean') {
+    const run = () => {
+      const name = $('#name').value.trim(); if (!name) return;
+      const dob = $('#dob').value;
+      const c = Numerology.chaldean(name);
+      const first = name.split(/\s+/)[0]; const cf = Numerology.chaldean(first);
+      const py = Numerology.pythagorean(name);
+      const p = dobOk(dob) ? Numerology.profileFromDOB(dob) : null;
+      const purpose = DATA.passwords[c.single];
+      show(`
+        <div class="card"><div class="card-title"><h3>${esc(name)}</h3>${chip('Chaldean', '')}</div>
+          <div class="letters">${c.letters.map(l => `<div class="l"><b>${esc(l.ch)}</b><span>${l.v || ''}</span></div>`).join('')}</div>
+          <div class="grid grid-2" style="margin-top:6px">
+            <div><div class="stat">${badge(c.single)}<div><div class="label">Root number</div><div class="value">${N[c.single].planet} — ${DATA.lifePath[c.single].title}</div><div class="steps">${steps(c.steps)}</div></div></div></div>
+            <div><div class="stat">${badge(cf.single, 'teal')}<div><div class="label">First name</div><div class="value">${N[cf.single].planet}</div><div class="steps">${esc(first)} → ${steps(cf.steps)}</div></div></div></div>
+          </div>
+          <div class="divider"></div>
+          <div class="kv"><dt>Compound number</dt><dd><b>${c.total}</b> <span class="muted small">(the raw total, read as the hidden influence)</span></dd>
+            <dt>Root number</dt><dd><b>${c.single}</b> <span class="muted small">(the outward effect)</span></dd>
+            <dt>Pythagorean, for comparison</dt><dd><b>${py.single}</b> <span class="muted small">(Western system — different chart, different number)</span></dd></div>
+          <div class="divider"></div>
+          <p><b>${N[c.single].keyword}.</b> ${DATA.lifePath[c.single].traits}</p>
+          ${purpose ? `<p class="small muted">As a word total, ${c.single} relates to: <b>${purpose.purpose}</b>.</p>` : ''}
+          ${p ? `<div class="divider"></div><h4>Does this name suit your date of birth?</h4><div class="kv"><dt>Birth number ${p.bn}</dt><dd>${rel(Numerology.relation(p.bn, c.single))}</dd><dt>Destiny number ${p.dn}</dt><dd>${rel(Numerology.relation(p.dn, c.single))}</dd><dt>Balancer numbers</dt><dd>${digits(p.balancers, 'good')}</dd></div>
+            <p class="small muted" style="margin-top:8px">${Numerology.relation(p.bn, c.single) === 'enemy' || Numerology.relation(p.dn, c.single) === 'enemy' ? 'This name total is an enemy of one of your core numbers. Numerologists often suggest a small spelling change — adding or dropping a letter — to move the total to a friendly number. Try variations above.' : 'This name total is compatible with your core numbers.'}</p>` : '<p class="small muted">Add your date of birth above to check whether this name is friendly to your Birth and Destiny numbers.</p>'}
+        </div>${cta}`);
+    };
+    $('#f').addEventListener('submit', e => { e.preventDefault(); run(); });
+  }
+
   /* ---------- Lo Shu grid ---------- */
   if (tool === 'lo-shu') {
     $('#f').addEventListener('submit', e => {
