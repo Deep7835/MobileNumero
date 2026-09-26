@@ -11,3 +11,6 @@ __pycache__/
 
 # Node
 node_modules/
+
+# rendered launch video (regenerate with tools/launch_video.py)
+brand/video/
