@@ -1,12 +1,38 @@
-# Cloudflare Pages/Workers static headers (replaces the old netlify.toml rules)
+# Cloudflare Workers static headers (replaces the old netlify.toml rules).
+# Note: when several rules match one request Cloudflare concatenates the values, so
+# Cache-Control is set per path group rather than on /* — otherwise assets inherit the
+# page window too and end up with two conflicting max-ages.
 /*
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  # Pages are served without an ETag, so give crawlers an explicit revalidation window
-  # instead of a full refetch on every visit (Bing guidelines 3 and 21).
+
+# Pages. Cloudflare serves these without an ETag or Last-Modified, so an explicit
+# revalidation window stops crawlers refetching every page in full on each visit
+# (Bing Webmaster Guidelines 3 and 21). Pages are extensionless, hence the path list.
+/
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/blog/*
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/numbers/*
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/tools/*
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/hi/*
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/mr/*
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/ta/*
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/gu/*
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/about
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/privacy
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/terms
   Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
 
 # Images, icons and fonts never change in place
