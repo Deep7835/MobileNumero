@@ -6,6 +6,13 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
+# HTML: Cloudflare serves these without an ETag, so give crawlers and the CDN an explicit
+# freshness window rather than forcing a full refetch on every visit (Bing guideline 3 & 21).
+/*.html
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+/
+  Cache-Control: public, max-age=600, s-maxage=3600, stale-while-revalidate=86400
+
 # Images, icons and fonts never change in place
 /assets/*
   Cache-Control: public, max-age=31536000, immutable

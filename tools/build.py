@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build script: generates blog pages, blog index, hero images, favicon/OG images,
 sitemap.xml and robots.txt into ../site. Run:  python3 tools/build.py"""
-import os, re, json, html, datetime, sys
+import os, re, json, html, datetime, sys, hashlib
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
@@ -52,7 +52,7 @@ VERIFY = {'google-site-verification': 'WMT9RBYqvsxIn936s6lqItZouN2_6RP97dqWz3PPz
 VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=35'
+VER = 'v=36'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -349,7 +349,7 @@ def foot(depth=1, lang='en', home_anchor=None):
           <p>{u['f_tag']}</p>
         </div>
         <div>
-          <h4>{u['f_explore']}</h4>
+          <h3>{u['f_explore']}</h3>
           <ul>
             <li><a href="{anchor}">{u['f_analyser']}</a></li>
             <li><a href="{up}tools/">{u['calc']}</a></li>
@@ -358,7 +358,7 @@ def foot(depth=1, lang='en', home_anchor=None):
           </ul>
         </div>
         <div>
-          <h4>{u['f_company']}</h4>
+          <h3>{u['f_company']}</h3>
           <ul>
             <li><a href="{up}about.html">{u['f_about']}</a></li>
             <li><a href="{up}privacy.html">{u['privacy']}</a></li>
@@ -565,7 +565,7 @@ def number_pages():
 ''' + foot()
         write_page(NUMDIR / f'{slug}.html', html_)
     # index of the nine numbers
-    cards = ''.join(f'''<article class="card post-card"><a href="birth-number-{n}.html">{picture('birth-number-' + n, f"Birth number {n} — {d['planet']}", thumb=True)}</a><div class="body"><span class="tag">{d['planet']}</span><h3><a href="birth-number-{n}.html">Birth Number {n}</a></h3><p>{d['keyword']}. Born on the {', '.join(map(str, d['days']))}.</p></div></article>''' for n, d in NUMBERS.items())
+    cards = ''.join(f'''<article class="card post-card"><a href="birth-number-{n}.html">{picture('birth-number-' + n, f"Birth number {n} — {d['planet']}", thumb=True)}</a><div class="body"><span class="tag">{d['planet']}</span><h2><a href="birth-number-{n}.html">Birth Number {n}</a></h2><p>{d['keyword']}. Born on the {', '.join(map(str, d['days']))}.</p></div></article>''' for n, d in NUMBERS.items())
     html_ = head('Birth Numbers 1–9: Lucky Mobile Number, PIN & Colour', 'Find your birth number from your day of birth and see the lucky mobile number digits, PINs, passwords, wallpaper, cover and colour recommended for numbers 1 to 9.', 'numbers/', f'{SITE_URL}/assets/og-image.jpg') + f'''
 <div class="page-head"><div class="breadcrumb"><a href="../index.html">Home</a> › Birth numbers</div><h1>Birth Numbers 1–9</h1><p class="muted" style="max-width:64ch">Your Birth number is the day of the month you were born, reduced to a single digit (29 → 2 + 9 = 11 → 2). Pick yours to see the mobile-number digits, PINs, wallpaper, cover and colour that suit it.</p></div>
 <div class="post-grid">{cards}</div>
@@ -604,12 +604,33 @@ def tool_pages():
 ''' + foot().replace('<script src="../js/site-config.js', scripts())
         html_ = html_.replace('<body>', f'<body data-tool="{t["tool"]}">')
         write_page(TDIR / f"{t['slug']}.html", html_)
-    cards = ''.join(f'<a class="card tool-card" href="{t["slug"]}.html"><div class="tool-ico">{ICON(t["icon"], "../")}</div><h3>{t["name"]}</h3><p class="muted small">{t["short"]}</p></a>' for t in TOOLS)
+    cards = ''.join(f'<a class="card tool-card" href="{t["slug"]}.html"><div class="tool-ico">{ICON(t["icon"], "../")}</div><h2>{t["name"]}</h2><p class="muted small">{t["short"]}</p></a>' for t in TOOLS)
     html_ = head('Free Numerology Calculators: Life Path, Name & More', 'Five free numerology calculators: Life Path number, name numerology (Chaldean & Pythagorean), compatibility by date of birth, Personal Year forecast and Lo Shu grid — plus the mobile number analyser.', 'tools/', f'{SITE_URL}/assets/og-image.jpg') + f'''
 <div class="page-head"><div class="breadcrumb"><a href="../index.html">Home</a> › Calculators</div><h1>Free numerology calculators</h1><p class="muted" style="max-width:64ch">Quick, single-purpose tools that run in your browser. For the complete picture — mobile number, PIN, password, wallpaper, cover and a PDF report — use the <a href="../index.html#mainForm">main analyser</a>.</p></div>
-<div class="grid grid-3">{cards}<a class="card tool-card" href="../index.html#mainForm"><div class="tool-ico">{ICON("smartphone", "../")}</div><h3>Mobile Number Analyser</h3><p class="muted small">All 10 positions, score, lucky numbers &amp; PDF</p></a></div>
+<div class="grid grid-3">{cards}<a class="card tool-card" href="../index.html#mainForm"><div class="tool-ico">{ICON("smartphone", "../")}</div><h2>Mobile Number Analyser</h2><p class="muted small">All 10 positions, score, lucky numbers &amp; PDF</p></a></div>
 ''' + foot()
     write_page(TDIR / 'index.html', html_)
+
+LASTMOD_DB = Path(__file__).resolve().parent / 'lastmod.json'
+
+def real_lastmod(path, fallback):
+    """Bing wants lastmod to mean "the content changed". Hash only the <main> region — so nav,
+    footer and asset-version churn don't fake a change — and move the date only when it moves."""
+    f = ROOT / (path if path.endswith(('.xml', '.txt')) else (path + 'index.html' if path.endswith('/') or path == '' else path + '.html'))
+    if not f.exists(): return fallback
+    html_ = f.read_text()
+    m = re.search(r'<main\b[^>]*>(.*?)</main>', html_, re.S)
+    body = re.sub(r'\?v=\d+', '', m.group(1) if m else html_)
+    digest = hashlib.sha1(body.encode()).hexdigest()[:16]
+    db = json.loads(LASTMOD_DB.read_text()) if LASTMOD_DB.exists() else {}
+    rec = db.get(path)
+    if rec and rec.get('hash') == digest:
+        return rec['date']
+    # unknown page: trust the caller's date (publish date); known page with new content: today
+    date = fallback if rec is None else datetime.date.today().isoformat()
+    db[path] = {'hash': digest, 'date': date}
+    LASTMOD_DB.write_text(json.dumps(db, indent=1, sort_keys=True) + '\n')
+    return date
 
 def sitemap_robots():
     today = datetime.date.today().isoformat()
@@ -626,6 +647,7 @@ def sitemap_robots():
         alts = ''
         if m: alts = ''.join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="{SITE_URL}/{ap[:-5]}" />' for l, ap in alternates_for(m.group(2)).items())
         elif path.endswith('blog/'): alts = ''.join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="{SITE_URL}/{ap}" />' for l, ap in ({'en': 'blog/'} | {l: f'{l}/blog/' for l in LANGS if TR.get(l)}).items())
+        mod = real_lastmod(path, mod)
         xml += f'  <url>\n    <loc>{SITE_URL}/{path}</loc>\n    <lastmod>{mod}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{pri}</priority>{img}{alts}\n  </url>\n'
     xml += '</urlset>\n'
     (ROOT / 'sitemap.xml').write_text(xml)
