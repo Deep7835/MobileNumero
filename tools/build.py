@@ -46,13 +46,14 @@ NUM_INTRO = {
 ROOT = Path(__file__).resolve().parent.parent / 'site'
 SITE_URL = 'https://numberkundli.com'   # keep in sync with site/js/site-config.js
 SITE_NAME = 'NumberKundli'
+ADSENSE = 'ca-pub-3245687391344995'   # public publisher id; ads are served by Google
 AUTHOR = 'Deepam Mishra'   # independent creator; Person entity lives on /about
 # Search-engine ownership tokens (public by design). Leave empty if verifying via DNS TXT instead.
 VERIFY = {'google-site-verification': 'WMT9RBYqvsxIn936s6lqItZouN2_6RP97dqWz3PPz6o', 'msvalidate.01': ''}
 VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=36'
+VER = 'v=37'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -233,6 +234,8 @@ def nav_dd(up, label):
     return (f'<div class="nav-dd">\n        <button class="nav-dd-btn" type="button" aria-haspopup="true" aria-expanded="false">{ICON("calculator", up)}<span>{label}</span>{ICON("chevron-down", up)}</button>'
             f'\n        <div class="nav-dd-menu">{items}\n          <a class="all" href="{up}tools/">{ICON("layout-grid", up)}<span>All calculators</span></a>\n        </div>\n      </div>')
 
+ADS_TAG = f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE}" crossorigin="anonymous"></script>' if ADSENSE else ''
+
 THEME_PRE = "<script>(function(){try{var m=localStorage.getItem('theme');if(m==='light'||(m===null&&matchMedia('(prefers-color-scheme: light)').matches))document.documentElement.setAttribute('data-theme','light')}catch(e){}})()</script>"
 
 def short_title(t, limit=60):
@@ -296,6 +299,7 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{up}css/styles.css?{VER}" />
   {THEME_PRE}
+  {ADS_TAG}
   {'<style>:root{--font:' + FONT_CSS[lang][0] + ';--display:' + FONT_CSS[lang][1] + '}</style>' if lang != 'en' else ''}
 </head>
 <body>

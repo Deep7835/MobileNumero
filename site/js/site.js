@@ -82,7 +82,7 @@
     const banner = document.createElement('div');
     banner.className = 'cookie-banner'; banner.setAttribute('role', 'dialog'); banner.setAttribute('aria-live', 'polite'); banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML = `
-      <div class="cookie-text"><strong>${ico('cookie')} Cookies &amp; privacy.</strong> This site stores your language and theme preferences on your device.
+      <div class="cookie-text"><strong>${ico('cookie')} Cookies &amp; privacy.</strong> This site stores your language and theme preferences on your device, and shows ads served by Google, which may use cookies.
         ${hasAnalytics ? 'With your consent we also use anonymised analytics to understand which pages are useful.' : 'No tracking cookies are set.'}
         <a href="${privacyHref}">Privacy policy</a></div>
       <div class="cookie-actions">
