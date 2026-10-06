@@ -20,7 +20,7 @@ for _l in LANGS:
     except ModuleNotFoundError: TR[_l] = {}
 FONT_CSS = {'hi': ("'Noto Sans Devanagari','Geist',sans-serif", "'Noto Sans Devanagari','Geist',sans-serif"), 'mr': ("'Noto Sans Devanagari','Geist',sans-serif", "'Noto Sans Devanagari','Geist',sans-serif"), 'ta': ("'Noto Sans Tamil','Geist',sans-serif", "'Noto Sans Tamil','Geist',sans-serif"), 'gu': ("'Noto Sans Gujarati','Geist',sans-serif", "'Noto Sans Gujarati','Geist',sans-serif")}
 LANG_NAMES = {'hi': 'Hindi (हिन्दी)', 'mr': 'Marathi (मराठी)', 'ta': 'Tamil (தமிழ்)', 'gu': 'Gujarati (ગુજરાતી)'}
-LOCALE = {'en': 'en_IN', 'hi': 'hi_IN', 'mr': 'mr_IN', 'ta': 'ta_IN', 'gu': 'gu_IN'}
+LOCALE = {'hi-Latn': 'hi_IN', 'en': 'en_IN', 'hi': 'hi_IN', 'mr': 'mr_IN', 'ta': 'ta_IN', 'gu': 'gu_IN'}
 LANG_NAME = {'en': 'English', 'hi': 'हिन्दी', 'mr': 'मराठी', 'ta': 'தமிழ்', 'gu': 'ગુજરાતી'}
 FOOT_UI = {'en': {'f_about': 'About', 'f_indep': 'NumberKundli is an independent project by Deepam Mishra and is not affiliated with or endorsed by any numerology school or teacher.', 'f_tag': 'Free mobile numerology: analyse your number, find a lucky PIN and password, and get a PDF report in five languages.', 'f_explore': 'Explore', 'f_company': 'Company', 'f_social': 'Socials', 'f_rights': 'All rights reserved', 'f_made': 'Built with care in India', 'f_cta_eye': 'Free personal report', 'f_cta_h': 'Get your mobile numerology report', 'f_cta_p': 'Birth & Destiny numbers, a position-by-position reading of your mobile number, lucky PIN, password, wallpaper and cover — compiled into a PDF you can keep.', 'f_cta_btn': 'Analyse my number', 'f_expert': 'Talk to an expert', 'f_home': 'Home', 'f_analyser': 'Mobile number analyser', 'viewall': 'View all', 'journal_eye': 'NumberKundli Journal', 'featured': 'Featured'}, 'hi': {'f_about': 'हमारे बारे में', 'f_indep': 'NumberKundli दीपम मिश्रा की एक स्वतंत्र परियोजना है और किसी भी न्यूमरोलॉजी संस्थान या शिक्षक से संबद्ध या अनुमोदित नहीं है।', 'f_tag': 'मुफ़्त मोबाइल न्यूमरोलॉजी: अपना नंबर जाँचें, शुभ पिन और पासवर्ड पाएँ, और पाँच भाषाओं में PDF रिपोर्ट लें।', 'f_explore': 'खोजें', 'f_company': 'कंपनी', 'f_social': 'सोशल', 'f_rights': 'सर्वाधिकार सुरक्षित', 'f_made': 'भारत में सावधानी से बनाया गया', 'f_cta_eye': 'मुफ़्त व्यक्तिगत रिपोर्ट', 'f_cta_h': 'अपनी मोबाइल न्यूमरोलॉजी रिपोर्ट पाएँ', 'f_cta_p': 'मूलांक और भाग्यांक, आपके मोबाइल नंबर की पोज़ीशन-दर-पोज़ीशन रीडिंग, शुभ पिन, पासवर्ड, वॉलपेपर और कवर — एक PDF में।', 'f_cta_btn': 'मेरा नंबर जाँचें', 'f_expert': 'विशेषज्ञ से बात करें', 'f_home': 'होम', 'f_analyser': 'मोबाइल नंबर विश्लेषक', 'viewall': 'सभी देखें', 'journal_eye': 'NumberKundli जर्नल', 'featured': 'विशेष'}, 'mr': {'f_about': 'आमच्याबद्दल', 'f_indep': 'NumberKundli हा दीपम मिश्रा यांचा स्वतंत्र प्रकल्प आहे आणि कोणत्याही न्यूमरॉलॉजी संस्थेशी किंवा शिक्षकाशी संलग्न वा त्यांनी मान्य केलेला नाही.', 'f_tag': 'मोफत मोबाइल न्यूमरॉलॉजी: तुमचा नंबर तपासा, शुभ पिन व पासवर्ड मिळवा, आणि पाच भाषांत PDF अहवाल घ्या.', 'f_explore': 'शोधा', 'f_company': 'कंपनी', 'f_social': 'सोशल', 'f_rights': 'सर्व हक्क राखीव', 'f_made': 'भारतात काळजीपूर्वक बनवले', 'f_cta_eye': 'मोफत वैयक्तिक अहवाल', 'f_cta_h': 'तुमचा मोबाइल न्यूमरॉलॉजी अहवाल मिळवा', 'f_cta_p': 'मूलांक व भाग्यांक, तुमच्या मोबाइल नंबरचे स्थाननिहाय वाचन, शुभ पिन, पासवर्ड, वॉलपेपर व कव्हर — एका PDF मध्ये.', 'f_cta_btn': 'माझा नंबर तपासा', 'f_expert': 'तज्ज्ञांशी बोला', 'f_home': 'होम', 'f_analyser': 'मोबाइल नंबर विश्लेषक', 'viewall': 'सर्व पहा', 'journal_eye': 'NumberKundli जर्नल', 'featured': 'खास'}, 'ta': {'f_about': 'எங்களைப் பற்றி', 'f_indep': 'NumberKundli தீபம் மிஸ்ராவின் சுயாதீன திட்டம்; எந்த நியூமராலஜி நிறுவனத்துடனோ ஆசிரியருடனோ இணைந்ததோ அவர்களால் அங்கீகரிக்கப்பட்டதோ அல்ல.', 'f_tag': 'இலவச மொபைல் எண் கணிதம்: உங்கள் எண்ணை ஆய்வு செய்து, அதிர்ஷ்ட பின் மற்றும் கடவுச்சொல்லைக் கண்டறிந்து, ஐந்து மொழிகளில் PDF அறிக்கையைப் பெறுங்கள்.', 'f_explore': 'ஆராயுங்கள்', 'f_company': 'நிறுவனம்', 'f_social': 'சமூக ஊடகம்', 'f_rights': 'அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை', 'f_made': 'இந்தியாவில் அக்கறையுடன் உருவாக்கப்பட்டது', 'f_cta_eye': 'இலவச தனிப்பட்ட அறிக்கை', 'f_cta_h': 'உங்கள் மொபைல் எண் கணித அறிக்கையைப் பெறுங்கள்', 'f_cta_p': 'பிறப்பு & விதி எண்கள், உங்கள் மொபைல் எண்ணின் இடவாரியான வாசிப்பு, அதிர்ஷ்ட பின், கடவுச்சொல், வால்பேப்பர் மற்றும் கவர் — ஒரே PDF இல்.', 'f_cta_btn': 'என் எண்ணை ஆய்வு செய்', 'f_expert': 'நிபுணரிடம் பேசுங்கள்', 'f_home': 'முகப்பு', 'f_analyser': 'மொபைல் எண் ஆய்வாளர்', 'viewall': 'அனைத்தும்', 'journal_eye': 'NumberKundli இதழ்', 'featured': 'சிறப்பு'}, 'gu': {'f_about': 'અમારા વિશે', 'f_indep': 'NumberKundli દીપમ મિશ્રાનો સ્વતંત્ર પ્રોજેક્ટ છે અને કોઈપણ ન્યુમરોલોજી સંસ્થા કે શિક્ષક સાથે સંલગ્ન કે તેમના દ્વારા માન્ય નથી.', 'f_tag': 'મફત મોબાઇલ ન્યુમરોલોજી: તમારો નંબર તપાસો, શુભ પિન અને પાસવર્ડ મેળવો, અને પાંચ ભાષામાં PDF રિપોર્ટ લો.', 'f_explore': 'શોધો', 'f_company': 'કંપની', 'f_social': 'સોશિયલ', 'f_rights': 'સર્વ હક્ક સુરક્ષિત', 'f_made': 'ભારતમાં કાળજીથી બનાવેલું', 'f_cta_eye': 'મફત વ્યક્તિગત રિપોર્ટ', 'f_cta_h': 'તમારો મોબાઇલ ન્યુમરોલોજી રિપોર્ટ મેળવો', 'f_cta_p': 'મૂળાંક અને ભાગ્યાંક, તમારા મોબાઇલ નંબરનું પોઝિશન-દર-પોઝિશન વાંચન, શુભ પિન, પાસવર્ડ, વૉલપેપર અને કવર — એક PDF માં.', 'f_cta_btn': 'મારો નંબર તપાસો', 'f_expert': 'નિષ્ણાત સાથે વાત કરો', 'f_home': 'હોમ', 'f_analyser': 'મોબાઇલ નંબર વિશ્લેષક', 'viewall': 'બધા જુઓ', 'journal_eye': 'NumberKundli જર્નલ', 'featured': 'ખાસ'}}
 UI = {
@@ -247,7 +247,7 @@ def short_title(t, limit=60):
         if len(t) <= limit: break
     return t
 
-def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth=1, lang='en', alternates=None):
+def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth=1, lang='en', alternates=None, html_lang=None):
     up = '../' * depth; u = UI[lang]
     alt_links = ''.join(f'<link rel="alternate" hreflang="{l}" href="{SITE_URL}/{p}" />' for l, p in (alternates or {}).items()) + (f'<link rel="alternate" hreflang="x-default" href="{SITE_URL}/{alternates["en"]}" />' if alternates and 'en' in alternates else '')
     ld = [{"@type": "WebSite", "name": SITE_NAME, "url": SITE_URL + '/'},
@@ -255,7 +255,7 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
     if article:
         ld.append({"@type": "Article", "headline": article['title'], "description": article['meta'], "image": [og_image],
                    "datePublished": article['date'], "dateModified": article['date'],
-                   "author": {"@type": "Person", "@id": SITE_URL + '/about#person', "name": AUTHOR, "url": SITE_URL + '/about'}, "inLanguage": lang,
+                   "author": {"@type": "Person", "@id": SITE_URL + '/about#person', "name": AUTHOR, "url": SITE_URL + '/about'}, "inLanguage": (article.get('page_lang') or lang) if article else lang,
                    "publisher": {"@type": "Organization", "name": SITE_NAME, "logo": {"@type": "ImageObject", "url": f"{SITE_URL}/assets/icon-512.png"}},
                    "mainEntityOfPage": f"{SITE_URL}/{canonical_path}", "keywords": article['keywords'], "articleSection": article['category']})
         ld.append({"@type": "BreadcrumbList", "itemListElement": [
@@ -265,7 +265,7 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
         if article.get('faqs'):
             ld.append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in article['faqs']]})
     return f'''<!DOCTYPE html>
-<html lang="{lang}">
+<html lang="{html_lang or lang}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -275,7 +275,7 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
   <meta name="theme-color" content="#0b0d17" />
   {VERIFY_TAGS}<link rel="canonical" href="{SITE_URL}/{canonical_path}" />
   {alt_links}
-  <meta property="og:locale" content="{LOCALE[lang]}" />
+  <meta property="og:locale" content="{LOCALE.get(html_lang, LOCALE[lang])}" />
   <link rel="icon" href="{up}assets/favicon.ico" sizes="48x48" />
   <link rel="icon" href="{up}assets/favicon-32.png" sizes="32x32" type="image/png" />
   <link rel="icon" href="{up}assets/icon-192.png" sizes="192x192" type="image/png" />
@@ -439,12 +439,12 @@ def post_page(p0, lang='en'):
       <div class="body"><span class="tag">{esc(rp['category'])}</span><h3><a href="{r}.html">{esc(rp['title'])}</a></h3><p>{esc(rp['excerpt'])}</p></div></article>''' for r, rp in rel_posts if rp)
     alts = alternates_for(p['slug'])
     switcher = ' '.join(f'<a class="chip {"good" if l == lang else ""}" href="{"../" * depth}{path}" hreflang="{l}" lang="{l}">{LANG_NAME[l]}</a>' for l, path in alts.items())
-    html_ = head(p['title'], p['meta'], f"{pre}blog/{p['slug']}.html", og, article=p, depth=depth, lang=lang, alternates=alts) + f'''
+    html_ = head(p['title'], p['meta'], f"{pre}blog/{p['slug']}.html", og, article=p, depth=depth, lang=lang, alternates=alts, html_lang=p.get('page_lang')) + f'''
 <article class="page-head" style="padding-bottom:0">
   <div class="breadcrumb"><a href="{'../' * depth}index.html{'' if lang == 'en' else '?lang=' + lang}">{u['home']}</a> › <a href="./">{u['blog']}</a> › {esc(p['category'])}</div>
   <h1>{esc(p['title'])}</h1>
   <div class="meta-row"><span>{esc(p['category'])}</span><span>·</span><time datetime="{p['date']}">{fmt_date_l(p['date'], lang)}</time><span>·</span><span>{u['minread'].format(n=mins)}</span><span>·</span><span><a href="{'../' * depth}about.html">{u['by']}</a></span></div>
-  <div class="lang-switch"><span class="small muted">{u['readin']}:</span> {switcher}</div>
+  {f'<div class="lang-switch"><span class="small muted">{u["readin"]}:</span> {switcher}</div>' if len(alts) > 1 else ''}
   <div class="article-hero">{picture(p['slug'], alt, lazy=False, depth=depth, lang=lang)}</div>
   <div class="grid" style="grid-template-columns: minmax(0, 760px) 1fr; align-items: start">
     <div class="prose">

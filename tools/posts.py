@@ -724,4 +724,94 @@ dict(
        ('My number has 7 at the 7th position — should I change it?', '7 at the 7th position is linked to divorce and financial loss, one of the heaviest warnings in the system. Run the full analysis; if the total is also unfriendly, a change is worth considering.'),
        ('Does a good middle fix a bad ending?', 'No. The positions are read independently. A 6 at the 7th helps married life while an 8 at the 10th still burdens finances.')],
  related=['mobile-number-numerology-10-positions-meaning','how-to-choose-lucky-pin-code-numerology','phone-cover-material-numerology-personality']),
+
+dict(
+ slug='mulank-bhagyank-kaise-nikale',
+ page_lang='hi-Latn',
+ title='Mulank aur Bhagyank Kaise Nikale (Easy Method + Example)',
+ meta='Apni date of birth se mulank aur bhagyank kaise nikale — step by step method, solved example, aur 1 se 9 tak har ank ka matlab. Free calculator bhi.',
+ category='Core Numbers', date='2026-10-06',
+ keywords='mulank kaise nikale, bhagyank kaise nikale, mulank bhagyank calculator, apna mulank kaise jane, date of birth se mulank, mulank 1 se 9 matlab',
+ excerpt='Numerology ke do sabse zaroori number — mulank aur bhagyank. Dono aapki date of birth se nikalte hain aur dono nikalne me ek minute bhi nahi lagta.',
+ img=dict(a='#78350f', b='#ffcb47', glyph='2+9', label='Mulank · Bhagyank'),
+ body='''
+<p>Numerology me sabse pehla sawal yahi hota hai: <strong>mera mulank kya hai?</strong> Aur uske turant baad — <strong>bhagyank kaise nikalte hain?</strong> Dono numbers aapki date of birth se hi nikalte hain, calculation bahut simple hai, aur ek baar samajh gaye to zindagi bhar kaam aayega. Mobile number, PIN, password, wallpaper — numerology ki har recommendation inhi do numbers par tiki hoti hai.</p>
+
+<p>Is page par dono ka tareeka example ke saath diya hai. Agar aap calculation skip karna chahte hain to seedha <a href="../tools/life-path-number">free calculator</a> use kar lijiye — date of birth daaliye, dono number saamne aa jayenge.</p>
+
+<h2>Mulank kya hota hai</h2>
+<p><strong>Mulank</strong> (English me Birth Number ya Psychic Number) aapke <em>janm ki tareekh</em> se banta hai — sirf date, mahina aur saal nahi. Ye aapka swabhav batata hai: aap andar se kaise insaan hain, kaise sochte hain, log aapse pehli mulaqat me kya mehsoos karte hain.</p>
+
+<h3>Mulank kaise nikale</h3>
+<p>Janm ki tareekh ko ek single digit tak jodte jaiye.</p>
+<ul>
+<li>Agar aap <strong>5 tareekh</strong> ko paida hue hain → mulank = <strong>5</strong></li>
+<li>Agar aap <strong>17 tareekh</strong> ko paida hue hain → 1 + 7 = <strong>8</strong></li>
+<li>Agar aap <strong>29 tareekh</strong> ko paida hue hain → 2 + 9 = 11 → 1 + 1 = <strong>2</strong></li>
+</ul>
+<p>Yaad rakhiye: mulank me <em>sirf tareekh</em> use hoti hai. Mahina aur saal ka isme koi role nahi hai.</p>
+
+<h2>Bhagyank kya hota hai</h2>
+<p><strong>Bhagyank</strong> (English me Destiny Number ya Life Path Number) poori date of birth se banta hai — tareekh, mahina aur saal, teeno. Ye aapka swabhav nahi, aapki <em>disha</em> batata hai: aapki life kis taraf jaa rahi hai, kaun se mauke baar baar aayenge, aur kaun si seekh baar baar saamne aayegi.</p>
+
+<h3>Bhagyank kaise nikale</h3>
+<p>Poori date of birth ke saare digits jod dijiye, phir single digit tak reduce kijiye.</p>
+<p>Maan lijiye date of birth hai <strong>29 November 1994</strong> (29/11/1994):</p>
+<ul>
+<li>2 + 9 + 1 + 1 + 1 + 9 + 9 + 4 = <strong>36</strong></li>
+<li>3 + 6 = <strong>9</strong></li>
+</ul>
+<p>To is date of birth ka <strong>bhagyank 9</strong> hai, aur mulank (29 → 2 + 9 = 11 → 2) <strong>2</strong> hai.</p>
+
+<h2>Ek aur solved example</h2>
+<p>Date of birth: <strong>8 March 1990</strong> (08/03/1990)</p>
+<ul>
+<li><strong>Mulank:</strong> tareekh 8 hai → mulank = <strong>8</strong></li>
+<li><strong>Bhagyank:</strong> 0 + 8 + 0 + 3 + 1 + 9 + 9 + 0 = 30 → 3 + 0 = <strong>3</strong></li>
+</ul>
+<p>Yaani swabhav Shani (8) jaisa — mehnati, zimmedar, dheere par pakka. Aur disha Guru (3) ki — padhai, sikhana, logon se judna.</p>
+
+<h2>1 se 9 tak har ank ka matlab</h2>
+<table>
+<tr><th>Ank</th><th>Grah</th><th>Swabhav ek line me</th></tr>
+<tr><td><b>1</b></td><td>Surya</td><td>Leader, apni marzi ka maalik, pehal karne wala</td></tr>
+<tr><td><b>2</b></td><td>Chandra</td><td>Bhavuk, sahyogi, dusron ko jodne wala</td></tr>
+<tr><td><b>3</b></td><td>Guru</td><td>Gyani, bolne me tez, sikhane wala</td></tr>
+<tr><td><b>4</b></td><td>Rahu</td><td>Alag soch, mehnati, system banane wala</td></tr>
+<tr><td><b>5</b></td><td>Budh</td><td>Tez dimaag, business, communication</td></tr>
+<tr><td><b>6</b></td><td>Shukra</td><td>Sundarta, parivaar, aaram aur kala</td></tr>
+<tr><td><b>7</b></td><td>Ketu</td><td>Khoj, adhyatm, akele me sochne wala</td></tr>
+<tr><td><b>8</b></td><td>Shani</td><td>Mehnat, dheeraj, lambi race ka ghoda</td></tr>
+<tr><td><b>9</b></td><td>Mangal</td><td>Himmat, energy, ladne aur jeetne wala</td></tr>
+</table>
+
+<h2>Mulank aur bhagyank alag kyun hote hain</h2>
+<p>Zyadatar logon ke dono number alag hote hain, aur ye bilkul normal hai. Mulank batata hai aap <em>kaise</em> hain, bhagyank batata hai aap <em>kis taraf</em> jaa rahe hain. Jab dono ek hi number ho, to swabhav aur disha ek line me hoti hai — aisa vyakti apne raaste par bahut clear hota hai.</p>
+<p>Numerology me dono ka saath dekha jaata hai. Jaise koi mobile number ya PIN tabhi achha maana jaata hai jab uska total <strong>dono</strong> numbers ka mitra ho. Kaun sa ank kiska mitra hai, ye <a href="friendly-and-enemy-numbers-numerology-chart">friendly aur enemy numbers chart</a> me poora diya hai.</p>
+
+<h2>Aam galtiyan</h2>
+<ul>
+<li><strong>Mulank me poori date jod dena.</strong> Mulank me sirf tareekh aati hai, mahina aur saal nahi.</li>
+<li><strong>Bhagyank me pehle alag alag reduce karna.</strong> Saare digits ek saath jodiye, phir reduce kijiye — beech me alag alag reduce karne se jawab badal sakta hai.</li>
+<li><strong>Angrezi tareekh ke bajay Hindu tithi lena.</strong> Numerology English calendar ki date par chalti hai.</li>
+<li><strong>Raat 12 baje ke aaspaas janm.</strong> Agar aap 12 baje ke theek aaspaas paida hue hain to dono tareekhon ke number nikaal kar dekhiye, kaun sa aapke swabhav se zyada milta hai.</li>
+</ul>
+
+<h2>Ab in numbers ka kya karein</h2>
+<p>Mulank aur bhagyank sirf jaanne ke liye nahi hote — inhi se tay hota hai ki aapke aas paas ke numbers aapka saath de rahe hain ya nahi:</p>
+<ul>
+<li><strong>Mobile number:</strong> aapke number ke 10 position aur unka total dono numbers se match hona chahiye. <a href="../index.html#mainForm">Free analyser</a> poora number check kar deta hai.</li>
+<li><strong>PIN:</strong> ATM ya phone PIN ka total dono ka mitra ho aur usme aapke <a href="lo-shu-grid-missing-numbers-explained">missing numbers</a> ho. <a href="../tools/lucky-pin-generator">Lucky PIN generator</a> bana deta hai.</li>
+<li><strong>Password:</strong> shabd ka Chaldean total aapke lakshya se milna chahiye — <a href="../tools/lucky-password">password calculator</a> dekh lijiye.</li>
+</ul>
+
+<p class="small muted">Numerology ek vishwas par aadharit paddhati hai. Ise margdarshan aur manoranjan ke liye liya jaana chahiye, medical, kanooni ya aarthik salah ke roop me nahi.</p>
+''',
+ faqs=[('Mulank aur bhagyank me kya antar hai?', 'Mulank sirf janm ki tareekh se banta hai aur aapka swabhav batata hai. Bhagyank poori date of birth (tareekh, mahina, saal) se banta hai aur aapki life ki disha batata hai. Dono alag ho sakte hain aur ye normal hai.'),
+       ('Kya mulank aur bhagyank badal sakte hain?', 'Nahi. Dono aapki date of birth se tay hote hain, isliye zindagi bhar wahi rehte hain. Jo badla ja sakta hai wo hain aapke aas paas ke numbers — mobile number, PIN, password, naam ki spelling.'),
+       ('Agar jod ke baad 11, 22 ya 33 aaye to?', 'Inhe master number kehte hain. Indian numerology me inhe aage reduce kar diya jaata hai — 11 se 2, 22 se 4, 33 se 6 — lekin maana jaata hai ki in logon me us ank ki shakti thodi zyada hoti hai.'),
+       ('Mulank 1 se 9 me sabse achha kaun sa hai?', 'Koi bhi ank apne aap me achha ya bura nahi hota. Har ank ki apni taakat aur apni kamzori hai. Sawal ye hota hai ki aapke aas paas ke numbers aapke mulank aur bhagyank ke mitra hain ya shatru.'),
+       ('Kya ye calculator free hai?', 'Haan. Life Path calculator, mobile number analyser, PIN aur password generator — sab free hain, bina sign-up ke, aur sab kuch aapke browser me hi chalta hai. Aapki date of birth kahin upload nahi hoti.')],
+ related=['how-to-calculate-birth-number-and-destiny-number','friendly-and-enemy-numbers-numerology-chart','mobile-number-numerology-10-positions-meaning']),
+
 ]

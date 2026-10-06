@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://numberkundli.com/blog/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://numberkundli.com/blog/" />
@@ -256,6 +256,14 @@
     <xhtml:link rel="alternate" hreflang="mr" href="https://numberkundli.com/mr/blog/mobile-number-for-marriage-and-relationships" />
     <xhtml:link rel="alternate" hreflang="ta" href="https://numberkundli.com/ta/blog/mobile-number-for-marriage-and-relationships" />
     <xhtml:link rel="alternate" hreflang="gu" href="https://numberkundli.com/gu/blog/mobile-number-for-marriage-and-relationships" />
+  </url>
+  <url>
+    <loc>https://numberkundli.com/blog/mulank-bhagyank-kaise-nikale</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://numberkundli.com/assets/blog/mulank-bhagyank-kaise-nikale.jpg</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="en" href="https://numberkundli.com/blog/mulank-bhagyank-kaise-nikale" />
   </url>
   <url>
     <loc>https://numberkundli.com/numbers/birth-number-1</loc>
