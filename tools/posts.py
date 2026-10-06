@@ -953,4 +953,514 @@ dict(
        ('8 wala number lene se nuksaan ho hi jayega?', 'Numerology koi guarantee nahi deti. Ye ek paramparik maanyata hai jo kehti hai ki paisa aane me rukawat zyada mehsoos hoti hai. Ise margdarshan ki tarah lijiye, bhavishyavani ki tarah nahi.')],
  related=['never-end-mobile-number-with-8','lucky-mobile-number-kaise-choose-kare','mobile-number-for-business-growth-money']),
 
+dict(
+ slug='name-correction-numerology-how-it-works',
+ title='Name Correction in Numerology: How One Letter Works',
+ meta='What name correction actually is, how adding or dropping a single letter changes your name number, which spellings suit which birth numbers, and when not to bother.',
+ category='Name Numerology', date='2026-10-06',
+ keywords='name correction numerology, numerology name change, lucky name spelling, name correction as per date of birth, name numerology correction',
+ excerpt='Adding an extra letter is the most talked-about trick in Indian numerology. Here is the arithmetic behind it, and the honest limits of what it can do.',
+ img=dict(a='#3b0764', b='#fbbf24', glyph='A+', label='Name correction'),
+ body='''
+<p><strong>Name correction</strong> is the practice of changing the <em>spelling</em> of a name — not the name itself — so that its numerological total becomes friendly to the owner's date of birth. It is the most visible idea in Indian numerology, and the one with the most myths attached. This guide explains the arithmetic, shows which changes are actually used, and is honest about where the practice stops.</p>
+
+<h2>The arithmetic in one minute</h2>
+<p>In the Chaldean system every letter carries a value from 1 to 8:</p>
+<table><tr><th>Value</th><th>Letters</th></tr>
+<tr><td><b>1</b></td><td>A I J Q Y</td></tr><tr><td><b>2</b></td><td>B K R</td></tr><tr><td><b>3</b></td><td>C G L S</td></tr><tr><td><b>4</b></td><td>D M T</td></tr>
+<tr><td><b>5</b></td><td>E H N X</td></tr><tr><td><b>6</b></td><td>U V W</td></tr><tr><td><b>7</b></td><td>O Z</td></tr><tr><td><b>8</b></td><td>F P</td></tr></table>
+<p>Add the values of every letter and reduce to a single digit. That digit is the <strong>name number</strong>. Because each letter has a fixed value, changing one letter changes the total by exactly that amount — an H adds 5, an A adds 1, an M adds 4. The name still sounds the same; the number does not.</p>
+
+<h2>The three moves</h2>
+<p>Almost every real name correction is one of three edits:</p>
+<table><tr><th>Move</th><th>Pattern</th><th>What it does</th></tr>
+<tr><td><b>Double a letter</b></td><td>Rajkumar → Rajkummar</td><td>adds that letter's value a second time</td></tr>
+<tr><td><b>Add a letter</b></td><td>Urfi → Uorfi</td><td>adds the new letter's value</td></tr>
+<tr><td><b>Drop a vowel</b></td><td>Devgan → Devgn</td><td>subtracts that vowel's value</td></tr></table>
+<p>Our <a href="../tools/name-correction">name correction calculator</a> applies all three to your name and keeps only the spellings whose new total is friendly to both your Birth and Destiny numbers.</p>
+
+<h2>What you are aiming at</h2>
+<p>A corrected name is not one with a "lucky" number in the abstract. It is one whose total is a <strong>friend of your own two numbers</strong> — the Birth number from your day of birth and the Destiny number from your full date. If you do not know yours, work them out first: the method is on <a href="how-to-calculate-birth-number-and-destiny-number">this page</a>, or use the <a href="../tools/life-path-number">Life Path calculator</a>.</p>
+<p>A total that is friendly to both is called a <strong>balancer</strong>, and that is the target. A total friendly to one and neutral to the other is acceptable. A total that is an enemy of either is what correction exists to escape. The full chart of which numbers befriend which is <a href="friendly-and-enemy-numbers-numerology-chart">here</a>.</p>
+
+<h2>The cases people cite</h2>
+<p>Several Indian film figures are widely reported to have changed a spelling on a numerologist's advice. <strong>Ajay Devgn</strong> dropped the "a" from Devgan. <strong>Rajkummar Rao</strong>, born Rajkumar, added a second "m". <strong>Ayushmann Khurrana</strong>'s double-n spelling was set by his father, an astrologer. <strong>Uorfi Javed</strong> changed from Urfi, and <strong>Abhishek A Bachchan</strong> added a standalone initial.</p>
+<p>One story is worth correcting, because it is repeated more than any other: <strong>Hrithik Roshan did not add an H to "Rithik"</strong>. He was born Hrithik, and the surname came from his father's screen name rather than from numerology. If someone uses that example to sell you a correction, they have not checked it.</p>
+
+<h2>Which name do you correct?</h2>
+<p>The one you are <em>called</em> by. Numerology reads the name that is spoken and written around you every day, which for most people is not the full name on their passport. If colleagues call you by your first name alone, check that on its own as well as the full version — the two often give different numbers, and a numerologist will usually treat the everyday name as the one that matters.</p>
+
+<h2>When not to bother</h2>
+<ul>
+<li><strong>Your total is already friendly to both numbers.</strong> There is nothing to fix, and no system in numerology says a friendly number can be made friendlier.</li>
+<li><strong>The new spelling is one you will never use.</strong> A corrected name that only exists on a certificate does nothing even by numerology's own logic, because nobody says it.</li>
+<li><strong>You are being asked to pay a lot for it.</strong> The arithmetic on this page is the whole method. Anyone can check it in a minute.</li>
+</ul>
+
+<h2>What correction cannot do</h2>
+<p>Numerology is a belief-based practice. There is no evidence that a spelling changes outcomes, and the famous examples are survivorship bias — we hear about the actor who changed a letter and then succeeded, never the thousands who changed a letter and did not. The sensible way to treat it is as a low-cost, low-risk tradition: if it gives you a bit of confidence when you sign your name, that is a real effect, and it costs nothing to try on a social profile before it ever touches a legal document.</p>
+''',
+ faqs=[('How many letters can I change at once?', 'Traditionally one, sometimes two. The point is that the name stays recognisably yours — a correction is a spelling tweak, not a new name. Our calculator only suggests single-letter changes for this reason.'),
+       ('Should I change my first name or my surname?', 'Whichever gets you to a friendly total with the smaller change. Surnames are often shared with family, so many people prefer to adjust the first name; the arithmetic does not care which word the letter sits in.'),
+       ('Does a corrected name work immediately?', 'Practitioners usually talk about a settling period of a few weeks to a few months of consistent use. There is no evidence base for any particular timeline — treat it as folklore rather than a schedule.'),
+       ('Is name correction the same as changing my name legally?', 'No, and they are usually kept separate. Numerology reads the name you are called by, so most people change how they write it — social profiles, email signature, signature itself — without touching legal records.')],
+ related=['name-number-1-to-9-meaning','chaldean-vs-pythagorean-numerology','does-name-numerology-really-work']),
+
+dict(
+ slug='name-number-1-to-9-meaning',
+ title='Name Number 1 to 9: What Your Name Number Actually Means',
+ meta='What each name number from 1 to 9 stands for, which planet rules it, the work it suits, and which birth numbers it sits well with. With the Chaldean letter chart.',
+ category='Name Numerology', date='2026-10-06',
+ keywords='name number meaning, name numerology 1 to 9, lucky name number, name number 5 meaning, what does my name number mean',
+ excerpt='Your name number describes how the world receives you. Here is what each of the nine numbers carries, and the kind of life it tends to suit.',
+ img=dict(a='#0f172a', b='#fbbf24', glyph='1–9', label='Name numbers'),
+ body='''
+<p>Your <strong>name number</strong> is the reduced Chaldean total of the name you are called by. Where the Birth number describes your temperament and the Destiny number your direction, the name number describes something different again: <em>how the world receives you</em> — the first impression, the reputation, the thing people expect of you before they know you.</p>
+<p>Work yours out with the <a href="../tools/name-numerology">name numerology calculator</a>, then find it below.</p>
+
+<h2>The nine name numbers</h2>
+
+<h3>Name number 1 — Sun</h3>
+<p>Reads as a leader. A name totalling 1 suits founders, soloists and anyone whose work carries their own name. It projects decisiveness and can read as stubborn. Strongest for people whose Birth or Destiny number is 1, 2, 3 or 9.</p>
+
+<h3>Name number 2 — Moon</h3>
+<p>Reads as approachable and diplomatic. Good for counsellors, mediators, designers and partnership businesses. It is a soft number, which is an asset in people-facing work and a liability where you need to project authority quickly.</p>
+
+<h3>Name number 3 — Jupiter</h3>
+<p>Reads as knowledgeable and expressive. The teacher, writer, broadcaster and consultant number. It is the most commonly recommended name total in Indian practice because it is friendly to a wide range of birth numbers and carries no heavy associations.</p>
+
+<h3>Name number 4 — Rahu</h3>
+<p>Reads as unconventional. It suits research, technology and anyone building something structurally new, but Indian numerology treats 4 cautiously in names for the same reason it avoids it in <a href="number-4-in-mobile-number-numerology">mobile numbers</a> — the energy is seen as unpredictable rather than bad.</p>
+
+<h3>Name number 5 — Mercury</h3>
+<p>Reads as quick, commercial and communicative. The sales, trading, media and marketing number. Along with 3, it is among the most frequently recommended totals, especially for business names, because Mercury governs exchange — of words and of money.</p>
+
+<h3>Name number 6 — Venus</h3>
+<p>Reads as warm and attractive. Strong for anything to do with beauty, fashion, hospitality, food, art and family services. A 6 name draws people in, which is why it is so common in consumer brands.</p>
+
+<h3>Name number 7 — Ketu</h3>
+<p>Reads as deep and slightly distant. It suits researchers, analysts, spiritual teachers and specialists. It is a poor fit for work that needs mass appeal, because 7 reads as private rather than approachable.</p>
+
+<h3>Name number 8 — Saturn</h3>
+<p>Reads as serious and substantial. The most argued-over name number in Indian numerology: it is associated with slow, hard-won success and with obstacles along the way. Many practitioners avoid it in names entirely. The case for and against is set out in <a href="is-name-number-8-unlucky">this guide</a>.</p>
+
+<h3>Name number 9 — Mars</h3>
+<p>Reads as energetic and decisive. Good for sport, defence, surgery, engineering and anything competitive. 9 is unusual in the friendly-number chart: it is friendly to almost everyone, which makes it a safe total for a public-facing name.</p>
+
+<h2>The Chaldean letter values</h2>
+<table><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr>
+<tr><td>A I J Q Y</td><td>B K R</td><td>C G L S</td><td>D M T</td><td>E H N X</td><td>U V W</td><td>O Z</td><td>F P</td></tr></table>
+<p class="small muted">There is no 9 in the Chaldean letter chart — it is treated as sacred and never assigned to a letter. A name <em>total</em> can still reduce to 9.</p>
+
+<h2>A good name number is a relative thing</h2>
+<p>No number on this page is universally lucky. A name totalling 8 can be excellent for someone whose Birth number is 8 and heavy for someone whose Birth number is 1. What matters is the relationship between your name total and your own two numbers — which is what <a href="name-and-date-of-birth-compatibility">this guide</a> covers, and what the <a href="../tools/name-correction">name correction calculator</a> checks automatically.</p>
+''',
+ faqs=[('Which name number is the luckiest?', 'None in the abstract. 3, 5 and 6 are recommended most often because they are friendly to the widest range of birth numbers, but the right answer depends entirely on your own date of birth.'),
+       ('Should I calculate my full name or just my first name?', 'Both, and compare. Numerology reads the name people actually use. If you are usually addressed by your first name alone, that number carries more weight than the full legal version.'),
+       ('Why is there no letter worth 9 in Chaldean?', 'The Chaldean system treats 9 as a sacred number and does not assign it to any letter. Totals can still reduce to 9 through addition.'),
+       ('My name number is the same as my birth number — is that good?', 'It is seen as a reinforcement: the way you are received matches the way you are. It makes your character read clearly to others, though it offers less balance than a complementary number would.')],
+ related=['name-correction-numerology-how-it-works','is-name-number-8-unlucky','chaldean-vs-pythagorean-numerology']),
+
+dict(
+ slug='chaldean-vs-pythagorean-numerology',
+ title='Chaldean vs Pythagorean Numerology: Which to Use',
+ meta='The two name numerology systems compared: how the letter values differ, why they give different answers, which one Indian numerology uses, and how to choose.',
+ category='Name Numerology', date='2026-10-06',
+ keywords='chaldean vs pythagorean, chaldean numerology, pythagorean numerology, which numerology system is best, indian numerology system',
+ excerpt='The same name gives two different numbers depending on the system. Here is why, and which one to follow.',
+ img=dict(a='#422006', b='#fbbf24', glyph='C/P', label='Two systems'),
+ body='''
+<p>Run your name through two numerology calculators and you will often get two different numbers. That is not a bug. There are two established systems with different letter values, and they disagree by design. This page explains the difference and tells you which to use.</p>
+
+<h2>The short answer</h2>
+<p>If you are following <strong>Indian numerology</strong> — mobile numbers, name correction, PINs, Vastu — use <strong>Chaldean</strong>. If you are following Western numerology, use <strong>Pythagorean</strong>. Do not mix them, and do not average them.</p>
+
+<h2>How the values differ</h2>
+<p><strong>Pythagorean</strong> assigns values in simple alphabetical order and repeats after 9:</p>
+<table><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+<tr><td>A J S</td><td>B K T</td><td>C L U</td><td>D M V</td><td>E N W</td><td>F O X</td><td>G P Y</td><td>H Q Z</td><td>I R</td></tr></table>
+<p><strong>Chaldean</strong> assigns values by the <em>sound</em> a letter makes, uses only 1 to 8, and never assigns 9:</p>
+<table><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr>
+<tr><td>A I J Q Y</td><td>B K R</td><td>C G L S</td><td>D M T</td><td>E H N X</td><td>U V W</td><td>O Z</td><td>F P</td></tr></table>
+<p>Compare the letter R: Pythagorean gives it 9, Chaldean gives it 2. One letter, seven points of difference — which is why the totals diverge so quickly.</p>
+
+<h2>Why Chaldean has no 9</h2>
+<p>In the Chaldean tradition 9 is considered sacred and is deliberately left out of the letter chart. A name can still <em>total</em> 9 by addition; no single letter is ever worth 9. Pythagorean has no such rule.</p>
+
+<h2>Which is older, and does it matter?</h2>
+<p>Chaldean is the older of the two, traced to Mesopotamian practice, and it is the system Indian numerologists use almost universally. Pythagorean, named for the Greek mathematician, is the Western standard and is what most English-language numerology books teach. Age is not an argument for correctness in a belief-based practice — the practical argument is consistency. If your numerologist, your family tradition and the advice you are reading all use Chaldean, adding a Pythagorean result to the mix only creates confusion.</p>
+
+<h2>Two numbers, two uses</h2>
+<p>Some practitioners use both deliberately: Chaldean for the name's outward vibration and Pythagorean for a secondary reading. If you want to do that, keep them labelled and never add them together. Our <a href="../tools/name-numerology">name numerology calculator</a> shows both side by side for exactly this reason, and the <a href="../tools/chaldean-numerology-calculator">Chaldean calculator</a> goes deeper on the Chaldean reading alone.</p>
+
+<h2>Compound and root numbers</h2>
+<p>Chaldean adds one idea Pythagorean does not emphasise: the difference between the <strong>compound number</strong> (the raw total before reducing, such as 37) and the <strong>root number</strong> (37 → 3 + 7 = 10 → 1). The compound is read as the hidden influence, the root as the outward effect. Two names can share a root of 1 and carry quite different compounds, and a Chaldean reading will take both into account.</p>
+
+<h2>Which to use for what</h2>
+<table><tr><th>Purpose</th><th>System</th></tr>
+<tr><td>Name correction in India</td><td>Chaldean</td></tr>
+<tr><td>Business or brand name in India</td><td>Chaldean</td></tr>
+<tr><td>Mobile number, PIN, password</td><td>Chaldean</td></tr>
+<tr><td>Western numerology readings</td><td>Pythagorean</td></tr>
+<tr><td>Life Path from date of birth</td><td>Same in both — dates use digits, not letters</td></tr></table>
+<p>That last row is worth noting: the two systems only disagree about <em>letters</em>. Anything calculated from a date of birth — Birth number, Destiny number, Lo Shu grid, personal year — is identical in both.</p>
+''',
+ faqs=[('Which system is more accurate?', 'Neither can be shown to be accurate in any testable sense; they are different traditions. The practical answer is to pick the one your other advice uses and stay with it.'),
+       ('Why do online calculators give me different name numbers?', 'Almost always because one uses Chaldean and the other Pythagorean. Check which system a calculator uses before comparing results.'),
+       ('Do the two systems agree on my Life Path number?', 'Yes. Life Path, Birth number, Lo Shu grid and personal year are all calculated from your date of birth, which uses digits rather than letters, so both systems give the same answer.'),
+       ('Can I use Chaldean for my name and Pythagorean for my business?', 'You can, but there is no reason to. Mixing systems within one set of decisions makes the advice incoherent — pick one.')],
+ related=['name-number-1-to-9-meaning','name-correction-numerology-how-it-works','business-name-numerology']),
+
+dict(
+ slug='baby-name-numerology',
+ title='Baby Name Numerology: Choosing a Lucky Name for Your Child',
+ meta='How to pick a baby name by numerology: working from the birth date, which name totals suit which birth numbers, the first-letter question, and what to ignore.',
+ category='Name Numerology', date='2026-10-06',
+ keywords='baby name numerology, lucky baby name, numerology baby name calculator, baby name as per date of birth, newborn name numerology',
+ excerpt='Naming a child by numerology is the most common reason Indian families consult a numerologist. The method is simpler than it is usually made to sound.',
+ img=dict(a='#164e63', b='#a5f3fc', glyph='★', label='Baby names'),
+ body='''
+<p>Choosing a baby name by numerology is one of the most common reasons Indian families visit a numerologist, and one of the easiest things to do yourself. The method has three steps, and everything else is preference.</p>
+
+<h2>Step 1: work out the child's numbers first</h2>
+<p>The name comes last, not first. Start from the date of birth, which is already fixed:</p>
+<ul>
+<li><strong>Birth number (Mulank)</strong> — the day of the month, reduced. Born on the 23rd: 2 + 3 = 5.</li>
+<li><strong>Destiny number (Bhagyank)</strong> — the whole date, reduced. 23/09/2026: 2+3+0+9+2+0+2+6 = 24 → 6.</li>
+</ul>
+<p>The <a href="../tools/life-path-number">Life Path calculator</a> does both in one step. The full method is on <a href="how-to-calculate-birth-number-and-destiny-number">this page</a>.</p>
+
+<h2>Step 2: find which totals are friendly</h2>
+<p>You are looking for a name whose Chaldean total is <strong>friendly to both</strong> of the child's numbers — a balancer. The <a href="friendly-and-enemy-numbers-numerology-chart">friendly and enemy chart</a> gives the pairs. For the example above (Birth 5, Destiny 6), the balancers happen to be 1, 5 and 6, so a name totalling 1, 5 or 6 would be the aim.</p>
+<p>Most charts leave you three or four acceptable totals, which is a wide enough net that you will not be forced into a name you dislike.</p>
+
+<h2>Step 3: test the names you actually like</h2>
+<p>This is the step that gets done backwards. Make a shortlist of names you and your family genuinely want — for their meaning, their sound, their family history — and <em>then</em> run each through the <a href="../tools/name-numerology">name calculator</a>. Keep the ones that land on a friendly total.</p>
+<p>If a name you love misses by a little, a spelling variant often fixes it. Aditi, Adithi and Adithy are all the same name to a grandmother and three different numbers to a numerologist. That is <a href="name-correction-numerology-how-it-works">name correction</a> applied before the name is ever used, which is the cleanest possible version of it — no documents to change later.</p>
+
+<h2>The first-letter question</h2>
+<p>Many Indian families are given a starting syllable by an astrologer based on the child's <em>nakshatra</em> (birth star) — <em>Chu, Che, Cho, La</em> and so on. This comes from Vedic astrology, not numerology, and the two can be combined: take the syllable from the astrologer, then choose among names starting with it by numerological total. They constrain different things and rarely conflict badly. More on the numerology side of first letters is in <a href="lucky-first-letter-of-name-numerology">this guide</a>.</p>
+
+<h2>Which name counts — the full one or the called one?</h2>
+<p>Numerology reads the name a person is <em>called</em> by. For a child this is almost always the first name or a nickname, not the full name on the birth certificate. If you plan to call your daughter Anu, then Anu is the name that matters numerologically, however Anuradha appears on paper. Check both and prioritise the everyday one.</p>
+
+<h2>What to ignore</h2>
+<ul>
+<li><strong>"Lucky name" lists sold by number.</strong> A name is not lucky on its own — only in relation to a particular date of birth. A list of "names for number 5" is meaningless without the child's chart.</li>
+<li><strong>Pressure to pay for a shortlist.</strong> The arithmetic on this page is the entire method.</li>
+<li><strong>Anyone who tells you a name is dangerous.</strong> Numerology is a belief-based tradition. It is not a reason to reject a family name that matters to you.</li>
+</ul>
+
+<h2>A worked example</h2>
+<p>Child born 23 September 2026. Birth number 5, Destiny number 6, balancers 1, 5 and 6.</p>
+<table><tr><th>Name</th><th>Chaldean total</th><th>Verdict</th></tr>
+<tr><td>Aarav</td><td>1+1+2+1+6 = 11 → 2</td><td>neutral — workable</td></tr>
+<tr><td>Arjun</td><td>1+2+1+6+5 = 15 → 6</td><td>balancer — strong fit</td></tr>
+<tr><td>Vihaan</td><td>6+1+5+1+1+5 = 19 → 1</td><td>balancer — strong fit</td></tr></table>
+<p>Two of the three shortlisted names already work, which is the usual outcome. Numerology narrows a list; it rarely needs to overrule one.</p>
+''',
+ faqs=[('Should I pick the name number before the name?', 'No. Work out which totals are friendly, then test names you actually want. Choosing a number first and hunting for names to match it produces names nobody likes.'),
+       ('What if the family name we want has a bad total?', 'Try spelling variants first — one extra letter usually moves the total. If it still does not work, numerology is not a good enough reason to drop a name that carries family meaning.'),
+       ('Does the surname count in a baby name calculation?', 'Include it if the child will be addressed with it. For young children the first name alone is usually what is spoken, so most practitioners weight that more heavily.'),
+       ('Is the nakshatra letter more important than the number?', 'They come from different systems — nakshatra from Vedic astrology, totals from numerology. Neither overrides the other. Most families take the syllable as a constraint and then optimise the number within it.')],
+ related=['name-correction-numerology-how-it-works','lucky-first-letter-of-name-numerology','name-and-date-of-birth-compatibility']),
+
+dict(
+ slug='business-name-numerology',
+ title='Business Name Numerology: Picking a Brand Name That Works',
+ meta='How to choose a business name by numerology: which totals suit which trades, whether to use the owner or the company date, and how to test a shortlist.',
+ category='Name Numerology', date='2026-10-06',
+ keywords='business name numerology, company name numerology, lucky business name, brand name numerology, shop name numerology',
+ excerpt='A brand name is spoken and written more than almost any other word in a business. Numerology treats that repetition as the whole point.',
+ img=dict(a='#064e3b', b='#4fd1c5', glyph='₹', label='Business names'),
+ body='''
+<p>Corporate numerology is a real service in India — numerologists are consulted on company names, launch dates and even the business phone number. Whatever you make of the belief, the method is straightforward enough to run yourself before you pay anyone.</p>
+
+<h2>Whose numbers does a business name answer to?</h2>
+<p>This is the first question and the one most guides skip. There are two defensible answers:</p>
+<ul>
+<li><strong>The founder's numbers.</strong> Used for owner-led businesses — a consultancy, a clinic, a shop with the proprietor's name over the door. The brand is an extension of the person, so the name total should be friendly to the founder's Birth and Destiny numbers.</li>
+<li><strong>The incorporation date's numbers.</strong> Used for companies with multiple founders or outside investors, where no single person's chart should dominate. Treat the registration date exactly like a date of birth.</li>
+</ul>
+<p>Pick one and be consistent. Running a name against two charts and taking whichever answer you prefer is not numerology, it is motivated reasoning.</p>
+
+<h2>Which totals suit which trades</h2>
+<p>Indian practice associates each total with a planet, and each planet with a kind of work:</p>
+<table><tr><th>Total</th><th>Planet</th><th>Trades it is associated with</th></tr>
+<tr><td><b>1</b></td><td>Sun</td><td>Leadership brands, government-facing work, anything named after the founder</td></tr>
+<tr><td><b>2</b></td><td>Moon</td><td>Partnerships, hospitality, care, water and dairy</td></tr>
+<tr><td><b>3</b></td><td>Jupiter</td><td>Education, publishing, consulting, finance, law</td></tr>
+<tr><td><b>4</b></td><td>Rahu</td><td>Technology and anything genuinely unconventional — used with caution</td></tr>
+<tr><td><b>5</b></td><td>Mercury</td><td>Trading, retail, media, marketing, logistics — the most recommended business total</td></tr>
+<tr><td><b>6</b></td><td>Venus</td><td>Beauty, fashion, food, events, interiors, entertainment</td></tr>
+<tr><td><b>7</b></td><td>Ketu</td><td>Research, analytics, spiritual and wellness services</td></tr>
+<tr><td><b>8</b></td><td>Saturn</td><td>Real estate, mining, heavy industry — slow and solid, avoided by many</td></tr>
+<tr><td><b>9</b></td><td>Mars</td><td>Sport, defence, engineering, surgery, competitive fields</td></tr></table>
+<p><strong>5</strong> is the most commonly recommended total for a trading business, because Mercury governs exchange — of words and of money. <strong>6</strong> dominates consumer brands for the same reason Venus does: it reads as attractive.</p>
+
+<h2>How to test a shortlist</h2>
+<ol>
+<li>Work out the relevant chart — founder's or incorporation date — with the <a href="../tools/life-path-number">Life Path calculator</a>.</li>
+<li>Note which totals are friendly to both numbers using the <a href="friendly-and-enemy-numbers-numerology-chart">friendly and enemy chart</a>.</li>
+<li>Run each candidate name through the <a href="../tools/name-numerology">name calculator</a> in Chaldean.</li>
+<li>Where a good name misses by one or two, try a spelling variant — the <a href="../tools/name-correction">name correction tool</a> will find them for you.</li>
+</ol>
+<p>Exactly which letters to count is a practical question. Include the word people actually say. If your company is registered as "Shree Balaji Textiles Private Limited" but everyone calls it "Shree Balaji", count Shree Balaji. Legal suffixes like Pvt Ltd, LLP and Inc are not spoken and are generally excluded.</p>
+
+<h2>Don't let the number pick the name</h2>
+<p>A business name has to clear several bars that matter more than its total: it must be memorable, pronounceable, available as a domain and a trademark, and not already owned by someone else. Numerology is a tiebreaker among names that already pass those tests — not a substitute for them. A name with a perfect total and a taken trademark is worth nothing.</p>
+
+<h2>Beyond the name</h2>
+<p>If you are applying this to a business, the number people type most is the phone number. The same friendly-total logic applies there, and the position rules matter more for business lines because the tenth digit is tied to income — the full method is in <a href="mobile-number-for-business-growth-money">this guide</a>, and the <a href="../index.html#mainForm">free analyser</a> will score a number in a few seconds.</p>
+''',
+ faqs=[('Should the business name match my personal numbers or the company date?', 'Use the founder chart for owner-led businesses where the brand is an extension of the person, and the incorporation date for companies with several founders. Choose one and stay with it.'),
+       ('Do I include Pvt Ltd or LLP in the calculation?', 'Generally no. Numerology reads the name that is spoken, and nobody says the legal suffix in conversation. Count the name people actually use.'),
+       ('Which number is best for business?', '5 is recommended most often for trading and commerce, and 6 for consumer and lifestyle brands — but only if that total is also friendly to your own chart. There is no universally best number.'),
+       ('Is it worth renaming an existing business?', 'Rarely. An established name carries recognition, search traffic, reviews and trademark value that far outweigh a numerological adjustment. Spelling tweaks to a new sub-brand are a lower-risk place to apply this.')],
+ related=['name-number-1-to-9-meaning','mobile-number-for-business-growth-money','name-correction-numerology-how-it-works']),
+
+dict(
+ slug='signature-numerology-how-to-sign-your-name',
+ title='Signature Numerology: How to Sign Your Name',
+ meta='What numerology says about a signature: the rules practitioners actually give, which habits are discouraged, and how a signature relates to your name number.',
+ category='Name Numerology', date='2026-10-06',
+ keywords='signature numerology, lucky signature, how to make signature as per numerology, signature rules numerology, correct signature style',
+ excerpt='A signature is the one version of your name you write with intent. Numerology treats it as the most personal number you own.',
+ img=dict(a='#1e1b4b', b='#c4b5fd', glyph='✓', label='Signature'),
+ body='''
+<p>Of all the places your name appears, the signature is the one you produce deliberately, thousands of times, usually at moments that matter — contracts, cheques, agreements. Numerology treats that repetition and intent as significant, and has a set of conventions about how a signature should be formed.</p>
+
+<p>Worth saying plainly at the outset: these are traditional conventions, not findings. There is no evidence that a signature shape changes outcomes. What follows is what practitioners actually advise, with the reasoning they give.</p>
+
+<h2>The signature and the name number are not the same thing</h2>
+<p>Your <a href="name-number-1-to-9-meaning">name number</a> comes from the letters of the name you are called by. A signature may contain fewer letters — initials, a surname only, an illegible flourish. Numerologists read them as two different things: the name number is how the world receives you, the signature is how you present yourself when you commit to something.</p>
+<p>The usual advice is that they should not contradict each other. If your written name totals a friendly number, a signature built from the same letters inherits it.</p>
+
+<h2>The conventions practitioners give</h2>
+<table><tr><th>Convention</th><th>Reasoning given</th></tr>
+<tr><td>Sign close to how you write your name</td><td>An unreadable signature is held to disconnect the signature from the name's number</td></tr>
+<tr><td>Keep it legible enough to read the first letter</td><td>The opening letter is treated as the entry point of the name's energy</td></tr>
+<tr><td>Sign upward, not downward</td><td>A rising line is associated with growth; a falling one with decline</td></tr>
+<tr><td>Avoid striking a line through your own name</td><td>Read as cancelling the name — the most consistently repeated warning in this tradition</td></tr>
+<tr><td>Avoid underlining with a downward stroke</td><td>Same reasoning as above; a flat or rising underline is considered fine</td></tr>
+<tr><td>Avoid dots after the signature</td><td>Treated as a full stop on the name</td></tr>
+<tr><td>Keep it consistent</td><td>A signature that changes constantly is said to reflect, and reinforce, indecision</td></tr></table>
+
+<h2>The one that overlaps with the real world</h2>
+<p>Two pieces of this advice happen to be sensible for reasons that have nothing to do with numerology: <strong>keep it consistent</strong> and <strong>keep it legible</strong>. Banks, registrars and courts all compare signatures. A signature that varies between documents causes genuine administrative problems in India, especially with property records and bank KYC. If numerological advice nudges you toward consistency, that is a practical win regardless of what you believe about the rest.</p>
+
+<h2>Adding an initial</h2>
+<p>A common correction is to add a single letter to the signature — an initial, usually — to shift the total. This is the same arithmetic as <a href="name-correction-numerology-how-it-works">name correction</a>, applied to a smaller string. Because a signature is shorter than a full name, one letter moves the number more.</p>
+<p>You can test any version with the <a href="../tools/name-numerology">name calculator</a>: type the letters your signature actually contains and compare the total to your Birth and Destiny numbers. The <a href="../tools/name-correction">name correction tool</a> will suggest letters that land on a friendly total.</p>
+
+<h2>The practical caution</h2>
+<p>Changing a signature is not free. In India your signature is on record with banks, demat accounts, insurance policies, property documents and your passport. Changing it means updating specimen signatures across all of them, and a mismatch can hold up a transaction at the worst moment. If you decide to change, change once, document it, and update the records that matter before you need them.</p>
+<p>That practical cost is the main argument for treating signature numerology as the lowest-priority item on the list. Your PIN and password can be changed in two minutes with no paperwork — see the <a href="../tools/lucky-pin-generator">PIN generator</a> — and the numerological logic is identical.</p>
+''',
+ faqs=[('Should my signature match my full legal name?', 'It does not have to, and most people sign something shorter. Numerology asks only that the signature does not contradict the name number — and the law asks only that it is consistent.'),
+       ('Is striking a line through your signature really bad?', 'It is the most repeated warning in this tradition, read as cancelling your own name. There is no evidence for it. It is also easy to avoid, which is why the advice persists.'),
+       ('Can I just add a dot or a flourish to change my number?', 'No. Only letters carry Chaldean values. Dots, lines and flourishes change nothing arithmetically, whatever meaning tradition assigns them.'),
+       ('How often should I change my signature?', 'As rarely as possible. Every change means updating specimen signatures at banks and registrars, and mismatches cause real delays.')],
+ related=['name-correction-numerology-how-it-works','name-number-1-to-9-meaning','does-name-numerology-really-work']),
+
+dict(
+ slug='is-name-number-8-unlucky',
+ title='Is Name Number 8 Unlucky? Saturn in Your Name, Explained',
+ meta='Why Indian numerologists avoid 8 in names, when an 8 name is actually suitable, which birth numbers can carry it, and what to do if your name totals 8.',
+ category='Name Numerology', date='2026-10-06',
+ keywords='name number 8, is 8 lucky name, name number 8 meaning, saturn name number, 8 name numerology',
+ excerpt='No number in Indian numerology is argued over more. The answer is not yes or no — it depends on whose name it is.',
+ img=dict(a='#3b0d0d', b='#f87171', glyph='8', label='Saturn'),
+ body='''
+<p>Ask three Indian numerologists about a name totalling 8 and you will get three different answers, ranging from "change it immediately" to "it is the best number you can have". The disagreement is real, and understanding why it exists tells you more than either answer alone.</p>
+
+<h2>What 8 actually stands for</h2>
+<p>8 is Saturn. In Indian tradition Saturn is not malefic in the sense of evil — it is <em>strict</em>. It demands work, delays reward, and settles accounts precisely. People strongly associated with 8 are often described as patient, responsible, slow to rise and difficult to stop once risen.</p>
+<p>That is the whole ambiguity in one sentence. A number that means "delayed but durable" is excellent if you are building something that should last, and punishing if you need results this quarter.</p>
+
+<h2>Why practitioners avoid it in names</h2>
+<p>A <a href="name-number-1-to-9-meaning">name number</a> is read as how the world receives you — the first impression. An 8 name reads as serious and heavy. In public-facing work, where you want to be approachable or quickly trusted, that is a disadvantage. The usual advice to avoid 8 is really advice about <em>first impressions</em>, not about character.</p>
+<p>There is a second, more practical reason: 8 has a narrow friendship circle. It is an enemy of several other numbers, which means an 8 name is more likely to clash with a given person's chart than a 3, 5 or 9 name would. Practitioners recommending a total for a client they barely know will reach for the safe options. The full map is in the <a href="friendly-and-enemy-numbers-numerology-chart">friendly and enemy chart</a>.</p>
+
+<h2>When an 8 name is fine — or good</h2>
+<ul>
+<li><strong>Your own Birth or Destiny number is 8.</strong> Saturn is your own planet; a name in the same vibration reinforces rather than fights you.</li>
+<li><strong>Your numbers are friendly to 8.</strong> Check rather than assume — the <a href="../tools/name-correction">name correction tool</a> reports the relationship directly.</li>
+<li><strong>The work suits Saturn.</strong> Real estate, construction, mining, heavy industry, law, administration and anything where endurance beats speed.</li>
+<li><strong>You are building something long.</strong> Saturn's reputation is for slow, compounding results. For a twenty-year business that is a feature.</li>
+</ul>
+
+<h2>What to do if your name totals 8</h2>
+<p>Three honest options, in order of how much they cost you:</p>
+<ol>
+<li><strong>Check the relationship first.</strong> An 8 total is only a problem if it is an enemy of your own numbers. Run it before you decide anything — most people who worry about this turn out to have a neutral or friendly reading.</li>
+<li><strong>If it is an enemy, try a one-letter change.</strong> A single added or dropped letter moves the total. That is all <a href="name-correction-numerology-how-it-works">name correction</a> is.</li>
+<li><strong>Leave it alone.</strong> If the name carries family meaning, or you simply like it, that outranks a tradition with no evidence behind it. Numerology should not cost you something you value.</li>
+</ol>
+
+<h2>The same debate, elsewhere</h2>
+<p>If the number 8 worries you in a name, it is worth knowing the rule is far stronger in <a href="never-end-mobile-number-with-8">mobile numbers</a>, where an 8 as the final digit sits on the position governing income. That rule is much more specific — it is about one position, not the whole number — and it is the one place in this system where practitioners are close to unanimous.</p>
+
+<h2>The honest summary</h2>
+<p>8 is not unlucky. It is narrow: it suits fewer people and fewer trades than 3, 5 or 6, and it projects weight rather than warmth. For a public-facing name that is usually the wrong trade-off, which is why the blanket advice exists. For the right person doing the right work, it is the number that describes them best.</p>
+''',
+ faqs=[('My name totals 8 and things are going well — should I change it?', 'No. Numerology offers no reason to change a name that is working. The advice to avoid 8 is about first impressions in general, not a verdict on your particular life.'),
+       ('Is 8 bad for a business name?', 'Not inherently. It is associated with real estate, construction, mining and heavy industry — slow, solid trades. It is a poor fit for fast consumer brands, where 5 and 6 are preferred.'),
+       ('What if both my name and birth number are 8?', 'That is seen as reinforcement rather than conflict. Saturn is already your planet; the name is in the same vibration. Most practitioners leave such a name alone.'),
+       ('Is 8 unlucky in a mobile number too?', 'The rule there is specific and much stronger: avoid 8 as the final digit, because the tenth position governs income. Elsewhere in the number it carries no particular warning.')],
+ related=['name-number-1-to-9-meaning','never-end-mobile-number-with-8','name-correction-numerology-how-it-works']),
+
+dict(
+ slug='name-and-date-of-birth-compatibility',
+ title='Name and Date of Birth Compatibility in Numerology',
+ meta='How to check whether your name number suits your date of birth: the friendly and enemy logic, what a balancer is, and what to do when the two do not match.',
+ category='Name Numerology', date='2026-10-06',
+ keywords='name and date of birth compatibility, name number match birth number, lucky name as per date of birth, name numerology with date of birth',
+ excerpt='A name number means nothing on its own. It only becomes good or bad in relation to the two numbers your birth date already fixed.',
+ img=dict(a='#4a044e', b='#f9a8d4', glyph='=', label='Name vs date'),
+ body='''
+<p>Every "lucky name" list on the internet shares the same flaw: it treats a name number as good or bad in isolation. In Indian numerology it is neither. A name total is only meaningful <em>in relation to</em> the two numbers your date of birth already fixed — and those cannot change.</p>
+
+<h2>The three numbers involved</h2>
+<table><tr><th>Number</th><th>Comes from</th><th>What it describes</th><th>Can it change?</th></tr>
+<tr><td><b>Birth number</b></td><td>Day of the month</td><td>Your temperament</td><td>No</td></tr>
+<tr><td><b>Destiny number</b></td><td>Full date of birth</td><td>Your direction</td><td>No</td></tr>
+<tr><td><b>Name number</b></td><td>Letters of your name</td><td>How you are received</td><td>Yes — spelling</td></tr></table>
+<p>Because only the third is adjustable, the whole of name numerology is about moving it into a good relationship with the first two. Work out yours with the <a href="../tools/life-path-number">Life Path calculator</a> and the <a href="../tools/name-numerology">name calculator</a>.</p>
+
+<h2>Friendly, neutral, enemy</h2>
+<p>Each number from 1 to 9 is friendly, neutral or hostile to each other number, based on the planets that rule them. Two things make this trickier than it looks:</p>
+<ul>
+<li><strong>The relationship is not always mutual.</strong> 9 is friendly to 2, but 2 can treat 9 as an enemy. Direction matters.</li>
+<li><strong>You have two numbers to satisfy, not one.</strong> A name friendly to your Birth number but hostile to your Destiny number is not a good name.</li>
+</ul>
+<p>The complete chart is in <a href="friendly-and-enemy-numbers-numerology-chart">this guide</a>.</p>
+
+<h2>The target: a balancer</h2>
+<p>A number that is friendly to <strong>both</strong> your Birth and Destiny numbers is called a <strong>balancer</strong>. Most people have two to four of them. Those are the totals to aim a name at — and the same set is used for a lucky <a href="../tools/lucky-pin-generator">PIN</a>, a <a href="../tools/lucky-password">password</a>, and the total of a mobile number.</p>
+<p>That consistency is the strongest internal logic in this system: one set of friendly numbers, applied to every number you can choose.</p>
+
+<h2>Reading the four possible outcomes</h2>
+<table><tr><th>Name total is…</th><th>Reading</th><th>Usual advice</th></tr>
+<tr><td>Friendly to both</td><td>Balancer — the ideal</td><td>Change nothing</td></tr>
+<tr><td>Friendly to one, neutral to the other</td><td>Workable</td><td>Optional tweak</td></tr>
+<tr><td>Neutral to both</td><td>Inert — neither helps nor hinders</td><td>Worth a one-letter change</td></tr>
+<tr><td>Enemy of either</td><td>The case correction exists for</td><td>Try a spelling variant</td></tr></table>
+<p>The <a href="../tools/name-correction">name correction calculator</a> reports which of these four you are in, and only suggests changes when one would help.</p>
+
+<h2>When the two cannot be reconciled</h2>
+<p>Occasionally no single-letter change lands on a friendly total — usually with very short names, where there are few letters to work with. Practitioners then look at:</p>
+<ul>
+<li><strong>The fuller form of the name.</strong> If Raj is on the shortlist and will not work, Rajesh might.</li>
+<li><strong>Adding a middle initial</strong>, which is a longer-standing convention in India than it appears.</li>
+<li><strong>The surname instead.</strong> The arithmetic does not care which word the letter sits in.</li>
+</ul>
+
+<h2>A caution about certainty</h2>
+<p>This system is internally consistent, which makes it satisfying — but internal consistency is not evidence. Numerology cannot be shown to predict anything, and a name that reads as "an enemy of your chart" is not a diagnosis. The reasonable way to hold it is as a tradition that occasionally nudges a decision you were going to make on other grounds anyway. More on that in <a href="does-name-numerology-really-work">this piece</a>.</p>
+''',
+ faqs=[('What if my name number equals my birth number?', 'That is read as reinforcement — the way you are received matches the way you are. It is considered clear rather than balanced; a complementary number offers more range.'),
+       ('Does the Destiny number or the Birth number matter more for a name?', 'Most practitioners weight the Birth number slightly higher for names, because it governs how you come across day to day. A name friendly to both is the real target.'),
+       ('Can one name suit two people?', 'Only if the total is friendly to both their charts. This is why a name that worked well for a sibling or a friend is not automatically right for you.'),
+       ('If I cannot change my name, what else can I change?', 'Your PIN, your password and your mobile number all answer to the same friendly-number logic, and none of them need paperwork. Those are where most of this system is actually applied.')],
+ related=['friendly-and-enemy-numbers-numerology-chart','name-correction-numerology-how-it-works','how-to-calculate-birth-number-and-destiny-number']),
+
+dict(
+ slug='lucky-first-letter-of-name-numerology',
+ title='Lucky First Letter of Your Name: What Numerology Says',
+ meta='Does the first letter of a name matter in numerology? What the opening letter carries, how it differs from the nakshatra syllable, and how much weight to give it.',
+ category='Name Numerology', date='2026-10-06',
+ keywords='lucky first letter of name, first letter numerology, name starting letter as per date of birth, lucky alphabet numerology',
+ excerpt='The opening letter gets more attention than the system actually gives it. Here is what it does and does not decide.',
+ img=dict(a='#0f172a', b='#4fd1c5', glyph='A', label='First letter'),
+ body='''
+<p>"Which letter should my name start with?" is among the most common numerology questions in India — and one where two different traditions get mixed together. Untangling them makes the answer much simpler.</p>
+
+<h2>Two traditions, two answers</h2>
+<table><tr><th></th><th>Vedic astrology</th><th>Numerology</th></tr>
+<tr><td>What it gives you</td><td>A starting <em>syllable</em> (Chu, Che, La, Da…)</td><td>A target <em>total</em> for the whole name</td></tr>
+<tr><td>Based on</td><td>Nakshatra — the moon's position at birth</td><td>Birth and Destiny numbers from the date</td></tr>
+<tr><td>How strict</td><td>Prescriptive — a specific syllable</td><td>Flexible — several totals usually work</td></tr></table>
+<p>When a family is told "the name must start with Ma", that is <strong>astrology, not numerology</strong>. Numerology has no rule that reserves particular letters for particular people. The two systems can be used together — take the syllable as a constraint, then pick among names starting with it by total — and they rarely conflict badly.</p>
+
+<h2>What numerology does say about the first letter</h2>
+<p>Two things, both softer than people expect:</p>
+<ul>
+<li><strong>It carries a value like any other letter.</strong> In Chaldean, a name starting with A adds 1 to the total, one starting with F adds 8. It contributes, but so does every other letter.</li>
+<li><strong>It is read as the entry point.</strong> Some practitioners give the opening letter extra weight as the first impression within the first impression — the sound people hear before the rest of the name registers. This is interpretive, not arithmetic.</li>
+</ul>
+<p>What the system does <em>not</em> say is that a given letter is lucky in isolation. A name beginning with S can total 3 or total 8 depending on everything after it.</p>
+
+<h2>The Chaldean value of each opening letter</h2>
+<table><tr><th>Value</th><th>Letters</th><th>Planet</th></tr>
+<tr><td><b>1</b></td><td>A I J Q Y</td><td>Sun</td></tr><tr><td><b>2</b></td><td>B K R</td><td>Moon</td></tr>
+<tr><td><b>3</b></td><td>C G L S</td><td>Jupiter</td></tr><tr><td><b>4</b></td><td>D M T</td><td>Rahu</td></tr>
+<tr><td><b>5</b></td><td>E H N X</td><td>Mercury</td></tr><tr><td><b>6</b></td><td>U V W</td><td>Venus</td></tr>
+<tr><td><b>7</b></td><td>O Z</td><td>Ketu</td></tr><tr><td><b>8</b></td><td>F P</td><td>Saturn</td></tr></table>
+<p>If you want to give the opening letter weight, the defensible version is: prefer a first letter whose value is friendly to your Birth number, then optimise the whole total. Check both with the <a href="../tools/chaldean-numerology-calculator">Chaldean calculator</a>.</p>
+
+<h2>Where the first letter genuinely matters</h2>
+<p>Outside numerology, there is one real effect worth knowing: in India, as elsewhere, alphabetical ordering is used constantly — class registers, examination seating, directory listings, panel invitations. A surname early in the alphabet does measurably change how often a name appears first on a list. That is not numerology, but it is the only first-letter effect anyone can actually demonstrate.</p>
+
+<h2>How much weight to give it</h2>
+<p>Less than the total. If you are naming a child, the practical order is: pick names you want, apply the nakshatra syllable if your family follows it, then use the total to choose among what remains. Starting from the letter and working outward narrows your options enormously for a rule numerology does not really make. The full approach is in the <a href="baby-name-numerology">baby name guide</a>.</p>
+''',
+ faqs=[('Is there a lucky first letter for my date of birth?', 'Not in numerology. The system works on the total of the whole name, not on reserved letters. Starting-syllable rules come from Vedic astrology and the nakshatra, which is a different tradition.'),
+       ('My astrologer gave me a syllable — should I ignore the number?', 'No, use both. Take the syllable as a constraint and then choose among qualifying names by total. They constrain different things and usually leave room for each other.'),
+       ('Does the first letter of my surname matter?', 'It contributes its value to the total like any other letter. Practitioners who give extra weight to opening letters generally mean the name you are called by, which is usually the first name.'),
+       ('Should I change my name to start with a different letter?', 'That is a much bigger change than name correction, which adjusts a spelling by one letter. If the aim is a friendlier total, a one-letter tweak almost always gets there without changing what people call you.')],
+ related=['baby-name-numerology','name-number-1-to-9-meaning','chaldean-vs-pythagorean-numerology']),
+
+dict(
+ slug='does-name-numerology-really-work',
+ title='Does Name Numerology Really Work? An Honest Look',
+ meta='What name numerology can and cannot do, why the celebrity examples are weak evidence, what the practice is actually useful for, and how to use it sensibly.',
+ category='Name Numerology', date='2026-10-06',
+ keywords='does numerology really work, is numerology true, name numerology accuracy, numerology evidence, should i change my name numerology',
+ excerpt='We run numerology calculators on this site. That is not a reason to overclaim what they do — so here is the honest version.',
+ img=dict(a='#1e293b', b='#a3a8c8', glyph='?', label='Honest look'),
+ body='''
+<p>This site runs a set of numerology calculators, so you might expect this page to tell you the practice works. It would be easy to write and bad for you to read. Here is the honest version instead.</p>
+
+<h2>The short answer</h2>
+<p>There is <strong>no scientific evidence</strong> that the letters of a name influence a person's life, income, relationships or health. Numerology is a belief-based tradition, and the arithmetic in it — however internally consistent — is not a mechanism. Anyone telling you otherwise is selling something.</p>
+
+<h2>Why the celebrity examples are weak</h2>
+<p>Every article about name correction cites the same handful of actors who changed a letter and then succeeded. The problem is <strong>survivorship bias</strong>: we hear about the person who changed their spelling and prospered, never the thousands who changed a spelling and nothing happened. Without the second group, the first tells you nothing.</p>
+<p>There is also a timing problem. The people most often cited made their changes around the point they were already breaking through — a stage at which careers frequently take off with or without a numerologist. Attributing the rise to the letter requires ignoring everything else that changed at the same time.</p>
+<p>And some of the examples are simply wrong. The most repeated one — that Hrithik Roshan added an H to "Rithik" — is false. He was born Hrithik. A claim that survives that long unchecked is a signal about how carefully the rest is being reported.</p>
+
+<h2>What it is actually useful for</h2>
+<p>Three things, none of them supernatural:</p>
+<ul>
+<li><strong>A decision procedure.</strong> Choosing a baby name or a brand name is an open-ended problem with too many options and no clear criteria. Numerology narrows the field and gives a tiebreaker. Families argue less when there is an external rule.</li>
+<li><strong>Confidence.</strong> If believing your name suits you makes you introduce yourself more firmly, that effect is real — it just comes from you, not from the number.</li>
+<li><strong>A prompt to pay attention.</strong> People who look at their numbers often end up thinking about what they actually want from the next year. The numbers are the occasion, not the cause.</li>
+</ul>
+
+<h2>Where it does harm</h2>
+<ul>
+<li><strong>When it costs real money.</strong> Consultations running into tens of thousands of rupees for arithmetic you can do in a minute.</li>
+<li><strong>When it overrides something you value.</strong> Dropping a grandparent's name because a total came out wrong is a bad trade.</li>
+<li><strong>When it replaces action.</strong> Changing a spelling is not a business plan. The risk is not that it fails — it is the months spent waiting for it to work.</li>
+<li><strong>When it is used to predict harm.</strong> Nobody should be told their name will cause illness, divorce or financial ruin. That is not tradition, it is pressure.</li>
+</ul>
+
+<h2>How to use it sensibly</h2>
+<ol>
+<li><strong>Keep it free.</strong> The whole method is public. Our <a href="../tools/name-correction">name correction</a> and <a href="../tools/name-numerology">name calculators</a> cost nothing and run in your browser.</li>
+<li><strong>Change cheap things first.</strong> A <a href="../tools/lucky-pin-generator">PIN</a> takes two minutes. A legal name change takes an affidavit and a gazette notification.</li>
+<li><strong>Never let it veto something that matters.</strong> If you love a name, keep it.</li>
+<li><strong>Treat predictions with suspicion.</strong> A tradition that describes tendencies is one thing; one that promises outcomes is another.</li>
+</ol>
+
+<h2>Why we built the tools anyway</h2>
+<p>Because people are going to look this up regardless, and the alternative to a free, transparent calculator is a paid consultation that shows no workings. Every number on this site comes with the arithmetic visible — which letter, which value, which total — so you can check it yourself and decide what it is worth. That seems better than either pretending the tradition does not exist or pretending it is science.</p>
+''',
+ faqs=[('Is there any scientific evidence for numerology?', 'No. There are no controlled studies showing that names or numbers influence life outcomes. It is a belief-based tradition, and this site treats it as one.'),
+       ('Why do so many successful people follow it?', 'Successful people in every field hold assorted beliefs; the ones we hear about are selected after the fact precisely because they succeeded. That is survivorship bias, not evidence.'),
+       ('So should I not bother with name correction?', 'That is your call. It costs nothing to test a spelling, and if it gives you confidence, that is a genuine benefit. The caution is about spending real money or giving up something you value.'),
+       ('Why does this site run numerology tools if it does not claim they work?', 'Because people search for this either way, and a free calculator that shows its arithmetic is better than a paid reading that shows nothing. We would rather be the transparent version.')],
+ related=['name-correction-numerology-how-it-works','name-and-date-of-birth-compatibility','name-number-1-to-9-meaning']),
+
 ]
