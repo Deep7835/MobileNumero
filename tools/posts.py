@@ -193,6 +193,7 @@ dict(
 <p>The Birth number describes your natural temperament — how you think, react and what you are drawn to. It is the number used to match cover materials and most of the "best for" recommendations.</p>
 
 <h2>Destiny Number: the whole date</h2>
+<p>The <a href="../tools/life-path-number">Life Path number calculator</a> works both numbers out from your date of birth in one step.</p>
 <p>Add <em>every</em> digit of the full date (day, month and year) and reduce to a single digit.</p>
 <p>Example: 29 / 11 / 1994 → 2 + 9 + 1 + 1 + 1 + 9 + 9 + 4 = 36 → 3 + 6 = <strong>9</strong></p>
 <p>The Destiny number describes the direction your life tends to take and the opportunities that come to you. A good mobile number total should be friendly to <em>both</em> the Birth and Destiny numbers — a number that satisfies both is called a <strong>balancer</strong>.</p>
@@ -246,6 +247,7 @@ dict(
 <p>The top row (4-9-2) is the <em>mental</em> plane, the middle row (3-5-7) the <em>emotional</em> plane and the bottom row (8-1-6) the <em>practical</em> plane. Columns run from thought (4-3-8) through will (9-5-1) to action (2-7-6).</p>
 
 <h2>How to fill it in</h2>
+<p>The <a href="../tools/lo-shu-grid">Lo Shu grid calculator</a> draws your grid and lists the missing and repeated numbers automatically.</p>
 <ol>
 <li>Write out every digit of your date of birth, ignoring zeros. For 29/11/1994 that is 2, 9, 1, 1, 1, 9, 9, 4.</li>
 <li>If the day has two digits, also add the reduced Birth number (29 → 2).</li>
@@ -340,6 +342,7 @@ dict(
 <p>Mobile passwords may be 4–16 characters long, and in numerology those characters carry numbers. The <strong>Chaldean</strong> system assigns each letter a value from 1 to 8 (there is no 9, which is considered sacred). Add the values, reduce to a single digit, and you have the "total" of the password. The method is to choose a word whose total matches your life purpose. The <a href="../tools/lucky-password">lucky password generator</a> does this for your date of birth, and the <a href="../tools/chaldean-numerology-calculator">Chaldean calculator</a> converts any word you are considering.</p>
 
 <h2>The Chaldean alphabet</h2>
+<p>To check a name rather than a password, use the <a href="../tools/name-numerology">name numerology calculator</a>; for the letter chart itself see the <a href="../tools/chaldean-numerology-calculator">Chaldean calculator</a>.</p>
 <table>
 <tr><th>Value</th><th>Letters</th></tr>
 <tr><td>1</td><td>A, I, J, Q, Y</td></tr>

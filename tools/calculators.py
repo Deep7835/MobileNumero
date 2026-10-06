@@ -20,8 +20,8 @@ TOOLS = [
             ('Can my Life Path number change?', 'No. It is fixed by your date of birth. What you can change is the numbers around you — mobile number, PIN, name spelling — to be friendly to it.')]),
 
  dict(slug='name-numerology', tool='name', icon='user', name='Name Numerology', short='Chaldean & Pythagorean value of any name',
-      title='Name Numerology Calculator — Chaldean & Pythagorean',
-      meta='Free name numerology calculator. Get the Chaldean or Pythagorean number of your full name and first name, its meaning, and whether it is friendly to your date of birth.',
+      title='Name Numerology Calculator — Your Name Number Free',
+      meta='Free name numerology calculator. Get your full-name and first-name number, what it means, and whether it is friendly to your date of birth. Chaldean and Pythagorean supported.',
       img=dict(a='#0f172a', b='#fbbf24', glyph='Aa', label='Name number'),
       form='<div class="field"><label for="name">Full name (as commonly used)</label><input id="name" type="text" placeholder="e.g. Priya Sharma" maxlength="60" required autocomplete="name" /></div>'
            '<div class="row"><div class="field"><label for="system">System</label><select id="system"><option value="chaldean">Chaldean (1–8)</option><option value="pythagorean">Pythagorean (1–9)</option></select></div><div class="field"><label for="dob">Date of birth <span class="muted">(optional, for compatibility)</span></label><input id="dob" type="date" min="1900-01-01" /></div></div>'
@@ -30,7 +30,7 @@ TOOLS = [
       body='<h2>Chaldean letter values</h2><table><tr><th>Value</th><th>Letters</th></tr>' + _rows([(1,'A I J Q Y'),(2,'B K R'),(3,'C G L S'),(4,'D M T'),(5,'E H N X'),(6,'U V W'),(7,'O Z'),(8,'F P')]) + '</table>'
            '<h2>Pythagorean letter values</h2><table><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr><tr><td>A J S</td><td>B K T</td><td>C L U</td><td>D M V</td><td>E N W</td><td>F O X</td><td>G P Y</td><td>H Q Z</td><td>I R</td></tr></table>'
            '<h2>Should the name number match your date of birth?</h2>'
-           '<p>Ideally the name number is <em>friendly</em> to both your Birth and Destiny numbers. If it is an enemy of either, numerologists sometimes suggest a small spelling change — adding or dropping a letter — to shift the total. Enter your date of birth above and the calculator checks this for you. The same letter values are used for <a href="../blog/chaldean-numerology-password-guide.html">choosing a password</a>.</p>',
+           '<p>Ideally the name number is <em>friendly</em> to both your Birth and Destiny numbers. If it is an enemy of either, numerologists sometimes suggest a small spelling change — adding or dropping a letter — to shift the total. Enter your date of birth above and the calculator checks this for you. The same letter values are used for <a href="../blog/chaldean-numerology-password-guide.html">choosing a password</a>. For the Chaldean chart itself — letter values, compound versus root number — see the <a href="chaldean-numerology-calculator.html">Chaldean numerology calculator</a>.</p>',
       faqs=[('Which name should I enter — official or nickname?', 'The name you actually use and hear every day. Many numerologists analyse the commonly used name rather than the one on documents, because that is the vibration you live with.'),
             ('Chaldean or Pythagorean — which is right?', 'Neither is "wrong"; they are different traditions. Indian mobile and name numerology (including this site) uses Chaldean. Use Pythagorean if you follow Western numerology.'),
             ('Does changing my name spelling really change anything?', 'Numerology holds that the vibration changes with the spelling. Changing a signature or the spelling on social profiles is a low-risk way to try it; legal name changes are a bigger decision.')]),
@@ -67,8 +67,8 @@ TOOLS = [
             ('What are Personal Month and Day?', 'Finer subdivisions of the same cycle: Personal Year + calendar month = Personal Month; Personal Month + date = Personal Day. Use them for timing decisions within the year.')]),
 
  dict(slug='lucky-pin-generator', tool='lucky-pin', icon='lock', name='Lucky PIN Generator', short='4-digit PINs built from your missing numbers',
-      title='Lucky PIN Number Generator (Free) — By Date of Birth',
-      meta='Free lucky PIN generator. Enter your date of birth to get 4-digit ATM, phone and locker PINs whose total is friendly to your Birth and Destiny numbers and which add your missing Lo Shu numbers.',
+      title='Lucky PIN Number Generator — ATM, Phone & Locker PINs',
+      meta='Free lucky ATM PIN calculator. Enter your date of birth for 4-digit PINs whose total is friendly to your Birth and Destiny numbers and which add the numbers missing from your Lo Shu grid.',
       img=dict(a='#0b2545', b='#4fd1c5', glyph='PIN', label='Lucky PIN'),
       form='<div class="row"><div class="field"><label for="dob">Date of birth</label><input id="dob" type="date" required min="1900-01-01" /></div>'
            '<div class="field"><label for="purpose">Purpose <span class="muted">(optional)</span></label><select id="purpose"><option value="">General — best overall PINs</option></select></div></div>'
@@ -118,8 +118,8 @@ TOOLS = [
             ('Is it safe to use a suggested word as my password?', 'Not on its own — a dictionary word is weak. Use it as the base and add digits and a symbol, or combine two words. The calculator never uploads or stores what you type.')]),
 
  dict(slug='chaldean-numerology-calculator', tool='chaldean', icon='sparkle', name='Chaldean Calculator', short='Chaldean number of any name or word',
-      title='Chaldean Numerology Calculator — Name & Word Number',
-      meta='Free Chaldean numerology calculator. Enter any name or word to get its Chaldean number with a letter-by-letter breakdown, the compound and root number, and whether it suits your date of birth.',
+      title='Chaldean Numerology Calculator — Letter Values & Totals',
+      meta='Free Chaldean numerology calculator. Enter any word to get its Chaldean value letter by letter, with the compound number, the root number and how they differ from Pythagorean.',
       img=dict(a='#422006', b='#fbbf24', glyph='C', label='Chaldean'),
       form='<div class="field"><label for="name">Name or word</label><input id="name" type="text" placeholder="e.g. Priya Sharma" maxlength="60" required autocomplete="off" /></div>'
            '<div class="field"><label for="dob">Date of birth <span class="muted">(optional — checks whether the name suits you)</span></label><input id="dob" type="date" min="1900-01-01" /></div>'
@@ -130,7 +130,7 @@ TOOLS = [
            '<tr><td><b>1</b></td><td>A I J Q Y</td><td>Sun</td></tr><tr><td><b>2</b></td><td>B K R</td><td>Moon</td></tr><tr><td><b>3</b></td><td>C G L S</td><td>Jupiter</td></tr><tr><td><b>4</b></td><td>D M T</td><td>Rahu</td></tr>'
            '<tr><td><b>5</b></td><td>E H N X</td><td>Mercury</td></tr><tr><td><b>6</b></td><td>U V W</td><td>Venus</td></tr><tr><td><b>7</b></td><td>O Z</td><td>Ketu</td></tr><tr><td><b>8</b></td><td>F P</td><td>Saturn</td></tr></table>'
            '<h2>Chaldean vs Pythagorean</h2>'
-           '<p>Pythagorean numerology assigns values in alphabetical order (A=1, B=2 … I=9, then repeats) and is the Western standard. Chaldean assigns values by the sound a letter makes, uses only 1–8, and is older — it is what Indian numerologists use for names, mobile numbers, PINs and passwords. The two systems will usually give a different number for the same name; neither is "wrong", but mixing them is. Our <a href="name-numerology.html">name numerology calculator</a> shows both side by side.</p>'
+           '<p>Pythagorean numerology assigns values in alphabetical order (A=1, B=2 … I=9, then repeats) and is the Western standard. Chaldean assigns values by the sound a letter makes, uses only 1–8, and is older — it is what Indian numerologists use for names, mobile numbers, PINs and passwords. The two systems will usually give a different number for the same name; neither is "wrong", but mixing them is. For a name specifically — full name, first name and how it sits against your date of birth — use the <a href="name-numerology.html">name numerology calculator</a>; this page is for the Chaldean letter values themselves.</p>'
            '<h2>Compound number and root number</h2>'
            '<p>Chaldean readings use two numbers. The <strong>compound number</strong> is the raw total before reducing (for example 37) and is said to describe the hidden influence; the <strong>root number</strong> is that total reduced to a single digit (3 + 7 = 10 → 1) and describes the outward effect. Both are shown above.</p>'
            '<h2>Using it beyond names</h2>'
