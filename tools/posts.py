@@ -814,4 +814,143 @@ dict(
        ('Kya ye calculator free hai?', 'Haan. Life Path calculator, mobile number analyser, PIN aur password generator — sab free hain, bina sign-up ke, aur sab kuch aapke browser me hi chalta hai. Aapki date of birth kahin upload nahi hoti.')],
  related=['how-to-calculate-birth-number-and-destiny-number','friendly-and-enemy-numbers-numerology-chart','mobile-number-numerology-10-positions-meaning']),
 
+dict(
+ slug='lucky-mobile-number-kaise-choose-kare',
+ page_lang='hi-Latn',
+ title='Lucky Mobile Number Kaise Choose Kare (Poora Tareeka)',
+ meta='Naya mobile number lene se pehle kya dekhein — 10 position ka rule, total ka hisaab, kaun se ank avoid karein, aur shubh ending. Free checker ke saath.',
+ category='Mobile Number', date='2026-10-06',
+ keywords='lucky mobile number kaise choose kare, shubh mobile number, mobile number numerology hindi, achha mobile number kaise chune, mobile number total kaise nikale',
+ excerpt='Naya number lete waqt log sirf yaad rakhne me aasan number dhundhte hain. Numerology ke hisaab se dekhne par kuch aur hi cheezein maayne rakhti hain.',
+ img=dict(a='#064e3b', b='#4fd1c5', glyph='9·5', label='Shubh number'),
+ body='''
+<p>Naya SIM lete waqt zyadatar log do hi cheez dekhte hain — number yaad rakhne me aasan ho, aur sasta mil jaye. Numerology ka nazariya thoda alag hai: aapka mobile number din me sau baar likha, bola aur dial kiya jata hai, isliye wo ek dohrata hua number ban jata hai. Is page par poora tareeka hai ki <strong>lucky mobile number kaise choose kare</strong> — bina kisi expert ke, khud.</p>
+
+<p>Jaldi me hain? Apna number aur date of birth <a href="../index.html#mainForm">free analyser</a> me daal dijiye — 10 position, total, aur 0 se 100 ka score ek saath mil jayega.</p>
+
+<h2>Pehle apne do number jaan lijiye</h2>
+<p>Koi bhi mobile number achha ya bura <em>apne aap me</em> nahi hota. Wo aapke liye achha ya bura hota hai. Isliye sabse pehle apna <strong>mulank</strong> aur <strong>bhagyank</strong> nikal lijiye — tareeka <a href="mulank-bhagyank-kaise-nikale">is page par</a> step by step diya hai. Maan lijiye aapka mulank 2 hai aur bhagyank 9. Ab aage ka sab kuch inhi do numbers ke hisaab se dekha jayega.</p>
+
+<h2>Rule 1: number ka total</h2>
+<p>Apne 10 digit number ke saare ank jod dijiye aur single digit tak reduce kijiye. Jaise 9560569497:</p>
+<ul>
+<li>9+5+6+0+5+6+9+4+9+7 = <strong>60</strong></li>
+<li>6 + 0 = <strong>6</strong></li>
+</ul>
+<p>Ye 6 hi number ka asli <em>swabhav</em> hai. Ab dekhiye ki 6 aapke mulank aur bhagyank ka <strong>mitra</strong> hai ya <strong>shatru</strong>. Jo total dono ka mitra ho, use <strong>balancer</strong> kehte hain — wahi sabse achha hota hai. Poora chart <a href="friendly-and-enemy-numbers-numerology-chart">mitra aur shatru ank</a> wale page par hai.</p>
+<p>Agar total dono ka shatru hai, to baaki sab achha hone par bhi number aapke liye bhari rahega.</p>
+
+<h2>Rule 2: 10 position</h2>
+<p>Number ke har ank ki apni jagah hoti hai, aur har jagah zindagi ke ek hisse se judi hai. Bayein se dayein:</p>
+<table>
+<tr><th>Position</th><th>Kis cheez par asar</th></tr>
+<tr><td>1</td><td>Aapka rawaiya, kaam shuru karne ka tareeka</td></tr>
+<tr><td>2</td><td>Faisle lene ki shakti</td></tr>
+<tr><td>3</td><td>Sehat</td></tr>
+<tr><td>4</td><td>Saajhedari, partnership</td></tr>
+<tr><td>5</td><td>Santan</td></tr>
+<tr><td>6</td><td>Vivah</td></tr>
+<tr><td>7</td><td>Shaadi ke baad ka jeevan</td></tr>
+<tr><td>8</td><td>Career aur sharirik sehat</td></tr>
+<tr><td>9</td><td>Samaj me naam, network</td></tr>
+<tr><td>10</td><td>Paisa aur aamdani</td></tr>
+</table>
+<p>Isi wajah se ek hi ank kisi jagah achha aur kisi jagah dikkat ban jata hai. Har position ka poora matlab <a href="mobile-number-numerology-10-positions-meaning">yahan</a> diya hai.</p>
+
+<h2>Rule 3: kuch ank bachane layak hain</h2>
+<ul>
+<li><strong>Aakhir me 8 nahi.</strong> Ye sabse zyada dohraya jane wala niyam hai — vajah <a href="never-end-mobile-number-with-8">is page par</a> hai.</li>
+<li><strong>4 se bachiye.</strong> 4 Rahu ka ank hai aur mobile number me ise kahin bhi rakhne se mana kiya jata hai, khaas kar 6th position par.</li>
+<li><strong>Aakhir me teen zero (000) nahi.</strong> Business number me ise nuksaan ka sanket mana jata hai.</li>
+<li><strong>Apne shatru ank kam se kam.</strong> Jo ank aapke mulank ya bhagyank ke shatru hain, unki ginti jitni kam ho utna achha.</li>
+</ul>
+
+<h2>Rule 4: shubh ending</h2>
+<p>Agar aapko chunne ka mauka mil raha hai to <strong>55</strong> ya <strong>555</strong> par khatam hone wala number sabse achha mana jata hai — 5 Budh ka ank hai, jo baat-cheet, vyapar aur paise ke behaav se juda hai. Iski poori vajah <a href="best-mobile-number-ending-55-555">yahan</a> likhi hai.</p>
+
+<h2>Naya number lete waqt kya karein</h2>
+<ol>
+<li>Apna mulank aur bhagyank nikal lijiye.</li>
+<li>Dukaan ya website par jo numbers available hain, unki list bana lijiye.</li>
+<li>Har number ko <a href="../index.html#mainForm">analyser</a> me daal kar score dekh lijiye — ek minute me sab compare ho jayega.</li>
+<li>Jo number sabse zyada score laaye aur jiska total aapka balancer ho, wahi lijiye.</li>
+</ol>
+<p>Agar naya number lena mumkin nahi hai to ghabraiye mat. PIN aur password badalna bhi usi system ka hissa hai aur usme kharcha kuch nahi — <a href="../tools/lucky-pin-generator">lucky PIN</a> aur <a href="../tools/lucky-password">password</a> dono free bante hain.</p>
+
+<h2>Aam galtiyan</h2>
+<ul>
+<li><strong>Sirf total dekh lena.</strong> Total zaroori hai par 10 position bhi utne hi zaroori hain.</li>
+<li><strong>Country code jod dena.</strong> Sirf aakhri 10 digit ginte hain, +91 nahi.</li>
+<li><strong>Dusre ka lucky number copy karna.</strong> Jo aapke dost ke liye shubh hai wo aapke liye shatru ho sakta hai — sab aapki date of birth par nirbhar hai.</li>
+<li><strong>Baar baar number badalna.</strong> Ek achha number chun kar us par tike rehna behtar mana jata hai.</li>
+</ul>
+
+<p class="small muted">Numerology ek vishwas par aadharit paddhati hai. Ise margdarshan aur manoranjan ke liye liya jaana chahiye, medical, kanooni ya aarthik salah ke roop me nahi.</p>
+''',
+ faqs=[('Kya mujhe apna purana mobile number badalna chahiye?', 'Zaroori nahi. Pehle analyser me daal kar dekhiye — agar score theek hai to rehne dijiye. Number badalne me contacts, bank aur OTP sab ka jhanjhat hota hai, isliye tabhi badliye jab score sach me kharab ho aur warnings aapke zaroori kshetra se judi hon.'),
+       ('Mobile number ka total kaise nikalte hain?', 'Aakhri 10 digit ke saare ank jod dijiye aur single digit tak reduce kijiye. Jaise 9876543210 ka jod 45 hota hai, aur 4 + 5 = 9. Country code nahi joda jata.'),
+       ('Kya VIP ya fancy number zyada shubh hote hain?', 'Nahi. Fancy number sirf dikhne me achha lagta hai. Numerology me maayne ye rakhta hai ki uska total aur uske 10 position aapki date of birth se mel khate hain ya nahi.'),
+       ('Ek hi number do logon ke liye shubh ho sakta hai?', 'Tabhi jab dono ke mulank aur bhagyank us total ke mitra hon. Yahi wajah hai ki family ya business partner ke liye alag alag number check karna padta hai.'),
+       ('Number badalne ke baad asar kitne din me dikhta hai?', 'Aam taur par lagbhag 45 din ka samay bataya jata hai, agar number lagatar istemal ho. Ye ek parampara par aadharit maanyata hai, koi guarantee nahi.')],
+ related=['mobile-number-numerology-10-positions-meaning','best-mobile-number-ending-55-555','mulank-bhagyank-kaise-nikale']),
+
+dict(
+ slug='mobile-number-me-8-kyun-nahi-hona-chahiye',
+ page_lang='hi-Latn',
+ title='Mobile Number Me 8 Kyun Nahi Hona Chahiye (Shani ka Ank)',
+ meta='Numerology me mobile number ke aakhir me 8 se mana kiya jata hai. Jaaniye vajah, kahan 8 chalta hai, aur agar aapka number pehle se 8 par khatam hai to kya karein.',
+ category='Mobile Number', date='2026-10-06',
+ keywords='mobile number me 8, mobile number last digit 8, 8 se number khatam, shani ank 8 numerology, mobile number 8 achha hai ya bura',
+ excerpt='Mobile numerology ke sabhi niyamon me ye wala sabse zyada dohraya jata hai. Par 8 har jagah bura nahi hai — jagah maayne rakhti hai.',
+ img=dict(a='#3b0d0d', b='#f87171', glyph='8', label='Shani ka ank'),
+ body='''
+<p>Agar aapne kisi numerologist se mobile number ke baare me poocha hai to ek baat zaroor suni hogi: <strong>number 8 par khatam nahi hona chahiye.</strong> Ye mobile numerology ka sabse zyada dohraya jane wala niyam hai. Par iske peeche vajah kya hai, aur kya 8 har jagah bura hai? Dono ka jawab yahan hai.</p>
+
+<h2>8 ka matlab: Shani</h2>
+<p>8 Shani ka ank hai. Shani ko numerology me bura nahi, balki <em>sakht</em> mana jata hai — wo mehnat maangta hai, der se phal deta hai, aur hisaab poora rakhta hai. Jin logon ka mulank ya bhagyank 8 hota hai wo aksar dheere badhte hain par bahut pakka badhte hain.</p>
+<p>Dikkat tab hoti hai jab 8 aise sthaan par baith jaye jahan uska sakht swabhav aapke khilaf kaam karne lage.</p>
+
+<h2>Aakhri ank 8 kyun nahi</h2>
+<p>Mobile number ki <strong>10vi position paisa aur aamdani</strong> se judi hai. Yahi wo jagah hai jahan number ka asar sabse zyada aarthik maamlon par padta hai. 8 is jagah par aarthik nuksaan, rukawat aur karz se joda jata hai — isliye paramparik niyam saaf kehta hai ki mobile number ke aakhir me 8 nahi hona chahiye.</p>
+<p>Iska matlab ye nahi ki 8 wale sabhi log garib ho jate hain. Matlab ye hai ki paisa aane me rukawat aur der zyada mehsoos hoti hai — Shani ka asli swabhav yahi hai.</p>
+
+<h2>To 8 kahan chalta hai</h2>
+<p>Yahi wo hissa hai jo zyadatar log nahi batate. Niyam sirf aakhri ank ke liye hai, poore number ke liye nahi:</p>
+<table>
+<tr><th>Position</th><th>8 ka asar</th></tr>
+<tr><td>1, 2, 3, 4</td><td>Koi khaas nakaratmak niyam nahi</td></tr>
+<tr><td>7</td><td>Rishton me doori — bachna behtar</td></tr>
+<tr><td>8</td><td>Peeth aur haddi se judi dikkat</td></tr>
+<tr><td>9</td><td>Samaj me rutba — kai mamlon me theek</td></tr>
+<tr><td>10</td><td>Aarthik nuksaan — yahi sabse bhari niyam hai</td></tr>
+</table>
+<p>Agar aapka mulank ya bhagyank hi 8 hai, to number ke beech me ek 8 hona aapke liye aam taur par dikkat nahi karta — wo aapka apna ank hai. Har position ka poora matlab <a href="mobile-number-numerology-10-positions-meaning">yahan</a> diya gaya hai.</p>
+
+<h2>88 ya 008 ho to</h2>
+<ul>
+<li><strong>88 aakhir me:</strong> niyam aakhri ank se juda hai, isliye 88 ka asar lagbhag utna hi hai jitna ek 8 ka. Dusra 8 9vi position par aata hai, jahan uska koi khaas nakaratmak niyam nahi hai.</li>
+<li><strong>008 aakhir me:</strong> ye do vajah se bhari mana jata hai — aakhir me 8, aur saath me zero, jo kisi bhi position ko kamzor karta hai.</li>
+<li><strong>8 se shuru:</strong> pehli position rawaiye se judi hai. Yahan 8 ka matlab hai gambhir aur zimmedar shuruaat — koi chetavni nahi.</li>
+</ul>
+
+<h2>Aapka number pehle se 8 par khatam hai to kya karein</h2>
+<p>Ghabrane ki zaroorat nahi. Teen raaste hain:</p>
+<ol>
+<li><strong>Pehle poora number jaanchiye.</strong> Aakhri ank sirf ek niyam hai. Ho sakta hai baaki 9 position aur total aapke liye achhe hon. <a href="../index.html#mainForm">Free analyser</a> me daal kar poora score dekh lijiye.</li>
+<li><strong>Agar paisa hi mukhya chinta hai</strong> aur score bhi kam aa raha hai, to number badalne par sochiye — khaas kar business number. Chunne ka tareeka <a href="lucky-mobile-number-kaise-choose-kare">is page par</a> hai.</li>
+<li><strong>Number nahi badal sakte to baaki numbers theek kijiye.</strong> PIN aur password badalna free hai aur usi system ka hissa hai — <a href="../tools/lucky-pin-generator">lucky PIN</a> aur <a href="../tools/lucky-password">password</a> yahan ban jate hain.</li>
+</ol>
+
+<h2>Business number ke liye khaas dhyan</h2>
+<p>Dukaan, office ya jis number par payment aati hai — wahan ye niyam sabse zyada maayne rakhta hai, kyunki 10vi position seedhe aamdani se judi hai. Vyapar ke liye number chunne ka poora tareeka <a href="mobile-number-for-business-growth-money">yahan</a> diya hai.</p>
+
+<p class="small muted">Numerology ek vishwas par aadharit paddhati hai. Ise margdarshan aur manoranjan ke liye liya jaana chahiye, medical, kanooni ya aarthik salah ke roop me nahi.</p>
+''',
+ faqs=[('Kya 8 har jagah bura hai?', 'Nahi. Niyam khaas taur par aakhri ank ke liye hai, jo paise se judi position hai. 1 se 4 tak ki position par 8 ke liye koi khaas nakaratmak niyam nahi hai, aur 9vi position par ise kai mamlon me theek mana jata hai.'),
+       ('Mera mulank hi 8 hai, tab bhi number me 8 nahi rakhein?', 'Aakhri ank wala niyam phir bhi lagu rehta hai, par number ke beech me 8 hona aapke liye aam taur par dikkat nahi karta, kyunki wo aapka apna ank hai. Poora number jaanch kar faisla lijiye.'),
+       ('Mera number 88 par khatam hota hai, kya ye dugna bura hai?', 'Nahi. Niyam aakhri ank se juda hai, isliye asar lagbhag ek 8 jaisa hi hai. Dusra 8 9vi position par aata hai jahan uska koi khaas nakaratmak niyam nahi hai.'),
+       ('Kya sirf aakhri ank badalne se kaam ho jayega?', 'Mobile number me ek ank alag se nahi badla ja sakta — poora number badalna padta hai. Isliye pehle score dekhiye; agar sirf yahi ek chetavni hai aur baaki sab theek hai, to shayad badalne ki zaroorat na ho.'),
+       ('8 wala number lene se nuksaan ho hi jayega?', 'Numerology koi guarantee nahi deti. Ye ek paramparik maanyata hai jo kehti hai ki paisa aane me rukawat zyada mehsoos hoti hai. Ise margdarshan ki tarah lijiye, bhavishyavani ki tarah nahi.')],
+ related=['never-end-mobile-number-with-8','lucky-mobile-number-kaise-choose-kare','mobile-number-for-business-growth-money']),
+
 ]
