@@ -1,7 +1,7 @@
 {
  "": {
-  "date": "2026-10-04",
-  "hash": "23e467b5478fd2f3"
+  "date": "2026-10-06",
+  "hash": "24ed0a8b19427c1b"
  },
  "about": {
   "date": "2026-10-04",
@@ -388,39 +388,43 @@
   "hash": "6f086684034a0b09"
  },
  "tools/": {
-  "date": "2026-10-04",
-  "hash": "e257b9196082d783"
+  "date": "2026-10-06",
+  "hash": "bf004302f38235eb"
  },
  "tools/chaldean-numerology-calculator": {
   "date": "2026-10-06",
-  "hash": "3b98640369e7eae3"
+  "hash": "c8a7c7138ff90ced"
  },
  "tools/compatibility": {
-  "date": "2026-10-04",
-  "hash": "8633f071831d7195"
+  "date": "2026-10-06",
+  "hash": "721a4e0643aec963"
  },
  "tools/life-path-number": {
-  "date": "2026-10-04",
-  "hash": "215c27cb03f1742d"
+  "date": "2026-10-06",
+  "hash": "6471733f0414b3cf"
  },
  "tools/lo-shu-grid": {
-  "date": "2026-10-04",
-  "hash": "91c68c9d09d6bbfa"
+  "date": "2026-10-06",
+  "hash": "49378e4de279d871"
  },
  "tools/lucky-password": {
-  "date": "2026-10-04",
-  "hash": "db8dc8de2a0e5241"
+  "date": "2026-10-06",
+  "hash": "bf1da8ac3f4da3c9"
  },
  "tools/lucky-pin-generator": {
   "date": "2026-10-06",
-  "hash": "42e1962ff510ec75"
+  "hash": "769ed32776573824"
+ },
+ "tools/name-correction": {
+  "date": "2026-10-06",
+  "hash": "9bb9fc70c8c6b847"
  },
  "tools/name-numerology": {
   "date": "2026-10-06",
-  "hash": "e4ed5aaa1b376844"
+  "hash": "e5c88e53a1fb8720"
  },
  "tools/personal-year": {
-  "date": "2026-10-04",
-  "hash": "e64e4f7ae880eb1d"
+  "date": "2026-10-06",
+  "hash": "23e455f7d06e7a92"
  }
 }

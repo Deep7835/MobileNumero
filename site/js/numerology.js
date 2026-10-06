@@ -77,6 +77,73 @@ const Numerology = (() => {
     return { letters, total, steps: reduceSteps(total), single: reduce(total) };
   }
 
+  /* ---------- Name correction ----------
+     Indian name correction changes the spelling, not the name: double a letter
+     (Rajkumar -> Rajkummar), add one (Urfi -> Uorfi), or drop a vowel
+     (Devgan -> Devgn). Each edit shifts the Chaldean total by that letter's
+     value, so we apply the same three moves and keep the spellings whose new
+     total is friendly to both core numbers. */
+  const VOWELS = 'AEIOU';
+  const INSERTS = ['A', 'E', 'H', 'I', 'O', 'U'];
+
+  function nameVariants(fullName, profile, limit = 12) {
+    const words = String(fullName).trim().split(/\s+/).filter(Boolean);
+    if (!words.length) return [];
+    const base = chaldean(fullName);
+    const seen = new Map();
+    const push = (parts, kind, note, rank) => {
+      const variant = parts.join(' ');
+      if (variant.toUpperCase() === fullName.trim().toUpperCase()) return;
+      if (/(.)\1\1/i.test(variant)) return;                       // no triple letters
+      const c = chaldean(variant);
+      const rBN = relation(profile.bn, c.single), rDN = relation(profile.dn, c.single);
+      if (rBN === 'enemy' || rDN === 'enemy') return;             // never suggest a worse name
+      const both = rBN === 'friendly' && rDN === 'friendly';
+      const prev = seen.get(variant);
+      const score = (both ? 100 : rBN === 'friendly' || rDN === 'friendly' ? 50 : 0) - rank;
+      if (!prev || prev.score < score) seen.set(variant, { variant, total: c.single, raw: c.total, kind, note, rBN, rDN, both, score });
+    };
+    const titled = w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+
+    words.forEach((word, wi) => {
+      const w = word.toUpperCase();
+      const swap = (nw) => words.map((o, i) => i === wi ? titled(nw) : titled(o));
+      for (let i = 0; i < w.length; i++) {
+        // 1. double a letter — the most common correction, and the most natural looking
+        if (i > 0 && w[i] !== w[i + 1] && w[i] !== w[i - 1])
+          push(swap(w.slice(0, i + 1) + w[i] + w.slice(i + 1)), 'double',
+               `doubled the ${w[i]} in ${titled(word)}`, 0);
+        // 2. drop a vowel that is not the first letter of the word
+        if (i > 0 && VOWELS.includes(w[i]) && w.length > 3)
+          push(swap(w.slice(0, i) + w.slice(i + 1)), 'drop',
+               `dropped the ${w[i]} from ${titled(word)}`, 1);
+        // 3. insert a letter after this position
+        for (const L of INSERTS) {
+          if (L === w[i] || L === w[i + 1]) continue;              // that is case 1
+          if (!VOWELS.includes(L) && !VOWELS.includes(w[i]) && !VOWELS.includes(w[i + 1] || '')) continue;  // keep it speakable
+          push(swap(w.slice(0, i + 1) + L + w.slice(i + 1)), 'add',
+               `added an ${L} to ${titled(word)}`, 2);
+        }
+      }
+      // 4. a trailing initial, the "Abhishek A Bachchan" move — only on the last word
+      if (wi === words.length - 1)
+        for (const L of ['A', 'E', 'H', 'I', 'K', 'R', 'S'])
+          push([...words.map(titled), L], 'initial', `added the initial ${L}`, 4);
+    });
+
+    const ranked = [...seen.values()]
+      .sort((a, b) => b.score - a.score || a.variant.length - b.variant.length || a.variant.localeCompare(b.variant));
+    const perTotal = new Map(), out = [];                         // show a spread of totals, not five ways to make a 3
+    for (const v of ranked) {
+      const n = (perTotal.get(v.total) || 0);
+      if (n >= 3) continue;
+      perTotal.set(v.total, n + 1);
+      out.push({ ...v, base: base.single });
+      if (out.length >= limit) break;
+    }
+    return out;
+  }
+
   /* ---------- Mobile number analysis ---------- */
   function analyzeMobile(raw, profile) {
     const all = digitsOf(raw);
@@ -347,5 +414,5 @@ const Numerology = (() => {
   }
 
   return { reduce, reduceSteps, relation, profileFromDOB, chaldean, pythagorean, analyzeMobile, idealDigitsByPosition, generateNumbers, compareNumbers, lifePath, personalCycle, compatibility, loShuPlanes,
-           checkPin, generatePins, recommendCovers, recommendColors, purposePins, purposePasswords, balancerNumbers, digitsOf };
+           checkPin, generatePins, nameVariants, recommendCovers, recommendColors, purposePins, purposePasswords, balancerNumbers, digitsOf };
 })();

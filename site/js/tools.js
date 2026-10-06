@@ -119,6 +119,53 @@
     });
   }
 
+  /* ---------- Name correction ---------- */
+  if (tool === 'name-correction') {
+    const run = () => {
+      const name = $('#name').value.trim(); const dob = $('#dob').value;
+      if (!name) return;
+      if (!dobOk(dob)) { out.innerHTML = chip('Enter a valid date of birth', 'bad'); out.classList.remove('hidden'); return; }
+      const p = Numerology.profileFromDOB(dob);
+      const c = Numerology.chaldean(name);
+      const rBN = Numerology.relation(p.bn, c.single), rDN = Numerology.relation(p.dn, c.single);
+      const good = rBN === 'friendly' && rDN === 'friendly';
+      const bad = rBN === 'enemy' || rDN === 'enemy';
+      const list = Numerology.nameVariants(name, p, 9);
+      const verdict = good ? ['Your spelling already suits you', 'good']
+                    : bad  ? ['This name number works against your chart', 'bad']
+                           : ['Workable, but not working for you', 'warn'];
+      show(`
+        <div class="card"><div class="card-title"><h3>${esc(name)}</h3>${chip('Birth ' + p.bn + ' · Destiny ' + p.dn, '')}</div>
+          <div class="letters">${c.letters.map(l => `<div class="l"><b>${esc(l.ch)}</b><span>${l.v || ''}</span></div>`).join('')}</div>
+          <div class="stat" style="margin-top:6px">${badge(c.single, good ? 'teal' : '')}
+            <div><div class="label">Name number</div><div class="value">${verdict[0]}</div><div class="steps">${steps(c.steps)}</div></div></div>
+          <div class="divider"></div>
+          <div class="kv"><dt>With your Birth number ${p.bn}</dt><dd>${rel(rBN)}</dd>
+            <dt>With your Destiny number ${p.dn}</dt><dd>${rel(rDN)}</dd>
+            <dt>Totals that suit you</dt><dd>${digits(p.balancers, 'good')}</dd></div>
+        </div>
+        ${good ? `<div class="callout" style="margin-top:18px"><h3>No change needed</h3>
+            <p class="muted">Your name total of ${c.single} is friendly to both your Birth and Destiny numbers — that is exactly what a name correction aims for. Changing a spelling that already suits you has no upside in this system.</p>
+            ${list.length ? `<p class="small muted">Out of interest, these spellings would also land on a friendly total: ${list.slice(0, 4).map(v => '<b>' + esc(v.variant) + '</b> (' + v.total + ')').join(', ')}.</p>` : ''}</div>`
+          : list.length ? `<div class="card" style="margin-top:18px"><div class="card-title"><h3>Spellings that would suit you</h3>${chip(list.length + ' found', '')}</div>
+            <p class="muted small">Each one changes a single letter. Totals in green are friendly to <b>both</b> your numbers; the rest are friendly to one and neutral to the other. Nothing here lands on an enemy number.</p>
+            <div style="display:grid;gap:10px;margin-top:12px">
+            ${list.map(v => `<div class="finding ${v.both ? 'good' : ''}">
+                <span class="tag">${v.total}</span>
+                <div class="txt"><b>${esc(v.variant)}</b><small>${esc(v.note)} · was ${v.base}, now ${v.total}${v.both ? ' · friendly to both' : ''}</small></div>
+                <button class="btn secondary sm" data-copy="${esc(v.variant)}" style="margin-left:auto;align-self:center">Copy</button></div>`).join('')}
+            </div>
+            <p class="small muted" style="margin-top:14px">Try the one you would actually be happy writing. Start with social profiles and your signature — the name you are called by is the one this system reads.</p></div>`
+          : `<div class="callout" style="margin-top:18px"><h3>No single-letter change lands on a friendly total</h3>
+             <p class="muted">Every one-letter variation of this spelling still misses your friendly numbers (${p.balancers.join(', ') || 'none'}). A numerologist would look at a shorter form of the name, a different name order, or the first name on its own.</p></div>`}
+        ${cta}`);
+      out.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => {
+        navigator.clipboard?.writeText(b.dataset.copy); b.textContent = 'Copied'; setTimeout(() => b.textContent = 'Copy', 1400);
+      }));
+    };
+    $('#f').addEventListener('submit', e => { e.preventDefault(); run(); });
+  }
+
   /* ---------- Lucky PIN generator ---------- */
   if (tool === 'lucky-pin') {
     const sel = $('#purpose');

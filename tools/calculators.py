@@ -141,6 +141,35 @@ TOOLS = [
             ('Do spaces, initials and surnames count?', 'Only letters are valued, so spaces and punctuation are ignored. Include the surname if you normally use it; calculate the first name alone as well, since many numerologists read the two separately.'),
             ('Is Chaldean better than Pythagorean?', 'Neither is better — they are separate traditions. Chaldean is standard in Indian numerology and across this site; Pythagorean is the Western norm. Pick one and stay with it.')]),
 
+ dict(slug='name-correction', tool='name-correction', icon='sparkle', name='Name Correction', short='Spelling changes that suit your date of birth',
+      title='Name Correction Numerology — Lucky Name Spelling Check',
+      meta='Free name correction calculator. Check whether your name number suits your date of birth, and get spelling changes — a doubled letter, an added letter, a dropped vowel — that move it to a friendly total.',
+      img=dict(a='#3b0764', b='#fbbf24', glyph='A+', label='Name correction'),
+      form='<div class="field"><label for="name">Your name as you normally write it</label><input id="name" type="text" placeholder="e.g. Priya Sharma" maxlength="60" required autocomplete="name" /></div>'
+           '<div class="field"><label for="dob">Date of birth</label><input id="dob" type="date" required min="1900-01-01" /></div>'
+           '<button class="btn" type="submit">Check my name</button>',
+      intro='<strong>Name correction</strong> is the most talked-about practice in Indian numerology: instead of changing a name, you change its <em>spelling</em> by a letter or two so that its Chaldean total becomes friendly to your Birth and Destiny numbers. This page tells you whether your current spelling already suits your date of birth — and if it does not, which small edits would move it.',
+      body='<h2>How a one-letter change moves the number</h2>'
+           '<p>Every letter carries a Chaldean value, so adding, doubling or removing a single letter shifts the whole total. An H adds 5, an A adds 1, an M adds 4. That is the entire mechanism: the name sounds the same, the number does not.</p>'
+           '<p>Three moves cover almost every correction you will see:</p>'
+           '<table><tr><th>Move</th><th>Example pattern</th><th>Effect on the total</th></tr>'
+           '<tr><td><b>Double a letter</b></td><td>Rajkumar → Rajkummar</td><td>adds that letter\'s value again</td></tr>'
+           '<tr><td><b>Add a letter</b></td><td>Urfi → Uorfi</td><td>adds the new letter\'s value</td></tr>'
+           '<tr><td><b>Drop a vowel</b></td><td>Devgan → Devgn</td><td>subtracts that vowel\'s value</td></tr></table>'
+           '<h2>Names people point to</h2>'
+           '<p>Several Indian film figures are widely reported to have changed a spelling on numerological advice. <strong>Ajay Devgn</strong> dropped the "a" from Devgan on numerologist Sanjay B Jumaani\'s suggestion. <strong>Rajkummar Rao</strong>, born Rajkumar, added a second "m" at his mother\'s suggestion. <strong>Ayushmann Khurrana</strong>\'s spelling was set by his father, an astrologer. <strong>Uorfi Javed</strong> changed from Urfi, also on Jumaani\'s advice, and <strong>Abhishek A Bachchan</strong> added a standalone initial.</p>'
+           '<p>One correction worth making: <strong>Hrithik Roshan is often cited as "Rithik who added an H", but he was born Hrithik</strong>. The family surname came from his father\'s screen name, not from numerology. It is a good illustration of how these stories grow in the retelling.</p>'
+           '<h2>What this calculator does</h2>'
+           '<p>It works out your Birth and Destiny numbers from your date of birth, takes the Chaldean total of the name you type, and tells you whether that total is friendly, neutral or an enemy to both. If a change would help, it applies the three moves above and keeps only the spellings whose new total is friendly — never one that would make things worse. Each suggestion shows exactly which letter changed.</p>'
+           '<p>For the plain value of a name without the correction logic, use the <a href="name-numerology.html">name numerology calculator</a> or the <a href="chaldean-numerology-calculator.html">Chaldean calculator</a>.</p>'
+           '<h2>Before you change anything</h2>'
+           '<p>A spelling change is only worth making if you actually use it. Numerologists treat the name you are <em>called</em> and <em>sign</em> as the one that matters, which is why most people start with social profiles, email signatures and their signature itself rather than legal documents. A legal name change in India means an affidavit, a gazette notification and updates across every ID — a much bigger decision than numerology alone should drive.</p>',
+      faqs=[('Does changing my name spelling really work?', 'Numerology holds that the vibration of a name changes with its spelling. There is no scientific evidence for it, so treat this as a belief-based practice. The practical argument people make is that it costs little to try on social profiles and a signature before touching anything legal.'),
+            ('Do I need to change my name legally?', 'No. Most practitioners say the name you are called by and sign with is the one that counts. Start with how you write it day to day — social profiles, email signature, how you introduce yourself. A legal change is a separate and much larger decision.'),
+            ('Which name should I enter — full, short or with surname?', 'The one you actually use and hear. If people call you by your first name alone, check that too; many numerologists read the commonly used name rather than the full legal one.'),
+            ('Why does the calculator not suggest some spellings?', 'It only shows spellings whose total is friendly to both your Birth and Destiny numbers, or at worst neutral. Anything that would move your name onto an enemy number is filtered out rather than offered.'),
+            ('My name total is already good — should I still change it?', 'No. If the calculator says your current spelling is friendly to both numbers, leave it alone. Changing a name that already suits you has no upside in this system.')]),
+
  dict(slug='lo-shu-grid', tool='lo-shu', icon='grid', name='Lo Shu Grid', short='Present, missing & repeated numbers',
       title='Lo Shu Grid Calculator — Missing & Repeated Numbers',
       meta='Free Lo Shu grid calculator. Enter your date of birth to draw your 3×3 numerology grid, see present, missing and repeated numbers, completed planes, and PINs that add the missing energies.',
