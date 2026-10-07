@@ -53,7 +53,7 @@ VERIFY = {'google-site-verification': 'WMT9RBYqvsxIn936s6lqItZouN2_6RP97dqWz3PPz
 VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=40'
+VER = 'v=41'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -640,6 +640,7 @@ def sitemap_robots():
     today = datetime.date.today().isoformat()
     urls = [('', '1.0', 'weekly', today), ('blog/', '0.8', 'weekly', today), ('numbers/', '0.8', 'monthly', today), ('tools/', '0.9', 'monthly', today)] + [(f"tools/{t['slug']}", '0.8', 'monthly', today) for t in TOOLS] + [(f"blog/{p['slug']}", '0.7', 'monthly', p['date']) for p in POSTS] + [(f'numbers/birth-number-{n}', '0.7', 'monthly', '2026-09-16') for n in NUMBERS] + [('about', '0.5', 'yearly', today), ('privacy', '0.2', 'yearly', today), ('terms', '0.2', 'yearly', today)]
     for l in LANGS:
+        if l in LANG_UI: urls.append((f'{l}/', '0.9', 'weekly', today))
         if TR.get(l):
             urls.append((f'{l}/blog/', '0.7', 'weekly', today))
             urls += [(f"{l}/blog/{p['slug']}", '0.6', 'monthly', p['date']) for p in POSTS if p['slug'] in TR[l]]
@@ -674,6 +675,75 @@ def llms_txt():
     L += ['', '## Optional', f'- [About / author]({SITE_URL}/about)', f'- [Privacy policy]({SITE_URL}/privacy)', f'- [Terms]({SITE_URL}/terms)', f'- [Sitemap]({SITE_URL}/sitemap.xml)', '']
     (ROOT / 'llms.txt').write_text('\n'.join(L))
 
+LANG_UI = json.loads((Path(__file__).resolve().parent / 'lang.json').read_text()) if (Path(__file__).resolve().parent / 'lang.json').exists() else {}
+
+def home_pages():
+    """Real home pages at /hi/, /mr/, /ta/, /gu/ with the UI strings already substituted.
+
+    The site translates itself in the browser, which is fine for a visitor but leaves one
+    indexable home page for five languages. These are the same page pre-rendered, so each
+    language has its own URL, canonical and hreflang."""
+    src = (ROOT / 'index.html').read_text()
+    alts = {'en': ''} | {l: l + '/' for l in LANGS if l in LANG_UI}
+    hreflang = ''.join(f'<link rel="alternate" hreflang="{l}" href="{SITE_URL}/{pth}" />' for l, pth in alts.items()) \
+             + f'<link rel="alternate" hreflang="x-default" href="{SITE_URL}/" />'
+
+    # the English original gets the same alternates, so Google can see the set from any of them
+    en = re.sub(r'<link rel="alternate"[^>]*/>', '', src)
+    en = en.replace('<link rel="canonical" href="https://numberkundli.com/" />',
+                    f'<link rel="canonical" href="{SITE_URL}/" />\n  {hreflang}', 1)
+    (ROOT / 'index.html').write_text(en)
+    src = en
+
+    def localise(html_, lang):
+        ui = LANG_UI[lang]
+        def attr(m):
+            tag, key = m.group(0), m.group(2)
+            return tag if key not in ui else tag
+        # text content: <x data-i18n="k">old</x>
+        html_ = re.sub(r'(<([a-z0-9]+)\b[^>]*\bdata-i18n="([^"]+)"[^>]*>)(.*?)(</\2>)',
+                       lambda m: m.group(1) + (esc(ui[m.group(3)]) if m.group(3) in ui else m.group(4)) + m.group(5),
+                       html_, flags=re.S)
+        html_ = re.sub(r'(<([a-z0-9]+)\b[^>]*\bdata-i18n-html="([^"]+)"[^>]*>)(.*?)(</\2>)',
+                       lambda m: m.group(1) + (ui[m.group(3)] if m.group(3) in ui else m.group(4)) + m.group(5),
+                       html_, flags=re.S)
+        for a, k in (('placeholder', 'data-i18n-ph'), ('title', 'data-i18n-title')):
+            html_ = re.sub(rf'{k}="([^"]+)"([^>]*?)\s{a}="[^"]*"',
+                           lambda m: f'{k}="{m.group(1)}"{m.group(2)} {a}="{esc(ui.get(m.group(1), ""))}"' if m.group(1) in ui else m.group(0), html_)
+            html_ = re.sub(rf'{a}="([^"]*)"((?:[^>]*?))\s{k}="([^"]+)"',
+                           lambda m: f'{a}="{esc(ui.get(m.group(3), m.group(1)))}"{m.group(2)} {k}="{m.group(3)}"' if m.group(3) in ui else m.group(0), html_)
+        return html_
+
+    def reroot(html_, lang):
+        """Rewrite root-relative paths for a page one directory down, and point the blog at this language."""
+        def fix(m):
+            attr, q, path = m.group(1), m.group(2), m.group(3)
+            if path.startswith(('http', '#', 'data:', 'mailto:', '../', '/')): return m.group(0)
+            if path == './': return f'{attr}={q}../{lang}/{q}'
+            if path == 'blog/': return f'{attr}={q}../{lang}/blog/{q}'
+            return f'{attr}={q}../{path}{q}'
+        return re.sub(r'\b(href|src)=(")([^"]*)"', fix, html_)
+
+    for lang in [l for l in LANGS if l in LANG_UI]:
+        h = localise(src, lang)
+        h = reroot(h, lang)
+        h = h.replace('<html lang="en">', f'<html lang="{lang}">', 1)
+        h = h.replace(f'<link rel="canonical" href="{SITE_URL}/" />', f'<link rel="canonical" href="{SITE_URL}/{lang}/" />', 1)
+        h = h.replace(f'<meta property="og:url" content="{SITE_URL}/" />', f'<meta property="og:url" content="{SITE_URL}/{lang}/" />', 1)
+        h = h.replace('<meta property="og:locale" content="en_IN" />', f'<meta property="og:locale" content="{LOCALE[lang]}" />', 1)
+        ui = LANG_UI[lang]
+        for tag, key in [('title', 'meta.title'), ('og:title', 'meta.title'), ('twitter:title', 'meta.title'),
+                         ('description', 'meta.desc'), ('og:description', 'meta.desc'), ('twitter:description', 'meta.desc')]:
+            if key not in ui: continue
+            if tag == 'title': h = re.sub(r'<title>.*?</title>', '<title>' + esc(short_title(ui[key])) + '</title>', h, count=1, flags=re.S)
+            elif tag.startswith(('og:', 'twitter:')): h = re.sub(rf'(<meta (?:property|name)="{tag}" content=")[^"]*"', lambda m: m.group(1) + esc(ui[key]) + '"', h, count=1)
+            else: h = re.sub(rf'(<meta name="{tag}" content=")[^"]*"', lambda m: m.group(1) + esc(ui[key]) + '"', h, count=1)
+        # tell the client-side i18n which language this page is, so it does not flip back to English
+        h = h.replace('<script src="../js/icons.js', f'<script>window.__LANG = "{lang}";</script>\n<script src="../js/icons.js', 1)
+        out = ROOT / lang
+        out.mkdir(parents=True, exist_ok=True)
+        (out / 'index.html').write_text(h)
+
 def inject_static_footers():
     """privacy/terms/404/index keep their own bodies; the footer is replaced between markers."""
     for name in ['index.html', 'about.html', 'privacy.html', 'terms.html', '404.html']:
@@ -704,7 +774,7 @@ if __name__ == '__main__':
             if lp: save_variants(hero_image(lp, l), f"{p['slug']}-{l}"); post_page(p, l)
     index_page()
     for l in LANGS: index_page(l)
-    number_pages(); tool_pages(); sitemap_robots()
+    number_pages(); tool_pages(); home_pages(); sitemap_robots()
     total = sum(f.stat().st_size for f in IMG.iterdir())
     n_tr = {l: len(TR.get(l, {})) for l in LANGS}
     print(f"built {len(POSTS)} posts (translations: {n_tr}), indexes, sitemap, robots; {len(list(IMG.iterdir()))} images = {total/1024:.0f} KB")

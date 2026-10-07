@@ -1,4 +1,5 @@
 I18N.register('gu', { ui: {
+  'meta.title': 'મોબાઇલ નંબર ન્યુમરોલોજી કેલ્ક્યુલેટર (મફત) | NumberKundli', 'meta.desc': 'તમારી જન્મતારીખ અને મોબાઇલ નંબર દાખલ કરો — મૂળાંક, ભાગ્યાંક, બધી 10 પોઝિશનનું વિશ્લેષણ, શુભ પિન, પાસવર્ડ, વૉલપેપર અને મફત PDF રિપોર્ટ.',
   'brand': 'NumberKundli',
   'nav.profile': 'પ્રોફાઇલ', 'nav.mobile': 'મોબાઇલ નંબર', 'nav.pin': 'પિન', 'nav.password': 'પાસવર્ડ', 'nav.wallpaper': 'વૉલપેપર',
   'nav.cover': 'કવર અને રંગ', 'nav.affirmation': 'અફર્મેશન', 'nav.report': 'રિપોર્ટ', 'nav.buy': 'નંબર ખરીદો',

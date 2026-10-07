@@ -1,4 +1,5 @@
 I18N.register('ta', { ui: {
+  'meta.title': 'மொபைல் எண் கணித கால்குலேட்டர் (இலவசம்) | NumberKundli', 'meta.desc': 'உங்கள் பிறந்த தேதி மற்றும் மொபைல் எண்ணை உள்ளிடுங்கள் — பிறப்பு எண், விதி எண், 10 இடங்களின் ஆய்வு, அதிர்ஷ்ட பின், கடவுச்சொல் மற்றும் இலவச PDF அறிக்கை.',
   'brand': 'NumberKundli',
   'nav.profile': 'சுயவிவரம்', 'nav.mobile': 'மொபைல் எண்', 'nav.pin': 'பின்', 'nav.password': 'கடவுச்சொல்', 'nav.wallpaper': 'வால்பேப்பர்',
   'nav.cover': 'கவர் & நிறம்', 'nav.affirmation': 'உறுதிமொழி', 'nav.report': 'அறிக்கை', 'nav.buy': 'எண் வாங்க',

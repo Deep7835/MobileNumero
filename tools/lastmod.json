@@ -123,6 +123,10 @@
   "date": "2026-10-06",
   "hash": "0af2ea708f2e46ad"
  },
+ "gu/": {
+  "date": "2026-10-07",
+  "hash": "e88c884f19e8219b"
+ },
  "gu/blog/": {
   "date": "2026-10-04",
   "hash": "b613276feef78e46"
@@ -187,6 +191,10 @@
   "date": "2026-09-10",
   "hash": "d432424708723fb7"
  },
+ "hi/": {
+  "date": "2026-10-07",
+  "hash": "cf7ac179624d9b91"
+ },
  "hi/blog/": {
   "date": "2026-10-04",
   "hash": "47deb3525017edd0"
@@ -250,6 +258,10 @@
  "hi/blog/phone-cover-material-numerology-personality": {
   "date": "2026-09-10",
   "hash": "0decac7a525ee630"
+ },
+ "mr/": {
+  "date": "2026-10-07",
+  "hash": "07507b384dc8f611"
  },
  "mr/blog/": {
   "date": "2026-10-04",
@@ -358,6 +370,10 @@
  "privacy": {
   "date": "2026-10-06",
   "hash": "1281bff927d347fb"
+ },
+ "ta/": {
+  "date": "2026-10-07",
+  "hash": "ef10aea868eb0fa1"
  },
  "ta/blog/": {
   "date": "2026-10-04",

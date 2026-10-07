@@ -1,4 +1,5 @@
 I18N.register('en', { ui: {
+  'meta.title': 'Mobile Number Numerology Calculator (Free) | NumberKundli', 'meta.desc': 'Analyse your phone number digit by digit and get a lucky PIN, password, wallpaper, cover colour and mantra from your date of birth. Free, no sign-up.',
   'brand': 'NumberKundli',
   'nav.profile': 'Profile', 'nav.mobile': 'Mobile Number', 'nav.pin': 'PIN', 'nav.password': 'Password', 'nav.wallpaper': 'Wallpaper',
   'nav.cover': 'Cover & Colour', 'nav.affirmation': 'Affirmation', 'nav.report': 'Report', 'nav.buy': 'Buy a Number',

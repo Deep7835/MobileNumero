@@ -1,4 +1,5 @@
 I18N.register('mr', { ui: {
+  'meta.title': 'मोबाइल नंबर न्यूमरॉलॉजी कॅल्क्युलेटर (मोफत) | NumberKundli', 'meta.desc': 'तुमची जन्मतारीख व मोबाइल नंबर टाका — मूलांक, भाग्यांक, सर्व 10 स्थानांचे विश्लेषण, शुभ पिन, पासवर्ड, वॉलपेपर आणि मोफत PDF अहवाल.',
   'brand': 'NumberKundli',
   'nav.profile': 'प्रोफाइल', 'nav.mobile': 'मोबाइल नंबर', 'nav.pin': 'पिन', 'nav.password': 'पासवर्ड', 'nav.wallpaper': 'वॉलपेपर',
   'nav.cover': 'कव्हर आणि रंग', 'nav.affirmation': 'अफर्मेशन', 'nav.report': 'अहवाल', 'nav.buy': 'नंबर खरेदी करा',

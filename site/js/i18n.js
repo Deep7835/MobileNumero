@@ -52,6 +52,7 @@ const I18N = (() => {
     let saved = null;
     const q = new URLSearchParams(location.search).get('lang');   // ?lang=hi from localized blog pages
     if (q && LANGS[q]) saved = q;
+    else if (window.__LANG && LANGS[window.__LANG]) saved = window.__LANG;   // pre-rendered /hi/, /mr/ … page
     else try { saved = localStorage.getItem('lang'); } catch {}
     if (!saved) { const nav = (navigator.language || 'en').slice(0, 2); if (LANGS[nav]) saved = nav; }
     setLang(saved || 'en', { silent: true });

@@ -24,15 +24,27 @@
   Object.entries(I18N.LANGS).forEach(([code, l]) => langSel.append(new Option(l.native, code)));
   I18N.init();
   langSel.value = I18N.lang;
-  langSel.onchange = e => I18N.setLang(e.target.value);
+  langSel.onchange = e => {
+    // the home page exists at /, /hi/, /mr/, /ta/, /gu/ — switch the URL, not just the strings,
+    // so the language is shareable and indexable
+    const to = e.target.value, here = location.pathname.replace(/\/index\.html$/, '/');
+    const m = here.match(/^\/(hi|mr|ta|gu)\/$/);
+    if (m || here === '/' || here === '') {
+      try { localStorage.setItem('lang', to); } catch {}
+      location.href = to === 'en' ? '/' : '/' + to + '/';
+      return;
+    }
+    I18N.setLang(to);
+  };
   I18N.onChange(() => { renderStatic(); if (profile) renderAll(); refreshTools(); });
 
   /* ---------- static content (re-rendered on language change) ---------- */
   const purposeSel = $('#purpose');
   const seoTitle = document.title;   // the English <title> is SEO-tuned; only localise it for other languages
   function renderStatic() {
-    document.querySelectorAll('a[href$="blog/"]').forEach(a => a.href = (I18N.lang === 'en' ? '' : I18N.lang + '/') + 'blog/');
-    document.title = I18N.lang === 'en' ? seoTitle : t('brand') + ' — ' + t('report.title');
+    const up = /^\/(hi|mr|ta|gu)\//.test(location.pathname) ? '../' : '';
+    document.querySelectorAll('a[href$="blog/"]').forEach(a => a.href = up + (I18N.lang === 'en' ? '' : I18N.lang + '/') + 'blog/');
+    document.title = t('meta.title') || seoTitle;   // each language has its own SEO title
     const keep = purposeSel.value || 'money';
     purposeSel.innerHTML = '';
     DATA.purposes.forEach(p => purposeSel.append(new Option(td(p.label), p.id)));
