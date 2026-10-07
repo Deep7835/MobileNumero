@@ -53,7 +53,7 @@ VERIFY = {'google-site-verification': 'WMT9RBYqvsxIn936s6lqItZouN2_6RP97dqWz3PPz
 VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=41'
+VER = 'v=42'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -306,16 +306,16 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
 <a class="skip-link" href="#main">{u['skip']}</a>
 <nav class="nav" aria-label="Main">
   <div class="container">
-    <a class="brand" href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}"><img class="logo" src="{up}assets/logo-mark.png" width="34" height="34" alt="{SITE_NAME} logo" /> <span>{SITE_NAME}</span></a>
+    <a class="brand" href="{up}{'' if lang == 'en' else lang + '/'}"><img class="logo" src="{up}assets/logo-mark.png" width="34" height="34" alt="{SITE_NAME} logo" /> <span>{SITE_NAME}</span></a>
     <div class="nav-links" id="navLinks">
-      <a href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}">{ICON("house", up)}<span>{u['home']}</span></a>
+      <a href="{up}{'' if lang == 'en' else lang + '/'}">{ICON("house", up)}<span>{u['home']}</span></a>
       <a href="{up}{'' if lang == 'en' else lang + '/'}blog/">{ICON("book", up)}<span>{u['blog']}</span></a>
       {nav_dd(up, u['calc'])}
       <a href="{up}numbers/">{ICON("cake", up)}<span>{u['numbers']}</span></a>
     </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">{ICON("menu", up)}</button>
     <button class="icon-btn theme-toggle" title="Toggle theme" aria-label="Toggle theme">{ICON("sun", up)}</button>
-    <a class="btn sm nav-cta" href="{up}index.html{'' if lang == 'en' else '?lang=' + lang}#mainForm"><span>{u['free']}</span><span class="cta-arrow">{ICON("arrow-up-right", up)}</span></a>
+    <a class="btn sm nav-cta" href="{up}{'' if lang == 'en' else lang + '/'}#mainForm"><span>{u['free']}</span><span class="cta-arrow">{ICON("arrow-up-right", up)}</span></a>
   </div>
 </nav>
 <main class="container" id="main">
@@ -325,8 +325,8 @@ for _l in FOOT_UI: UI[_l].update(FOOT_UI[_l])
 
 def foot(depth=1, lang='en', home_anchor=None):
     """CTA card + 4-column footer + newsletter. Shared by every page (static pages get it injected too)."""
-    up = '../' * depth; u = UI[lang]; q = '' if lang == 'en' else '?lang=' + lang
-    home = f"{up}index.html{q}"; anchor = home_anchor or f"{home}#mainForm"
+    up = '../' * depth; u = UI[lang]
+    home = f"{up}{'' if lang == 'en' else lang + '/'}" or './'; anchor = home_anchor or f"{home}#mainForm"
     orbs = ''.join(f'<span class="orb" style="left:{x}%;top:{y}%;background:{c}">{n}</span>' for n, x, y, c in [(1, 50, 4, '#ffcb47'), (5, 84, 22, '#9CCC65'), (6, 90, 62, '#7fb0ff'), (9, 62, 88, '#f28b8b'), (3, 22, 80, '#f6c95b'), (2, 8, 40, '#e6e9ff'), (7, 28, 14, '#a5e8a0')])
     return f"""
 </main>
@@ -441,7 +441,7 @@ def post_page(p0, lang='en'):
     switcher = ' '.join(f'<a class="chip {"good" if l == lang else ""}" href="{"../" * depth}{path}" hreflang="{l}" lang="{l}">{LANG_NAME[l]}</a>' for l, path in alts.items())
     html_ = head(p['title'], p['meta'], f"{pre}blog/{p['slug']}.html", og, article=p, depth=depth, lang=lang, alternates=alts, html_lang=p.get('page_lang')) + f'''
 <article class="page-head" style="padding-bottom:0">
-  <div class="breadcrumb"><a href="{'../' * depth}index.html{'' if lang == 'en' else '?lang=' + lang}">{u['home']}</a> › <a href="./">{u['blog']}</a> › {esc(p['category'])}</div>
+  <div class="breadcrumb"><a href="{'../' * depth}{'' if lang == 'en' else lang + '/'}">{u['home']}</a> › <a href="./">{u['blog']}</a> › {esc(p['category'])}</div>
   <h1>{esc(p['title'])}</h1>
   <div class="meta-row"><span>{esc(p['category'])}</span><span>·</span><time datetime="{p['date']}">{fmt_date_l(p['date'], lang)}</time><span>·</span><span>{u['minread'].format(n=mins)}</span><span>·</span><span><a href="{'../' * depth}about.html">{u['by']}</a></span></div>
   {f'<div class="lang-switch"><span class="small muted">{u["readin"]}:</span> {switcher}</div>' if len(alts) > 1 else ''}

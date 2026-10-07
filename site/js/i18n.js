@@ -50,7 +50,12 @@ const I18N = (() => {
 
   function init() {
     let saved = null;
-    const q = new URLSearchParams(location.search).get('lang');   // ?lang=hi from localized blog pages
+    const q = new URLSearchParams(location.search).get('lang');   // legacy ?lang=hi links
+    // the home page now lives at /hi/, /mr/ … — send old query-string links there so one page, one URL
+    if (q && LANGS[q] && /^\/(index\.html)?$/.test(location.pathname)) {
+      location.replace(q === 'en' ? '/' : '/' + q + '/' + location.hash);
+      return;
+    }
     if (q && LANGS[q]) saved = q;
     else if (window.__LANG && LANGS[window.__LANG]) saved = window.__LANG;   // pre-rendered /hi/, /mr/ … page
     else try { saved = localStorage.getItem('lang'); } catch {}
