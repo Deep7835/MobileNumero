@@ -9,8 +9,8 @@ CTA = '''<div class="callout cta"><h3>Check your own number in 30 seconds</h3>
 POSTS = [
 dict(
  slug='mobile-number-numerology-10-positions-meaning',
- title='Mobile Number Numerology: What Each of the 10 Digit Positions Means',
- meta='Learn what every position of your 10-digit mobile number governs in numerology — attitude, health, marriage, career, wealth — and which digits help or harm.',
+ title='Mobile Number Numerology: What All 10 Positions Mean',
+ meta='What each of the 10 positions in your mobile number governs — attitude, health, marriage, career, wealth — which digits help or harm, and a free checker.',
  category='Mobile Number', date='2026-09-01',
  keywords='mobile number numerology, phone number numerology positions, 10 digit mobile number meaning',
  excerpt='Your mobile number is not just a string of digits. In mobile numerology each position — from the first digit to the last — rules a specific area of life.',
@@ -57,8 +57,8 @@ dict(
 
 dict(
  slug='best-mobile-number-ending-55-555',
- title='Best Mobile Number Ending: Why 55 and 555 Are Considered the Luckiest',
- meta='Numerology says the best mobile numbers end in 55 or 555. Discover why Mercury\'s number 5 in the last positions attracts career success, fame and money.',
+ title='Best Mobile Number Ending: Why 55 and 555 Are Lucky',
+ meta='Why numerology rates 55 and 555 as the best mobile number endings, which endings to avoid, and how to score your own number free in 30 seconds.',
  category='Mobile Number', date='2026-09-02',
  keywords='lucky mobile number ending, mobile number ending 555, best last digit mobile number',
  excerpt='If you could pick the last digits of your phone number, numerology has a clear favourite: 55 or 555.',
@@ -97,7 +97,7 @@ dict(
 
 dict(
  slug='never-end-mobile-number-with-8',
- title='Why You Should Never End Your Mobile Number With 8 (Numerology Explained)',
+ title='Why You Should Never End Your Mobile Number With 8',
  meta='An 8 as the last digit of a mobile number is linked to financial loss and debt, and 8 at the 7th position to divorce. Learn the rules and what to do instead.',
  category='Mobile Number', date='2026-09-03',
  keywords='mobile number ending with 8, number 8 numerology phone, 8 last digit mobile',
@@ -137,7 +137,7 @@ dict(
 
 dict(
  slug='number-4-in-mobile-number-numerology',
- title='Number 4 in Your Mobile Number: Why Numerologists Say Avoid It',
+ title='Number 4 in Your Mobile Number: Why to Avoid It',
  meta='Number 4 (Rahu) is the one digit numerologists recommend leaving out of a mobile number entirely. Learn what it does at each position and how to balance it.',
  category='Mobile Number', date='2026-09-04',
  keywords='number 4 mobile numerology, rahu number phone, avoid 4 in mobile number',
@@ -229,7 +229,7 @@ dict(
 
 dict(
  slug='lo-shu-grid-missing-numbers-explained',
- title='Lo Shu Grid Explained: How to Find Your Missing Numbers and Fix Them',
+ title='Lo Shu Grid: Find and Fix Your Missing Numbers',
  meta='The Lo Shu grid maps your date of birth into a 3×3 square. Learn how to draw it, what missing numbers mean, and how to add them back with a PIN.',
  category='Core Numbers', date='2026-09-06',
  keywords='lo shu grid, missing numbers numerology, lo shu grid calculator, date of birth grid',
@@ -281,7 +281,7 @@ dict(
 
 dict(
  slug='how-to-choose-lucky-pin-code-numerology',
- title='How to Choose a Lucky PIN Code Using Numerology (Rules + Examples)',
+ title='How to Choose a Lucky PIN Code Using Numerology',
  meta='Four numerology rules for a lucky PIN: use missing numbers, keep the total friendly, include your money number, pick a balancer. Purpose-wise PIN list inside.',
  category='PIN & Password', date='2026-09-07',
  keywords='lucky pin code numerology, numerology pin number, best pin for phone numerology, lucky 4 digit number',
@@ -332,7 +332,7 @@ dict(
 
 dict(
  slug='chaldean-numerology-password-guide',
- title='Chaldean Numerology Password Guide: Pick a Word That Matches Your Goal',
+ title='Chaldean Numerology Password Guide: Pick Your Word',
  meta='Every letter has a Chaldean value from 1 to 8. Learn the chart, how to total a word, which totals suit which purpose, and the avoid-8 rule for Birth number 8.',
  category='PIN & Password', date='2026-09-08',
  keywords='chaldean numerology password, numerology password words, chaldean alphabet chart, lucky password',
@@ -427,7 +427,7 @@ dict(
 
 dict(
  slug='phone-cover-material-numerology-personality',
- title='What Your Phone Cover Says About You: Silicone, Leather, Metal & More',
+ title='What Your Phone Cover Says: Silicone, Leather, Metal',
  meta='Silicone, plastic, metal, leather, rubber, armour, flip or pouch — each phone cover type reflects a personality and suits certain Birth numbers. Full guide.',
  category='Lifestyle', date='2026-09-10',
  keywords='phone cover numerology, mobile cover according to birth number, phone case personality',
@@ -469,7 +469,7 @@ dict(
 
 dict(
  slug='phone-colour-numerology-which-colour-suits-you',
- title='Phone Colour Numerology: Black, Gold, Blue, Red — Which One Suits You?',
+ title='Phone Colour Numerology: Which Colour Suits You?',
  meta='Every phone colour carries a planet\'s energy. See what black, gold, blue, red, purple, green and other phones say about you and which suit your Birth number.',
  category='Lifestyle', date='2026-09-11',
  keywords='phone colour numerology, lucky mobile colour, which colour phone is lucky for me',
@@ -574,8 +574,8 @@ dict(
 
 dict(
  slug='friendly-and-enemy-numbers-numerology-chart',
- title='Friendly and Enemy Numbers in Numerology: The Complete Compatibility Chart',
- meta='Which numbers are friendly, enemy or neutral to yours? Full 1–9 compatibility chart, how to find balancer numbers, and how it applies to phone numbers.',
+ title='Friendly and Enemy Numbers in Numerology: Full Chart',
+ meta='The full 1–9 friendly, enemy and neutral chart, how to find your balancer numbers, and what it means for your phone number, PIN and password.',
  category='Core Numbers', date='2026-09-13',
  keywords='friendly numbers numerology, enemy numbers chart, numerology compatibility chart 1 to 9, balancer number',
  excerpt='Every recommendation in mobile numerology comes back to one question: is this number a friend, an enemy or neutral to you?',
@@ -671,7 +671,7 @@ dict(
 
 dict(
  slug='mobile-number-for-marriage-and-relationships',
- title='Mobile Number for Marriage & Relationships: Positions 6 and 7 Explained',
+ title='Mobile Number for Marriage: Positions 6 and 7',
  meta='Positions 6 and 7 of a mobile number govern marriage and married life. Learn which digits bring harmony (6 at the 7th) and which point to friction or divorce.',
  category='Mobile Number', date='2026-09-15',
  keywords='mobile number for marriage numerology, phone number relationship numerology, 6th 7th position mobile number',

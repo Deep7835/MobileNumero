@@ -53,7 +53,7 @@ VERIFY = {'google-site-verification': 'WMT9RBYqvsxIn936s6lqItZouN2_6RP97dqWz3PPz
 VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=43'
+VER = 'v=44'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -238,13 +238,18 @@ ADS_TAG = f'<script async src="https://pagead2.googlesyndication.com/pagead/js/a
 
 THEME_PRE = "<script>(function(){try{var m=localStorage.getItem('theme');if(m==='light'||(m===null&&matchMedia('(prefers-color-scheme: light)').matches))document.documentElement.setAttribute('data-theme','light')}catch(e){}})()</script>"
 
-def short_title(t, limit=60):
-    """Trim a headline for the <title> tag: drop a trailing parenthetical, then a ' — ' or ': ' subtitle, while it stays meaningful."""
+def short_title(t, limit=60, floor=45):
+    """Trim a headline for the <title> tag — but never into a vague stub.
+
+    Search Console showed the cost of being too eager here: pages whose titles were cut to a
+    bare noun phrase ("Best Mobile Number Ending") took 0.6-1.7% CTR at position 6-8, while
+    pages that kept their descriptive half took 4-8% at the same positions. Google truncates
+    the display anyway and still reads the whole string, so a long informative title beats a
+    short empty one. Only accept a trim that lands between floor and limit."""
     if len(t) <= limit: return t
-    for pat in (r'\s*\([^()]*\)\s*$', r'\s+—\s+[^—]*$', r':\s+[^:]*$'):
+    for pat in (r'\s*\([^()]*\)\s*$', r'\s+[—–]\s+[^—–]*$', r':\s+[^:]*$'):
         cut = re.sub(pat, '', t).strip()
-        if 20 <= len(cut) < len(t): t = cut
-        if len(t) <= limit: break
+        if floor <= len(cut) < len(t): return cut
     return t
 
 def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth=1, lang='en', alternates=None, html_lang=None):
