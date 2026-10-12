@@ -16,6 +16,8 @@ Author and publisher: Deepam Mishra, who runs NumberKundli independently (https:
 - [Lucky Password](https://numberkundli.com/tools/lucky-password): Chaldean word values matched to your goal
 - [Chaldean Calculator](https://numberkundli.com/tools/chaldean-numerology-calculator): Chaldean number of any name or word
 - [Name Correction](https://numberkundli.com/tools/name-correction): Spelling changes that suit your date of birth
+- [Zodiac Sign](https://numberkundli.com/tools/zodiac-sign): Your sun sign and how it meets your numbers
+- [Angel Numbers](https://numberkundli.com/tools/angel-number): What a repeating number is said to mean
 - [Lo Shu Grid](https://numberkundli.com/tools/lo-shu-grid): Present, missing & repeated numbers
 
 ## Birth number guides (1–9)
@@ -58,6 +60,14 @@ Author and publisher: Deepam Mishra, who runs NumberKundli independently (https:
 - [Name and Date of Birth Compatibility in Numerology](https://numberkundli.com/blog/name-and-date-of-birth-compatibility): A name number means nothing on its own. It only becomes good or bad in relation to the two numbers your birth date already fixed.
 - [Lucky First Letter of Your Name: What Numerology Says](https://numberkundli.com/blog/lucky-first-letter-of-name-numerology): The opening letter gets more attention than the system actually gives it. Here is what it does and does not decide.
 - [Does Name Numerology Really Work? An Honest Look](https://numberkundli.com/blog/does-name-numerology-really-work): We run numerology calculators on this site. That is not a reason to overclaim what they do — so here is the honest version.
+- [What Are Angel Numbers? A Straight Explanation](https://numberkundli.com/blog/what-are-angel-numbers): Repeating numbers on clocks and receipts, read as messages. Here is where the idea came from, what each one means, and why you notice them.
+- [1111 Angel Number: Meaning, and Why Everyone Sees It](https://numberkundli.com/blog/1111-angel-number-meaning): The most searched number sequence in the world, and the one with the simplest explanation for why you keep catching it.
+- [444 Angel Number: Meaning and What It Reduces To](https://numberkundli.com/blog/444-angel-number-meaning): The sequence people report most during hard stretches, and the one with the most comforting reading attached to it.
+- [Angel Numbers vs Numerology: What Is the Difference?](https://numberkundli.com/blog/angel-numbers-vs-numerology): They both read meaning into numbers, and they are not the same thing. One is thousands of years old and one is from the 1990s.
+- [All 12 Zodiac Signs: Dates, Elements and Personality](https://numberkundli.com/blog/zodiac-signs-dates-and-personality): The twelve signs, their dates, and what each is actually like — without the flattery that usually comes with them.
+- [Zodiac Sign and Numerology: How the Two Connect](https://numberkundli.com/blog/zodiac-sign-and-numerology): Two different systems that happen to share a vocabulary. That shared piece is the only honest way to read them together.
+- [Lucky Numbers for Each Zodiac Sign (And the Catch)](https://numberkundli.com/blog/lucky-numbers-for-each-zodiac-sign): Every sign has a set of numbers attached to it. They are worth knowing, and they are not the final word.
+- [Sun Sign vs Rashi: Why You Have Two Different Signs](https://numberkundli.com/blog/sun-sign-vs-rashi-moon-sign): Most Indians have been given two different signs by two different people. Both are right — they are answering different questions.
 
 ## Blog in other languages
 - [Hindi (हिन्दी)](https://numberkundli.com/hi/blog/)

@@ -119,6 +119,87 @@
     });
   }
 
+  /* ---------- Zodiac sign ---------- */
+  if (tool === 'zodiac') {
+    $('#f').addEventListener('submit', e => {
+      e.preventDefault(); const v = $('#dob').value;
+      if (!dobOk(v)) { out.innerHTML = chip('Enter a valid date of birth', 'bad'); out.classList.remove('hidden'); return; }
+      const z = Numerology.zodiacFor(v), p = Numerology.profileFromDOB(v), h = Numerology.zodiacHarmony(z, p);
+      const others = DATA.zodiac.filter(x => x.element === z.element && x.id !== z.id);
+      const month = ['', 'January','February','March','April','May','June','July','August','September','October','November','December'];
+      const range = `${z.from[1]} ${month[z.from[0]]} – ${z.to[1]} ${month[z.to[0]]}`;
+      show(`
+        <div class="card"><div class="card-title"><h3><span style="font-size:1.4em;vertical-align:-.1em">${z.sym}</span> ${z.name}</h3>${chip(range, '')}</div>
+          <p><b>${esc(z.keyword)}.</b> ${esc(z.traits)}</p>
+          <div class="divider"></div>
+          <div class="kv"><dt>Element</dt><dd>${z.element}</dd><dt>Quality</dt><dd>${z.quality}</dd>
+            <dt>Ruling planet</dt><dd>${z.rules} — number ${z.num}</dd>
+            <dt>Colour</dt><dd>${z.colour}</dd>
+            <dt>Lucky numbers</dt><dd>${digits(z.lucky, 'good')}</dd></div>
+          ${z.onCusp ? `<p class="small muted" style="margin-top:12px">You were born on the boundary day, so you are on the <b>${z.name}–${z.neighbour.name} cusp</b>. The sun changes sign at an hour that shifts between years — only a chart cast for your birth time can settle which side you fall on.</p>` : ''}
+        </div>
+        <div class="grid grid-2" style="margin-top:18px">
+          <div class="card"><h3>Your sign against your numbers</h3>
+            <div class="stat">${badge(z.num, h.both ? 'teal' : '')}<div><div class="label">${z.rules}, the ruler of ${z.name}</div>
+              <div class="value">${h.both ? 'Friendly to both your numbers' : h.clash ? 'Pulls against your chart' : 'Workable'}</div></div></div>
+            <div class="divider"></div>
+            <div class="kv"><dt>Birth number ${p.bn}</dt><dd>${rel(h.rBN)}</dd><dt>Destiny number ${p.dn}</dt><dd>${rel(h.rDN)}</dd>
+              <dt>Your balancers</dt><dd>${digits(p.balancers, 'good')}</dd></div>
+            <p class="small muted" style="margin-top:10px">${h.shared.length
+              ? 'Both systems point at ' + digits(h.shared, 'good') + ' — numbers worth using in a PIN or password.'
+              : h.clash ? 'Your sign and your numbers pull in different directions. That is a description, not a problem to fix.'
+                        : 'No overlap either way — your sign neither reinforces nor fights your numbers.'}</p></div>
+          <div class="card"><h3>Same element</h3>
+            <p class="muted small">${z.element} signs are traditionally the easiest company for one another.</p>
+            <div class="chips" style="margin-top:8px">${others.map(o => chip(o.sym + ' ' + o.name, 'neutral')).join('')}</div>
+            <div class="divider"></div>
+            <h4 style="margin:0 0 8px">All twelve</h4>
+            <div class="chips">${DATA.zodiac.map(o => `<span class="chip ${o.id === z.id ? 'good' : ''}">${o.sym} ${o.name}</span>`).join('')}</div></div>
+        </div>
+        <div class="callout" style="margin-top:18px"><h3>This is your sun sign, not your rashi</h3>
+          <p class="muted">Rashi is the Vedic <em>moon</em> sign and needs your exact time and place of birth; the two often differ by one sign. If an astrologer gave you a rashi, that is the Vedic one.</p></div>
+        ${cta}`);
+    });
+  }
+
+  /* ---------- Angel numbers ---------- */
+  if (tool === 'angel') {
+    const quick = $('#quickSeq');
+    ['111', '222', '333', '444', '555', '777', '888', '999', '1111', '1212'].forEach(n =>
+      quick.insertAdjacentHTML('beforeend', `<button class="chip" type="button" data-seq="${n}" style="cursor:pointer">${n}</button>`));
+    const run = () => {
+      const seq = $('#seq').value.replace(/\D/g, ''), dob = $('#dob').value;
+      if (!seq) { out.innerHTML = chip('Enter a number you keep seeing', 'bad'); out.classList.remove('hidden'); return; }
+      const p = dobOk(dob) ? Numerology.profileFromDOB(dob) : null;
+      const a = Numerology.angelNumber(seq, p);
+      const known = Object.keys(DATA.angel);
+      show(`
+        <div class="card"><div class="card-title"><h3>${esc(a.digits)}</h3>${a.repeated ? chip('repeating', '') : chip('sequence', 'neutral')}</div>
+          ${a.entry ? `<div class="stat" style="margin-bottom:10px">${badge(a.root, 'violet')}<div><div class="label">Usually read as</div><div class="value">${esc(a.entry.title)}</div></div></div>
+            <p>${esc(a.entry.text)}</p>`
+            : `<p class="muted">That exact sequence is not one of the commonly reported ones. What it still has is a root number, which is the part numerology can actually work with.</p>`}
+          <div class="divider"></div>
+          <div class="kv"><dt>Digits add to</dt><dd>${a.raw}${a.steps.length > 1 ? ' → ' + steps(a.steps) : ''}</dd>
+            <dt>Root number</dt><dd><b>${a.root}</b>${a.planet ? ' — ' + a.planet : ''}</dd>
+            ${a.keyword ? `<dt>That planet means</dt><dd>${esc(a.keyword)}</dd>` : ''}</div>
+        </div>
+        ${p ? `<div class="card" style="margin-top:18px"><div class="card-title"><h3>Against your own numbers</h3>${chip('Birth ' + p.bn + ' · Destiny ' + p.dn, '')}</div>
+            <div class="kv"><dt>Root ${a.root} with Birth ${p.bn}</dt><dd>${rel(a.rBN)}</dd>
+              <dt>Root ${a.root} with Destiny ${p.dn}</dt><dd>${rel(a.rDN)}</dd></div>
+            <p class="small muted" style="margin-top:10px">${a.both
+              ? 'This sequence reduces to a number friendly to both of yours — if you like it, it is a sensible one to use deliberately in a PIN or password rather than only noticing it.'
+              : 'It does not reduce to one of your friendly numbers, which in this system simply means it is not a number to build around. It takes nothing away from noticing it.'}</p></div>`
+          : `<p class="small muted" style="margin-top:14px">Add your date of birth above to see how this sequence sits against your own numbers.</p>`}
+        <div class="card" style="margin-top:18px"><h3>Why you keep seeing it</h3>
+          <p class="muted small">Angel numbers are modern folklore rather than an old tradition, and the repetition has a well-understood explanation: the <b>frequency illusion</b>. Once a number matters to you, attention selects for it and memory keeps the hits. You check a clock dozens of times a day — 11:11 is memorable, 11:09 is not. What remains is still useful: a recurring prompt to stop and notice what you were thinking.</p>
+          <div class="divider"></div><div class="chips">${known.map(k => `<button class="chip ${k === a.digits ? 'good' : ''}" type="button" data-seq="${k}" style="cursor:pointer">${k}</button>`).join('')}</div></div>
+        ${cta}`);
+      out.querySelectorAll('[data-seq]').forEach(b => b.addEventListener('click', () => { $('#seq').value = b.dataset.seq; run(); }));
+    };
+    $('#f').addEventListener('submit', e => { e.preventDefault(); run(); });
+    quick.addEventListener('click', e => { const b = e.target.closest('[data-seq]'); if (!b) return; $('#seq').value = b.dataset.seq; run(); });
+  }
+
   /* ---------- Name correction ---------- */
   if (tool === 'name-correction') {
     const run = () => {

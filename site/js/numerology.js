@@ -77,6 +77,57 @@ const Numerology = (() => {
     return { letters, total, steps: reduceSteps(total), single: reduce(total) };
   }
 
+  /* ---------- Zodiac ---------- */
+  /** Sun sign for a date, with the ruling planet's number so it can be read against the chart. */
+  function zodiacFor(dateStr) {
+    const d = new Date(String(dateStr) + 'T00:00:00');
+    if (isNaN(d)) return null;
+    const m = d.getMonth() + 1, day = d.getDate();
+    const inSign = z => {
+      const [fm, fd] = z.from, [tm, td] = z.to;
+      return fm > tm ? (m === fm && day >= fd) || (m === tm && day <= td)
+                     : (m === fm && day >= fd) || (m === tm && day <= td) || (m > fm && m < tm);
+    };
+    const sign = DATA.zodiac.find(inSign);
+    if (!sign) return null;
+    // a birthday on the first or last day of a range sits on the cusp; say so rather than imply precision
+    const onCusp = (m === sign.from[0] && day === sign.from[1]) || (m === sign.to[0] && day === sign.to[1]);
+    const i = DATA.zodiac.indexOf(sign);
+    const neighbour = DATA.zodiac[(m === sign.from[0] && day === sign.from[1])
+      ? (i + DATA.zodiac.length - 1) % DATA.zodiac.length : (i + 1) % DATA.zodiac.length];
+    return { ...sign, onCusp, neighbour: onCusp ? neighbour : null };
+  }
+
+  /** How the sign's ruling planet sits against the person's own two numbers. */
+  function zodiacHarmony(sign, profile) {
+    if (!sign || !profile) return null;
+    const rBN = relation(profile.bn, sign.num), rDN = relation(profile.dn, sign.num);
+    return { num: sign.num, rBN, rDN,
+             both: rBN === 'friendly' && rDN === 'friendly',
+             clash: rBN === 'enemy' || rDN === 'enemy',
+             shared: sign.lucky.filter(n => profile.balancers.includes(n)) };
+  }
+
+  /* ---------- Angel numbers ---------- */
+  /** Look up a repeating sequence; falls back to the reduced root when the exact one is unlisted. */
+  function angelNumber(input, profile) {
+    const digits = String(input).replace(/\D/g, '');
+    if (!digits) return null;
+    const entry = DATA.angel[digits] || null;
+    const raw = digits.split('').reduce((a, b) => a + Number(b), 0);
+    const root = reduce(raw);
+    const repeated = /^(\d)\1+$/.test(digits);
+    const out = { digits, entry, raw, root, steps: reduceSteps(raw), repeated,
+                  planet: DATA.numbers[root] ? DATA.numbers[root].planet : null,
+                  keyword: DATA.numbers[root] ? DATA.numbers[root].keyword : null };
+    if (profile) {
+      out.rBN = relation(profile.bn, root);
+      out.rDN = relation(profile.dn, root);
+      out.both = out.rBN === 'friendly' && out.rDN === 'friendly';
+    }
+    return out;
+  }
+
   /* ---------- Name correction ----------
      Indian name correction changes the spelling, not the name: double a letter
      (Rajkumar -> Rajkummar), add one (Urfi -> Uorfi), or drop a vowel
@@ -414,5 +465,5 @@ const Numerology = (() => {
   }
 
   return { reduce, reduceSteps, relation, profileFromDOB, chaldean, pythagorean, analyzeMobile, idealDigitsByPosition, generateNumbers, compareNumbers, lifePath, personalCycle, compatibility, loShuPlanes,
-           checkPin, generatePins, nameVariants, recommendCovers, recommendColors, purposePins, purposePasswords, balancerNumbers, digitsOf };
+           checkPin, generatePins, nameVariants, zodiacFor, zodiacHarmony, angelNumber, recommendCovers, recommendColors, purposePins, purposePasswords, balancerNumbers, digitsOf };
 })();

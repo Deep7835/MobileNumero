@@ -170,6 +170,73 @@ TOOLS = [
             ('Why does the calculator not suggest some spellings?', 'It only shows spellings whose total is friendly to both your Birth and Destiny numbers, or at worst neutral. Anything that would move your name onto an enemy number is filtered out rather than offered.'),
             ('My name total is already good — should I still change it?', 'No. If the calculator says your current spelling is friendly to both numbers, leave it alone. Changing a name that already suits you has no upside in this system.')]),
 
+ dict(slug='zodiac-sign', tool='zodiac', icon='star', name='Zodiac Sign', short='Your sun sign and how it meets your numbers',
+      title='Zodiac Sign Calculator — Find Your Sun Sign by Date',
+      meta='Free zodiac sign calculator. Enter your date of birth for your sun sign, element, ruling planet and lucky numbers — and how that planet sits with your Birth and Destiny numbers.',
+      img=dict(a='#1e1b4b', b='#c4b5fd', glyph='★', label='Zodiac sign'),
+      form='<div class="field"><label for="dob">Date of birth</label><input id="dob" type="date" required min="1900-01-01" /></div><button class="btn" type="submit">Find my zodiac sign</button>',
+      intro='Your <strong>sun sign</strong> is decided by where the sun sat on the day you were born. This calculator gives the sign, its element, quality and ruling planet — and then does something most zodiac pages do not: it checks that ruling planet against your <strong>Birth and Destiny numbers</strong>, because in Indian numerology every planet already owns a number.',
+      body='<h2>Where astrology and numerology meet</h2>'
+           '<p>The two systems are separate traditions, but they share a vocabulary: planets. Leo is ruled by the Sun, and in numerology the Sun is 1. Taurus and Libra are ruled by Venus, which is 6. So a sign can be translated into a number and read against the numbers your date of birth already fixed.</p>'
+           '<table><tr><th>Sign</th><th>Dates</th><th>Element</th><th>Ruler</th><th>Number</th></tr>'
+           '<tr><td>Aries</td><td>21 Mar – 19 Apr</td><td>Fire</td><td>Mars</td><td>9</td></tr>'
+           '<tr><td>Taurus</td><td>20 Apr – 20 May</td><td>Earth</td><td>Venus</td><td>6</td></tr>'
+           '<tr><td>Gemini</td><td>21 May – 20 Jun</td><td>Air</td><td>Mercury</td><td>5</td></tr>'
+           '<tr><td>Cancer</td><td>21 Jun – 22 Jul</td><td>Water</td><td>Moon</td><td>2</td></tr>'
+           '<tr><td>Leo</td><td>23 Jul – 22 Aug</td><td>Fire</td><td>Sun</td><td>1</td></tr>'
+           '<tr><td>Virgo</td><td>23 Aug – 22 Sep</td><td>Earth</td><td>Mercury</td><td>5</td></tr>'
+           '<tr><td>Libra</td><td>23 Sep – 22 Oct</td><td>Air</td><td>Venus</td><td>6</td></tr>'
+           '<tr><td>Scorpio</td><td>23 Oct – 21 Nov</td><td>Water</td><td>Mars</td><td>9</td></tr>'
+           '<tr><td>Sagittarius</td><td>22 Nov – 21 Dec</td><td>Fire</td><td>Jupiter</td><td>3</td></tr>'
+           '<tr><td>Capricorn</td><td>22 Dec – 19 Jan</td><td>Earth</td><td>Saturn</td><td>8</td></tr>'
+           '<tr><td>Aquarius</td><td>20 Jan – 18 Feb</td><td>Air</td><td>Saturn</td><td>8</td></tr>'
+           '<tr><td>Pisces</td><td>19 Feb – 20 Mar</td><td>Water</td><td>Jupiter</td><td>3</td></tr></table>'
+           '<h2>Sun sign, not rashi</h2>'
+           '<p>This is the <strong>Western (tropical) sun sign</strong> — the one used by newspaper horoscopes worldwide. Indian Vedic astrology uses the <em>sidereal</em> zodiac and your <strong>moon sign (rashi)</strong>, which is calculated from the moon rather than the sun and needs your time and place of birth. The two often differ by one sign. If a priest or astrologer has given you a rashi, that is the Vedic one and this page does not replace it.</p>'
+           '<h2>Cusp birthdays</h2>'
+           '<p>If you were born on the first or last day of a range, the calculator tells you so. The sun actually changes sign at a particular hour, which shifts by a day between years, so a cusp birthday genuinely can fall either side. Only a chart cast for your exact birth time settles it.</p>'
+           '<h2>What to do with the number</h2>'
+           '<p>If your sign\'s ruling number is friendly to both your Birth and Destiny numbers, it is one more number worth keeping around — in a <a href="lucky-pin-generator.html">PIN</a>, a <a href="lucky-password.html">password</a> or the total of a <a href="../index.html#mainForm">mobile number</a>. If it clashes, that is not a problem to fix; it simply means your sign and your numbers pull in different directions, which most people find is a fair description of themselves.</p>',
+      faqs=[('Is this my rashi?', 'No. This is the Western sun sign. Rashi is the Vedic moon sign, calculated from the moon\'s position using your exact time and place of birth, and the two frequently differ.'),
+            ('I was born on a cusp — which sign am I?', 'The sun changes sign at a specific hour that shifts slightly year to year, so a birthday on a boundary day can fall either side. The calculator flags it; only a chart cast for your birth time can decide.'),
+            ('Why does my sign have a number?', 'Each sign has a ruling planet, and Indian numerology already assigns a number to every planet — Sun 1, Moon 2, Jupiter 3, Rahu 4, Mercury 5, Venus 6, Ketu 7, Saturn 8, Mars 9. That shared vocabulary is what lets the two systems be compared.'),
+            ('Do two signs share a planet?', 'Yes. Taurus and Libra are both ruled by Venus, Gemini and Virgo by Mercury, Capricorn and Aquarius by Saturn in the traditional scheme, and Aries and Scorpio by Mars. They share a number without sharing a personality.'),
+            ('Does my zodiac sign change my lucky mobile number?', 'Not on its own. The mobile number rules on this site run on your Birth and Destiny numbers. The sign adds one more number to prefer, not a different system.')]),
+
+ dict(slug='angel-number', tool='angel', icon='wand', name='Angel Numbers', short='What a repeating number is said to mean',
+      title='Angel Number Calculator — 111, 444, 1111 Meanings',
+      meta='Free angel number calculator. Enter any repeating sequence — 111, 222, 444, 777, 1111 — for its meaning, its root number and planet, and how it sits with your date of birth.',
+      img=dict(a='#3b0764', b='#fbbf24', glyph='111', label='Angel numbers'),
+      form='<div class="field"><label for="seq">The number you keep seeing</label><input id="seq" type="text" inputmode="numeric" maxlength="6" placeholder="e.g. 1111" required autocomplete="off" /></div>'
+           '<div class="field"><label for="dob">Date of birth <span class="muted">(optional — checks it against your numbers)</span></label><input id="dob" type="date" min="1900-01-01" /></div>'
+           '<button class="btn" type="submit">What does it mean?</button>'
+           '<div class="chips" style="margin-top:14px" id="quickSeq"></div>',
+      intro='<strong>Angel numbers</strong> are repeating sequences — 111, 444, 1111 — that people notice on clocks, receipts and number plates and read as a message. This calculator gives the meaning usually attached to a sequence, then reduces it to its <strong>root number</strong> and tells you which planet that is, so you can see how it sits against your own date of birth.',
+      body='<h2>Where angel numbers come from</h2>'
+           '<p>This is worth being straight about: angel numbers are <strong>modern folklore</strong>, popularised in the 1990s and spread enormously by social media. They are not part of Chaldean numerology, not part of Vedic astrology, and they are not centuries old. That does not make them worthless — it makes them a different thing from the rest of this site, which is why they have their own page.</p>'
+           '<h2>The sequences people report most</h2>'
+           '<table><tr><th>Number</th><th>Usually read as</th><th>Root</th></tr>'
+           '<tr><td><b>111</b></td><td>A beginning worth noticing</td><td>3</td></tr>'
+           '<tr><td><b>222</b></td><td>Balance, patience, partnership</td><td>6</td></tr>'
+           '<tr><td><b>333</b></td><td>Expression and support</td><td>9</td></tr>'
+           '<tr><td><b>444</b></td><td>Stability and protection</td><td>3</td></tr>'
+           '<tr><td><b>555</b></td><td>Change arriving</td><td>6</td></tr>'
+           '<tr><td><b>666</b></td><td>Rebalance the material — not a warning</td><td>9</td></tr>'
+           '<tr><td><b>777</b></td><td>Inner work paying off</td><td>3</td></tr>'
+           '<tr><td><b>888</b></td><td>Cycles completing, return</td><td>6</td></tr>'
+           '<tr><td><b>999</b></td><td>An ending, not a loss</td><td>9</td></tr>'
+           '<tr><td><b>1111</b></td><td>Alignment — the most searched of all</td><td>4</td></tr></table>'
+           '<h2>Why you see them so often</h2>'
+           '<p>There is a well-understood reason, and knowing it does not have to spoil anything. It is the <strong>frequency illusion</strong>: once a number is salient to you, your attention selects for it and your memory keeps the hits and discards the misses. You glance at a clock dozens of times a day; 11:11 is memorable and 11:09 is not. Someone who believes 444 is their number will notice 444 everywhere and never count the 443s.</p>'
+           '<p>What that leaves is still real: a repeated prompt to stop and check what you were thinking about. Plenty of people find that useful on its own terms.</p>'
+           '<h2>The root number is the part that connects</h2>'
+           '<p>Add the digits and reduce, and an angel number becomes an ordinary numerology number with a planet attached. 444 reduces to 3, which is Jupiter. 1111 reduces to 4, which is Rahu. That root is the bridge to the rest of this site — and if it happens to be friendly to both your <a href="life-path-number.html">Birth and Destiny numbers</a>, it is a number worth using deliberately rather than just noticing.</p>',
+      faqs=[('Are angel numbers real?', 'They are a real modern belief, widely held, but they are not an old tradition and there is no evidence behind them. The repetition you notice is well explained by the frequency illusion — attention selecting for what is already salient.'),
+            ('Is 666 a bad angel number?', 'Not in this system. Its reputation comes from Christian scripture, not numerology. In angel number folklore 666 is read as a nudge to rebalance away from money and worry, and its root is 9 — Mars.'),
+            ('What is the difference between an angel number and my numerology number?', 'Your Birth and Destiny numbers come from your date of birth and never change. An angel number is a sequence you happen to notice. The link between them is the root: reduce the sequence and you get an ordinary number with a planet.'),
+            ('Why is 1111 the most popular one?', 'Mostly the clock. 11:11 appears twice a day, is visually striking, and became a social media phenomenon. Its root is 4 — Rahu in Indian numerology, the planet of sudden and unconventional change.'),
+            ('Should I act on an angel number?', 'Treat it as a prompt rather than an instruction. Noticing a number is a reasonable cue to pause and think about what you want; it is not a reason to make a decision you would not otherwise make.')]),
+
  dict(slug='lo-shu-grid', tool='lo-shu', icon='grid', name='Lo Shu Grid', short='Present, missing & repeated numbers',
       title='Lo Shu Grid Calculator — Missing & Repeated Numbers',
       meta='Free Lo Shu grid calculator. Enter your date of birth to draw your 3×3 numerology grid, see present, missing and repeated numbers, completed planes, and PINs that add the missing energies.',

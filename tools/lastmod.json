@@ -1,15 +1,27 @@
 {
  "": {
-  "date": "2026-10-06",
-  "hash": "24ed0a8b19427c1b"
+  "date": "2026-10-12",
+  "hash": "ebc24ff52c7c5dad"
  },
  "about": {
   "date": "2026-10-04",
   "hash": "4d321873a96dda0b"
  },
  "blog/": {
-  "date": "2026-10-06",
-  "hash": "e84dbc9b8c47441b"
+  "date": "2026-10-12",
+  "hash": "943bb87d6070f7ba"
+ },
+ "blog/1111-angel-number-meaning": {
+  "date": "2026-10-12",
+  "hash": "fe2d72b03d183719"
+ },
+ "blog/444-angel-number-meaning": {
+  "date": "2026-10-12",
+  "hash": "d11b34b3b51165c9"
+ },
+ "blog/angel-numbers-vs-numerology": {
+  "date": "2026-10-12",
+  "hash": "36e3138b05efb2bf"
  },
  "blog/baby-name-numerology": {
   "date": "2026-10-06",
@@ -67,6 +79,10 @@
   "date": "2026-10-06",
   "hash": "cb0222f5a66654be"
  },
+ "blog/lucky-numbers-for-each-zodiac-sign": {
+  "date": "2026-10-12",
+  "hash": "be8e5b4d32b65a33"
+ },
  "blog/mobile-affirmations-ringtones-mantras-numbers-1-to-9": {
   "date": "2026-09-12",
   "hash": "06be8dcc7e035c7a"
@@ -123,9 +139,25 @@
   "date": "2026-10-06",
   "hash": "0af2ea708f2e46ad"
  },
+ "blog/sun-sign-vs-rashi-moon-sign": {
+  "date": "2026-10-12",
+  "hash": "9911ae41ab3d7b31"
+ },
+ "blog/what-are-angel-numbers": {
+  "date": "2026-10-12",
+  "hash": "7305e4a97fdeeb3b"
+ },
+ "blog/zodiac-sign-and-numerology": {
+  "date": "2026-10-12",
+  "hash": "976a3586a4e4449e"
+ },
+ "blog/zodiac-signs-dates-and-personality": {
+  "date": "2026-10-12",
+  "hash": "80f53dd7293237b2"
+ },
  "gu/": {
-  "date": "2026-10-07",
-  "hash": "e88c884f19e8219b"
+  "date": "2026-10-12",
+  "hash": "6a489e0ede851365"
  },
  "gu/blog/": {
   "date": "2026-10-04",
@@ -192,8 +224,8 @@
   "hash": "2392f829a8d0df3c"
  },
  "hi/": {
-  "date": "2026-10-07",
-  "hash": "cf7ac179624d9b91"
+  "date": "2026-10-12",
+  "hash": "5d6baf2ba4ff2b8a"
  },
  "hi/blog/": {
   "date": "2026-10-04",
@@ -260,8 +292,8 @@
   "hash": "e328578415997d2f"
  },
  "mr/": {
-  "date": "2026-10-07",
-  "hash": "07507b384dc8f611"
+  "date": "2026-10-12",
+  "hash": "d66fda12f70470df"
  },
  "mr/blog/": {
   "date": "2026-10-04",
@@ -372,8 +404,8 @@
   "hash": "1281bff927d347fb"
  },
  "ta/": {
-  "date": "2026-10-07",
-  "hash": "ef10aea868eb0fa1"
+  "date": "2026-10-12",
+  "hash": "16b5c1b26bfe54fa"
  },
  "ta/blog/": {
   "date": "2026-10-04",
@@ -444,43 +476,51 @@
   "hash": "6f086684034a0b09"
  },
  "tools/": {
-  "date": "2026-10-06",
-  "hash": "bf004302f38235eb"
+  "date": "2026-10-12",
+  "hash": "de15f797755b0983"
+ },
+ "tools/angel-number": {
+  "date": "2026-10-12",
+  "hash": "7d1c27f0d295e7bf"
  },
  "tools/chaldean-numerology-calculator": {
-  "date": "2026-10-06",
-  "hash": "c8a7c7138ff90ced"
+  "date": "2026-10-12",
+  "hash": "a18800b9c8e65153"
  },
  "tools/compatibility": {
-  "date": "2026-10-06",
-  "hash": "721a4e0643aec963"
+  "date": "2026-10-12",
+  "hash": "9c7a55574d8fb669"
  },
  "tools/life-path-number": {
-  "date": "2026-10-06",
-  "hash": "6471733f0414b3cf"
+  "date": "2026-10-12",
+  "hash": "0e9440ca76d5040e"
  },
  "tools/lo-shu-grid": {
-  "date": "2026-10-06",
-  "hash": "49378e4de279d871"
+  "date": "2026-10-12",
+  "hash": "2f5609395c1e3bb4"
  },
  "tools/lucky-password": {
-  "date": "2026-10-06",
-  "hash": "bf1da8ac3f4da3c9"
+  "date": "2026-10-12",
+  "hash": "e51686c6368229da"
  },
  "tools/lucky-pin-generator": {
-  "date": "2026-10-06",
-  "hash": "769ed32776573824"
+  "date": "2026-10-12",
+  "hash": "62ca684c20c5e7cd"
  },
  "tools/name-correction": {
-  "date": "2026-10-06",
-  "hash": "9bb9fc70c8c6b847"
+  "date": "2026-10-12",
+  "hash": "b92df7f2e1abe816"
  },
  "tools/name-numerology": {
-  "date": "2026-10-06",
-  "hash": "e5c88e53a1fb8720"
+  "date": "2026-10-12",
+  "hash": "f0776815d530975f"
  },
  "tools/personal-year": {
-  "date": "2026-10-06",
-  "hash": "23e455f7d06e7a92"
+  "date": "2026-10-12",
+  "hash": "f67a9b01356b0a00"
+ },
+ "tools/zodiac-sign": {
+  "date": "2026-10-12",
+  "hash": "606698b0594d6603"
  }
 }

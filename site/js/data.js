@@ -178,6 +178,59 @@ const DATA = {
   ],
 
   /* ---------- PDF 11: Chaldean alphabet ---------- */
+  /* ---------- Zodiac (sun signs) ----------
+     Dates are the common tropical ranges; a birthday on a boundary day is a "cusp" and the
+     calculator says so rather than pretending to be exact. rules = ruling planet, which is
+     where this meets the numerology side: each planet already owns a number on this site. */
+  zodiac: [
+    { id: 'aries',       name: 'Aries',       hi: 'मेष',     sym: '♈', from: [3, 21],  to: [4, 19],  element: 'Fire',  quality: 'Cardinal', rules: 'Mars',    num: 9,
+      keyword: 'Initiative, courage, impatience', traits: 'First out of the gate. Aries starts things, says what it thinks and would rather act than plan. The weakness is the follow-through, not the beginning.', lucky: [9, 1, 3], colour: 'Red' },
+    { id: 'taurus',      name: 'Taurus',      hi: 'वृषभ',    sym: '♉', from: [4, 20],  to: [5, 20],  element: 'Earth', quality: 'Fixed',    rules: 'Venus',   num: 6,
+      keyword: 'Steadiness, comfort, stubbornness', traits: 'Taurus builds slowly and keeps what it builds. Strong on patience, money sense and loyalty; slow to change its mind once made up.', lucky: [6, 5, 8], colour: 'Green' },
+    { id: 'gemini',      name: 'Gemini',      hi: 'मिथुन',   sym: '♊', from: [5, 21],  to: [6, 20],  element: 'Air',   quality: 'Mutable',  rules: 'Mercury', num: 5,
+      keyword: 'Curiosity, wit, restlessness', traits: 'Quick, verbal and easily bored. Gemini learns fast and explains well, but scatters across too many interests at once.', lucky: [5, 3, 6], colour: 'Yellow' },
+    { id: 'cancer',      name: 'Cancer',      hi: 'कर्क',    sym: '♋', from: [6, 21],  to: [7, 22],  element: 'Water', quality: 'Cardinal', rules: 'Moon',    num: 2,
+      keyword: 'Care, memory, sensitivity', traits: 'Protective of family and home, with a long memory for both kindness and slight. Reads a room instantly; takes criticism harder than it shows.', lucky: [2, 7, 9], colour: 'White' },
+    { id: 'leo',         name: 'Leo',         hi: 'सिंह',    sym: '♌', from: [7, 23],  to: [8, 22],  element: 'Fire',  quality: 'Fixed',    rules: 'Sun',     num: 1,
+      keyword: 'Confidence, warmth, pride', traits: 'Leo leads by presence rather than argument. Generous and loyal, and genuinely hurt when the effort goes unnoticed.', lucky: [1, 4, 9], colour: 'Gold' },
+    { id: 'virgo',       name: 'Virgo',       hi: 'कन्या',   sym: '♍', from: [8, 23],  to: [9, 22],  element: 'Earth', quality: 'Mutable',  rules: 'Mercury', num: 5,
+      keyword: 'Precision, service, self-criticism', traits: 'Virgo notices the detail everyone else missed, and fixes it. The same eye turned inward becomes the harshest critic it will ever have.', lucky: [5, 3, 6], colour: 'Green' },
+    { id: 'libra',       name: 'Libra',       hi: 'तुला',    sym: '♎', from: [9, 23],  to: [10, 22], element: 'Air',   quality: 'Cardinal', rules: 'Venus',   num: 6,
+      keyword: 'Balance, charm, indecision', traits: 'Libra weighs both sides, which makes it fair and slow. Strong in partnership, design and negotiation; uncomfortable with open conflict.', lucky: [6, 5, 8], colour: 'Pastel blue' },
+    { id: 'scorpio',     name: 'Scorpio',     hi: 'वृश्चिक', sym: '♏', from: [10, 23], to: [11, 21], element: 'Water', quality: 'Fixed',    rules: 'Mars',    num: 9,
+      keyword: 'Intensity, depth, control', traits: 'Scorpio commits completely or not at all. Excellent at research and crisis; the shadow is the grudge it is unwilling to put down.', lucky: [9, 1, 2], colour: 'Maroon' },
+    { id: 'sagittarius', name: 'Sagittarius', hi: 'धनु',     sym: '♐', from: [11, 22], to: [12, 21], element: 'Fire',  quality: 'Mutable',  rules: 'Jupiter', num: 3,
+      keyword: 'Optimism, freedom, bluntness', traits: 'Sagittarius wants the bigger picture and the open road. Honest to a fault, and allergic to being fenced in.', lucky: [3, 9, 1], colour: 'Yellow' },
+    { id: 'capricorn',   name: 'Capricorn',   hi: 'मकर',     sym: '♑', from: [12, 22], to: [1, 19],  element: 'Earth', quality: 'Cardinal', rules: 'Saturn',  num: 8,
+      keyword: 'Discipline, ambition, caution', traits: 'Capricorn plays the long game and is usually right to. Reliable and self-contained; the risk is treating rest as a failure.', lucky: [8, 4, 6], colour: 'Dark blue' },
+    { id: 'aquarius',    name: 'Aquarius',    hi: 'कुंभ',    sym: '♒', from: [1, 20],  to: [2, 18],  element: 'Air',   quality: 'Fixed',    rules: 'Saturn',  num: 8,
+      keyword: 'Independence, ideas, detachment', traits: 'Aquarius thinks sideways and resists being told. Loyal to causes and groups, less comfortable with one-to-one emotional demand.', lucky: [8, 4, 6], colour: 'Electric blue' },
+    { id: 'pisces',      name: 'Pisces',      hi: 'मीन',     sym: '♓', from: [2, 19],  to: [3, 20],  element: 'Water', quality: 'Mutable',  rules: 'Jupiter', num: 3,
+      keyword: 'Imagination, empathy, escape', traits: 'Pisces feels what the room feels. Creative and forgiving, with a standing temptation to avoid the hard conversation.', lucky: [3, 7, 9], colour: 'Sea green' },
+  ],
+
+  /* ---------- Angel numbers ----------
+     Modern new-age folklore rather than Chaldean numerology; kept separate for that reason.
+     The root is the digit the sequence reduces to, which is how it connects to the rest of
+     the site: an angel number's root carries the same planet as everywhere else. */
+  angel: {
+    '000': { title: 'A clean slate', text: 'Read as the point before something starts — a pause rather than a result. Associated with letting an old chapter close without rushing the next one.' },
+    '111': { title: 'A beginning worth noticing', text: 'The most commonly reported sequence. Read as a prompt that what you are currently thinking about is taking shape, and worth being deliberate about.' },
+    '222': { title: 'Balance and patience', text: 'Associated with partnership, co-operation and timing — the idea that something is working even though it has not shown a result yet.' },
+    '333': { title: 'Expression and support', text: 'Linked to creativity, communication and the sense of being backed. Often read as encouragement to say the thing rather than sit on it.' },
+    '444': { title: 'Stability and protection', text: 'The most reassuring of the sequences in popular use: foundations, structure, and the idea that the work being done is solid.' },
+    '555': { title: 'Change arriving', text: 'Read as movement — a job, a city, a relationship shifting. Treated as neutral rather than good or bad: a signal to stay flexible.' },
+    '666': { title: 'Rebalance the material', text: 'Despite its reputation, in angel number folklore 666 is not a warning of evil. It is read as a nudge that attention has tilted too far toward money, status or worry.' },
+    '777': { title: 'Inner work paying off', text: 'Associated with reflection, study and the spiritual side. Read as confirmation that a quieter, less visible effort is on the right track.' },
+    '888': { title: 'Cycles completing, abundance', text: 'Linked to money and return — the idea of something coming back around. In Indian numerology 8 is Saturn, so the same sequence reads as slow but durable rather than sudden.' },
+    '999': { title: 'An ending, not a loss', text: 'Read as completion: a phase finishing so the next can start. Associated with release rather than failure.' },
+    '1010': { title: 'Alignment', text: 'Read as a checkpoint — a sense that intention and direction have lined up and it is a good moment to act.' },
+    '1111': { title: 'The famous one', text: 'The most searched sequence of all, usually spotted on a clock. Read as a moment of alignment and a prompt to pay attention to what you were just thinking.' },
+    '1212': { title: 'Step forward', text: 'Associated with progress out of a comfortable spot — growth that requires a small deliberate move rather than waiting.' },
+    '1221': { title: 'A mirror', text: 'Read as reflection: the sequence reads the same both ways, and is associated with what you put out coming back.' },
+    '1234': { title: 'Sequence and order', text: 'Read as things falling into order, one step at a time — associated with simplification rather than a dramatic change.' },
+  },
+
   chaldean: {
     A: 1, I: 1, J: 1, Q: 1, Y: 1,
     B: 2, K: 2, R: 2,
