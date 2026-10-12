@@ -18,6 +18,11 @@ TR = {}
 for _l in LANGS:
     try: TR[_l] = importlib.import_module(f'posts_{_l}').POSTS
     except ModuleNotFoundError: TR[_l] = {}
+GEIST = 'family=Geist:wght@400;500;600;700;800'
+_NOTO = {'hi': 'Noto+Sans+Devanagari', 'mr': 'Noto+Sans+Devanagari', 'ta': 'Noto+Sans+Tamil', 'gu': 'Noto+Sans+Gujarati'}
+# only request the script a page actually renders — pulling all four blocked rendering on every page
+FONT_URL = {l: 'https://fonts.googleapis.com/css2?' + GEIST + (f'&family={n}:wght@400;500;600;700' if n else '') + '&display=swap'
+            for l, n in ({'en': None} | _NOTO).items()}
 FONT_CSS = {'hi': ("'Noto Sans Devanagari','Geist',sans-serif", "'Noto Sans Devanagari','Geist',sans-serif"), 'mr': ("'Noto Sans Devanagari','Geist',sans-serif", "'Noto Sans Devanagari','Geist',sans-serif"), 'ta': ("'Noto Sans Tamil','Geist',sans-serif", "'Noto Sans Tamil','Geist',sans-serif"), 'gu': ("'Noto Sans Gujarati','Geist',sans-serif", "'Noto Sans Gujarati','Geist',sans-serif")}
 LANG_NAMES = {'hi': 'Hindi (हिन्दी)', 'mr': 'Marathi (मराठी)', 'ta': 'Tamil (தமிழ்)', 'gu': 'Gujarati (ગુજરાતી)'}
 LOCALE = {'hi-Latn': 'hi_IN', 'en': 'en_IN', 'hi': 'hi_IN', 'mr': 'mr_IN', 'ta': 'ta_IN', 'gu': 'gu_IN'}
@@ -53,7 +58,7 @@ VERIFY = {'google-site-verification': 'WMT9RBYqvsxIn936s6lqItZouN2_6RP97dqWz3PPz
 VERIFY_TAGS = ''.join(f'<meta name="{k}" content="{v}" />\n  ' for k, v in VERIFY.items() if v)
 ASSETS = ROOT / 'assets'; BLOG = ROOT / 'blog'; IMG = ASSETS / 'blog'
 for d in (ASSETS, BLOG, IMG): d.mkdir(parents=True, exist_ok=True)
-VER = 'v=44'
+VER = 'v=45'
 
 # ---------------------------------------------------------------- fonts
 def font(size, bold=True):
@@ -301,7 +306,7 @@ def head(title, desc, canonical_path, og_image, extra_ld='', article=None, depth
   <meta name="twitter:image" content="{og_image}" />
   <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@graph": ld}, ensure_ascii=False)}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="{FONT_URL[lang]}" rel="stylesheet" />
   <link rel="stylesheet" href="{up}css/styles.css?{VER}" />
   {THEME_PRE}
   {ADS_TAG}
